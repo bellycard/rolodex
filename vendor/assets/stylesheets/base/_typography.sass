@@ -1,0 +1,72 @@
+// Typography
+// ========================================
+
+// Open Sans for everything
+// All headers
+// - Weight: 300 (Thin)
+// Main headers
+// - 42pt / 56pt / 64pt (Hero headers only, use what fits best)
+// h2 (Section Headers)
+// - 30pt
+// h3 (Sub headers)
+// - 21pt
+// h4 (Paragraph small headers)
+// - 16pt
+// - Weight: 600 (Semi-Bold)
+
+html
+  font-family: sans-serif
+  font-size: 62.5%
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+
+h1
+  +rem(font-size, 20)
+  +rem(margin, 20 0)
+
+abbr[title]
+  border-bottom: 1px dotted
+
+b,
+strong
+  font-weight: bold
+
+dfn
+  font-style: italic
+
+hr
+  +box-sizing(content-box)
+  height: 0
+
+mark
+  background: #ff0
+  color: #000
+
+code,
+kbd,
+pre,
+samp
+  font-family: monospace, serif
+  font-size: 1em
+
+pre
+  white-space: pre-wrap
+
+q
+  quotes: "\201C" "\201D" "\2018" "\2019"
+
+small
+  font-size: 80%
+
+sub,
+sup
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+
+sup
+  top: -0.5em
+
+sub
+  bottom: -0.25em

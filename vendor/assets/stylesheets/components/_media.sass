@@ -1,0 +1,26 @@
+// Media
+// ========================================
+
+// Display preferences
+
+audio,
+canvas,
+video
+  @extend .display-inline-block
+
+audio:not([controls])
+  @extend .display-none
+  height: 0
+
+// Embedded content
+
+img
+  border: 0
+
+svg:not(:root)
+  overflow: hidden
+
+// Figures
+
+figure
+  @extend .margin-0
