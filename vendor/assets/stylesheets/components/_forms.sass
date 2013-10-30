@@ -1,0 +1,64 @@
+// Layout
+// ========================================
+
+// Follow the styles, with labels inline, as found on the account settings add a credit card form.
+// Look at WCC
+
+fieldset
+  border: 1px solid #c0c0c0
+  margin: 0 2px
+  padding: 0.35em 0.625em 0.75em
+
+legend
+  border: 0
+  @extend .pad-0
+
+button,
+input,
+select,
+textarea
+  font-family: inherit
+  font-size: 100%
+  @extend .margin-0
+
+button,
+input
+  line-height: normal
+
+button,
+select
+  text-transform: none
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"]
+  -webkit-appearance: button
+  cursor: pointer
+
+button[disabled],
+html input[disabled]
+  cursor: default
+
+input[type="checkbox"],
+input[type="radio"]
+  +box-sizing(border-box)
+  @extend .pad-0
+
+input[type="search"]
+  -webkit-appearance: textfield
+  +box-sizing(content-box)
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration
+  -webkit-appearance: none
+
+// Chrome hates these selectors, specifically with extends
+// button::-moz-focus-inner,
+// input::-moz-focus-inner
+//   border: 0
+//   @extend .pad-0
+
+textarea
+  overflow: auto
+  vertical-align: top

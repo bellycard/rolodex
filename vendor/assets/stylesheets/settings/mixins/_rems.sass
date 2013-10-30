@@ -1,0 +1,26 @@
+// REM conversion
+// ========================================
+
+=rem($property, $values)
+
+  @if type-of($values) == "number"
+    #{$property}: $values + px
+    #{$property}: $values / 10 + rem
+
+  @else
+
+    $px-values:  ()
+    $rem-values: ()
+
+    @each $value in $values
+
+      @if $value == 0 or type-of($value) != "number"
+        $px-values:  append($px-values,  $value)
+        $rem-values: append($rem-values, $value)
+
+      @else
+        $px-values:  append($px-values,  $value + px)
+        $rem-values: append($rem-values, $value / 10 + rem)
+
+    #{$property}: $px-values
+    #{$property}: $rem-values
