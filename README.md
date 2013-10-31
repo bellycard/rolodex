@@ -1,24 +1,20 @@
 # Rolodex
 
-TODO: Write a gem description
+Styleguide gem for Belly
 
-## Installation
+## Use with Middleman
 
-Add this line to your application's Gemfile:
+Add to your `Gemfile`:
 
-    gem 'rolodex'
+```
+gem 'rolodex', :git => 'https://github.com/bellycard/rolodex.git'
+```
 
-And then execute:
+Import modules to your SCSS files:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install rolodex
-
-## Usage
-
-TODO: Write usage instructions here
+```
+@import 'main';
+```
 
 ## Contributing
 
