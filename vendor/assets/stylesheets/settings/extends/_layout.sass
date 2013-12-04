@@ -20,6 +20,9 @@
 .pull-right
   float: right
 
+.pull-none
+  float: none
+
 // Clearfix
 
 .group
@@ -31,9 +34,185 @@
     clear: both
 
 // Margins & paddings
+// ========================================
 
 .margin-0
   margin: 0
 
 .pad-0
   padding: 0
+
+.margin-auto
+  margin: 0 auto
+
+// Surgical classes
+
+.margin-bottom
+  +rem(margin-bottom, $line-height-base)
+
+.margin-top
+  +rem(margin-top, $line-height-base)
+
+.pad-bottom
+  +rem(padding-bottom, $line-height-base)
+
+.pad-top
+  +rem(padding-top, $line-height-base)
+
+// Full boxes
+
+.pad-gutters
+  +rem(padding-left, $grid-gutter)
+  +rem(padding-right, $grid-gutter)
+
+.pad-baselines
+  @extend .pad-bottom
+  @extend .pad-top
+
+.pad-box
+  @extend .pad-gutters
+  @extend .pad-baselines
+
+// Half boxes
+
+.pad-gutters-half
+  +rem(padding-left, ($grid-gutter / 2))
+  +rem(padding-right, ($grid-gutter / 2))
+
+// Grid system
+// ========================================
+
+.grid
+  @extend .list-none
+  +rem(letter-spacing, -.28572rem) // -4px
+
+.opera:-o-prefocus,
+.grid
+  +rem(word-spacing, -.35714rem) // -5px
+
+.grid-col
+  @extend .display-inline-block
+  vertical-align: top
+  letter-spacing: normal
+  word-spacing: normal
+  *display: inline
+  zoom: 1
+
+// Grid widths
+// ========================================
+
+@function grid-width($column, $columns)
+  @return ($column/$columns) * 100%
+
+// Whole
+
+.grid-one-whole
+  width: grid-width(1, 1)
+
+// Half
+
+.grid-one-half
+  width: grid-width(1, 2)
+
+// Thirds
+
+.grid-one-third
+  width: grid-width(1, 3)
+.grid-two-thirds
+  width: grid-width(2, 3)
+
+// Fourths
+
+.grid-one-fourth
+  width: grid-width(1, 4)
+.grid-two-fourths
+  @extend .grid-one-half
+.grid-three-fourths
+  width: grid-width(3, 4)
+
+// Fifths
+
+.grid-one-fifth
+  width: grid-width(1, 5)
+.grid-two-fifths
+  width: grid-width(2, 5)
+.grid-three-fifths
+  width: grid-width(3, 5)
+.grid-four-fifths
+  width: grid-width(4, 5)
+
+// Sixths
+
+.grid-one-sixth
+  width: grid-width(1, 6)
+.grid-two-sixths
+  @extend .grid-one-third
+.grid-three-sixths
+  @extend .grid-one-half
+.grid-four-sixths
+  @extend .grid-two-thirds
+.grid-five-sixths
+  width: grid-width(5, 6)
+
+// Eighths
+
+.grid-one-eighth
+  width: grid-width(1, 8)
+.grid-two-eighths
+  @extend .grid-one-fourth
+.grid-three-eighths
+  width: grid-width(3, 8)
+.grid-four-eighths
+  @extend .grid-one-half
+.grid-five-eighths
+  width: grid-width(5, 8)
+.grid-six-eighths
+  @extend .grid-three-fourths
+.grid-seven-eighths
+  width: grid-width(7, 8)
+
+// Tenths
+
+.grid-one-tenth
+  width: grid-width(1, 10)
+.grid-two-tenths
+  @extend .grid-one-fifth
+.grid-three-tenths
+  width: grid-width(3, 10)
+.grid-four-tenths
+  @extend .grid-two-fifths
+.grid-five-tenths
+  @extend .grid-one-half
+.grid-six-tenths
+  @extend .grid-three-fifths
+.grid-seven-tenths
+  width: grid-width(7, 10)
+.grid-eight-tenths
+  @extend .grid-four-fifths
+.grid-nine-tenths
+  width: grid-width(9, 10)
+
+// Twelfths
+
+.grid-one-twelfth
+  width: grid-width(1, 12)
+.grid-two-twelfths
+  @extend .grid-one-sixth
+.grid-three-twelfths
+  @extend .grid-one-fourth
+.grid-four-twelfths
+  @extend .grid-one-third
+.grid-five-twelfths
+  width: grid-width(5, 12)
+.grid-six-twelfths
+  @extend .grid-one-half
+.grid-seven-twelfths
+  width: grid-width(7, 12)
+.grid-eight-twelfths
+  @extend .grid-two-thirds
+.grid-nine-twelfths
+  @extend .grid-three-fourths
+.grid-ten-twelfths
+  @extend .grid-five-sixths
+.grid-eleven-twelfths
+  width: grid-width(11, 12)

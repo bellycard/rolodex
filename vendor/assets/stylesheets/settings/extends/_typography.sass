@@ -1,34 +1,52 @@
 // Typography
 // ========================================
 
-// %font-family-sans-serif
-//   font-family: $font-family-sans-serif
+// Font families
 
-// %font-weight-bold
-//   font-weight: $font-weight-bold
+%font-family-sans-serif
+  font-family: $font-family-sans-serif
+%font-family-monospace
+  font-family: $font-family-monospace
 
-// %line-height-base
-//   line-height: $grid-baseline
+// Weights
 
-// Sizes
+%font-weight-book
+  font-weight: $font-weight-book
+%font-weight-normal
+  font-weight: $font-weight-normal
+%font-weight-bold
+  font-weight: $font-weight-bold
 
-// .h-headline
-//   font-size: 36px
+// Line height
 
-// .h-subheadline
-//   font-size: 21px
+%line-height-base
+  +rem(line-height, $line-height-base)
+%line-height-double
+  +rem(line-height, $line-height-double)
+%line-height-triple
+  +rem(line-height, $line-height-triple)
 
-// .h-byline
-//   font-size: 18px
+// Scale
 
-// .h-standfirst
-//   font-size: 16px
-
-// .h-related
-//   font-size: $font-size-base
-
-// .h-promo
-//   font-size: 12px
-
-// .h-micro
-//   font-size: 10px
+.h-giga
+  +rem(font-size, $h-giga)
+.h-mega
+  +rem(font-size, $h-mega)
+.h-alpha
+  +rem(font-size, $h-alpha)
+.h-bravo
+  +rem(font-size, $h-bravo)
+.h-charlie
+  +rem(font-size, $h-charlie)
+.h-delta
+  +rem(font-size, $h-delta)
+.h-echo
+  +rem(font-size, $h-echo)
+.h-foxtrot
+  +rem(font-size, $h-foxtrot)
+.h-golf
+  +rem(font-size, $h-golf)
+.h-hotel
+  +rem(font-size, $h-hotel)
+.h-india
+  +rem(font-size, $h-india)
