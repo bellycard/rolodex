@@ -1,26 +1,44 @@
 // REM conversion
 // ========================================
 
+// Strip the unit from a value
+
+@function remove-unit($num)
+  @return $num / ($num * 0 + 1)
+
+// Set up the root font size
+
+
+// Mixin
+
 =rem($property, $values)
 
-  @if type-of($values) == "number"
-    #{$property}: $values + px
-    #{$property}: $values / 10 + rem
+  $root: remove-unit($font-size-base)
+
+  $px-values:  ()
+  $rem-values: ()
+
+  @each $value in $values
+
+    @if $value == 0 or type-of($value) != "number"
+      $px-values:  append($px-values,  $value)
+      $rem-values: append($rem-values, $value)
+
+    @else
+      $unit: unit($value)
+      $val:  remove-unit($value)
+
+      @if $unit == "px"
+        $px-values:  append($px-values,  ($val + px))
+        $rem-values: append($rem-values, ($val / $root + rem))
+
+      @if $unit == "rem"
+        $px-values:  append($px-values,  ($val * $root + px))
+        $rem-values: append($rem-values, ($val + rem))
+
+  @if $rem-values == $px-values
+    #{$property}: $rem-values
 
   @else
-
-    $px-values:  ()
-    $rem-values: ()
-
-    @each $value in $values
-
-      @if $value == 0 or type-of($value) != "number"
-        $px-values:  append($px-values,  $value)
-        $rem-values: append($rem-values, $value)
-
-      @else
-        $px-values:  append($px-values,  $value + px)
-        $rem-values: append($rem-values, $value / 10 + rem)
-
     #{$property}: $px-values
     #{$property}: $rem-values
