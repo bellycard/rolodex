@@ -10,10 +10,10 @@ Add to your `Gemfile`:
 gem 'rolodex', :git => 'https://github.com/bellycard/rolodex.git'
 ```
 
-Import modules to your SCSS files:
+Import modules to your Sass files:
 
 ```
-@import 'main';
+@import 'rolodex'
 ```
 
 ## Contributing
