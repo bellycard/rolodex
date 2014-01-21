@@ -1,0 +1,58 @@
+// Buttons
+// ========================================
+
+.btn-default,
+.btn-success,
+.btn-danger,
+.btn-boring,
+.btn-alt
+  @extend %btn
+
+// Normal buttons
+
+.btn-default,
+.btn-success,
+.btn-danger,
+.btn-boring
+  @extend %btn-normal
+
+  &.btn-large
+    +btn-size(border-radius-base, h-delta, 21px 42px)
+  &.btn-small
+    +btn-size(border-radius-mini, h-golf, 3px 10px)
+
+.btn-default
+  +btn-bg(brand-blue, #1d96d4, #0c8acb)
+.btn-success
+  +btn-bg(brand-green, #51960c, #488a07)
+.btn-danger
+  +btn-bg(brand-orange, #d13100, #ba2b00)
+
+// Boring button
+
+.btn-boring
+  @extend %background-white
+  border-color: $gray-light
+  @extend %color-gray-dark
+
+  &:focus,
+  &:hover
+    border-color: $gray
+  &.btn-active
+  &:active
+    @extend %background-white-offset
+  &.btn-disabled,
+  &[disabled]
+    @extend %color-white
+
+// Alternate button
+
+.btn-alt
+  +btn-bg(brand-green, #51960c, #488a07)
+  border: 2px solid $white
+  +rem(padding, 9px 18px)
+
+  &.btn-large
+    +btn-size(border-radius-base, h-delta, 20px 40px)
+  &.btn-small
+    +btn-size(border-radius-mini, h-golf, 2px 10px)
