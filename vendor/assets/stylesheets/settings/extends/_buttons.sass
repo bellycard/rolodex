@@ -1,0 +1,35 @@
+// Buttons
+// ========================================
+
+%btn
+  @extend %border-radius-base
+  cursor: pointer
+  @extend .display-inline-block
+  @extend %font-weight-bold
+  @extend .h-foxtrot
+  @extend %line-height-base
+  @extend %font-family-sans-serif
+  @extend .margin-0
+  outline: 0
+  @extend %text-center
+  @extend %text-decoration-none
+  @extend %transition-all
+  vertical-align: middle
+  white-space: nowrap
+
+  &.btn-disabled,
+  &[disabled]
+    background-color: #d6d6d6
+    border-color: $gray-light
+    cursor: not-allowed
+    pointer-events: none
+    &:focus,
+    &:hover
+      background-color: #d6d6d6
+      border-color: $gray-light
+
+// Normal buttons
+
+%btn-normal
+  border: 1px solid transparent
+  +rem(padding, 10px 20px)
