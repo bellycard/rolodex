@@ -1,6 +1,14 @@
 // Layout
 // ========================================
 
+.border-0
+  border: 0
+
+.ir
+  overflow: hidden
+  text-indent: 100%
+  white-space: nowrap
+
 // Displays
 
 .display-block
@@ -22,6 +30,14 @@
 
 .pull-none
   float: none
+
+// Positions
+
+.position-relative
+  position: relative
+
+.position-absolute
+  position: absolute
 
 // Clearfix
 
@@ -106,113 +122,113 @@
 
 // Whole
 
-.grid-one-whole
+.grid-1-1
   width: grid-width(1, 1)
 
 // Half
 
-.grid-one-half
+.grid-1-2
   width: grid-width(1, 2)
 
 // Thirds
 
-.grid-one-third
+.grid-1-3
   width: grid-width(1, 3)
-.grid-two-thirds
+.grid-2-3
   width: grid-width(2, 3)
 
 // Fourths
 
-.grid-one-fourth
+.grid-1-4
   width: grid-width(1, 4)
-.grid-two-fourths
-  @extend .grid-one-half
-.grid-three-fourths
+.grid-2-4
+  @extend .grid-1-2
+.grid-3-4
   width: grid-width(3, 4)
 
 // Fifths
 
-.grid-one-fifth
+.grid-1-5
   width: grid-width(1, 5)
-.grid-two-fifths
+.grid-2-5
   width: grid-width(2, 5)
-.grid-three-fifths
+.grid-3-5
   width: grid-width(3, 5)
-.grid-four-fifths
+.grid-4-5
   width: grid-width(4, 5)
 
 // Sixths
 
-.grid-one-sixth
+.grid-1-6
   width: grid-width(1, 6)
-.grid-two-sixths
-  @extend .grid-one-third
-.grid-three-sixths
-  @extend .grid-one-half
-.grid-four-sixths
-  @extend .grid-two-thirds
-.grid-five-sixths
+.grid-2-6
+  @extend .grid-1-3
+.grid-3-6
+  @extend .grid-1-2
+.grid-4-6
+  @extend .grid-2-3
+.grid-5-6
   width: grid-width(5, 6)
 
 // Eighths
 
-.grid-one-eighth
+.grid-1-8
   width: grid-width(1, 8)
-.grid-two-eighths
-  @extend .grid-one-fourth
-.grid-three-eighths
+.grid-2-8
+  @extend .grid-1-4
+.grid-3-8
   width: grid-width(3, 8)
-.grid-four-eighths
-  @extend .grid-one-half
-.grid-five-eighths
+.grid-4-8
+  @extend .grid-1-2
+.grid-5-8
   width: grid-width(5, 8)
-.grid-six-eighths
-  @extend .grid-three-fourths
-.grid-seven-eighths
+.grid-6-8
+  @extend .grid-3-4
+.grid-7-8
   width: grid-width(7, 8)
 
 // Tenths
 
-.grid-one-tenth
+.grid-1-10
   width: grid-width(1, 10)
-.grid-two-tenths
-  @extend .grid-one-fifth
-.grid-three-tenths
+.grid-2-10
+  @extend .grid-1-5
+.grid-3-10
   width: grid-width(3, 10)
-.grid-four-tenths
-  @extend .grid-two-fifths
-.grid-five-tenths
-  @extend .grid-one-half
-.grid-six-tenths
-  @extend .grid-three-fifths
-.grid-seven-tenths
+.grid-4-10
+  @extend .grid-2-5
+.grid-5-10
+  @extend .grid-1-2
+.grid-6-10
+  @extend .grid-3-5
+.grid-7-10
   width: grid-width(7, 10)
-.grid-eight-tenths
-  @extend .grid-four-fifths
-.grid-nine-tenths
+.grid-8-10
+  @extend .grid-4-5
+.grid-9-10
   width: grid-width(9, 10)
 
 // Twelfths
 
-.grid-one-twelfth
+.grid-1-12
   width: grid-width(1, 12)
-.grid-two-twelfths
-  @extend .grid-one-sixth
-.grid-three-twelfths
-  @extend .grid-one-fourth
-.grid-four-twelfths
-  @extend .grid-one-third
-.grid-five-twelfths
+.grid-2-12
+  @extend .grid-1-6
+.grid-3-12
+  @extend .grid-1-4
+.grid-4-12
+  @extend .grid-1-3
+.grid-5-12
   width: grid-width(5, 12)
-.grid-six-twelfths
-  @extend .grid-one-half
-.grid-seven-twelfths
+.grid-6-12
+  @extend .grid-1-2
+.grid-7-12
   width: grid-width(7, 12)
-.grid-eight-twelfths
-  @extend .grid-two-thirds
-.grid-nine-twelfths
-  @extend .grid-three-fourths
-.grid-ten-twelfths
-  @extend .grid-five-sixths
-.grid-eleven-twelfths
+.grid-8-12
+  @extend .grid-2-3
+.grid-9-12
+  @extend .grid-3-4
+.grid-10-12
+  @extend .grid-5-6
+.grid-11-12
   width: grid-width(11, 12)
