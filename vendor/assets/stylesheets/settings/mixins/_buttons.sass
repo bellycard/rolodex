@@ -1,0 +1,29 @@
+// Buttons
+// ========================================
+
+// Styles
+
+=btn-bg($bg-color, $bg-color-hover, $bg-color-active)
+  @extend %background-#{$bg-color}
+  @extend %color-white
+
+  &:focus,
+  &:hover
+    background-color: $bg-color-hover
+
+  &.btn-active,
+  &:active
+    background-color: $bg-color-active
+
+// Sizes
+
+=btn-size($size, $padding...)
+  +rem(padding, $padding)
+
+  @if $size == large
+    @extend .h-delta
+    @extend %font-weight-book
+
+  @if $size == small
+    @extend .h-golf
+    @extend %border-radius-mini
