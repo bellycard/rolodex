@@ -69,7 +69,7 @@ textarea
   @extend %border-radius-base
   @extend %color-black
   @extend .display-block
-  +rem(padding, 10px 14px)
+  +rem(padding, 8px 14px)
   @extend .position-relative
   @extend .grid-1-1
   @extend %transition-all
@@ -108,6 +108,7 @@ textarea
 
 .form-choice-disabled label
   @extend %cursor-not-allowed
+  @extend %color-gray
 
 // Labels
 
@@ -118,7 +119,7 @@ textarea
   +border-radius($border-radius-base 0 0 $border-radius-base)
   @extend %color-gray-dark
   @extend %font-weight-bold
-  +rem(padding, 10px 14px)
+  +rem(padding, 8px 14px)
 
   &.form-label-disabled
     @extend %color-gray
@@ -128,10 +129,13 @@ textarea
 
 .form-help
   @extend %color-gray-dark
-  @extend .h-golf
-  +rem(margin, 2px 5px -2px 5px)
+  @extend .s-golf
+  +rem(margin, $line-height-step 5px 0 5px)
   .form-choice &
     +rem(margin-left, 0)
+
+  &.form-help-disabled
+    @extend %color-gray
 
 // Error blocks
 
@@ -152,7 +156,7 @@ textarea
   +rem(font-size, 18px)
   @extend .position-absolute
   +rem(right, 14px)
-  +rem(top, 13px)
+  +rem(top, 12px)
   z-index: 3
 
 .form-choice-required
@@ -175,7 +179,7 @@ textarea
   +rem(height, 22px)
   +rem(left, 14px)
   @extend .position-absolute
-  +rem(top, 11px)
+  +rem(top, 9px)
   +rem(width, 22px)
   z-index: 3
 
@@ -265,7 +269,6 @@ textarea
 .form-stacked
 
   .form-group-stacked
-    @extend .position-relative
 
     &:first-of-type,
     &:not(:first-of-type):not(:last-of-type)
@@ -275,7 +278,7 @@ textarea
     &:first-of-type .form-area,
     &:not(:first-of-type):not(:last-of-type) .form-control,
     &:not(:first-of-type):not(:last-of-type) .form-area
-      +rem(padding-top, 11px)
+      +rem(padding-top, 9px)
 
 // Alternate stacked styles
 
@@ -284,16 +287,17 @@ textarea
   .form-control,
   .form-area
     border-color: transparent
-    +rem(padding-top, 9px)
 
   .form-group-stacked
     &:first-of-type,
     &:not(:first-of-type):not(:last-of-type)
       +rem(border-bottom, 1px solid $gray-light)
 
+    &:not(:first-of-type):not(:last-of-type) .form-control,
+    &:not(:first-of-type):not(:last-of-type) .form-area,
     &:last-of-type .form-control,
     &:last-of-type .form-area
-      +rem(padding-top, 10px)
+      +rem(padding-top, 7px)
 
   .form-error
     .form-control,

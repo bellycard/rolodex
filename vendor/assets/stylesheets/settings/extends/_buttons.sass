@@ -5,9 +5,9 @@
   @extend %border-radius-base
   cursor: pointer
   @extend .display-inline-block
-  @extend .h-foxtrot
+  @extend .s-foxtrot
   @extend %line-height-base
-  @extend %font-family-sans-serif
+  @extend %font-family-open-sans
   @extend .margin-0
   outline: 0
   @extend %text-center
@@ -25,9 +25,10 @@
     &:hover
       @extend %background-gray-light
       @extend %cursor-not-allowed
+      border-color: transparent
 
 // Normal buttons
 
 %btn-normal
   border: 1px solid transparent
-  +rem(padding, 10px 20px)
+  +rem(padding, 8px 20px)
