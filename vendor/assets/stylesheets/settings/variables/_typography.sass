@@ -5,22 +5,23 @@
 
 $font-size-base: 14px
 
-$h-giga:    60px
-$h-mega:    48px
-$h-alpha:   36px
-$h-bravo:   24px
-$h-charlie: 21px
-$h-delta:   18px
-$h-echo:    16px
-$h-foxtrot: $font-size-base
-$h-golf:    12px
-$h-hotel:   11px
-$h-india:   10px
+$s-giga:    60px
+$s-mega:    48px
+
+$s-alpha:   36px
+$s-bravo:   24px
+$s-charlie: 21px
+$s-delta:   18px
+$s-echo:    16px
+$s-foxtrot: $font-size-base
+$s-golf:    12px
+$s-hotel:   11px
 
 // Font families
 
-$font-family-sans-serif: "Open Sans", Verdana, Helvetica, sans-serif
-$font-family-monospace:  "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier
+$font-family-open-sans: "Open Sans", Verdana, Helvetica, sans-serif
+$font-family-helvetica: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+$font-family-monospace: "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier
 
 // Weights
 
@@ -30,6 +31,8 @@ $font-weight-bold:   600
 
 // Line heights
 
-$line-height-base:   22px
-$line-height-double: $line-height-base * 2
-$line-height-triple: $line-height-base * 3
+$line-height-step:    6px
+$line-height-smaller: $line-height-step * 3 // 18px
+$line-height-base:    $line-height-step * 4
+$line-height-taller:  $line-height-step * 5 // 30px
+$line-height-tallest: $line-height-step * 7 // 42px

@@ -3,8 +3,10 @@
 
 // Font families
 
-%font-family-sans-serif
-  font-family: $font-family-sans-serif
+%font-family-open-sans
+  font-family: $font-family-open-sans
+%font-family-helvetica
+  font-family: $font-family-helvetica
 %font-family-monospace
   font-family: $font-family-monospace
 
@@ -26,34 +28,65 @@
 
 // Line height
 
+%line-height-smaller
+  +rem(line-height, $line-height-smaller)
 %line-height-base
   +rem(line-height, $line-height-base)
-%line-height-double
-  +rem(line-height, $line-height-double)
-%line-height-triple
-  +rem(line-height, $line-height-triple)
+%line-height-taller
+  +rem(line-height, $line-height-taller)
+%line-height-tallest
+  +rem(line-height, $line-height-tallest)
 
 // Scale
 
-.h-giga
-  +rem(font-size, $h-giga)
-.h-mega
-  +rem(font-size, $h-mega)
+.s-giga
+  +rem(font-size, $s-giga)
+.s-mega
+  +rem(font-size, $s-mega)
+
+.s-alpha
+  +rem(font-size, $s-alpha)
+  @extend %line-height-tallest
+.s-bravo
+  +rem(font-size, $s-bravo)
+  @extend %line-height-taller
+.s-charlie
+  +rem(font-size, $s-charlie)
+  @extend %line-height-taller
+.s-delta
+  +rem(font-size, $s-delta)
+.s-echo
+  +rem(font-size, $s-echo)
+.s-foxtrot
+  +rem(font-size, $s-foxtrot)
+.s-golf
+  +rem(font-size, $s-golf)
+  @extend %font-family-helvetica
+  @extend %line-height-smaller
+.s-hotel
+  +rem(font-size, $s-hotel)
+  @extend %font-family-helvetica
+  @extend %line-height-smaller
+
+// All together
+
 .h-alpha
-  +rem(font-size, $h-alpha)
+  @extend .s-alpha
+  @extend %font-weight-book
 .h-bravo
-  +rem(font-size, $h-bravo)
+  @extend .s-bravo
+  @extend %font-weight-book
 .h-charlie
-  +rem(font-size, $h-charlie)
+  @extend .s-charlie
+  @extend %font-weight-book
 .h-delta
-  +rem(font-size, $h-delta)
+  @extend .s-delta
+  @extend %font-weight-normal
 .h-echo
-  +rem(font-size, $h-echo)
+  @extend .s-echo
 .h-foxtrot
-  +rem(font-size, $h-foxtrot)
+  @extend .s-foxtrot
 .h-golf
-  +rem(font-size, $h-golf)
+  @extend .s-golf
 .h-hotel
-  +rem(font-size, $h-hotel)
-.h-india
-  +rem(font-size, $h-india)
+  @extend .s-hotel

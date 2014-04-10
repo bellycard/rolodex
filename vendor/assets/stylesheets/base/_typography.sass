@@ -5,30 +5,17 @@
 
 html
   @extend %color-black
-  @extend %font-family-sans-serif
+  @extend %font-family-open-sans
   font-size: 87.5%
   -ms-text-size-adjust: 100%
   -webkit-text-size-adjust: 100%
-  line-height: 22px
-  line-height: 1.375rem
+  line-height: 24px
+  line-height: 1.5rem
 
-// Headings
-
-#{headings(3)}
-  @extend %font-weight-book
-
-h4
-  @extend %font-weight-normal
-
-#{headings(5, 6)}
-  @extend %font-weight-bold
-
-#{headings(3)}
-  @extend %line-height-double
+// Heading sizes
 
 h1
   @extend .h-alpha
-  @extend .margin-0
 h2
   @extend .h-bravo
 h3

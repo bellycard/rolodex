@@ -1,4 +1,5 @@
 require "rolodex/version"
+require "rolodex/sass"
 
 module Rolodex
 
@@ -6,4 +7,5 @@ module Rolodex
     class Engine < ::Rails::Engine
     end
   end
+
 end
