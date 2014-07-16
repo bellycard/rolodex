@@ -1,102 +1,33 @@
 // Colors
 // ========================================
 
-// Text
-// ========================================
+// Brand palettes
 
-// Primary blue
+@each $palette in map-keys($brand-palettes)
+  @each $color, $i in map-get($brand-palettes, $palette)
 
-%color-brand-blue
-  color: $brand-blue
+    @if $color == "base"
+      
+      %background-#{$palette}
+        background-color: $i
 
-// Brand blues
+      %color-#{$palette}
+        color: $i
 
-%color-brand-blue-dark
-  color: $brand-blue-dark
-%color-brand-blue-light
-  color: $brand-blue-light
+    @else
+      
+      %background-#{$palette}-#{$color}
+        background-color: $i
+      
+      %color-#{$palette}-#{$color}
+        color: $i
 
-// Brand colors
+// Monochromatic palette
 
-%color-brand-green
-  color: $brand-green
-%color-brand-orange
-  color: $brand-orange
-%color-brand-yellow
-  color: $brand-yellow
+@each $color, $i in $monochromatic-palette
 
-// Monochromatic colors
+  %background-#{$color}
+    background-color: $i
 
-%color-white
-  color: $white
-%color-white-offset
-  color: $white-offset
-%color-gray-light
-  color: $gray-light
-%color-gray
-  color: $gray
-%color-gray-dark
-  color: $gray-dark
-%color-black
-  color: $black
-
-// Slate colors
-
-%color-slate-offset
-  color: $slate-offset
-%color-slate-light
-  color: $slate-light
-%color-slate
-  color: $slate
-%color-slate-dark
-  color: $slate-dark
-
-// Backgrounds
-// ========================================
-
-// Primary blue
-
-%background-brand-blue
-  background-color: $brand-blue
-
-// Brand blues
-
-%background-brand-blue-dark
-  background-color: $brand-blue-dark
-%background-brand-blue-light
-  background-color: $brand-blue-light
-
-// Brand colors
-
-%background-brand-green
-  background-color: $brand-green
-%background-brand-orange
-  background-color: $brand-orange
-%background-brand-yellow
-  background-color: $brand-yellow
-
-// Monochromatic colors
-
-%background-white
-  background-color: $white
-%background-white-offset
-  background-color: $white-offset
-%background-gray-light
-  background-color: $gray-light
-%background-gray
-  background-color: $gray
-%background-gray-dark
-  background-color: $gray-dark
-%background-black
-  background-color: $black
-
-// Slate colors
-
-%background-slate-offset
-  background-color: $slate-offset
-%background-slate-light
-  background-color: $slate-light
-%background-slate
-  background-color: $slate
-%background-slate-dark
-  background-color: $slate-dark
+  %color-#{$color}
+    color: $i

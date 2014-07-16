@@ -1,0 +1,103 @@
+// Colors
+// ========================================
+
+// Brand palettes
+
+$blue:         #33a9e0;
+$blue-light:   #e1f2fa;
+$blue-dark:    #0076ad;
+
+$slate:        #45454c;
+$slate-light:  #efeff4;
+$slate-dark:   #1e1e21;
+
+$red:          #cb4e52;
+$red-light:    #f7e2e2;
+$red-dark:     #9c292d;
+
+$gold:         #f3ae4e;
+$gold-light:   #fceddf;
+$gold-dark:    #c07b1b;
+
+$purple:       #6479bf;
+$purple-light: #cbd6f4;
+$purple-dark:  #31468c;
+
+$orange:       #ed844a;
+$orange-light: #f4d4c6;
+$orange-dark:  #ba5117;
+
+$green:        #45ad60;
+$green-light:  #c8edcd;
+$green-dark:   #127a2d;
+
+$pink:         #d37295;
+$pink-light:   #f2d1e3;
+$pink-dark:    #a03f62;
+
+// Monochromatic palette
+
+$white:        #fff;
+$white-offset: #f7f7f7;
+$gray-light:   #ccc;
+$gray:         #999;
+$gray-dark:    #666;
+$black-offset: #333;
+$black:        #000;
+
+// Brand palettes map
+
+$brand-palettes: (
+  blue: (
+    base:  $blue,
+    light: $blue-light,
+    dark:  $blue-dark
+  ),
+  slate: (
+    base:  $slate,
+    light: $slate-light,
+    dark:  $slate-dark
+  ),
+  red: (
+    base:  $red,
+    light: $red-light,
+    dark:  $red-dark
+  ),
+  gold: (
+    base:  $gold,
+    light: $gold-light,
+    dark:  $gold-dark
+  ),
+  purple: (
+    base:  $purple,
+    light: $purple-light,
+    dark:  $purple-dark
+  ),
+  orange: (
+    base:  $orange,
+    light: $orange-light,
+    dark:  $orange-dark
+  ),
+  green: (
+    base:  $green,
+    light: $green-light,
+    dark:  $green-dark
+  ),
+  pink: (
+    base:  $pink,
+    light: $pink-light,
+    dark:  $pink-dark
+  )
+);
+
+// Monochromatic palette map
+
+$monochromatic-palette: (
+  white:        $white,
+  white-offset: $white-offset,
+  gray-light:   $gray-light,
+  gray:         $gray,
+  gray-dark:    $gray-dark,
+  black-offset: $black-offset,
+  black:        $black
+);
