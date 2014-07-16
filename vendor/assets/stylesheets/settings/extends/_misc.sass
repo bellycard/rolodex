@@ -3,15 +3,15 @@
 
 // Border radius
 
-%border-radius-base
-  +border-radius($border-radius-base)
-%border-radius-mini
-  +border-radius($border-radius-mini)
+@each $radius, $i in $radii
+
+  %border-radius-#{$radius}
+    border-radius: $i
 
 // Transition
 
 %transition-all
-  +transition($transition-all)
+  transition: $transition-all
 
 // Cursor not-allowed
 
