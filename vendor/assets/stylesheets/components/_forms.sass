@@ -75,7 +75,7 @@ textarea
   @extend %transition-all
 
   &:focus
-    border-color: $brand-blue
+    border-color: $blue
     +rem(outline, 0)
     z-index: 2
 
@@ -142,16 +142,16 @@ textarea
 .form-error
   .form-control,
   .form-area
-    border-color: $brand-orange
+    border-color: $orange
     z-index: 1
   .form-help,
   &.form-choice
-    @extend %color-brand-orange
+    @extend %color-orange
 
 // Form required
 
 .form-required
-  @extend %color-brand-orange
+  @extend %color-orange
   cursor: text
   +rem(font-size, 18px)
   @extend .position-absolute
@@ -302,4 +302,4 @@ textarea
   .form-error
     .form-control,
     .form-area
-      background: lighten($brand-orange, 50)
+      background: lighten($orange, 50)
