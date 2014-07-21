@@ -1,9 +1,6 @@
 // Layout
 // ========================================
 
-.border-0
-  border: 0
-
 .ir
   overflow: hidden
   text-indent: 100%
@@ -11,33 +8,21 @@
 
 // Displays
 
-.display-block
-  display: block
-
-.display-inline-block
-  display: inline-block
-
-.display-none
-  display: none
+@each $display in $displays
+  .display-#{$display}
+    display: $display
 
 // Floats
 
-.pull-left
-  float: left
-
-.pull-right
-  float: right
-
-.pull-none
-  float: none
+@each $float in $floats
+  .pull-#{$float}
+    float: $float
 
 // Positions
 
-.position-relative
-  position: relative
-
-.position-absolute
-  position: absolute
+@each $position in $positions
+  .position-#{$position}
+    position: $position
 
 // Clearfix
 
@@ -49,49 +34,43 @@
   &:after
     clear: both
 
-// Margins & paddings
+// Box models
 // ========================================
 
-.margin-0
-  margin: 0
-
-.pad-0
-  padding: 0
+@each $zero in $zeros
+  .#{$zero}-0
+    #{$zero}: 0
 
 .margin-auto
   margin: 0 auto
 
 // Surgical classes
 
-.margin-bottom
-  +rem(margin-bottom, $line-height-base)
+@each $surgical, $i in $surgicals
 
-.margin-top
-  +rem(margin-top, $line-height-base)
+  .margin-#{$surgical}
+    +rem(margin-#{$surgical}, $i)
 
-.pad-bottom
-  +rem(padding-bottom, $line-height-base)
-
-.pad-top
-  +rem(padding-top, $line-height-base)
+  .padding-#{$surgical}
+    +rem(padding-#{$surgical}, $i)
 
 // Full boxes
 
-.pad-gutters
-  +rem(padding-left, $grid-gutter)
-  +rem(padding-right, $grid-gutter)
+.padding-gutters
+  @extend .padding-left
+  @extend .padding-right
 
-.pad-baselines
-  @extend .pad-bottom
-  @extend .pad-top
+.padding-baselines
+  @extend .padding-bottom
+  @extend .padding-top
 
-.pad-box
-  @extend .pad-gutters
-  @extend .pad-baselines
+.padding-box
+  @extend .padding-gutters
+  @extend .padding-baselines
 
 // Half boxes
 
-.pad-gutters-half
+.padding-gutters-half
   +rem(padding-left, ($grid-gutter / 2))
   +rem(padding-right, ($grid-gutter / 2))
 
@@ -117,118 +96,33 @@
 // Grid widths
 // ========================================
 
-@function grid-width($column, $columns)
-  @return ($column/$columns) * 100%
+$columns: 12
 
-// Whole
+// Counting down from 12, for 12 columns
+@while 1 <= $columns
+  
+  // Counting up to the given potential number of columns in a given row
+  @for $column from 1 to $columns
+  
+    // Extend multiples of 2, 3, 5, or compile the class
+    @if ($column % 2 == 0) and ($columns % 2 == 0)
+    
+      .grid-#{$column}-#{$columns}
+        @extend .grid-#{$column/2}-#{$columns/2}
+    
+    @else if ($column % 3 == 0) and ($columns % 3 == 0)
+    
+      .grid-#{$column}-#{$columns}
+        @extend .grid-#{$column/3}-#{$columns/3}
 
-.grid-1-1
-  width: grid-width(1, 1)
-
-// Half
-
-.grid-1-2
-  width: grid-width(1, 2)
-
-// Thirds
-
-.grid-1-3
-  width: grid-width(1, 3)
-.grid-2-3
-  width: grid-width(2, 3)
-
-// Fourths
-
-.grid-1-4
-  width: grid-width(1, 4)
-.grid-2-4
-  @extend .grid-1-2
-.grid-3-4
-  width: grid-width(3, 4)
-
-// Fifths
-
-.grid-1-5
-  width: grid-width(1, 5)
-.grid-2-5
-  width: grid-width(2, 5)
-.grid-3-5
-  width: grid-width(3, 5)
-.grid-4-5
-  width: grid-width(4, 5)
-
-// Sixths
-
-.grid-1-6
-  width: grid-width(1, 6)
-.grid-2-6
-  @extend .grid-1-3
-.grid-3-6
-  @extend .grid-1-2
-.grid-4-6
-  @extend .grid-2-3
-.grid-5-6
-  width: grid-width(5, 6)
-
-// Eighths
-
-.grid-1-8
-  width: grid-width(1, 8)
-.grid-2-8
-  @extend .grid-1-4
-.grid-3-8
-  width: grid-width(3, 8)
-.grid-4-8
-  @extend .grid-1-2
-.grid-5-8
-  width: grid-width(5, 8)
-.grid-6-8
-  @extend .grid-3-4
-.grid-7-8
-  width: grid-width(7, 8)
-
-// Tenths
-
-.grid-1-10
-  width: grid-width(1, 10)
-.grid-2-10
-  @extend .grid-1-5
-.grid-3-10
-  width: grid-width(3, 10)
-.grid-4-10
-  @extend .grid-2-5
-.grid-5-10
-  @extend .grid-1-2
-.grid-6-10
-  @extend .grid-3-5
-.grid-7-10
-  width: grid-width(7, 10)
-.grid-8-10
-  @extend .grid-4-5
-.grid-9-10
-  width: grid-width(9, 10)
-
-// Twelfths
-
-.grid-1-12
-  width: grid-width(1, 12)
-.grid-2-12
-  @extend .grid-1-6
-.grid-3-12
-  @extend .grid-1-4
-.grid-4-12
-  @extend .grid-1-3
-.grid-5-12
-  width: grid-width(5, 12)
-.grid-6-12
-  @extend .grid-1-2
-.grid-7-12
-  width: grid-width(7, 12)
-.grid-8-12
-  @extend .grid-2-3
-.grid-9-12
-  @extend .grid-3-4
-.grid-10-12
-  @extend .grid-5-6
-.grid-11-12
-  width: grid-width(11, 12)
+    @else if ($column % 5 == 0) and ($columns % 5 == 0)
+    
+      .grid-#{$column}-#{$columns}
+        @extend .grid-#{$column/5}-#{$columns/5}
+        
+    @else
+  
+      .grid-#{$column}-#{$columns}
+        width: ($column/$columns) * 100%
+    
+  $columns: $columns - 1

@@ -1,92 +1,60 @@
 // Typography
 // ========================================
 
+// Scale
+
+@each $size, $i in $font-sizes
+  .s-#{$size}
+    +rem(font-size, $i)
+
+.s-alpha
+  @extend %line-height-tallest
+
+.s-bravo,
+.s-charlie
+  @extend %line-height-taller
+
+.s-golf,
+.s-hotel
+  @extend %font-family-helvetica
+  @extend %line-height-smaller
+
+// Headings
+
+@each $heading, $i in $headings
+  .h-#{$i}
+    @extend .s-#{$i}
+
+.h-alpha,
+.h-bravo,
+.h-charlie
+  @extend %font-weight-book
+
+.h-delta
+  @extend %font-weight-normal
+
 // Font families
 
-%font-family-open-sans
-  font-family: $font-family-open-sans
-%font-family-helvetica
-  font-family: $font-family-helvetica
-%font-family-monospace
-  font-family: $font-family-monospace
+@each $family, $i in $font-families
+  %font-family-#{$family}
+    font-family: $i
 
 // Weights
 
-%font-weight-book
-  font-weight: $font-weight-book
-%font-weight-normal
-  font-weight: $font-weight-normal
-%font-weight-bold
-  font-weight: $font-weight-bold
+@each $weight, $i in $font-weights
+  %font-weight-#{$weight}
+    font-weight: $i
 
 // Misc
 
 %text-center
   text-align: center
+
 %text-decoration-none
   text-decoration: none
 
 // Line height
 
-%line-height-smaller
-  +rem(line-height, $line-height-smaller)
-%line-height-base
-  +rem(line-height, $line-height-base)
-%line-height-taller
-  +rem(line-height, $line-height-taller)
-%line-height-tallest
-  +rem(line-height, $line-height-tallest)
-
-// Scale
-
-.s-giga
-  +rem(font-size, $s-giga)
-.s-mega
-  +rem(font-size, $s-mega)
-
-.s-alpha
-  +rem(font-size, $s-alpha)
-  @extend %line-height-tallest
-.s-bravo
-  +rem(font-size, $s-bravo)
-  @extend %line-height-taller
-.s-charlie
-  +rem(font-size, $s-charlie)
-  @extend %line-height-taller
-.s-delta
-  +rem(font-size, $s-delta)
-.s-echo
-  +rem(font-size, $s-echo)
-.s-foxtrot
-  +rem(font-size, $s-foxtrot)
-.s-golf
-  +rem(font-size, $s-golf)
-  @extend %font-family-helvetica
-  @extend %line-height-smaller
-.s-hotel
-  +rem(font-size, $s-hotel)
-  @extend %font-family-helvetica
-  @extend %line-height-smaller
-
-// All together
-
-.h-alpha
-  @extend .s-alpha
-  @extend %font-weight-book
-.h-bravo
-  @extend .s-bravo
-  @extend %font-weight-book
-.h-charlie
-  @extend .s-charlie
-  @extend %font-weight-book
-.h-delta
-  @extend .s-delta
-  @extend %font-weight-normal
-.h-echo
-  @extend .s-echo
-.h-foxtrot
-  @extend .s-foxtrot
-.h-golf
-  @extend .s-golf
-.h-hotel
-  @extend .s-hotel
+@each $height, $i in $line-heights
+  %line-height-#{$height}
+    +rem(line-height, $i)
