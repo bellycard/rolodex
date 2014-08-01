@@ -55,6 +55,6 @@
 
 // Line height
 
-@each $height, $i in $line-heights
-  %line-height-#{$height}
+@each $line-height, $i in $baselines
+  %line-height-#{$line-height}
     +rem(line-height, $i)
