@@ -14,5 +14,6 @@
 
 // Cursor not-allowed
 
-%cursor-not-allowed
-  cursor: not-allowed
+@each $cursor in $cursors
+  %cursor-#{$cursor}
+    cursor: $cursor

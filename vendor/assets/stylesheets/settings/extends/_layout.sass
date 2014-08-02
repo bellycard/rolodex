@@ -6,6 +6,12 @@
   text-indent: 100%
   white-space: nowrap
 
+// Alignments
+
+@each $align in $alignments
+  %vertical-align-#{$align}
+    vertical-align: $align
+
 // Displays
 
 @each $display in $displays
