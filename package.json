@@ -15,7 +15,7 @@
     "karma-safari-launcher": "^0.1.1"
   },
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start"
+    "test_angular": "./node_modules/karma/bin/karma start"
   },
   "repository": {
     "type": "git",

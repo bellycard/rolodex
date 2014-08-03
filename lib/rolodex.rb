@@ -5,6 +5,7 @@ module Rolodex
 
   if defined?(::Middleman)
     require "middleman-autoprefixer"
+    require "rolodex/sprockets"
   end
 
 end
