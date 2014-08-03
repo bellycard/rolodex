@@ -8,23 +8,16 @@ fieldset
   @extend .border-0
   @extend .margin-0
   min-width: 0
-  @extend .pad-0
+  @extend .padding-0
 
 legend
   @extend .border-0
-  @extend .pad-0
+  @extend .padding-0
 
 button::-moz-focus-inner,
 input::-moz-focus-inner
-  +rem(border, 0)   // Vendor prefixes bust the extend
-  +rem(padding, 0)  // Vendor prefixes bust the extend
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"]
-  -webkit-appearance: button
-  cursor: pointer
+  border: 0   // Vendor prefixes bust the extend
+  padding: 0  // Vendor prefixes bust the extend
 
 button[disabled],
 html input[disabled]
@@ -32,12 +25,12 @@ html input[disabled]
 
 input[type="checkbox"],
 input[type="radio"]
-  +box-sizing(border-box)
-  @extend .pad-0
+  box-sizing: border-box
+  @extend .padding-0
 
 input[type="search"]
   -webkit-appearance: textfield
-  +box-sizing(border-box)
+  box-sizing: border-box
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration
@@ -59,13 +52,23 @@ textarea
   @extend .margin-bottom
   @extend .position-relative
 
+.form-label
+  @extend .display-inline-block
+  @extend %font-weight-bold
+  +rem(margin-bottom, $baseline-step)
+
+.form-subtle
+  @extend %color-gray
+  @extend %font-weight-normal
+  @extend .s-golf
+
 // Text inputs and textareas
 
 .form-control,
 .form-area
   @extend %background-white
   background-image: none
-  border: 1px solid $gray-light
+  +rem(border, 1px solid $gray-light)
   @extend %border-radius-base
   @extend %color-black
   @extend .display-block
@@ -76,18 +79,15 @@ textarea
 
   &:focus
     border-color: $blue
-    +rem(outline, 0)
+    outline: 0
     z-index: 2
 
   &[disabled],
   &[readonly],
-  fieldset[disabled] &
+  [disabled] &
     @extend %background-white-offset
-    @extend %color-gray
+    @extend %color-gray-light
     @extend %cursor-not-allowed
-
-  &[required]
-    +rem(padding-right, 35px)
 
   &:-ms-input-placeholder,
   &:-moz-placeholder,
@@ -104,109 +104,17 @@ textarea
 
   input
     @extend .pull-left
-    +rem(margin, 5px 0 0 -20px)
+    +rem(margin, 6px 0 0 -20px)
 
-.form-choice-disabled label
-  @extend %cursor-not-allowed
-  @extend %color-gray
-
-// Labels
-
-.form-label
-  @extend %background-white-offset
-  +rem(border, 1px solid $gray-light)
-  +rem(border-right, 0)
-  +border-radius($border-radius-base 0 0 $border-radius-base)
-  @extend %color-gray-dark
-  @extend %font-weight-bold
-  +rem(padding, 8px 14px)
-
-  &.form-label-disabled
-    @extend %color-gray
+  label[disabled]
     @extend %cursor-not-allowed
-
-// Help blocks
-
-.form-help
-  @extend %color-gray-dark
-  @extend .s-golf
-  +rem(margin, $line-height-step 5px 0 5px)
-  .form-choice &
-    +rem(margin-left, 0)
-
-  &.form-help-disabled
     @extend %color-gray
-
-// Error blocks
-
-.form-error
-  .form-control,
-  .form-area
-    border-color: $orange
-    z-index: 1
-  .form-help,
-  &.form-choice
-    @extend %color-orange
-
-// Form required
-
-.form-required
-  @extend %color-orange
-  cursor: text
-  +rem(font-size, 18px)
-  @extend .position-absolute
-  +rem(right, 14px)
-  +rem(top, 12px)
-  z-index: 3
-
-.form-choice-required
-  +rem(padding-right, 20px)
-  @extend .position-relative
-
-  .form-required
-    +rem(right, 0)
-    +rem(top, 2px)
-
-// Form icons
-
-.form-control-icon
-  +rem(padding-left, 44px)
-
-.form-icon
-  @extend .ir
-  +background-svg(icons-form)
-  cursor: text
-  +rem(height, 22px)
-  +rem(left, 14px)
-  @extend .position-absolute
-  +rem(top, 9px)
-  +rem(width, 22px)
-  z-index: 3
-
-  &.form-icon-disabled
-    @extend %cursor-not-allowed
-
-.form-icon-email
-  +rem(background-position, 0 0)
-  .form-control-icon:focus + &
-    +rem(background-position, -22px 0)
-  .form-error &,
-  .form-error .form-control-icon:focus + &
-    +rem(background-position, -44px 0)
-
-.form-icon-lock
-  +rem(background-position, 0 -22px)
-  .form-control-icon:focus + &
-    +rem(background-position, -22px -22px)
-  .form-error &,
-  .form-error .form-control-icon:focus + &
-    +rem(background-position, -44px -22px)
 
 // Horizontal styles
 // ========================================
 
 .form-row
-  display: table
+  @extend .display-table
   border-collapse: separate
   @extend .grid-1-1
 
@@ -218,88 +126,66 @@ textarea
   .form-control,
   .form-area,
   .form-btn
-    display: table-cell
-    vertical-align: top
+    @extend .display-table-cell
+    @extend %vertical-align-top
 
   .form-label,
   .form-btn
     @extend .position-relative
 
+  .form-label
+    @extend %background-white-offset
+    +rem(border, 1px solid $gray-light)
+    border-right: 0
+    +rem(border-radius, $border-radius-base 0 0 $border-radius-base)
+    @extend %color-gray-dark
+    +rem(padding, 8px 14px)
+    
+    &[disabled]
+      @extend %color-gray
+      @extend %cursor-not-allowed
+
   .form-control,
   .form-area
+    
     &:first-child
-      +border-bottom-right-radius(0)
-      +border-top-right-radius(0)
+      border-bottom-right-radius: 0
+      border-top-right-radius: 0
+    
     &:last-child
-      +border-bottom-left-radius(0)
-      +border-top-left-radius(0)
+      border-bottom-left-radius: 0
+      border-top-left-radius: 0
+    
     &:not(:first-child):not(:last-child)
-      +border-radius(0)
+      border-radius: 0
 
   .form-btn
     &:hover,
     &:focus,
     &:active
       z-index: 2
+
     .btn
-      +border-bottom-left-radius(0)
-      +border-top-left-radius(0)
+      border-bottom-left-radius: 0
+      border-top-left-radius: 0
       +rem(margin-left, -1px)
 
-// Stacked styles
+// Help blocks
 // ========================================
 
-.form-group-stacked
-  @extend .position-relative
+.form-help
+  @extend .form-subtle
+  +rem(margin-top, $baseline-step)
 
-  &:first-of-type .form-control,
-  &:first-of-type .form-area
-    +border-radius($border-radius-base $border-radius-base 0 0)
+// Error blocks
+// ========================================
 
-  &:not(:first-of-type):not(:last-of-type) .form-control,
-  &:not(:first-of-type):not(:last-of-type) .form-area
-    +border-radius(0)
+.form-error
 
-  &:last-of-type .form-control,
-  &:last-of-type .form-area
-    +border-radius(0 0 $border-radius-base $border-radius-base)
+  &.form-control,
+  &.form-area
+    border-color: $red
+    z-index: 1
 
-// Normal stacked styles
-
-.form-stacked
-
-  .form-group-stacked
-
-    &:first-of-type,
-    &:not(:first-of-type):not(:last-of-type)
-      +rem(margin-bottom, -1px)
-
-    &:first-of-type .form-control,
-    &:first-of-type .form-area,
-    &:not(:first-of-type):not(:last-of-type) .form-control,
-    &:not(:first-of-type):not(:last-of-type) .form-area
-      +rem(padding-top, 9px)
-
-// Alternate stacked styles
-
-.form-stacked-alt
-
-  .form-control,
-  .form-area
-    border-color: transparent
-
-  .form-group-stacked
-    &:first-of-type,
-    &:not(:first-of-type):not(:last-of-type)
-      +rem(border-bottom, 1px solid $gray-light)
-
-    &:not(:first-of-type):not(:last-of-type) .form-control,
-    &:not(:first-of-type):not(:last-of-type) .form-area,
-    &:last-of-type .form-control,
-    &:last-of-type .form-area
-      +rem(padding-top, 7px)
-
-  .form-error
-    .form-control,
-    .form-area
-      background: lighten($orange, 50)
+  &.form-choice
+    @extend %color-red
