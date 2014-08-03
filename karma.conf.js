@@ -1,11 +1,10 @@
 // Karma configuration
-// Generated on Sun Aug 03 2014 13:57:49 GMT-0500 (CDT)
 
 module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: 'spec/javascripts',
+    basePath: '',
 
 
     // frameworks to use
@@ -15,7 +14,18 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      './**/*Spec.coffee'
+      // Dependent libs for testing
+      'spec/test_lib/jquery-2.1.1.js',
+      'spec/test_lib/angular.js',
+      'spec/test_lib/angular-mocks.js',
+      'spec/test_lib/lodash.js',
+
+      // The actual apps/modules/templates
+      'vendor/assets/javascripts/rolodex_angular/**/*.coffee',
+      'vendor/assets/javascripts/rolodex_angular/**/*.html',
+
+      // Specs!
+      'spec/javascripts/**/*.spec.coffee'
     ],
 
 
@@ -23,18 +33,29 @@ module.exports = function(config) {
     exclude: [
     ],
 
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'source/',
+      moduleName: 'templates'
+    },
+
+    coverageReporter: {
+      type: 'html',
+      dir: 'spec/javascripts/rolodex_angular/coverage/'
+    },
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      '**/*.coffee': ['coffee']
+      '**/*.html': ['ng-html2js'],
+      'vendor/assets/javascripts/rolodex_angular/**/*.coffee': ['coverage'],
+      'spec/javascripts/rolodex_angular/**/*.coffee': ['coffee']
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
 
     // web server port
