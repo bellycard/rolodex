@@ -19,7 +19,7 @@ tmp
 # Ignore .DS_store file
 .DS_Store
 
-# Ignore RVM schtuff
+# Ignore Ruby version manager schtuff
 .ruby-version
 .ruby-gemset
 
