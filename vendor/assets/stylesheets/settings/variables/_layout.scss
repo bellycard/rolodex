@@ -15,7 +15,7 @@ $baseline-tallest: $baseline-step * 7; // 42px
 // ========================================
 
 $alignments:  bottom, middle, top;
-$displays:    block, inline-block, none;
+$displays:    block, inline-block, table, table-cell, none;
 $floats:      left, right, none;
 $positions:   relative, absolute;
 $zeros:       border, margin, padding;

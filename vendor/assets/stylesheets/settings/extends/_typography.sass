@@ -33,6 +33,10 @@
 .h-delta
   @extend %font-weight-normal
 
+.h-echo,
+.h-foxtrot
+  @extend %font-weight-bold
+
 // Font families
 
 @each $family, $i in $font-families
@@ -45,6 +49,12 @@
   %font-weight-#{$weight}
     font-weight: $i
 
+// Line height
+
+@each $line-height, $i in $baselines
+  %line-height-#{$line-height}
+    +rem(line-height, $i)
+    
 // Misc
 
 %text-center
@@ -52,9 +62,3 @@
 
 %text-decoration-none
   text-decoration: none
-
-// Line height
-
-@each $line-height, $i in $baselines
-  %line-height-#{$line-height}
-    +rem(line-height, $i)
