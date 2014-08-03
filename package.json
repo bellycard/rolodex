@@ -1,0 +1,31 @@
+{
+  "name": "rolodex",
+  "version": "0.0.1",
+  "description": "Styleguide assets for Belly",
+  "main": "",
+  "dependencies": {},
+  "devDependencies": {
+    "karma": "^0.12.19",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-coffee-preprocessor": "^0.2.1",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-jasmine": "^0.1.5",
+    "karma-safari-launcher": "^0.1.1"
+  },
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bellycard/rolodex.git"
+  },
+  "keywords": [
+    "rolodex"
+  ],
+  "author": "Belly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bellycard/rolodex/issues"
+  },
+  "homepage": "https://github.com/bellycard/rolodex"
+}
