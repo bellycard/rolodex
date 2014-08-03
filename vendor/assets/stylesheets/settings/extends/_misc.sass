@@ -4,9 +4,8 @@
 // Border radius
 
 @each $radius, $i in $radii
-
   %border-radius-#{$radius}
-    border-radius: $i
+    +rem(border-radius, $i)
 
 // Transition
 
@@ -15,5 +14,6 @@
 
 // Cursor not-allowed
 
-%cursor-not-allowed
-  cursor: not-allowed
+@each $cursor in $cursors
+  %cursor-#{$cursor}
+    cursor: $cursor

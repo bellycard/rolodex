@@ -10,9 +10,16 @@ $border-radius-mini: 4px;
 
 $transition-property-all: all;
 $transition-timing:       .15s;
-$transition-function:     linear;
+$transition-function:     ease;
 
 $transition-all: $transition-property-all $transition-timing $transition-function;
+
+// Cursors
+
+$cursors: default, pointer, help, not-allowed;
+
+// Maps
+// ========================================
 
 // Border radius map
 

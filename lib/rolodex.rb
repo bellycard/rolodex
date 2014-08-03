@@ -3,9 +3,8 @@ require "rolodex/sass"
 
 module Rolodex
 
-  if defined?(::Rails)
-    class Engine < ::Rails::Engine
-    end
+  if defined?(::Middleman)
+    require "middleman-autoprefixer"
   end
 
 end

@@ -1,0 +1,30 @@
+// Loading
+// ========================================
+
+.loading,
+.loading:after
+  height: 34px
+  width: 34px
+
+.loading
+  background: image-url("loading/loading-bg.png") 0 0 no-repeat
+  margin-left: auto
+  margin-right: auto
+  @extend .position-relative
+  position: relative
+
+  &:after
+    animation: loading 1s linear infinite
+    background: image-url("loading/loading-circle.png") 0 0 no-repeat
+    content: ""
+    @extend .position-absolute
+    right: 0
+    top: 0
+
+// Keyframes
+
+@keyframes loading
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)

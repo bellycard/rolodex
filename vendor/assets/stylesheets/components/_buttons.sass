@@ -1,60 +1,94 @@
 // Buttons
 // ========================================
 
-.btn-default,
-.btn-success,
-.btn-danger,
-.btn-boring,
-.btn-alt
-  @extend %btn
+.btn
+  border: 1px solid transparent
+  @extend %border-radius-base
+  @extend %color-white
+  @extend %cursor-pointer
+  @extend .display-inline-block
+  @extend %font-family-open-sans
+  @extend .s-foxtrot
+  @extend %line-height-base
+  @extend .margin-0
+  outline: 0
+  +rem(padding, 8px 22px)
+  @extend %text-center
+  @extend %text-decoration-none
+  @extend %transition-all
+  @extend %vertical-align-middle
+  white-space: nowrap
 
-// Normal buttons
-
-.btn-default,
-.btn-success,
-.btn-danger,
-.btn-boring
-  @extend %btn-normal
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:focus,
+  &[disabled]:active
+    @extend %background-gray-light
+    border-color: transparent
+    color: #eee
+    @extend %cursor-not-allowed
 
   &.btn-large
-    +btn-size(large, 19px 42px 21px 42px)
+    @extend .s-delta
+    +rem(padding, 19px 42px 21px 42px)
+
   &.btn-small
-    +btn-size(small, 5px 10px)
+    @extend %border-radius-mini
+    @extend .s-golf
+    +rem(padding, 5px 10px)
 
-.btn-default
-  +btn-bg(blue, #3599c7, #0076ad)
-.btn-success
-  +btn-bg(green, #3e9b56, #127a2d)
-.btn-danger
-  +btn-bg(red, #b6464a, #9c292d)
+// Kinds
+// ========================================
 
-// Boring button
+@each $btn in $btns
 
-.btn-boring
-  @extend %background-white
-  border-color: $gray-light
-  @extend %color-gray-dark
+  $kind:      nth($btn, 1)
+  $bg-normal: nth($btn, 2)
+  $bg-hover:  nth($btn, 3)
+  $bg-active: nth($btn, 4)
+  
+  .btn-#{$kind}
+    background-color: $bg-normal
 
-  &:focus,
-  &:hover
-    border-color: $gray
+    @if $kind == "boring"
+      border-color: $gray-light
+      @extend %color-gray-dark
 
-  &.btn-active,
-  &:active
-    @extend %background-white-offset
+    &:hover,
+    &:focus
+      background-color: $bg-hover
 
-  &.btn-disabled,
-  &[disabled]
-    @extend %color-white
+    &:active
+      background-color: $bg-active
 
-// Alternate button
+// Alternate & Overlay
+// ========================================
+
+.btn-alt,
+.btn-overlay
+  +rem(padding, 7px 21px)
+
+  &.btn-large
+    +rem(padding, 18px 41px 20px 41px)
+  
+  &.btn-small
+    +rem(padding, 4px 10px)
+
+// Alternate
 
 .btn-alt
-  +btn-bg(green, #3e9b56, #127a2d)
   border: 2px solid $white
-  +rem(padding, 7px 18px)
 
-  &.btn-large
-    +btn-size(large, 18px 40px 20px 40px)
-  &.btn-small
-    +btn-size(small, 4px 10px)
+// Overlay
+
+.btn-overlay
+  background-color: rgba($black, .3)
+  border: 2px solid rgba($white, .5)
+  @extend %color-white
+
+  &:hover,
+  &:focus
+    background-color: rgba($black, .5)
+
+  &:active
+    background-color: rgba($black, .7)
