@@ -35,7 +35,7 @@
   &.btn-small
     @extend %border-radius-mini
     @extend .s-golf
-    +rem(padding, 5px 10px)
+    +rem(padding, ($baseline-step - 1) 10px)
 
 // Kinds
 // ========================================
@@ -72,7 +72,7 @@
     +rem(padding, 18px 41px 20px 41px)
   
   &.btn-small
-    +rem(padding, 4px 10px)
+    +rem(padding, ($baseline-step - 2) 10px)
 
 // Alternate
 
@@ -92,3 +92,26 @@
 
   &:active
     background-color: rgba($black, .7)
+
+// Close
+// ========================================
+
+.close
+  @extend .ir
+  +background-svg("common/icon-close-x")
+  background-color: transparent
+  background-position: 50%
+  background-repeat: no-repeat
+  +rem(background-size, 10px)
+  @extend .border-0
+  @extend %cursor-pointer
+  +rem(height, 15px)
+  opacity: .4
+  outline: 0
+  @extend %transition-all
+  @extend %vertical-align-middle
+  +rem(width, 15px)
+
+  &:hover,
+  &:focus
+    opacity: .6

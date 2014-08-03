@@ -72,7 +72,7 @@ textarea
   @extend %border-radius-base
   @extend %color-black
   @extend .display-block
-  +rem(padding, 8px 14px)
+  +rem(padding, ($baseline-step + 2) ($grid-gutter-half - 1))
   @extend .position-relative
   @extend .grid-1-1
   @extend %transition-all
@@ -104,7 +104,7 @@ textarea
 
   input
     @extend .pull-left
-    +rem(margin, 6px 0 0 -20px)
+    +rem(margin, $baseline-step 0 0 -20px)
 
   label[disabled]
     @extend %cursor-not-allowed
@@ -139,7 +139,7 @@ textarea
     border-right: 0
     +rem(border-radius, $border-radius-base 0 0 $border-radius-base)
     @extend %color-gray-dark
-    +rem(padding, 8px 14px)
+    +rem(padding, ($baseline-step + 2) ($grid-gutter-half - 1))
     
     &[disabled]
       @extend %color-gray

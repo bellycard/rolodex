@@ -1,0 +1,9 @@
+// Alerts
+// ========================================
+
+$alerts: (
+  (success, green, $green)
+  (warning, gold,  $gold)
+  (danger,  red,   $red)
+  (default, blue,  $blue)
+);

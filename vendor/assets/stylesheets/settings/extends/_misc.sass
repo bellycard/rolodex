@@ -7,13 +7,13 @@
   %border-radius-#{$radius}
     +rem(border-radius, $i)
 
-// Transition
-
-%transition-all
-  transition: $transition-all
-
 // Cursor not-allowed
 
 @each $cursor in $cursors
   %cursor-#{$cursor}
     cursor: $cursor
+
+// Transition
+
+%transition-all
+  transition: $transition-all

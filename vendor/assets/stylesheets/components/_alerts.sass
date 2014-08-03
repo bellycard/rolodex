@@ -1,0 +1,67 @@
+// Alerts
+// ========================================
+
+// Banner alerts
+// ========================================
+
+.alert-banner
+  @extend %color-white
+  +rem(padding, ($baseline-step + 3) $grid-gutter-half ($baseline-step + 3) ($grid-gutter-half + 42))
+  @extend .position-relative
+
+  &:before
+    +rem(background-position, center 13px)
+    +rem(background-size, 16px)
+    background-repeat: no-repeat
+    bottom: 0
+    content: ""
+    @extend .position-absolute
+    left: 0
+    top: 0
+    +rem(width, 42px)
+
+.alert-dismissible
+  +rem(padding-right, $grid-gutter-half * 3)
+
+  .close
+    @extend .position-absolute
+    +rem(right, 15px)
+    +rem(top, 13px)
+
+// Kinds
+
+@each $alert in $alerts
+  
+  $kind: nth($alert, 1)
+  $bg:   nth($alert, 2)
+  
+  .alert-banner.alert-#{$kind}
+    @extend %background-#{$bg}
+    
+    &:before
+      @extend %background-#{$bg}-dark
+      +background-svg("alerts/icon-alert-#{$kind}")
+
+// Inline alerts
+// ========================================
+
+.alert-inline
+  @extend %border-radius-base
+  border-style: solid
+  +rem(border-width, 1px)
+  @extend %color-black-offset
+  @extend .display-inline-block
+  +rem(padding, ($baseline-step + 2) 14px)
+  @extend .s-golf
+
+// Kinds
+
+@each $alert in $alerts
+
+  $kind:   nth($alert, 1)
+  $bg:     nth($alert, 2)
+  $border: nth($alert, 3)
+
+  .alert-inline.alert-#{$kind}
+    @extend %background-#{$bg}-light
+    border-color: $border
