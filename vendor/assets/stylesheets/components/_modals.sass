@@ -1,0 +1,27 @@
+// Modals
+// ========================================
+
+.modal
+  background-color: rgba($slate-dark, .8)
+  +rem(padding, 84px)
+
+.modal-content
+  @extend %background-white
+  @extend %border-radius-base
+  box-shadow: 0 0 0 4px rgba($black, .15)
+  @extend .margin-auto
+  +rem(max-width, 660px)
+
+.modal-header,
+.modal-footer
+  @extend .padding-box
+
+.modal-header
+  @extend .position-relative
+  @extend %text-center
+
+.modal-body
+  @extend %background-white-offset
+  +rem(border, 1px solid $gray-light)
+  +rem(border-width, 1px 0)
+  +rem(padding, ($baseline-base - 1) $grid-gutter)
