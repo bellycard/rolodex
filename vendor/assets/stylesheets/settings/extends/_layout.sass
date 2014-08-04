@@ -1,10 +1,20 @@
 // Layout
 // ========================================
 
+// Image replacement
+
 .ir
   color: transparent
   font: 0/0 a
   text-shadow: none
+
+// Box overlay
+
+.box-overlay
+  @extend %background-white
+  +rem(border, 1px solid $gray-light)
+  @extend %border-radius-base
+  box-shadow: 0 0 0 4px rgba($black, .06)
 
 // Alignments
 
@@ -35,8 +45,8 @@
 .group
   &:before,
   &:after
-    content: ""
-    display: table
+    @extend %content-empty
+    @extend .display-table
   &:after
     clear: both
 

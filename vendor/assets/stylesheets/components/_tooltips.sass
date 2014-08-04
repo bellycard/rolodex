@@ -1,0 +1,95 @@
+// Alerts
+// ========================================
+
+.tooltip
+  // TODO: Fix with proper icons
+  // +background-svg("tooltips/tooltip-bulb")
+  background-image: image-url("tooltips/tooltip-bulb.png")
+  @extend %cursor-pointer
+  @extend .display-inline-block
+  +rem(height, 26px)
+  @extend .position-relative
+  @extend %vertical-align-middle
+  +rem(width, 26px)
+  
+  &:hover,
+  &:focus
+    +rem(background-position, 0 -26px)
+
+// Tip
+
+.tooltip-tip,
+.tooltip-head,
+.tooltip-body
+  @extend .display-inline-block
+
+.tooltip-head,
+.tooltip-body
+  @extend .grid-1-1
+
+.tooltip-tip
+  @extend .box-overlay
+  @extend %cursor-default
+  opacity: 0
+  pointer-events: none
+  @extend .position-absolute
+  @extend %transition-all
+  +rem(width, 300px)
+  z-index: 1
+
+  .tooltip:hover &
+    opacity: 1
+    pointer-events: auto
+
+  &:before
+    @extend %content-empty
+    +rem(height, 12px)
+    @extend .position-absolute
+    +rem(width, 40px)
+
+.tooltip-head
+  +rem(border-bottom, 1px solid $gray-light)
+  @extend .h-foxtrot
+  +rem(padding, ($baseline-step + 3) 20px)
+  @extend %text-center
+
+.tooltip-body
+  @extend %color-gray-dark
+  +rem(padding, $baseline-smaller 20px)
+  @extend .s-golf
+
+// Positioning
+
+.tooltip-top-right .tooltip-tip,
+.tooltip-top .tooltip-tip,
+.tooltip-top-left .tooltip-tip
+  +rem(bottom, 37px)
+
+  &:before
+    +rem(bottom, -12px)
+
+.tooltip-bottom-right .tooltip-tip,
+.tooltip-bottom .tooltip-tip,
+.tooltip-bottom-left .tooltip-tip
+  +rem(top, 37px)
+  
+  &:before
+    +rem(top, -12px)
+
+.tooltip-top-right .tooltip-tip:before,
+.tooltip-bottom-right .tooltip-tip:before
+  +rem(left, -1px)
+
+.tooltip-top .tooltip-tip,
+.tooltip-top .tooltip-tip:before,
+.tooltip-bottom .tooltip-tip,
+.tooltip-bottom .tooltip-tip:before
+  margin-left: 50%
+  transform: translateX(-50%)
+
+.tooltip-top-left .tooltip-tip,
+.tooltip-bottom-left .tooltip-tip
+  @extend .right-0
+
+  &:before
+    +rem(right, -1px)
