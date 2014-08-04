@@ -3,23 +3,26 @@
 
 .loading,
 .loading:after
-  height: 34px
-  width: 34px
+  +rem(height, 34px)
+  +rem(width, 34px)
 
 .loading
+  // TODO: Fix with proper icons
+  // +background-svg("loading/loading-bg")
   background: image-url("loading/loading-bg.png") 0 0 no-repeat
   margin-left: auto
   margin-right: auto
   @extend .position-relative
-  position: relative
 
   &:after
     animation: loading 1s linear infinite
+    // TODO: Fix with proper icons
+    // +background-svg("loading/loading-circle")
     background: image-url("loading/loading-circle.png") 0 0 no-repeat
-    content: ""
+    @extend %content-empty
     @extend .position-absolute
-    right: 0
-    top: 0
+    @extend .right-0
+    @extend .top-0
 
 // Keyframes
 
