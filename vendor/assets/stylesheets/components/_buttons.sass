@@ -98,11 +98,10 @@
 
 .close
   @extend .ir
-  +background-svg("common/icon-close-x")
+  +background-svg("common/icon-close-x", 10px)
   background-color: transparent
   background-position: 50%
   background-repeat: no-repeat
-  +rem(background-size, 10px)
   @extend .border-0
   @extend %cursor-pointer
   +rem(height, 15px)
