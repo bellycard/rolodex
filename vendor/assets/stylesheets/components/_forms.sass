@@ -159,16 +159,19 @@ textarea
     &:not(:first-child):not(:last-child)
       border-radius: 0
 
-  .form-btn
+  .form-btn:last-child
     &:hover,
     &:focus,
     &:active
       z-index: 2
-
+  
     .btn
       border-bottom-left-radius: 0
       border-top-left-radius: 0
       +rem(margin-left, -1px)
+
+  .form-btn:not(:first-child):not(:last-child) .btn
+    border-radius: 0
 
 // Help blocks
 // ========================================
@@ -183,7 +186,8 @@ textarea
 .form-error
 
   &.form-control,
-  &.form-area
+  &.form-area,
+  &.dropdown-toggle
     border-color: $red
     z-index: 1
 

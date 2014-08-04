@@ -1,0 +1,64 @@
+// Dropdowns
+// ========================================
+
+.dropdown
+  @extend .display-inline-block
+  @extend .position-relative
+  
+.dropdown-toggle
+  @extend %color-black-offset
+  @extend .position-relative
+  +rem(padding-right, 34px)
+  text-align: left
+
+  .caret
+    @extend .position-absolute
+    +rem(right, 14px)
+    top: 50%
+    transform: translateY(-50%)
+
+.dropdown-toggle-solo
+  +rem(padding, 20px 26px 20px 14px)
+
+.dropdown-toggle-active
+  @extend %background-white
+  border-color: $blue
+
+// Menu
+
+.dropdown-menu
+  @extend .box-overlay
+  border-color: $blue
+  +rem(margin-top, $baseline-step * 2)
+  +rem(min-width, 140px)
+  @extend .position-absolute
+  right: 0
+  top: 100%
+  z-index: 3
+
+  .dropdown-right &
+    left: 0
+    right: auto
+
+.dropdown-menu-item
+  +rem(border-bottom, 1px solid $gray-light)
+  
+  &:last-child
+    border-bottom: 0
+
+  a
+    @extend %color-black-offset
+    @extend .display-block
+    +rem(padding, 10px 22px)
+
+    &:hover,
+    &:focus
+      @extend %color-blue
+
+// Within a form
+
+.form-row
+
+  .form-btn.dropdown,
+  .dropdown-toggle
+    @extend .grid-1-1
