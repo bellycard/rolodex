@@ -41,7 +41,7 @@
 
   &:before
     @extend %content-empty
-    +rem(height, 12px)
+    +rem(height, $baseline-step * 2)
     @extend .position-absolute
     +rem(width, 40px)
 
@@ -62,19 +62,21 @@
 .tooltip-top,
 .tooltip-top-left
   .tooltip-tip
-    +rem(bottom, 37px)
+    bottom: 100%
+    +rem(margin-bottom, $baseline-step * 2)
 
     &:before
-      +rem(bottom, -12px)
+      +rem(bottom, ($baseline-step * -2) - 1)
 
 .tooltip-bottom-right,
 .tooltip-bottom,
 .tooltip-bottom-left
   .tooltip-tip
-    +rem(top, 37px)
+    top: 100%
+    +rem(margin-top, $baseline-step * 2)
     
     &:before
-      +rem(top, -12px)
+      +rem(top, ($baseline-step * -2) - 1)
 
 .tooltip-top-right,
 .tooltip-bottom-right
