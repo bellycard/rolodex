@@ -1,10 +1,9 @@
-// Alerts
+// Tooltips
 // ========================================
 
 .tooltip
-  // TODO: Fix with proper icons
-  // +background-svg("tooltips/tooltip-bulb")
-  background-image: image-url("tooltips/tooltip-bulb.png")
+  +background-svg("tooltips/tooltip-bulb")
+  +rem(background-size, 26px)
   @extend %cursor-pointer
   @extend .display-inline-block
   +rem(height, 26px)
@@ -19,11 +18,11 @@
 // Tip
 
 .tooltip-tip,
-.tooltip-head,
+.tooltip-header,
 .tooltip-body
   @extend .display-inline-block
 
-.tooltip-head,
+.tooltip-header,
 .tooltip-body
   @extend .grid-1-1
 
@@ -47,7 +46,7 @@
     @extend .position-absolute
     +rem(width, 40px)
 
-.tooltip-head
+.tooltip-header
   +rem(border-bottom, 1px solid $gray-light)
   @extend .h-foxtrot
   +rem(padding, ($baseline-step + 3) 20px)
@@ -60,25 +59,28 @@
 
 // Positioning
 
-.tooltip-top-right .tooltip-tip,
-.tooltip-top .tooltip-tip,
-.tooltip-top-left .tooltip-tip
-  +rem(bottom, 37px)
+.tooltip-top-right,
+.tooltip-top,
+.tooltip-top-left
+  .tooltip-tip
+    +rem(bottom, 37px)
 
-  &:before
-    +rem(bottom, -12px)
+    &:before
+      +rem(bottom, -12px)
 
-.tooltip-bottom-right .tooltip-tip,
-.tooltip-bottom .tooltip-tip,
-.tooltip-bottom-left .tooltip-tip
-  +rem(top, 37px)
-  
-  &:before
-    +rem(top, -12px)
+.tooltip-bottom-right,
+.tooltip-bottom,
+.tooltip-bottom-left
+  .tooltip-tip
+    +rem(top, 37px)
+    
+    &:before
+      +rem(top, -12px)
 
-.tooltip-top-right .tooltip-tip:before,
-.tooltip-bottom-right .tooltip-tip:before
-  +rem(left, -1px)
+.tooltip-top-right,
+.tooltip-bottom-right
+  .tooltip-tip:before
+    +rem(left, -1px)
 
 .tooltip-top .tooltip-tip,
 .tooltip-top .tooltip-tip:before,
@@ -87,9 +89,10 @@
   margin-left: 50%
   transform: translateX(-50%)
 
-.tooltip-top-left .tooltip-tip,
-.tooltip-bottom-left .tooltip-tip
-  @extend .right-0
+.tooltip-top-left,
+.tooltip-bottom-left
+  .tooltip-tip
+    @extend .right-0
 
-  &:before
-    +rem(right, -1px)
+    &:before
+      +rem(right, -1px)
