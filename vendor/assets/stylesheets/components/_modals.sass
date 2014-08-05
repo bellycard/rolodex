@@ -3,7 +3,20 @@
 
 .modal
   background-color: rgba($slate-dark, .8)
+  @extend .bottom-0
+  @extend .left-0
+  opacity: 0
+  overflow-x: hidden
+  overflow-y: auto
   +rem(padding, 84px)
+  position: fixed
+  @extend .right-0
+  @extend .top-0
+  @extend %transition-all
+  z-index: 99
+
+.modal-fade
+  opacity: 1
 
 .modal-content
   @extend %background-white

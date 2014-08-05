@@ -1,4 +1,3 @@
-#= require 'rolodex_angular/template/modal/backdrop'
 #= require 'rolodex_angular/template/modal/window'
 
 angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
@@ -48,18 +47,6 @@ angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
 
     length: ->
       stack.length
-
-.directive("modalBackdrop", ["$timeout", ($timeout) ->
-  restrict: "EA"
-  replace: true
-  templateUrl: "rolodex_angular/template/modal/backdrop"
-  link: (scope, element, attrs) ->
-    scope.backdropClass = attrs.backdropClass or ""
-    scope.animate = false
-    $timeout ->
-      scope.animate = true
-      return
-])
 
 .directive("modalWindow", ["$modalStack", "$timeout", ($modalStack, $timeout) ->
   restrict: "EA"
