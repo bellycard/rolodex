@@ -4,7 +4,12 @@
 .dropdown
   @extend .display-inline-block
   @extend .position-relative
-  
+
+.open
+  .dropdown-menu
+    opacity: 1
+    pointer-events: auto
+
 .dropdown-toggle
   @extend %color-black-offset
   @extend .position-relative
@@ -32,7 +37,10 @@
   +rem(margin-top, $baseline-step * 2)
   +rem(min-width, 140px)
   @extend .position-absolute
+  opacity: 0
+  pointer-events: none
   right: 0
+  @extend %transition-all
   top: 100%
   z-index: 3
 
@@ -42,7 +50,7 @@
 
 .dropdown-menu-item
   +rem(border-bottom, 1px solid $gray-light)
-  
+
   &:last-child
     border-bottom: 0
 
