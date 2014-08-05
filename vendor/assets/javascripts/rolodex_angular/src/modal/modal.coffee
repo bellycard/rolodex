@@ -1,6 +1,14 @@
 #= require 'rolodex_angular/template/modal/window'
 
-angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
+# Because of the flexibility of UI-Bootstraps modal this is a copy of their source converted to CoffeeScript for
+# maintainability. The module namespace has been changed to suite Rolodex and the template has been adjusted to
+# work with the Rolodex styles. The rest remains true to the Bootstrap source including using their transition
+# animation library and not ngAnimate.
+
+angular.module("rolodex.modal", ["rolodex.transition", "rolodexTemplates"])
+
+# A helper, internal data structure that acts as a map but also allows getting / removing
+# elements in the LIFO order
 .factory "$$stackedMap", ->
   createNew: ->
     stack = []
@@ -9,15 +17,12 @@ angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
         key: key
         value: value
 
-      return
-
     get: (key) ->
       i = 0
 
       while i < stack.length
         return stack[i]  if key is stack[i].key
         i++
-      return
 
     keys: ->
       keys = []
@@ -48,33 +53,41 @@ angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
     length: ->
       stack.length
 
-.directive("modalWindow", ["$modalStack", "$timeout", ($modalStack, $timeout) ->
-  restrict: "EA"
-  scope:
-    index: "@"
-    animate: "="
+.directive("modalWindow", [
+  "$modalStack"
+  "$timeout"
+  ($modalStack, $timeout) ->
 
-  replace: true
-  transclude: true
-  templateUrl: (tElement, tAttrs) ->
-    tAttrs.templateUrl or "rolodex_angular/template/modal/window"
+    restrict: "EA"
+    scope:
+      index: "@"
+      animate: "="
 
-  link: (scope, element, attrs) ->
-    element.addClass attrs.windowClass or ""
-    scope.size = attrs.size
-    $timeout ->
-      scope.animate = true
-      element[0].focus()  unless element[0].querySelectorAll("[autofocus]").length
-      return
+    replace: true
+    transclude: true
+    templateUrl: (tElement, tAttrs) ->
+      tAttrs.templateUrl or "rolodex_angular/template/modal/window"
 
-    scope.close = (evt) ->
-      modal = $modalStack.getTop()
-      if modal and modal.value.backdrop and modal.value.backdrop isnt "static" and (evt.target is evt.currentTarget)
-        evt.preventDefault()
-        evt.stopPropagation()
-        $modalStack.dismiss modal.key, "backdrop click"
-      return
+    link: (scope, element, attrs) ->
+      element.addClass attrs.windowClass or ""
+      scope.size = attrs.size
+      $timeout ->
+        scope.animate = true
+        element[0].focus()  unless element[0].querySelectorAll("[autofocus]").length
+        return
 
+      scope.close = (evt) ->
+        modal = $modalStack.getTop()
+        # Auto-focusing of a freshly-opened modal element causes any child elements
+        # with the autofocus attribute to loose focus. This is an issue on touch
+        # based devices which will show and then hide the onscreen keyboard.
+        # Attempts to refocus the autofocus element via JavaScript will not reopen
+        # the onscreen keyboard. Fixed by updated the focusing logic to only autofocus
+        # the modal element if the modal does not contain an autofocus element.
+        if modal and modal.value.backdrop and modal.value.backdrop isnt "static" and (evt.target is evt.currentTarget)
+          evt.preventDefault()
+          evt.stopPropagation()
+          $modalStack.dismiss modal.key, "backdrop click"
 ])
 
 .directive "modalTransclude", ->
@@ -83,7 +96,13 @@ angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
       $element.empty()
       $element.append clone
 
-.factory("$modalStack", ["$transition", "$timeout", "$document", "$compile", "$rootScope", "$$stackedMap"
+.factory("$modalStack", [
+  "$transition"
+  "$timeout"
+  "$document"
+  "$compile"
+  "$rootScope"
+  "$$stackedMap"
   ($transition, $timeout, $document, $compile, $rootScope, $$stackedMap) ->
     backdropIndex = ->
       topBackdropIndex = -1
@@ -94,7 +113,6 @@ angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
         topBackdropIndex = i  if openedWindows.get(opened[i]).value.backdrop
         i++
       topBackdropIndex
-
     removeModalWindow = (modalInstance) ->
       body = $document.find("body").eq(0)
       modalWindow = openedWindows.get(modalInstance).value
@@ -103,45 +121,48 @@ angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
         modalWindow.modalScope.$destroy()
         body.toggleClass OPENED_MODAL_CLASS, openedWindows.length() > 0
         checkRemoveBackdrop()
+        return
 
+      return
     checkRemoveBackdrop = ->
       if backdropDomEl and backdropIndex() is -1
         backdropScopeRef = backdropScope
         removeAfterAnimate backdropDomEl, backdropScope, 150, ->
           backdropScopeRef.$destroy()
           backdropScopeRef = null
+          return
 
-        backdropDomEl = undefined
-        backdropScope = undefined
-
+        backdropDomEl = `undefined`
+        backdropScope = `undefined`
+      return
     removeAfterAnimate = (domEl, scope, emulateTime, done) ->
       afterAnimating = ->
-        return if afterAnimating.done
+        return  if afterAnimating.done
         afterAnimating.done = true
         domEl.remove()
-        done() if done
-
+        done()  if done
+        return
       scope.animate = false
       transitionEndEventName = $transition.transitionEndEventName
-
       if transitionEndEventName
         timeout = $timeout(afterAnimating, emulateTime)
         domEl.bind transitionEndEventName, ->
           $timeout.cancel timeout
           afterAnimating()
           scope.$apply()
+          return
 
       else
         $timeout afterAnimating
-
+      return
     OPENED_MODAL_CLASS = "modal-open"
     backdropDomEl = undefined
     backdropScope = undefined
     openedWindows = $$stackedMap.createNew()
     $modalStack = {}
-
     $rootScope.$watch backdropIndex, (newBackdropIndex) ->
       backdropScope.index = newBackdropIndex  if backdropScope
+      return
 
     $document.bind "keydown", (evt) ->
       modal = undefined
@@ -151,6 +172,9 @@ angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
           evt.preventDefault()
           $rootScope.$apply ->
             $modalStack.dismiss modal.key, "escape key press"
+            return
+
+      return
 
     $modalStack.open = (modalInstance, modal) ->
       openedWindows.add modalInstance,
@@ -161,7 +185,6 @@ angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
 
       body = $document.find("body").eq(0)
       currBackdropIndex = backdropIndex()
-
       if currBackdropIndex >= 0 and not backdropDomEl
         backdropScope = $rootScope.$new(true)
         backdropScope.index = currBackdropIndex
@@ -169,45 +192,45 @@ angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
         angularBackgroundDomEl.attr "backdrop-class", modal.backdropClass
         backdropDomEl = $compile(angularBackgroundDomEl)(backdropScope)
         body.append backdropDomEl
-
       angularDomEl = angular.element("<div modal-window></div>")
-      angularDomEl.attr
+      angularDomEl.attr(
         "template-url": modal.windowTemplateUrl
         "window-class": modal.windowClass
         size: modal.size
         index: openedWindows.length() - 1
         animate: "animate"
-      .html modal.content
-
+      ).html modal.content
       modalDomEl = $compile(angularDomEl)(modal.scope)
       openedWindows.top().value.modalDomEl = modalDomEl
       body.append modalDomEl
       body.addClass OPENED_MODAL_CLASS
+      return
 
     $modalStack.close = (modalInstance, result) ->
       modalWindow = openedWindows.get(modalInstance)
-
       if modalWindow
         modalWindow.value.deferred.resolve result
         removeModalWindow modalInstance
+      return
 
     $modalStack.dismiss = (modalInstance, reason) ->
       modalWindow = openedWindows.get(modalInstance)
-
       if modalWindow
         modalWindow.value.deferred.reject reason
         removeModalWindow modalInstance
+      return
 
     $modalStack.dismissAll = (reason) ->
       topModal = @getTop()
       while topModal
         @dismiss topModal.key, reason
         topModal = @getTop()
+      return
 
     $modalStack.getTop = ->
       openedWindows.top()
 
-    $modalStack
+    return $modalStack
 ])
 
 .provider "$modal", ->
@@ -216,7 +239,14 @@ angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
       backdrop: true #can be also false or 'static'
       keyboard: true
 
-    $get: ["$injector", "$rootScope", "$q", "$http", "$templateCache", "$controller", "$modalStack"
+    $get: [
+      "$injector"
+      "$rootScope"
+      "$q"
+      "$http"
+      "$templateCache"
+      "$controller"
+      "$modalStack"
       ($injector, $rootScope, $q, $http, $templateCache, $controller, $modalStack) ->
         getTemplatePromise = (options) ->
           (if options.template then $q.when(options.template) else $http.get((if angular.isFunction(options.templateUrl) then (options.templateUrl)() else options.templateUrl),
@@ -224,16 +254,14 @@ angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
           ).then((result) ->
             result.data
           ))
-
         getResolvePromises = (resolves) ->
           promisesArr = []
           angular.forEach resolves, (value) ->
             promisesArr.push $q.when($injector.invoke(value))  if angular.isFunction(value) or angular.isArray(value)
+            return
 
           promisesArr
-
         $modal = {}
-
         $modal.open = (modalOptions) ->
           modalResultDeferred = $q.defer()
           modalOpenedDeferred = $q.defer()
@@ -244,9 +272,12 @@ angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
             opened: modalOpenedDeferred.promise
             close: (result) ->
               $modalStack.close modalInstance, result
+              return
 
             dismiss: (reason) ->
               $modalStack.dismiss modalInstance, reason
+              return
+
 
           #merge and clean up options
           modalOptions = angular.extend({}, $modalProvider.options, modalOptions)
@@ -255,8 +286,7 @@ angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
           #verify options
           throw new Error("One of template or templateUrl options is required.")  if not modalOptions.template and not modalOptions.templateUrl
           templateAndResolvePromise = $q.all([getTemplatePromise(modalOptions)].concat(getResolvePromises(modalOptions.resolve)))
-
-          templateAndResolvePromise.then resolveSuccess = (tplAndVars) ->
+          templateAndResolvePromise.then (resolveSuccess = (tplAndVars) ->
             modalScope = (modalOptions.scope or $rootScope).$new()
             modalScope.$close = modalInstance.close
             modalScope.$dismiss = modalInstance.dismiss
@@ -270,10 +300,10 @@ angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
               ctrlLocals.$modalInstance = modalInstance
               angular.forEach modalOptions.resolve, (value, key) ->
                 ctrlLocals[key] = tplAndVars[resolveIter++]
+                return
 
               ctrlInstance = $controller(modalOptions.controller, ctrlLocals)
               modalScope[modalOptions.controllerAs] = ctrlInstance  if modalOptions.controller
-
             $modalStack.open modalInstance,
               scope: modalScope
               deferred: modalResultDeferred
@@ -285,17 +315,17 @@ angular.module("rolodex.modal", ['rolodex.transition', 'rolodexTemplates'])
               windowTemplateUrl: modalOptions.windowTemplateUrl
               size: modalOptions.size
 
-          , (reason) ->
+          ), resolveError = (reason) ->
             modalResultDeferred.reject reason
 
-          templateAndResolvePromise.then ->
+          templateAndResolvePromise.then (->
             modalOpenedDeferred.resolve true
-          , ->
+          ), ->
             modalOpenedDeferred.reject false
 
           modalInstance
 
-        $modal
+        return $modal
     ]
 
   $modalProvider
