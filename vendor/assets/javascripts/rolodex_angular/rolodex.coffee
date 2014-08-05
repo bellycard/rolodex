@@ -1,6 +1,6 @@
 # Initialize primary namespace
 angular.module('rolodex', [
+  'rolodexTemplates'
   'rolodex.modal'
+  'rolodex.transition'
 ])
-
-#= require 'angular/modals/modals.coffee'
