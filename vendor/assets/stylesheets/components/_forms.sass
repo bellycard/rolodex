@@ -159,16 +159,19 @@ textarea
     &:not(:first-child):not(:last-child)
       border-radius: 0
 
-  .form-btn
+  .form-btn:last-child
     &:hover,
     &:focus,
     &:active
       z-index: 2
-
+  
     .btn
       border-bottom-left-radius: 0
       border-top-left-radius: 0
       +rem(margin-left, -1px)
+
+  .form-btn:not(:first-child):not(:last-child) .btn
+    border-radius: 0
 
 // Help blocks
 // ========================================
@@ -177,15 +180,52 @@ textarea
   @extend .form-subtle
   +rem(margin-top, $baseline-step)
 
-// Error blocks
+// Validation
 // ========================================
+
+// Errors
 
 .form-error
 
   &.form-control,
-  &.form-area
+  &.form-area,
+  &.dropdown-toggle
     border-color: $red
     z-index: 1
 
   &.form-choice
     @extend %color-red
+
+// Icons
+
+.form-validating,
+.form-valid,
+.form-invalid
+  +rem(background-position, right 14px center)
+  background-repeat: no-repeat
+  +rem(background-size, 16px)
+  +rem(padding-right, 44px)
+
+.form-validating
+  background-image: image-url("forms/icon-validating.gif")
+
+.form-valid
+  +background-svg("forms/icon-valid")
+
+.form-invalid
+  +background-svg("forms/icon-invalid")
+
+// Shake
+
+.form-submit-invalid
+  animation: shake 1s ease both
+  
+@keyframes shake
+  0%, 100%
+    transform: translateX(0)
+
+  10%, 30%, 50%, 70%, 90%
+    transform: translateX(-5px)
+
+  20%, 40%, 60%, 80%
+    transform: translateX(5px)

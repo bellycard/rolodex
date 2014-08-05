@@ -1,6 +1,10 @@
 // SVG fallbacks
 // ========================================
 
-=background-svg($file-name)
+=background-svg($file-name, $size...)
+
   background-image: image-url("#{$file-name}.png")
   background-image: image-url("#{$file-name}.svg")
+
+  @if length($size) > 0
+    +rem(background-size, $size)

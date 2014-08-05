@@ -12,7 +12,7 @@
   @extend %line-height-base
   @extend .margin-0
   outline: 0
-  +rem(padding, 8px 22px)
+  +rem(padding, 8px 14px)
   @extend %text-center
   @extend %text-decoration-none
   @extend %transition-all
@@ -54,8 +54,7 @@
       border-color: $gray-light
       @extend %color-gray-dark
 
-    &:hover,
-    &:focus
+    &:hover
       background-color: $bg-hover
 
     &:active
@@ -66,7 +65,7 @@
 
 .btn-alt,
 .btn-overlay
-  +rem(padding, 7px 21px)
+  +rem(padding, 7px 13px)
 
   &.btn-large
     +rem(padding, 18px 41px 20px 41px)
@@ -98,11 +97,10 @@
 
 .close
   @extend .ir
-  +background-svg("common/icon-close-x")
+  +background-svg("common/icon-close-x", 10px)
   background-color: transparent
   background-position: 50%
   background-repeat: no-repeat
-  +rem(background-size, 10px)
   @extend .border-0
   @extend %cursor-pointer
   +rem(height, 15px)
@@ -112,9 +110,23 @@
   +rem(right, 15px)
   +rem(top, 13px)
   @extend %transition-all
-  @extend %vertical-align-middle
   +rem(width, 15px)
 
   &:hover,
   &:focus
     opacity: .6
+
+// Caret
+// ========================================
+
+.caret
+  +background-svg("common/icon-caret", 12px 14px)
+  background-repeat: no-repeat
+  @extend .display-inline-block
+  +rem(height, 7px)
+  +rem(width, 12px)
+  
+.dropdown-toggle:hover,
+.dropdown-toggle-active
+  .caret
+    +rem(background-position, 0 -7px)
