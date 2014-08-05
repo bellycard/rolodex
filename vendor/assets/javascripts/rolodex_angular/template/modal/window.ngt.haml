@@ -1,3 +1,2 @@
-.modal.fade{"ng-class" => "{in: animate}", "ng-click" => "close($event)", "ng-style" => "{'z-index': 1050 + index * 10, display: 'block'}", :role => "dialog", :tabindex => "-1"}
-  .modal-dialog{"ng-class" => "{'modal-sm': size === 'sm', 'modal-lg': size === 'lg'}"}
-    .modal-content{"modal-transclude" => ""}
+.modal(ng-class="{'modal-fade': animate}" ng-click="close($event)" role="dialog" tabindex="-1")
+  .modal-content(modal-transclude="")
