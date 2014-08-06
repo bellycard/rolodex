@@ -68,7 +68,7 @@ textarea
 .form-area
   @extend %background-white
   background-image: none
-  +rem(border, 1px solid $gray-light)
+  @extend %border-base
   @extend %border-radius-base
   @extend %color-black
   @extend .display-block
@@ -135,7 +135,7 @@ textarea
 
   .form-label
     @extend %background-white-offset
-    +rem(border, 1px solid $gray-light)
+    @extend %border-base
     border-right: 0
     +rem(border-radius, $border-radius-base 0 0 $border-radius-base)
     @extend %color-gray-dark

@@ -8,11 +8,29 @@
   font: 0/0 a
   text-shadow: none
 
+// Borders
+
+%border-gray-light
+  border-color: $gray-light
+
+%border-1
+  +rem(border-width, 1px)
+
+%border-solid
+  border-style: solid
+
+%border-base
+  @extend %border-gray-light
+  @extend %border-1
+  @extend %border-solid
+
 // Box overlay
 
 .box-overlay
   @extend %background-white
-  +rem(border, 1px solid $gray-light)
+  border-color: $blue
+  @extend %border-1
+  @extend %border-solid
   @extend %border-radius-base
   box-shadow: 0 0 0 4px rgba($black, .06)
 
