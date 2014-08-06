@@ -2,6 +2,7 @@
 // ========================================
 
 // Functionality
+// ========================================
 
 [data-dropdown]
   @extend .display-inline-block
@@ -34,6 +35,7 @@
     pointer-events: auto
 
 // Dropdown toggle
+// ========================================
 
 .dropdown-toggle
   @extend %background-white
@@ -54,6 +56,7 @@
   +rem(padding, 20px 26px 20px 14px)
 
 // Menu
+// ========================================
 
 .dropdown-menu
   @extend .box-overlay
@@ -82,15 +85,16 @@
     &:focus
       @extend %color-blue
 
-// Within a form
+// Within a form row
+// ========================================
 
 .form-row
 
   [data-dropdown]
     @extend .grid-1-1
     
-    .form-control,
-    .form-area
+    .form-control:first-child,
+    .form-area:first-child
       border-bottom-left-radius: 0
       border-top-left-radius: 0
 
