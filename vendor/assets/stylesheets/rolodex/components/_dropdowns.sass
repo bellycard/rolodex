@@ -1,0 +1,104 @@
+// Dropdowns
+// ========================================
+
+// Functionality
+// ========================================
+
+[data-dropdown]
+  @extend .display-inline-block
+  @extend .position-relative
+  @extend %vertical-align-middle
+
+  &:after
+    @extend .caret
+    @extend %content-empty
+    @extend %cursor-pointer
+    @extend .position-absolute
+    +rem(right, $grid-gutter-half)
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 3
+
+[data-dropdown]:hover:after,
+[data-dropdown-open]:after
+  +rem(background-position, 0 -7px)
+  
+[data-dropdown-content]
+  opacity: 0
+  pointer-events: none
+  @extend .position-absolute
+  @extend %transition-all
+  z-index: 4
+
+  [data-dropdown-open] &
+    opacity: 1
+    pointer-events: auto
+
+// Dropdown toggle
+// ========================================
+
+.dropdown-toggle
+  @extend %background-white
+  +rem(border, 1px solid $gray-light)
+  @extend %border-radius-base
+  @extend %color-black-offset
+  @extend %cursor-pointer
+  +rem(padding, ($baseline-step + 2) 36px ($baseline-step + 2) ($grid-gutter-half - 1))
+  text-align: left
+
+  &:focus
+    outline: 0
+
+  [data-dropdown-open] &
+    border-color: $blue
+
+.dropdown-toggle-solo
+  +rem(padding, 20px 26px 20px 14px)
+
+// Menu
+// ========================================
+
+.dropdown-menu
+  @extend .box-overlay
+  border-color: $blue
+  +rem(margin-top, $baseline-step * 2)
+  +rem(min-width, 140px)
+  right: 0
+  top: 100%
+
+  .dropdown-right &
+    left: 0
+    right: auto
+
+.dropdown-menu-item
+  +rem(border-bottom, 1px solid $gray-light)
+
+  &:last-child
+    border-bottom: 0
+
+  a
+    @extend %color-black-offset
+    @extend .display-block
+    +rem(padding, 10px 22px)
+
+    &:hover,
+    &:focus
+      @extend %color-blue
+
+// Within a form row
+// ========================================
+
+.form-row
+
+  [data-dropdown]
+    @extend .grid-1-1
+    
+    .form-control:first-child,
+    .form-area:first-child
+      border-bottom-left-radius: 0
+      border-top-left-radius: 0
+
+    &:not(:first-child):not(:last-child)
+      .form-control,
+      .form-area
+        border-radius: 0

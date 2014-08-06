@@ -145,9 +145,9 @@ textarea
       @extend %color-gray
       @extend %cursor-not-allowed
 
-  .form-control,
-  .form-area
-    
+  > .form-control,
+  > .form-area,
+
     &:first-child
       border-bottom-right-radius: 0
       border-top-right-radius: 0
@@ -170,9 +170,6 @@ textarea
       border-top-left-radius: 0
       +rem(margin-left, -1px)
 
-  .form-btn:not(:first-child):not(:last-child) .btn
-    border-radius: 0
-
 // Help blocks
 // ========================================
 
@@ -188,8 +185,7 @@ textarea
 .form-error
 
   &.form-control,
-  &.form-area,
-  &.dropdown-toggle
+  &.form-area
     border-color: $red
     z-index: 1
 
