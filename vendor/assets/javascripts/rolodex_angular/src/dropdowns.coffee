@@ -1,6 +1,6 @@
-angular.module('rolodex.dropDown', [])
+angular.module('rolodex.dropdown', [])
 
-.constant('dropdownConfig', openClass: 'open')
+.constant('dropdownConfig', dropDownOpen: 'data-dropdown-open')
 
 .service('dropdownService', [
   '$document'
@@ -44,7 +44,7 @@ angular.module('rolodex.dropDown', [])
   ($scope, $attrs, $parse, dropdownConfig, dropdownService, $animate) ->
     self = this
     scope = $scope.$new()
-    openClass = dropdownConfig.openClass
+    dropDownOpen = dropdownConfig.dropDownOpen
     getIsOpen = undefined
     setIsOpen = angular.noop
     toggleInvoker = (if $attrs.onToggle then $parse($attrs.onToggle) else angular.noop)
@@ -71,11 +71,12 @@ angular.module('rolodex.dropDown', [])
       return
 
     scope.$watch 'isOpen', (isOpen, wasOpen) ->
-      $animate[(if isOpen then 'addClass' else 'removeClass')] self.$element, openClass
       if isOpen
+        self.$element.attr(dropDownOpen, '')
         scope.focusToggleElement()
         dropdownService.open scope
       else
+        self.$element.removeAttr(dropDownOpen)
         dropdownService.close scope
       setIsOpen $scope, isOpen
       if angular.isDefined(isOpen) and isOpen isnt wasOpen
