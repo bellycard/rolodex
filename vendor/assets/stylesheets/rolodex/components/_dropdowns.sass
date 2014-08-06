@@ -5,8 +5,24 @@
 // ========================================
 
 [data-dropdown]
-  @extend .display-inline-block
   @extend .position-relative
+  
+[data-dropdown-content]
+  opacity: 0
+  pointer-events: none
+  @extend .position-absolute
+  @extend %transition-all
+  z-index: 4
+
+  [data-dropdown-open] &
+    opacity: 1
+    pointer-events: auto
+
+// Dropdown
+// ========================================
+
+.dropdown
+  @extend .display-inline-block
   @extend %vertical-align-middle
 
   &:after
@@ -19,20 +35,10 @@
     transform: translateY(-50%)
     z-index: 3
 
-[data-dropdown]:hover:after,
-[data-dropdown-open]:after
+.dropdown:hover:after,
+.dropdown[data-dropdown-open]:after,
+[data-dropdown-open] .dropdown:after
   +rem(background-position, 0 -7px)
-  
-[data-dropdown-content]
-  opacity: 0
-  pointer-events: none
-  @extend .position-absolute
-  @extend %transition-all
-  z-index: 4
-
-  [data-dropdown-open] &
-    opacity: 1
-    pointer-events: auto
 
 // Dropdown toggle
 // ========================================
