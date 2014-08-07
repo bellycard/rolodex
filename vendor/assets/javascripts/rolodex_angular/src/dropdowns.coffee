@@ -22,7 +22,12 @@ angular.module('rolodex.dropdown', [])
 
     closeDropdown = (evt) ->
       toggleElement = openScope.getToggleElement()
-      return  if evt and toggleElement and toggleElement[0].contains(evt.target)
+
+      if evt and toggleElement?[0].contains(evt.target) or
+      toggleElement?[0].nodeName.toLowerCase() is 'input' or
+      evt.target.nodeName.toLowerCase() is 'input' # Don't close if the drop down has an input interaction
+        return
+
       openScope.$apply ->
         openScope.isOpen = false
 
@@ -101,7 +106,6 @@ angular.module('rolodex.dropdown', [])
 .directive 'dropdownToggle', ->
   require: '?^dropdown'
   link: (scope, element, attrs, dropdownCtrl) ->
-    return  unless dropdownCtrl
     dropdownCtrl.toggleElement = element
 
     toggleDropdown = (event) ->
