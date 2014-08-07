@@ -106,6 +106,7 @@ angular.module('rolodex.dropdown', [])
 .directive 'dropdownToggle', ->
   require: '?^dropdown'
   link: (scope, element, attrs, dropdownCtrl) ->
+    return unless dropdownCtrl
     dropdownCtrl.toggleElement = element
 
     toggleDropdown = (event) ->
