@@ -12,6 +12,11 @@ $baseline-base:    $baseline-step * 4; // 24px
 $baseline-taller:  $baseline-step * 5; // 30px
 $baseline-tallest: $baseline-step * 7; // 42px
 
+// Border radius
+
+$border-radius-base: 6px;
+$border-radius-mini: 4px;
+
 // Arrays
 // ========================================
 
@@ -33,7 +38,14 @@ $baselines: (
   tallest: $baseline-tallest
 );
 
-// Surgical classes
+// Border radius map
+
+$radii: (
+  base:   $border-radius-base,
+  mini:   $border-radius-mini
+);
+
+// Surgical classes map
 
 $surgicals: (
   top: $baseline-base,
