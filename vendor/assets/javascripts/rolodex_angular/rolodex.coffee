@@ -1,6 +1,6 @@
 # Initialize primary namespace
 angular.module('rolodex', [
-  'rolodexTemplates'
+  'templates'
   'rolodex.buttons'
   'rolodex.dropdown'
   'rolodex.modal'
