@@ -24,6 +24,13 @@
   @extend %border-1
   @extend %border-solid
 
+@each $radius, $i in $radii
+  %border-radius-#{$radius}
+    +rem(border-radius, $i)
+
+%border-radius-circle
+  border-radius: 50%
+  
 // Box overlay
 
 .box-overlay
