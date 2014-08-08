@@ -97,6 +97,12 @@ textarea
   &::-moz-placeholder
     opacity: 1
 
+  &[type='search']
+    +background-svg("common/icon-search", 15px)
+    background-position: 14px 50%
+    background-repeat: no-repeat
+    +rem(padding-left, 38px)
+
 // Checkboxes and radio buttons
 
 .form-choice
