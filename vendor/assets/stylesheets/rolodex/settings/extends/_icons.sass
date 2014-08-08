@@ -1,0 +1,54 @@
+// Icons
+// ========================================
+
+// Close
+// ========================================
+
+.i-close
+  @extend .ir
+  +background-svg("common/icon-close-x", 10px)
+  background-color: transparent
+  background-position: 50%
+  background-repeat: no-repeat
+  @extend .border-0
+  @extend %cursor-pointer
+  +rem(height, 15px)
+  opacity: .4
+  outline: 0
+  @extend .position-absolute
+  +rem(right, 15px)
+  +rem(top, 13px)
+  @extend %transition-all
+  +rem(width, 15px)
+
+  &:hover,
+  &:focus
+    opacity: .6
+
+// Caret
+// ========================================
+
+.i-caret,
+.i-caret-white
+  @extend .ir
+  +background-svg("common/icon-caret", 12px 23px)
+  background-repeat: no-repeat
+  @extend .display-inline-block
+  +rem(height, 7px)
+  @extend %vertical-align-middle
+  +rem(width, 12px)
+
+.i-caret-white
+  +rem(background-position, 0 -16px)
+
+// Gear
+// ========================================
+
+.i-gear
+  @extend .ir
+  +background-svg("common/icon-gear", 18px 18px)
+  background-repeat: no-repeat
+  @extend .display-inline-block
+  +rem(height, 18px)
+  @extend %vertical-align-middle
+  +rem(width, 18px)
