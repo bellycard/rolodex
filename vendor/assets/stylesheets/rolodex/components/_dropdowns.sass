@@ -21,24 +21,25 @@
 // Dropdown
 // ========================================
 
-.dropdown
+.dropdown,
+.dropdown-alt
   @extend .display-inline-block
   @extend %vertical-align-middle
 
-  &:after
-    @extend .caret
-    @extend %content-empty
-    @extend %cursor-pointer
-    @extend .position-absolute
-    +rem(right, $grid-gutter-half)
-    top: 50%
-    transform: translateY(-50%)
-    z-index: 3
+.dropdown:after
+  @extend .i-caret
+  @extend %content-empty
+  @extend %cursor-pointer
+  @extend .position-absolute
+  +rem(right, $grid-gutter-half)
+  top: 50%
+  transform: translateY(-50%)
+  z-index: 3
 
 .dropdown:hover:after,
 .dropdown[data-dropdown-open]:after,
 [data-dropdown-open] .dropdown:after
-  +rem(background-position, 0 -7px)
+  +rem(background-position, 0 -8px)
 
 // Dropdown toggle
 // ========================================
