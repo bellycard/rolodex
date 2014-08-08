@@ -37,6 +37,9 @@
       @extend %background-#{$bg}-dark
       +background-svg("alerts/icon-alert-#{$kind}")
 
+      @if $kind == "default"
+        +background-svg("alerts/icon-alert-warning")
+
 // Inline alerts
 // ========================================
 
