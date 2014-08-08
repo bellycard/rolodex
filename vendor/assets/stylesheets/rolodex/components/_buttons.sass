@@ -95,37 +95,3 @@
 
   &:active
     background-color: rgba($black, .7)
-
-// Close
-// ========================================
-
-.close
-  @extend .ir
-  +background-svg("common/icon-close-x", 10px)
-  background-color: transparent
-  background-position: 50%
-  background-repeat: no-repeat
-  @extend .border-0
-  @extend %cursor-pointer
-  +rem(height, 15px)
-  opacity: .4
-  outline: 0
-  @extend .position-absolute
-  +rem(right, 15px)
-  +rem(top, 13px)
-  @extend %transition-all
-  +rem(width, 15px)
-
-  &:hover,
-  &:focus
-    opacity: .6
-
-// Caret
-// ========================================
-
-.caret
-  +background-svg("common/icon-caret", 12px 14px)
-  background-repeat: no-repeat
-  @extend .display-inline-block
-  +rem(height, 7px)
-  +rem(width, 12px)

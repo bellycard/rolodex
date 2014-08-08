@@ -1,6 +1,7 @@
 #= require './rolodex_angular/src/transition'
 
 #= require './rolodex_angular/src/accordion'
+#= require './rolodex_angular/src/alert'
 #= require './rolodex_angular/src/buttons'
 #= require './rolodex_angular/src/collapse'
 #= require './rolodex_angular/src/dropdown'
