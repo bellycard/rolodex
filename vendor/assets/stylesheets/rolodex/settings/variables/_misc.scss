@@ -1,11 +1,6 @@
 // Misc
 // ========================================
 
-// Border radius
-
-$border-radius-base: 6px;
-$border-radius-mini: 4px;
-
 // Transition
 
 $transition-property-all: all;
@@ -17,13 +12,3 @@ $transition-all: $transition-property-all $transition-timing $transition-functio
 // Cursors
 
 $cursors: default, pointer, help, not-allowed;
-
-// Maps
-// ========================================
-
-// Border radius map
-
-$radii: (
-  base: $border-radius-base,
-  mini: $border-radius-mini
-);

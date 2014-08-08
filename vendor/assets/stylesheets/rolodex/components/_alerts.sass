@@ -37,13 +37,16 @@
       @extend %background-#{$bg}-dark
       +background-svg("alerts/icon-alert-#{$kind}")
 
+      @if $kind == "default"
+        +background-svg("alerts/icon-alert-warning")
+
 // Inline alerts
 // ========================================
 
 .alert-inline
   @extend %border-radius-base
-  border-style: solid
-  +rem(border-width, 1px)
+  @extend %border-solid
+  @extend %border-1
   @extend %color-black-offset
   @extend .display-inline-block
   +rem(padding, ($baseline-step + 2) 14px)

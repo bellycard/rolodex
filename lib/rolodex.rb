@@ -9,7 +9,7 @@ module Rolodex
     require "rolodex/sprockets"
 
     Angular::Html2js.configure do |config|
-      config.module_name = 'rolodexTemplates'
+      config.module_name = 'templates'
       config.init_sprockets
     end
 

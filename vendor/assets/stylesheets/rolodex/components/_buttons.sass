@@ -2,7 +2,9 @@
 // ========================================
 
 .btn
-  border: 1px solid transparent
+  @extend %border-solid
+  @extend %border-1
+  border-color: transparent
   @extend %border-radius-base
   @extend %color-white
   @extend %cursor-pointer
@@ -76,13 +78,15 @@
 // Alternate
 
 .btn-alt
-  border: 2px solid $white
+  border-color: $white
+  +rem(border-width, 2px)
 
 // Overlay
 
 .btn-overlay
   background-color: rgba($black, .3)
-  border: 2px solid rgba($white, .5)
+  border-color: rgba($white, .5)
+  +rem(border-width, 2px)
   @extend %color-white
 
   &:hover,
@@ -125,8 +129,3 @@
   @extend .display-inline-block
   +rem(height, 7px)
   +rem(width, 12px)
-  
-.dropdown-toggle:hover,
-.dropdown-toggle-active
-  .caret
-    +rem(background-position, 0 -7px)

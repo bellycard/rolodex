@@ -1,0 +1,21 @@
+// Labels
+// ========================================
+
+.label
+  @extend %border-radius-mini
+  @extend %color-white
+  font-weight: 500
+  +rem(padding, 4px 8px 5px 8px)
+  @extend .s-hotel
+  text-transform: uppercase
+  white-space: nowrap
+
+// Backgrounds
+
+@each $label in $labels
+  
+  $kind: nth($label, 1)
+  $bg:   nth($label, 2)
+  
+  .label-#{$kind}
+    @extend %background-#{$bg}

@@ -4,7 +4,7 @@
 // Base
 
 html
-  @extend %color-black
+  @extend %color-black-offset
   @extend %font-family-open-sans
   font-size: 87.5%
   -ms-text-size-adjust: 100%
@@ -56,6 +56,11 @@ pre
   @extend .margin-bottom
   white-space: pre-wrap
 
+// Address
+
+address
+  font-style: normal
+
 // Quotes
 
 q
@@ -64,7 +69,7 @@ q
 // Small
 
 small
-  font-size: 80%
+  @extend .s-golf
 
 // Sub & sup
 
