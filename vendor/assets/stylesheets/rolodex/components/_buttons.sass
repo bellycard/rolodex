@@ -21,6 +21,10 @@
   @extend %vertical-align-middle
   white-space: nowrap
 
+  &:hover,
+  &:active
+    @extend %color-white
+
   &[disabled],
   &[disabled]:hover,
   &[disabled]:focus,
@@ -61,6 +65,10 @@
 
     &:active
       background-color: $bg-active
+
+.btn-boring:hover,
+.btn-boring:active
+  @extend %color-gray-dark
 
 // Alternate & Overlay
 // ========================================
