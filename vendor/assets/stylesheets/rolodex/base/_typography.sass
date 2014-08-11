@@ -63,6 +63,9 @@ address
 
 // Quotes
 
+blockquote
+  @extend .margin-0
+
 q
   quotes: "\201C" "\201D" "\2018" "\2019"
 
@@ -90,6 +93,7 @@ sub
 
 a
   background: transparent
+  @extend %color-blue
   @extend %text-decoration-none
   @extend %transition-all
 
@@ -99,3 +103,4 @@ a
   &:active,
   &:hover
     outline: 0
+    @extend %color-blue-dark
