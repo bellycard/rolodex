@@ -75,7 +75,7 @@ textarea
   +rem(padding, ($baseline-step + 2) ($grid-gutter-half - 1))
   @extend .position-relative
   @extend .grid-1-1
-  @extend %transition-all
+  transition: border .15s ease, background-image .15s ease
 
   &:focus
     border-color: $blue
@@ -214,8 +214,10 @@ textarea
 .form-valid
   +background-svg("forms/icon-valid")
 
-.form-invalid
+.form-invalid,
+.form-invalid:focus
   +background-svg("forms/icon-invalid")
+  border-color: $red
 
 // Shake
 
