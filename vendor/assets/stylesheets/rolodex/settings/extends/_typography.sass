@@ -54,7 +54,13 @@
 @each $line-height, $i in $baselines
   %line-height-#{$line-height}
     +rem(line-height, $i)
-    
+
+// Colors
+
+@each $color, $i in $text-colors
+  .text-#{$i}
+    @extend %color-#{$color}
+
 // Misc
 
 %text-center
@@ -62,6 +68,3 @@
 
 %text-decoration-none
   text-decoration: none
-
-.text-subtle
-  @extend %color-gray

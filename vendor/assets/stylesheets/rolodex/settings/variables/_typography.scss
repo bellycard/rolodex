@@ -71,3 +71,12 @@ $font-weights: (
   normal: $font-weight-normal,
   bold:   $font-weight-bold
 );
+
+// Colors map
+
+$text-colors: (
+  gray: subtle,
+  blue: success,
+  gold: warning,
+  red:  danger
+);
