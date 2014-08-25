@@ -8,7 +8,7 @@
   opacity: 0
   overflow-x: hidden
   overflow-y: auto
-  +rem(padding, 84px)
+  +rem(padding, $baseline-step * 10)
   position: fixed
   @extend .right-0
   @extend .top-0
@@ -40,8 +40,13 @@
   @extend .h-bravo
   @extend .margin-0
 
-.modal-body
+.modal-body,
+.modal-body-alt
   @extend %background-white-offset
   @extend %border-base
   +rem(border-width, 1px 0)
+  +rem(max-height, 600px)
+  overflow: auto
+
+.modal-body
   +rem(padding, ($baseline-base - 1) $grid-gutter)

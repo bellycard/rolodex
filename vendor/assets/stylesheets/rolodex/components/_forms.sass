@@ -57,10 +57,18 @@ textarea
   @extend %font-weight-bold
   +rem(margin-bottom, $baseline-step)
 
+.form-subtle,
+.form-claim
+  @extend .s-golf
+
 .form-subtle
   @extend %color-gray
   @extend %font-weight-normal
-  @extend .s-golf
+
+.form-claim
+  @extend .pull-right
+  @extend %line-height-base
+  @extend %transition-all
 
 // Text inputs and textareas
 
