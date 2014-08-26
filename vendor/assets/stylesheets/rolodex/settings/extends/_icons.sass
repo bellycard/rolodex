@@ -5,14 +5,16 @@
 .i-caret,
 .i-caret-white,
 .i-gear,
-.i-expand
+.i-expand,
+.i-image
   @extend .ir
   background-repeat: no-repeat
 
 .i-caret,
 .i-caret-white,
 .i-gear,
-.i-expand
+.i-expand,
+.i-image
   @extend .display-inline-block
   @extend %vertical-align-middle
 
@@ -58,10 +60,16 @@
   +rem(height, 18px)
   +rem(width, 18px)
 
-// Expand
+// Expand & image
 // ========================================
+
+.i-expand,
+.i-image
+  +rem(height, 20px)
+  +rem(width, 25px)
 
 .i-expand
   +background-svg("common/icon-expand", 25px 20px)
-  +rem(height, 20px)
-  +rem(width, 25px)
+
+.i-image
+  +background-svg("common/icon-image", 25px 20px)
