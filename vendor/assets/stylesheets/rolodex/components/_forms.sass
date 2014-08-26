@@ -111,12 +111,20 @@ textarea
     background-repeat: no-repeat
     +rem(padding-left, 38px)
 
+.form-date
+  +background-svg("common/icon-calendar", 20px 21px)
+  background-position: right 14px top 50%
+  background-repeat: no-repeat
+  +rem(padding-right, 48px)
+
+
 // Checkboxes and radio buttons
 
 .form-choice
   +rem(padding-left, 20px)
 
-  input
+  input[type="radio"],
+  input[type="checkbox"]
     @extend .pull-left
     +rem(margin, $baseline-step 0 0 -20px)
 
@@ -154,6 +162,7 @@ textarea
     +rem(border-radius, $border-radius-base 0 0 $border-radius-base)
     @extend %color-gray-dark
     +rem(padding, ($baseline-step + 2) ($grid-gutter-half - 1))
+    white-space: nowrap
     
     &[disabled]
       @extend %color-gray
