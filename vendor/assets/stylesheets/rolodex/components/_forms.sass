@@ -117,7 +117,6 @@ textarea
   background-repeat: no-repeat
   +rem(padding-right, 48px)
 
-
 // Checkboxes and radio buttons
 
 .form-choice
@@ -198,7 +197,43 @@ textarea
 
 .form-help
   @extend .form-subtle
-  +rem(margin-top, $baseline-step)
+  +rem(margin, $baseline-step $grid-gutter-half 0 $grid-gutter-half)
+
+.form-help-title
+  @extend %color-gray-dark
+  @extend .display-inline-block
+  +rem(margin, $baseline-step 0)
+
+.form-help-suggestions
+
+  li
+    @extend %line-height-base
+    +rem(padding-left, 18px)
+    @extend .position-relative
+
+  .i-suggest-tick,
+  .form-help-bullet
+    @extend .position-absolute
+    @extend .left-0
+    @extend %transition-all
+
+  .i-suggest-tick
+    opacity: 0
+    +rem(top, 7px)
+
+.form-help-bullet
+  @extend .display-inline-block
+  @extend .s-delta
+  @extend %text-center
+  +rem(width, 12px)
+
+.form-help-success
+
+  .i-suggest-tick
+    opacity: 1
+  
+  .form-help-bullet
+    opacity: 0
 
 // Validation
 // ========================================

@@ -37,7 +37,8 @@
     @extend .margin-0
 
 .modal-title
-  @extend .h-bravo
+  @extend .s-bravo
+  @extend %font-weight-normal
   @extend .margin-0
 
 .modal-body,
@@ -50,3 +51,32 @@
 
 .modal-body
   +rem(padding, ($baseline-base - 1) $grid-gutter)
+
+// Nav
+
+.modal-nav
+  @extend .padding-gutters
+
+  li
+    +rem(margin-bottom, -1px)
+    @extend .padding-gutters
+    @extend .position-relative
+    z-index: 1
+
+  a
+    +rem(border-bottom, 5px solid transparent)
+    @extend %color-gray
+    @extend .display-block
+    +rem(padding-bottom, $baseline-step * 2)
+    @extend .s-delta
+    @extend %text-center
+
+    &:hover,
+    &:focus,
+    &:active
+      @extend %color-blue
+
+    &.modal-nav-active
+      border-color: $blue
+      @extend %color-black
+      @extend %cursor-default
