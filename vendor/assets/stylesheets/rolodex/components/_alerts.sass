@@ -6,65 +6,78 @@
   @extend %font-weight-bold
   +rem(margin-bottom, $baseline-step)
 
+// Kinds
+
+@each $alert in $alerts
+
+  $kind:     nth($alert, 1)
+  $bg-color: nth($alert, 2)
+  $bg-icon:  nth($alert, 3)
+
+  .alert-#{$kind}
+    @extend %background-#{$bg-color}
+
+  .alert-banner.alert-#{$kind}:before
+    @extend %background-#{$bg-color}-dark
+    +background-svg("common/icon-#{$bg-icon}-white")
+    background-repeat: no-repeat
+
+  .alert-inline.alert-#{$kind}
+    +background-svg("common/icon-#{$bg-icon}-white")
+    background-repeat: no-repeat
+
 // Banner alerts
 // ========================================
 
 .alert-banner
   @extend %color-white
-  +rem(padding, ($baseline-step + 3) $grid-gutter-half ($baseline-step + 3) ($grid-gutter-half + 42))
+  +rem(padding, $baseline-smaller $grid-gutter-half $baseline-smaller ($grid-gutter-half + 60))
   @extend .position-relative
+  @extend .s-delta
 
   &:before
-    +rem(background-position, center 13px)
-    +rem(background-size, 16px)
-    background-repeat: no-repeat
     @extend .bottom-0
     @extend %content-empty
     @extend .position-absolute
     @extend .left-0
     @extend .top-0
-    +rem(width, 42px)
+    +rem(width, 60px)
 
 .alert-dismissible
   +rem(padding-right, $grid-gutter-half * 3)
 
 // Kinds
 
-@each $alert in $alerts
-  
-  $kind: nth($alert, 1)
-  $bg:   nth($alert, 2)
-  
-  .alert-banner.alert-#{$kind}
-    @extend %background-#{$bg}
-    
-    &:before
-      @extend %background-#{$bg}-dark
-      +background-svg("alerts/icon-alert-#{$kind}")
+@each $alert in $alerts-banner
 
-      @if $kind == "default"
-        +background-svg("alerts/icon-alert-warning")
+  $kind:   nth($alert, 1)
+  $width:  nth($alert, 2)
+  $height: nth($alert, 3)
+  $offset: nth($alert, 4)
+
+  .alert-banner.alert-#{$kind}:before
+    +rem(background-position, center $offset)
+    +rem(background-size, $width $height)
 
 // Inline alerts
 // ========================================
 
 .alert-inline
   @extend %border-radius-base
-  @extend %border-solid
-  @extend %border-1
-  @extend %color-black-offset
+  @extend %color-white
   @extend .display-inline-block
-  +rem(padding, ($baseline-step + 2) 14px)
-  @extend .s-golf
+  +rem(padding, ($baseline-step * 1.5) 14px)
 
 // Kinds
 
-@each $alert in $alerts
+@each $alert in $alerts-inline
 
   $kind:   nth($alert, 1)
-  $bg:     nth($alert, 2)
-  $border: nth($alert, 3)
+  $width:  nth($alert, 2)
+  $height: nth($alert, 3)
+  $offset: nth($alert, 4)
 
   .alert-inline.alert-#{$kind}
-    @extend %background-#{$bg}-light
-    border-color: $border
+    +rem(background-position, 14px $offset)
+    +rem(background-size, $width $height)
+    +rem(padding-left, 24px + $width)
