@@ -74,7 +74,8 @@ textarea
 // Text inputs and textareas
 
 .form-control,
-.form-area
+.form-area,
+.form-placeholder
   @extend %background-white
   background-image: none
   @extend %border-base
@@ -107,16 +108,24 @@ textarea
     opacity: 1
 
   &[type='search']
-    +background-svg("common/icon-search", 15px)
+    +background-svg("icons/icon-search", 15px)
     background-position: 14px 50%
     background-repeat: no-repeat
     +rem(padding-left, 38px)
 
 .form-date
-  +background-svg("common/icon-calendar", 20px 21px)
+  +background-svg("icons/icon-calendar", 20px 21px)
   background-position: right 14px top 50%
   background-repeat: no-repeat
   +rem(padding-right, 48px)
+
+.form-placeholder
+  @extend %background-white-offset
+
+.form-placeholder-link
+  @extend .pull-right
+  @extend %line-height-base
+  @extend .s-golf
 
 // Checkboxes and radio buttons
 
