@@ -5,7 +5,8 @@
 .i-caret,
 .i-caret-white,
 .i-gear,
-.i-expand,
+.i-expand-gray,
+.i-expand-white,
 .i-image,
 .i-suggest-tick,
 .i-suggest-x,
@@ -17,7 +18,8 @@
 .i-caret,
 .i-caret-white,
 .i-gear,
-.i-expand,
+.i-expand-gray,
+.i-expand-white,
 .i-image,
 .i-suggest-tick,
 .i-suggest-x,
@@ -71,13 +73,17 @@
 // Expand & image
 // ========================================
 
-.i-expand,
+.i-expand-gray,
+.i-expand-white,
 .i-image
   +rem(height, 20px)
   +rem(width, 25px)
 
-.i-expand
-  +background-svg("icons/icon-expand", 25px 20px)
+.i-expand-gray
+  +background-svg("icons/icon-expand-gray", 25px 20px)
+
+.i-expand-white
+  +background-svg("icons/icon-expand-white", 25px 20px)
 
 .i-image
   +background-svg("icons/icon-image", 25px 20px)
