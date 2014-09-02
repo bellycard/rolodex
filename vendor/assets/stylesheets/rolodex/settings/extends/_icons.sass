@@ -5,20 +5,26 @@
 .i-caret,
 .i-caret-white,
 .i-gear,
-.i-expand,
+.i-expand-gray,
+.i-expand-white,
 .i-image,
 .i-suggest-tick,
-.i-suggest-x
+.i-suggest-x,
+.i-plane,
+.i-star-banner
   @extend .ir
   background-repeat: no-repeat
 
 .i-caret,
 .i-caret-white,
 .i-gear,
-.i-expand,
+.i-expand-gray,
+.i-expand-white,
 .i-image,
 .i-suggest-tick,
-.i-suggest-x
+.i-suggest-x,
+.i-plane,
+.i-star-banner
   @extend .display-inline-block
   @extend %vertical-align-middle
 
@@ -26,7 +32,7 @@
 // ========================================
 
 .i-close
-  +background-svg("common/icon-close-x", 10px)
+  +background-svg("icons/icon-close-x", 10px)
   background-color: transparent
   background-position: 50%
   @extend .border-0
@@ -49,7 +55,7 @@
 
 .i-caret,
 .i-caret-white
-  +background-svg("common/icon-caret", 12px 23px)
+  +background-svg("icons/icon-caret", 12px 23px)
   +rem(height, 7px)
   +rem(width, 12px)
 
@@ -60,32 +66,52 @@
 // ========================================
 
 .i-gear
-  +background-svg("common/icon-gear", 18px 18px)
+  +background-svg("icons/icon-gear", 18px 18px)
   +rem(height, 18px)
   +rem(width, 18px)
 
 // Expand & image
 // ========================================
 
-.i-expand,
+.i-expand-gray,
+.i-expand-white,
 .i-image
   +rem(height, 20px)
   +rem(width, 25px)
 
-.i-expand
-  +background-svg("common/icon-expand", 25px 20px)
+.i-expand-gray
+  +background-svg("icons/icon-expand-gray", 25px 20px)
+
+.i-expand-white
+  +background-svg("icons/icon-expand-white", 25px 20px)
 
 .i-image
-  +background-svg("common/icon-image", 25px 20px)
+  +background-svg("icons/icon-image", 25px 20px)
 
 // Suggest
 // ========================================
 
 .i-suggest-tick,
 .i-suggest-x
-  +background-svg("common/icon-suggest", 12px 18px)
+  +background-svg("icons/icon-suggest", 12px 18px)
   +rem(height, 9px)
   +rem(width, 12px)
 
 .i-suggest-x
   +rem(background-position, 0 -9px)
+
+// Plane
+// ========================================
+
+.i-plane
+  +background-svg("icons/icon-plane", 32px 24px)
+  +rem(height, 24px)
+  +rem(width, 32px)
+
+// Star banner
+// ========================================
+
+.i-star-banner
+  +background-svg("icons/icon-star-banner", 21px 30px)
+  +rem(height, 30px)
+  +rem(width, 21px)

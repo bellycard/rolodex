@@ -2,21 +2,34 @@
 // ========================================
 
 .tooltip
-  +background-svg("tooltips/tooltip-bulb", 26px)
+  +rem(border, 2px solid $gray-light)
+  @extend %border-radius-circle
   @extend %cursor-pointer
   @extend .display-inline-block
-  +rem(height, 26px)
+  +rem(height, 22px)
   @extend .position-relative
   @extend %vertical-align-middle
-  +rem(width, 26px)
+  +rem(width, 22px)
+
+  &:after
+    +background-svg("tooltips/tooltip-star", 10px)
+    @extend %content-empty
+    +rem(height, 10px)
+    left: 50%
+    @extend .position-absolute
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
+    +rem(width, 10px)
   
   &:hover,
   &:focus
-    +rem(background-position, 0 -26px)
+    border-color: $blue
+
+    &:after
+      +rem(background-position, 0 -10px)
 
   .form-group &
-    @extend .margin-left
-    +rem(margin-top, -1px)
+    +rem(margin, 1px 0 0 $grid-gutter-half)
 
 // Tip
 
