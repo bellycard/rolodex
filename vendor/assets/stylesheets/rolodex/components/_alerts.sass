@@ -6,42 +6,61 @@
   @extend %font-weight-bold
   +rem(margin-bottom, $baseline-step)
 
+.alert-signal
+  @extend %font-weight-bold
+  line-height: 1
+  +rem(padding-right, 5px)
+  text-transform: uppercase
+
+.alert-action
+  @extend .pull-right
+
 // Kinds
 
 @each $alert in $alerts
 
-  $kind:     nth($alert, 1)
-  $bg-color: nth($alert, 2)
-  $bg-icon:  nth($alert, 3)
+  $kind:   nth($alert, 1)
+  $color:  nth($alert, 2)
+  $icon:   nth($alert, 3)
+  $border: nth($alert, 4)
 
   .alert-#{$kind}
-    @extend %background-#{$bg-color}
-
-  .alert-banner.alert-#{$kind}:before
-    @extend %background-#{$bg-color}-dark
-    +background-svg("alerts/icon-#{$bg-icon}-white")
     background-repeat: no-repeat
+
+  .alert-banner.alert-#{$kind}
+    @extend %background-#{$color}
+    +background-svg("alerts/icon-#{$icon}-light")
+
+    .alert-signal,
+    .alert-action
+      @extend %color-#{$color}-light
+
+    .alert-signal
+      @extend .s-delta
+
+    .alert-action:active,
+    .alert-action:hover
+      @extend %color-white
 
   .alert-inline.alert-#{$kind}
-    +background-svg("alerts/icon-#{$bg-icon}-white")
-    background-repeat: no-repeat
+    @extend %background-#{$color}-light
+    +background-svg("alerts/icon-#{$icon}-dark")
+    border-color: $border
+
+    .alert-signal
+      @extend %color-#{$color}
 
 // Banner alerts
 // ========================================
 
 .alert-banner
   @extend %color-white
-  +rem(padding, $baseline-smaller $grid-gutter-half $baseline-smaller ($grid-gutter-half + 60))
+  +rem(padding, $baseline-smaller $grid-gutter-half)
   @extend .position-relative
-  @extend .s-delta
+  @extend .s-echo
 
-  &:before
-    @extend .bottom-0
-    @extend %content-empty
-    @extend .position-absolute
-    @extend .left-0
-    @extend .top-0
-    +rem(width, 60px)
+  .i-close
+    +rem(top, 23px)
 
 .alert-dismissible
   +rem(padding-right, $grid-gutter-half * 3)
@@ -55,18 +74,22 @@
   $height: nth($alert, 3)
   $offset: nth($alert, 4)
 
-  .alert-banner.alert-#{$kind}:before
-    +rem(background-position, center $offset)
+  .alert-banner.alert-#{$kind}
+    +rem(background-position, $grid-gutter-half $offset)
     +rem(background-size, $width $height)
+    +rem(padding-left, ($grid-gutter-half * 2) + $width)
 
 // Inline alerts
 // ========================================
 
 .alert-inline
   @extend %border-radius-base
-  @extend %color-white
+  @extend %border-radius-base
+  @extend %border-solid
+  @extend %border-1
+  @extend %color-black-offset
   @extend .display-inline-block
-  +rem(padding, ($baseline-step * 1.5) 14px)
+  +rem(padding, (($baseline-step * 1.5) - 1) ($grid-gutter-half - 1))
 
 // Kinds
 
