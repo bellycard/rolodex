@@ -3,11 +3,10 @@
 
 // Transition
 
-$transition-property-all: all;
-$transition-timing:       .15s;
-$transition-function:     ease;
+$transition-timing:   .15s;
+$transition-function: ease;
 
-$transition-all: $transition-property-all $transition-timing $transition-function;
+$transition-all: all $transition-timing $transition-function;
 
 // Cursors
 
