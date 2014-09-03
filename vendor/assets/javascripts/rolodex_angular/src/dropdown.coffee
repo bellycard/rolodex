@@ -15,7 +15,12 @@ angular.module('rolodex.dropdown', [])
       openScope = dropdownScope
 
     @close = (dropdownScope) ->
-      if openScope is dropdownScope
+      if openScope is dropdownScope or
+      dropdownScope.forceClose
+
+        if dropdownScope.forceClose
+          openScope.isOpen = false
+
         openScope = null
         $document.unbind 'click', closeDropdown
         $document.unbind 'keydown', escapeKeyBind
@@ -24,8 +29,7 @@ angular.module('rolodex.dropdown', [])
       toggleElement = openScope.getToggleElement()
 
       if evt and toggleElement?[0].contains(evt.target) or
-      toggleElement?[0].nodeName.toLowerCase() is 'input' or
-      evt.target.nodeName.toLowerCase() is 'input' # Don't close if the drop down has an input interaction
+      evt?.target.nodeName.toLowerCase() is 'input' # Don't close if the drop down has an input interaction
         return
 
       openScope.$apply ->
@@ -114,9 +118,6 @@ angular.module('rolodex.dropdown', [])
       if not element.hasClass('disabled') and not attrs.disabled
         scope.$apply ->
           dropdownCtrl.toggle()
-          return
-
-      return
 
     element.bind 'click', toggleDropdown
 
@@ -127,10 +128,6 @@ angular.module('rolodex.dropdown', [])
 
     scope.$watch dropdownCtrl.isOpen, (isOpen) ->
       element.attr 'aria-expanded', !!isOpen
-      return
 
     scope.$on '$destroy', ->
       element.unbind 'click', toggleDropdown
-      return
-
-    return

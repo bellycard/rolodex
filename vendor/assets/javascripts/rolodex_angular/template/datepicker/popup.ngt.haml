@@ -1,7 +1,7 @@
-%ul.dropdown-menu{"ng-keydown" => "keydown($event)", "ng-style" => "{display: (isOpen && 'block') || 'none', top: position.top+'px', left: position.left+'px'}"}
-  %li{"ng-transclude" => ""}
-  %li{"ng-if" => "showButtonBar", :style => "padding:10px 9px 2px"}
+%ul.dropdown-menu(class="daterangepicker group" ng-keydown="keydown($event)" data-dropdown-content)
+  %li(ng-transclude)
+  %li(ng-if="showButtonBar" style="padding:10px 9px 2px")
     %span.btn-group
-      %button.btn.btn-sm.btn-info{"ng-click" => "select('today')", :type => "button"} {{ getText('current') }}
-      %button.btn.btn-sm.btn-danger{"ng-click" => "select(null)", :type => "button"} {{ getText('clear') }}
-    %button.btn.btn-sm.btn-success.pull-right{"ng-click" => "close()", :type => "button"} {{ getText('close') }}
+      %button.btn.btn-sm.btn-info(ng-click="select('today')" type="button") {{ getText('current') }}
+      %button.btn.btn-sm.btn-danger(ng-click="select(null)" type="button") {{ getText('clear') }}
+    %button.btn.btn-sm.btn-success.pull-right(ng-click="close()" type="button") {{ getText('close') }}
