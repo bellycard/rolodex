@@ -6,6 +6,7 @@
 
 angular.module('rolodex.datepicker', [
   'rolodex.dateparser'
+  'rolodex.dropdown'
   'rolodex.position'
 ])
 
@@ -66,11 +67,9 @@ angular.module('rolodex.datepicker', [
         $scope.$parent.$watch $parse($attrs[key]), (value) ->
           self[key] = (if value then new Date(value) else null)
           self.refreshView()
-          return
 
       else
         self[key] = (if datepickerConfig[key] then new Date(datepickerConfig[key]) else null)
-      return
 
     $scope.datepickerMode = $scope.datepickerMode or datepickerConfig.datepickerMode
 
@@ -78,7 +77,7 @@ angular.module('rolodex.datepicker', [
 
     @activeDate = (if angular.isDefined($attrs.initDate) then $scope.$parent.$eval($attrs.initDate) else new Date())
 
-    $scope.isActive = (dateObject) ->
+    $scope.isActive = (dateObject) =>
       if self.compare(dateObject.date, self.activeDate) is 0
         $scope.activeDateId = dateObject.uid
         return true
@@ -125,7 +124,9 @@ angular.module('rolodex.datepicker', [
       arrays.push arr.splice(0, size) while arr.length > 0
       arrays
 
-    $scope.select = (date) ->
+    $scope.select = (date) =>
+      return if @isDisabled(date)
+
       if $scope.datepickerMode is self.minMode
         dt = (if ngModelCtrl.$modelValue then new Date(ngModelCtrl.$modelValue) else new Date(0, 0, 0, 0, 0, 0, 0))
         dt.setFullYear date.getFullYear(), date.getMonth(), date.getDate()
@@ -135,6 +136,8 @@ angular.module('rolodex.datepicker', [
         self.activeDate = date
         $scope.datepickerMode = self.modes[self.modes.indexOf($scope.datepickerMode) - 1]
 
+    $scope.isOff = (dt) => (dt.date < @minDate) or (dt.date > @maxDate)
+
     $scope.move = (direction) ->
       year = self.activeDate.getFullYear() + direction * (self.step.years or 0)
       month = self.activeDate.getMonth() + direction * (self.step.months or 0)
@@ -143,7 +146,7 @@ angular.module('rolodex.datepicker', [
 
     $scope.toggleMode = (direction) ->
       direction = direction or 1
-      return  if ($scope.datepickerMode is self.maxMode and direction is 1) or ($scope.datepickerMode is self.minMode and direction is -1)
+      return if ($scope.datepickerMode is self.maxMode and direction is 1) or ($scope.datepickerMode is self.minMode and direction is -1)
       $scope.datepickerMode = self.modes[self.modes.indexOf($scope.datepickerMode) + direction]
 
     $scope.keys =
@@ -167,12 +170,12 @@ angular.module('rolodex.datepicker', [
 
     $scope.keydown = (evt) ->
       key = $scope.keys[evt.which]
-      return  if not key or evt.shiftKey or evt.altKey
+      return if not key or evt.shiftKey or evt.altKey
       evt.preventDefault()
       evt.stopPropagation()
 
       if key is 'enter' or key is 'space'
-        return  if self.isDisabled(self.activeDate)
+        return if self.isDisabled(self.activeDate)
         $scope.select self.activeDate
         focusElement()
       else if evt.ctrlKey and (key is 'up' or key is 'down')
@@ -279,7 +282,6 @@ angular.module('rolodex.datepicker', [
             weekNumber = getISO8601WeekNumber(scope.rows[0][0].date)
             numWeeks = scope.rows.length
             continue  while scope.weekNumbers.push(weekNumber++) < numWeeks
-          return
 
         ctrl.compare = (date1, date2) ->
           new Date(date1.getFullYear(), date1.getMonth(), date1.getDate()) - new Date(date2.getFullYear(), date2.getMonth(), date2.getDate())
@@ -302,10 +304,8 @@ angular.module('rolodex.datepicker', [
             date = 1
           else date = getDaysInMonth(ctrl.activeDate.getFullYear(), ctrl.activeDate.getMonth())  if key is 'end'
           ctrl.activeDate.setDate date
-          return
 
         ctrl.refreshView()
-        return
     )
 ]
 
@@ -332,7 +332,6 @@ angular.module('rolodex.datepicker', [
             i++
           scope.title = dateFilter(ctrl.activeDate, ctrl.formatMonthTitle)
           scope.rows = ctrl.split(months, 3)
-          return
 
         ctrl.compare = (date1, date2) ->
           new Date(date1.getFullYear(), date1.getMonth()) - new Date(date2.getFullYear(), date2.getMonth())
@@ -354,10 +353,8 @@ angular.module('rolodex.datepicker', [
             date = 0
           else date = 11  if key is 'end'
           ctrl.activeDate.setMonth date
-          return
 
         ctrl.refreshView()
-        return
     )
 ]
 
@@ -390,7 +387,6 @@ angular.module('rolodex.datepicker', [
             years[range - 1].label
           ].join(' - ')
           scope.rows = ctrl.split(years, 5)
-          return
 
         ctrl.compare = (date1, date2) ->
           date1.getFullYear() - date2.getFullYear()
@@ -411,10 +407,8 @@ angular.module('rolodex.datepicker', [
             date = getStartingYear(ctrl.activeDate.getFullYear())
           else date = getStartingYear(ctrl.activeDate.getFullYear()) + range - 1  if key is 'end'
           ctrl.activeDate.setFullYear date
-          return
 
         ctrl.refreshView()
-        return
     )
 ]
 
@@ -431,11 +425,11 @@ angular.module('rolodex.datepicker', [
   '$compile'
   '$parse'
   '$document'
-  '$position'
   'dateFilter'
   'dateParser'
   'datepickerPopupConfig'
-  ($compile, $parse, $document, $position, dateFilter, dateParser, datepickerPopupConfig) ->
+  'dropdownService'
+  ($compile, $parse, $document, dateFilter, dateParser, datepickerPopupConfig, dropdownService) ->
     return (
       restrict: 'EA'
       require: 'ngModel'
@@ -480,7 +474,6 @@ angular.module('rolodex.datepicker', [
         attrs.$observe 'datepickerPopup', (value) ->
           dateFormat = value or datepickerPopupConfig.datepickerPopup
           ngModel.$render()
-          return
 
         popupEl = angular.element('<div datepicker-popup-wrap><div datepicker></div></div>')
         popupEl.attr
@@ -488,10 +481,10 @@ angular.module('rolodex.datepicker', [
           'ng-change': 'dateSelection()'
 
         datepickerEl = angular.element(popupEl.children()[0])
+
         if attrs.datepickerOptions
           angular.forEach scope.$parent.$eval(attrs.datepickerOptions), (value, option) ->
             datepickerEl.attr cameltoDash(option), value
-            return
 
         scope.watchData = {}
         angular.forEach [
@@ -501,18 +494,15 @@ angular.module('rolodex.datepicker', [
         ], (key) ->
           if attrs[key]
             getAttribute = $parse(attrs[key])
+
             scope.$parent.$watch getAttribute, (value) ->
               scope.watchData[key] = value
-              return
 
             datepickerEl.attr cameltoDash(key), 'watchData.' + key
             if key is 'datepickerMode'
               setAttribute = getAttribute.assign
               scope.$watch 'watchData.' + key, (value, oldvalue) ->
                 setAttribute scope.$parent, value  if value isnt oldvalue
-                return
-
-          return
 
         datepickerEl.attr 'date-disabled', 'dateDisabled({ date: date, mode: mode })'  if attrs.dateDisabled
         ngModel.$parsers.unshift parseDate
@@ -522,55 +512,21 @@ angular.module('rolodex.datepicker', [
           ngModel.$render()
           if closeOnDateSelection
             scope.isOpen = false
+            scope.forceClose = true
+            dropdownService.close(scope)
             element[0].focus()
-          return
 
         element.bind 'input change keyup', ->
           scope.$apply ->
             scope.date = ngModel.$modelValue
-            return
-
-          return
 
         ngModel.$render = ->
           date = (if ngModel.$viewValue then dateFilter(ngModel.$viewValue, dateFormat) else '')
           element.val date
           scope.date = parseDate(ngModel.$modelValue)
-          return
-
-        documentClickBind = (event) ->
-          if scope.isOpen and event.target isnt element[0]
-            scope.$apply ->
-              scope.isOpen = false
-              return
-
-          return
-
-        keydown = (evt, noApply) ->
-          scope.keydown evt
-          return
-
-        element.bind 'keydown', keydown
-
-        scope.keydown = (evt) ->
-          if evt.which is 27
-            evt.preventDefault()
-            evt.stopPropagation()
-            scope.close()
-          else scope.isOpen = true if evt.which is 40 and not scope.isOpen
-          return
-
-        scope.$watch 'isOpen', (value) ->
-          if value
-            scope.$broadcast 'datepicker.focus'
-            scope.position = (if appendToBody then $position.offset(element) else $position.position(element))
-            scope.position.top = scope.position.top + element.prop('offsetHeight')
-            $document.bind 'click', documentClickBind
-          else
-            $document.unbind 'click', documentClickBind
-          return
 
         scope.select = (date) ->
+
           if date is 'today'
             today = new Date()
             if angular.isDate(ngModel.$modelValue)
@@ -579,13 +535,6 @@ angular.module('rolodex.datepicker', [
             else
               date = new Date(today.setHours(0, 0, 0, 0))
           scope.dateSelection date
-          return
-
-        scope.close = ->
-          scope.isOpen = false
-          element[0].focus()
-          return
-
         $popup = $compile(popupEl)(scope)
         if appendToBody
           $document.find('body').append $popup
@@ -593,14 +542,8 @@ angular.module('rolodex.datepicker', [
           element.after $popup
         scope.$on '$destroy', ->
           $popup.remove()
-          element.unbind 'keydown', keydown
-          $document.unbind 'click', documentClickBind
-          return
-
-        return
     )
 ]
-
 .directive 'datepickerPopupWrap', ->
   restrict: 'EA'
   replace: true
