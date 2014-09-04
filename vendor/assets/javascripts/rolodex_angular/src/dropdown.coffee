@@ -19,7 +19,7 @@ angular.module('rolodex.dropdown', [])
       dropdownScope.forceClose
 
         if dropdownScope.forceClose
-          openScope.isOpen = false
+          openScope.isOpen = false if openScope
 
         openScope = null
         $document.unbind 'click', closeDropdown
@@ -27,7 +27,6 @@ angular.module('rolodex.dropdown', [])
 
     closeDropdown = (evt) ->
       toggleElement = openScope.getToggleElement()
-
       if evt and toggleElement?[0].contains(evt.target) or
       evt?.target.nodeName.toLowerCase() is 'input' # Don't close if the drop down has an input interaction
         return
@@ -80,13 +79,23 @@ angular.module('rolodex.dropdown', [])
       return
 
     scope.$watch 'isOpen', (isOpen, wasOpen) ->
+      anchors = self.$element.find('a')
+
       if isOpen
         self.$element.attr(dropDownOpen, '')
         scope.focusToggleElement()
         dropdownService.open scope
+
+        if anchors.length
+          scope.forceClose = true
+          _.each anchors, (anchor) ->
+            angular.element(anchor).on 'click', (evt) ->
+              dropdownService.close(scope)
+
       else
         self.$element.removeAttr(dropDownOpen)
-        dropdownService.close scope
+        dropdownService.close(scope)
+
       setIsOpen $scope, isOpen
       if angular.isDefined(isOpen) and isOpen isnt wasOpen
         toggleInvoker $scope,
