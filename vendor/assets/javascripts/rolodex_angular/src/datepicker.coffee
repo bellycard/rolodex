@@ -11,7 +11,7 @@ angular.module('rolodex.datepicker', [
 ])
 
 .constant 'datepickerConfig',
-  formatDay: 'dd'
+  formatDay: 'd'
   formatMonth: 'MMMM'
   formatYear: 'yyyy'
   formatDayHeader: 'EEE'
@@ -77,12 +77,6 @@ angular.module('rolodex.datepicker', [
 
     @activeDate = (if angular.isDefined($attrs.initDate) then $scope.$parent.$eval($attrs.initDate) else new Date())
 
-    $scope.isActive = (dateObject) =>
-      if self.compare(dateObject.date, self.activeDate) is 0
-        $scope.activeDateId = dateObject.uid
-        return true
-      false
-
     @init = (ngModelCtrl_) ->
       ngModelCtrl = ngModelCtrl_
       ngModelCtrl.$render = ->
@@ -135,8 +129,6 @@ angular.module('rolodex.datepicker', [
       else
         self.activeDate = date
         $scope.datepickerMode = self.modes[self.modes.indexOf($scope.datepickerMode) - 1]
-
-    $scope.isOff = (dt) => (dt.date < @minDate) or (dt.date > @maxDate)
 
     $scope.move = (direction) ->
       year = self.activeDate.getFullYear() + direction * (self.step.years or 0)
@@ -272,7 +264,7 @@ angular.module('rolodex.datepicker', [
 
           while j < 7
             scope.labels[j] =
-              abbr: dateFilter(days[j].date, ctrl.formatDayHeader)
+              abbr: dateFilter(days[j].date, ctrl.formatDayHeader).substr(0, 2)
               full: dateFilter(days[j].date, 'EEEE')
             j++
           scope.title = dateFilter(ctrl.activeDate, ctrl.formatDayTitle)
