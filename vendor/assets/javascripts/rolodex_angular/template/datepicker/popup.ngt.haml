@@ -1,7 +1,2 @@
-%ul.dropdown-menu(class="daterangepicker group" ng-keydown="keydown($event)" data-dropdown-content)
-  %li(ng-transclude)
-  %li(ng-if="showButtonBar" style="padding:10px 9px 2px")
-    %span.btn-group
-      %button.btn.btn-sm.btn-info(ng-click="select('today')" type="button") {{ getText('current') }}
-      %button.btn.btn-sm.btn-danger(ng-click="select(null)" type="button") {{ getText('clear') }}
-    %button.btn.btn-sm.btn-success.pull-right(ng-click="close()" type="button") {{ getText('close') }}
+.dropdown-menu(class="daterangepicker date-picker-solo group" ng-keydown="keydown($event)" data-dropdown-content)
+  %div(ng-transclude)

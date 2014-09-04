@@ -1,22 +1,20 @@
 %table(aria-activedescendant="{{ activeDateId }}" aria-labelledby="{{uniqueId }}-title" role="grid")
+  
   %thead
+    
     %tr
-      %th
-        %button.btn.btn-boring.pull-left(ng-click="move(-1)" tabindex="-1" type="button")
-          %i.i-caret
-      %th(colspan="{{ 5 + showWeeks }}")
-        %button.btn.btn-boring(aria-atomic="true" aria-live="assertive" id="{{ uniqueId }}-title" ng-click="toggleMode()" role="heading" style="width:100%;" tabindex="-1" type="button")
-          %strong {{ title }}
-      %th
-        %button.btn.btn-boring.pull-right(ng-click="move(1)" tabindex="-1" type="button")
-          %i.i-caret
+      %th.prev.available(ng-click="move(-1)" tabindex="-1")
+        .i-caret
+      %th.month(colspan="{{ 5 + showWeeks }}")
+        {{ title }}
+      %th.next.available(ng-click="move(1)" tabindex="-1")
+        .i-caret
+    
     %tr
-      %th.text-center(ng-show="showWeeks")
       %th.text-center(ng-repeat="label in labels track by $index")
         %small(aria-label="{{ label.full}}") {{ label.abbr }}
+
   %tbody
     %tr(ng-repeat="row in rows track by $index")
-      %td(ng-show="showWeeks")
-        %em {{  weekNumbers[$index] }}
-      %td(aria-disabled="{{ !!dt.disabled }}" id="{{ dt.uid }}" role="gridcell" tabindex="-1" ng-repeat="dt in row track by dt.date" ng-class="{'btn-info': dt.selected, active: isActive(dt), available: !dt.disabled, off: isOff(dt)}" ng-click="select(dt.date, dt.disabled)" ng-disabled="dt.disabled")
-        %span(ng-class="{'text-muted': dt.secondary, 'text-info': dt.current}") {{ dt.label }}
+      %td(aria-disabled="{{ !!dt.disabled }}" id="{{ dt.uid }}" role="gridcell" tabindex="-1" ng-repeat="dt in row track by dt.date" ng-class="{active: dt.selected, available: !dt.disabled, off: dt.disabled}" ng-click="select(dt.date, dt.disabled)" ng-disabled="dt.disabled")
+        %span(ng-class="{'text-muted': dt.secondary}") {{ dt.label }}
