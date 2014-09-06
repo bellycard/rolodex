@@ -144,6 +144,29 @@ textarea
     @extend %cursor-not-allowed
     @extend %color-gray
 
+// Custom radio buttons
+
+.form-radio
+  &:not(:last-of-type)
+    +rem(margin-bottom, $baseline-step / 2)
+
+  label
+    @extend %cursor-pointer
+    +rem(padding-left, 6px)
+    @extend .position-relative
+
+    &:before
+      +background-svg("forms/radio-button", 20px 40px)
+      @extend %content-empty
+      +rem(height, 20px)
+      +rem(left, -20px)
+      @extend .position-absolute
+      @extend .top-0
+      +rem(width, 20px)
+
+.form-radio-active:before
+  +rem(background-position, 0 -20px)
+
 // Horizontal styles
 // ========================================
 
