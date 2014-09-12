@@ -198,7 +198,7 @@ textarea
     @extend %color-gray-dark
     +rem(padding, ($baseline-step + 2) ($grid-gutter-half - 1))
     white-space: nowrap
-    
+
     &[disabled]
       @extend %color-gray
       @extend %cursor-not-allowed
@@ -209,11 +209,11 @@ textarea
     &:first-child
       border-bottom-right-radius: 0
       border-top-right-radius: 0
-    
+
     &:last-child
       border-bottom-left-radius: 0
       border-top-left-radius: 0
-    
+
     &:not(:first-child):not(:last-child)
       border-radius: 0
 
@@ -222,7 +222,7 @@ textarea
     &:focus,
     &:active
       z-index: 2
-  
+
     .btn
       border-bottom-left-radius: 0
       border-top-left-radius: 0
@@ -234,6 +234,9 @@ textarea
 .form-help
   @extend .form-subtle
   +rem(margin, $baseline-step $grid-gutter-half 0 $grid-gutter-half)
+
+  .form-choice &
+    margin-left: 0
 
 .form-help-title
   @extend %color-gray-dark
@@ -267,7 +270,7 @@ textarea
 
   .i-suggest-tick
     opacity: 1
-  
+
   .form-help-bullet
     opacity: 0
 
@@ -300,18 +303,18 @@ textarea
   background-image: image-url("forms/icon-validating.gif")
 
 .form-valid
-  +background-svg("forms/icon-valid")
+  +background-svg("icons/icon-valid")
 
 .form-invalid,
 .form-invalid:focus
-  +background-svg("forms/icon-invalid")
+  +background-svg("icons/icon-invalid")
   border-color: $red
 
 // Shake
 
 .form-submit-invalid
   animation: shake 1s ease both
-  
+
 @keyframes shake
   0%, 100%
     transform: translateX(0)

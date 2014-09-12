@@ -2,8 +2,9 @@
 // ========================================
 
 $labels: (
-  (success, green)
-  (warning, gold)
-  (danger,  red)
-  (default, blue)
+  (success, $green,  green)
+  (warning, $gold,   gold)
+  (danger,  $red,    red)
+  (default, $blue,   blue)
+  (alt,     $purple, purple)
 );
