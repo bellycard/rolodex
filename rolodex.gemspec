@@ -6,10 +6,10 @@ require 'rolodex/version'
 Gem::Specification.new do |spec|
   spec.name          = "rolodex"
   spec.version       = Rolodex::VERSION
-  spec.authors       = ["Darby Frey"]
-  spec.email         = ["darby@bellycard.com"]
-  spec.description   = %q{Bellystyle}
-  spec.summary       = %q{Bellystyle}
+  spec.authors       = ["AJ Self, Darby Frey, Shay Howe"]
+  spec.email         = ["tech@bellycard.com"]
+  spec.description   = %q{Rolodex}
+  spec.summary       = %q{Rolodex}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -26,7 +26,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
-
   spec.add_development_dependency "pry"
 
 end

@@ -2,10 +2,12 @@
 // ========================================
 
 .label
+  @extend %background-white
   @extend %border-radius-mini
-  @extend %color-white
+  @extend %border-solid
+  @extend %border-1
   font-weight: 500
-  +rem(padding, 4px 8px 5px 8px)
+  +rem(padding, 3px 7px 4px 7px)
   @extend .position-relative
   @extend .s-hotel
   text-transform: uppercase
@@ -19,8 +21,10 @@
 
 @each $label in $labels
   
-  $kind: nth($label, 1)
-  $bg:   nth($label, 2)
+  $kind:   nth($label, 1)
+  $border: nth($label, 2)
+  $color:  nth($label, 3)
   
   .label-#{$kind}
-    @extend %background-#{$bg}
+    border-color: $border
+    @extend %color-#{$color}

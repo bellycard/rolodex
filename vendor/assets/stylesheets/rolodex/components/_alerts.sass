@@ -27,28 +27,39 @@
   .alert-#{$kind}
     background-repeat: no-repeat
 
+    a
+      text-decoration: underline
+
   .alert-banner.alert-#{$kind}
     @extend %background-#{$color}
     +background-svg("alerts/icon-#{$icon}-light")
 
-    .alert-signal,
-    .alert-action
+    a,
+    .alert-signal
       @extend %color-#{$color}-light
+
+    a:active,
+    a:hover
+      @extend %color-white
 
     .alert-signal
       @extend .s-delta
 
-    .alert-action:active,
-    .alert-action:hover
-      @extend %color-white
+    .alert-action
+      text-decoration: none
 
   .alert-inline.alert-#{$kind}
     @extend %background-#{$color}-light
     +background-svg("alerts/icon-#{$icon}-dark")
     border-color: $border
 
+    a,
     .alert-signal
       @extend %color-#{$color}
+
+    a:active,
+    a:hover
+      @extend %color-#{$color}-dark
 
 // Banner alerts
 // ========================================
