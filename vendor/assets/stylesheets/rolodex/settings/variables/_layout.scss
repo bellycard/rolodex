@@ -20,11 +20,11 @@ $border-radius-mini: 4px;
 // Arrays
 // ========================================
 
-$alignments:  bottom, middle, top;
-$displays:    block, inline-block, table, table-cell, none;
-$floats:      left, right, none;
-$positions:   relative, absolute, fixed;
-$zeros:       bottom, border, left, margin, padding, right, top;
+$alignments: bottom, middle, top;
+$displays:   block, inline-block, table, table-cell, none;
+$floats:     left, right, none;
+$positions:  relative, absolute, fixed;
+$zeros:      bottom, border, left, margin, padding, right, top;
 
 // Maps
 // ========================================
@@ -41,15 +41,15 @@ $baselines: (
 // Border radius map
 
 $radii: (
-  base:   $border-radius-base,
-  mini:   $border-radius-mini
+  base: $border-radius-base,
+  mini: $border-radius-mini
 );
 
 // Surgical classes map
 
 $surgicals: (
-  top: $baseline-base,
+  top:    $baseline-base,
   bottom: $baseline-base,
-  left: $grid-gutter,
-  right: $grid-gutter
+  left:   $grid-gutter,
+  right:  $grid-gutter
 );
