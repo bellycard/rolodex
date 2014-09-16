@@ -1,3 +1,3 @@
-require 'sprockets'
+# require 'sprockets'
 
-Sprockets.append_path File.expand_path("../../vendor/assets/javascripts")
+# Sprockets.append_path File.expand_path("../../vendor/assets/javascripts")
