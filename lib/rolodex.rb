@@ -5,7 +5,6 @@ module Rolodex
 
   if defined?(::Middleman)
     require "middleman-autoprefixer"
-    # require "rolodex/sprockets"
 
     Angular::Html2js.configure do |config|
       config.module_name = 'templates'
