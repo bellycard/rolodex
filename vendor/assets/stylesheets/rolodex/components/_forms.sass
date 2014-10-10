@@ -56,7 +56,7 @@ textarea
 .form-label
   @extend .display-inline-block
   @extend %font-weight-bold
-  +rem(margin-bottom, $baseline-step)
+  @extend .margin-bottom-step
 
 .form-subtle,
 .form-claim
@@ -82,7 +82,7 @@ textarea
   @extend %border-radius-base
   @extend %color-black
   @extend .display-block
-  +rem(padding, ($baseline-step + 2) ($grid-gutter-half - 1))
+  +rem(padding, ($baseline-step + 2) ($gutter-half - 1))
   @extend .position-relative
   @extend .grid-1-1
   transition: border .15s ease, background-image .15s ease
@@ -102,10 +102,10 @@ textarea
   &:-ms-input-placeholder,
   &:-moz-placeholder,
   &::-webkit-input-placeholder
-    color: #999  // Vendor prefixes bust the extend
+    color: #999 // Vendor prefixes bust the extend
 
   &::-moz-placeholder
-    opacity: 1
+    opacity: 1 // Vendor prefixes bust the extend
 
   &[type='search']
     +background-svg("forms/icon-search", 15px)
@@ -114,7 +114,7 @@ textarea
     +rem(padding-left, 38px)
 
 .form-area
-  +rem(min-height, $baseline-base * 5)
+  +rem(min-height, $baseline-large)
 
 .form-date
   +background-svg("forms/icon-calendar", 20px 21px)
@@ -138,7 +138,8 @@ textarea
   input[type="radio"],
   input[type="checkbox"]
     @extend .pull-left
-    +rem(margin, $baseline-step 0 0 -20px)
+    @extend .margin-top-step
+    +rem(margin-left, -20px)
 
   label[disabled]
     @extend %cursor-not-allowed
@@ -196,8 +197,8 @@ textarea
     border-right: 0
     +rem(border-radius, $border-radius-base 0 0 $border-radius-base)
     @extend %color-gray-dark
-    +rem(padding, ($baseline-step + 2) ($grid-gutter-half - 1))
-    white-space: nowrap
+    +rem(padding, ($baseline-step + 2) ($gutter-half - 1))
+    @extend %white-space-nowrap
 
     &[disabled]
       @extend %color-gray
@@ -233,7 +234,9 @@ textarea
 
 .form-help
   @extend .form-subtle
-  +rem(margin, $baseline-step $grid-gutter-half 0 $grid-gutter-half)
+  @extend .margin-top-step
+  @extend .margin-right-half
+  @extend .margin-left-half
 
   .form-choice &
     margin-left: 0
@@ -241,7 +244,8 @@ textarea
 .form-help-title
   @extend %color-gray-dark
   @extend .display-inline-block
-  +rem(margin, $baseline-step 0)
+  @extend .margin-top-step
+  @extend .margin-bottom-step
 
 .form-help-suggestions
 
@@ -257,7 +261,7 @@ textarea
     @extend %transition-all
 
   .i-suggest-tick
-    opacity: 0
+    @extend %opacity-0
     +rem(top, 7px)
 
 .form-help-bullet
@@ -269,10 +273,10 @@ textarea
 .form-help-success
 
   .i-suggest-tick
-    opacity: 1
+    @extend %opacity-1
 
   .form-help-bullet
-    opacity: 0
+    @extend %opacity-0
 
 // Validation
 // ========================================
@@ -294,7 +298,7 @@ textarea
 .form-validating,
 .form-valid,
 .form-invalid
-  +rem(background-position, right ($grid-gutter-half - 1) top ($baseline-step * 2))
+  +rem(background-position, right ($gutter-half - 1) top $baseline-x-small)
   background-repeat: no-repeat
   +rem(background-size, 16px)
   +rem(padding-right, 44px)

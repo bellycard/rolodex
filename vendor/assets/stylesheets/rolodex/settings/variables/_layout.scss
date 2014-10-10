@@ -1,16 +1,20 @@
 // Layout
 // ========================================
 
-$grid-gutter:      30px;
-$grid-gutter-half: $grid-gutter / 2;
+// Gutters
+
+$gutter:      30px;
+$gutter-half: $gutter / 2;
 
 // Baselines
 
-$baseline-step:    6px;
-$baseline-smaller: $baseline-step * 3; // 18px
-$baseline-base:    $baseline-step * 4; // 24px
-$baseline-taller:  $baseline-step * 5; // 30px
-$baseline-tallest: $baseline-step * 7; // 42px
+$baseline-step:     6px;
+$baseline-x-small:  $baseline-step * 2; // 12px
+$baseline-small:    $baseline-step * 3; // 18px
+$baseline-base:     $baseline-step * 4; // 24px
+$baseline-large:    $baseline-step * 5; // 30px
+$baseline-x-large:  $baseline-step * 6; // 36px
+$baseline-xx-large: $baseline-step * 7; // 42px
 
 // Border radius
 
@@ -23,19 +27,30 @@ $border-radius-mini: 4px;
 $alignments: bottom, middle, top;
 $displays:   block, inline-block, table, table-cell, none;
 $floats:     left, right, none;
+$overflows:  auto, hidden, visible;
 $positions:  relative, absolute, fixed;
 $zeros:      bottom, border, left, margin, padding, right, top;
 
 // Maps
 // ========================================
 
+// Gutters map
+
+$gutters: (
+  base: $gutter,
+  half: $gutter-half
+);
+
 // Baselines map
 
 $baselines: (
-  smaller: $baseline-smaller,
-  base:    $baseline-base,
-  taller:  $baseline-taller,
-  tallest: $baseline-tallest
+  step:     $baseline-step,
+  x-small:  $baseline-x-small,
+  small:    $baseline-small,
+  base:     $baseline-base,
+  large:    $baseline-large,
+  x-large:  $baseline-x-large,
+  xx-large: $baseline-xx-large
 );
 
 // Border radius map
@@ -43,13 +58,4 @@ $baselines: (
 $radii: (
   base: $border-radius-base,
   mini: $border-radius-mini
-);
-
-// Surgical classes map
-
-$surgicals: (
-  top:    $baseline-base,
-  bottom: $baseline-base,
-  left:   $grid-gutter,
-  right:  $grid-gutter
 );

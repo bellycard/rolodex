@@ -1,11 +1,16 @@
 // Misc
 // ========================================
 
+// Opacities
+
+$opacities: 0, .65, 1;
+
 // Transition
 
-$transition-timing:   .15s;
+$transition-duration: .15s;
 $transition-function: ease;
 
 // Cursors
 
-$cursors: default, pointer, help, not-allowed;
+$cursors:        default, pointer, help, not-allowed;
+$pointer-events: auto, none;
