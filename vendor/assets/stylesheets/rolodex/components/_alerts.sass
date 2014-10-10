@@ -4,13 +4,13 @@
 .alert-title
   @extend .display-block
   @extend %font-weight-bold
-  +rem(margin-bottom, $baseline-step)
+  @extend .margin-bottom-step
 
 .alert-signal
   @extend %font-weight-bold
   line-height: 1
   +rem(padding-right, 5px)
-  text-transform: uppercase
+  @extend %text-transform-uppercase
 
 .alert-action
   @extend .pull-right
@@ -28,7 +28,7 @@
     background-repeat: no-repeat
 
     a
-      text-decoration: underline
+      @extend %text-decoration-underline
 
   .alert-banner.alert-#{$kind}
     @extend %background-#{$color}
@@ -46,7 +46,7 @@
       @extend .s-delta
 
     .alert-action
-      text-decoration: none
+      @extend %text-decoration-none
 
   .alert-inline.alert-#{$kind}
     @extend %background-#{$color}-light
@@ -66,7 +66,9 @@
 
 .alert-banner
   @extend %color-white
-  +rem(padding, $baseline-smaller $grid-gutter-half)
+  @extend .padding-top-small
+  @extend .padding-bottom-small
+  @extend .padding-gutters-half
   @extend .position-relative
   @extend .s-echo
 
@@ -74,7 +76,7 @@
     +rem(top, 23px)
 
 .alert-dismissible
-  +rem(padding-right, $grid-gutter-half * 3)
+  +rem(padding-right, $gutter-half * 3)
 
 // Kinds
 
@@ -86,21 +88,20 @@
   $offset: nth($alert, 4)
 
   .alert-banner.alert-#{$kind}
-    +rem(background-position, $grid-gutter-half $offset)
+    +rem(background-position, $gutter-half $offset)
     +rem(background-size, $width $height)
-    +rem(padding-left, ($grid-gutter-half * 2) + $width)
+    +rem(padding-left, $gutter + $width)
 
 // Inline alerts
 // ========================================
 
 .alert-inline
   @extend %border-radius-base
-  @extend %border-radius-base
   @extend %border-solid
   @extend %border-1
   @extend %color-black-offset
   @extend .display-inline-block
-  +rem(padding, (($baseline-step * 1.5) - 1) ($grid-gutter-half - 1))
+  +rem(padding, (($baseline-step * 1.5) - 1) ($gutter-half - 1))
 
 // Kinds
 

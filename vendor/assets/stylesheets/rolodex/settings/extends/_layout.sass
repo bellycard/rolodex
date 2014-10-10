@@ -39,7 +39,7 @@
   @extend %border-1
   @extend %border-solid
   @extend %border-radius-base
-  box-shadow: 0 0 0 4px rgba($black, .06)
+  +rem(box-shadow, 0 0 0 4px rgba($black, .06))
 
 // Alignments
 
@@ -59,6 +59,12 @@
   .pull-#{$float}
     float: $float
 
+// Overflows
+
+@each $overflow in $overflows
+  %overflow-#{$overflow}
+    overflow: $overflow
+
 // Positions
 
 @each $position in $positions
@@ -75,6 +81,27 @@
   &:after
     clear: both
 
+// Centering
+// ========================================
+
+%left-50
+  left: 50%
+
+%right-50
+  top: 50%
+
+%center-x
+  @extend %left-50
+  transform: translateX(-50%)
+
+%center-y
+  @extend %right-50
+  transform: translateY(-50%)
+
+%center-xy
+  @extend %left-50, %right-50
+  transform: translateX(-50%) translateY(-50%)
+
 // Box models
 // ========================================
 
@@ -85,22 +112,85 @@
 .margin-auto
   margin: 0 auto
 
-// Surgical classes
+// Baseline surgical classes
+// ========================================
 
-@each $surgical, $i in $surgicals
+@each $baseline, $i in $baselines
 
-  .margin-#{$surgical}
-    +rem(margin-#{$surgical}, $i)
+  %line-height-#{$baseline}
+    +rem(line-height, $i)
+    
+  @if $baseline == base
 
-  .padding-#{$surgical}
-    +rem(padding-#{$surgical}, $i)
+    .margin-bottom
+      +rem(margin-bottom, $i)
+
+    .margin-top
+      +rem(margin-top, $i)
+
+    .padding-bottom
+      +rem(padding-bottom, $i)
+
+    .padding-top
+      +rem(padding-top, $i)
+
+  @else
+
+    .margin-bottom-#{$baseline}
+      +rem(margin-bottom, $i)
+
+    .margin-top-#{$baseline}
+      +rem(margin-top, $i)
+
+    .padding-bottom-#{$baseline}
+      +rem(padding-bottom, $i)
+
+    .padding-top-#{$baseline}
+      +rem(padding-top, $i)
+
+// Gutter surgical classes
+// ========================================
+
+@each $gutter, $i in $gutters
+  @if $gutter == base
+
+    .margin-left
+      +rem(margin-left, $i)
+
+    .margin-right
+      +rem(margin-right, $i)
+
+    .padding-left
+      +rem(padding-left, $i)
+
+    .padding-right
+      +rem(padding-right, $i)
+
+  @else
+
+    .margin-left-#{$gutter}
+      +rem(margin-left, $i)
+
+    .margin-right-#{$gutter}
+      +rem(margin-right, $i)
+
+    .padding-left-#{$gutter}
+      +rem(padding-left, $i)
+
+    .padding-right-#{$gutter}
+      +rem(padding-right, $i)
 
 // Full boxes
+// ========================================
 
 .padding-gutters
   @extend .padding-left
   @extend .padding-right
 
+.padding-gutters-half
+  @extend .padding-left-half
+  @extend .padding-right-half
+  
 .padding-baselines
   @extend .padding-bottom
   @extend .padding-top
@@ -109,11 +199,21 @@
   @extend .padding-gutters
   @extend .padding-baselines
 
-// Half boxes
+.margin-gutters
+  @extend .margin-left
+  @extend .margin-right
 
-.padding-gutters-half
-  +rem(padding-left, $grid-gutter-half)
-  +rem(padding-right, $grid-gutter-half)
+.margin-gutters-half
+  @extend .margin-left-half
+  @extend .margin-right-half
+  
+.margin-baselines
+  @extend .margin-bottom
+  @extend .margin-top
+
+.margin-box
+  @extend .margin-gutters
+  @extend .margin-baselines
 
 // Grid system
 // ========================================

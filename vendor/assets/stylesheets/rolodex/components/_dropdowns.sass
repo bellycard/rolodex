@@ -8,15 +8,15 @@
   @extend .position-relative
   
 [data-dropdown-content]
-  opacity: 0
-  pointer-events: none
+  @extend %opacity-0
+  @extend %pointer-events-none
   @extend .position-absolute
   @extend %transition-all
   z-index: 4
 
   [data-dropdown-open] &
-    opacity: 1
-    pointer-events: auto
+    @extend %opacity-1
+    @extend %pointer-events-auto
 
 // Dropdown arrow
 // ========================================
@@ -31,9 +31,8 @@
   @extend %content-empty
   @extend %cursor-pointer
   @extend .position-absolute
-  +rem(right, $grid-gutter-half)
-  top: 50%
-  transform: translateY(-50%)
+  +rem(right, $gutter-half)
+  @extend %center-y
   z-index: 3
 
 .dropdown:hover:after,
@@ -50,8 +49,8 @@
   @extend %border-radius-base
   @extend %color-black-offset
   @extend %cursor-pointer
-  +rem(padding, ($baseline-step + 2) 36px ($baseline-step + 2) ($grid-gutter-half - 1))
-  text-align: left
+  +rem(padding, ($baseline-step + 2) 36px ($baseline-step + 2) ($gutter-half - 1))
+  @extend %text-left
 
   &:focus
     outline: 0
@@ -71,7 +70,7 @@
 
 .dropdown-menu
   @extend .box-overlay
-  +rem(margin-top, $baseline-step * 2)
+  @extend .margin-top-x-small
   +rem(min-width, 140px)
   right: 0
   top: 100%

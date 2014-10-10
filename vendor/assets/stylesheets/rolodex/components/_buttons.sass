@@ -19,7 +19,7 @@
   @extend %text-decoration-none
   @extend %transition-all
   @extend %vertical-align-middle
-  white-space: nowrap
+  @extend %white-space-nowrap
 
   &:hover,
   &:active
@@ -36,7 +36,9 @@
 
   &.btn-large
     @extend .s-delta
-    +rem(padding, 16px 30px 18px 30px)
+    @extend .padding-gutters
+    +rem(padding-bottom, 18px)
+    +rem(padding-top, 16px)
 
   &.btn-small
     @extend %border-radius-mini
@@ -57,7 +59,7 @@
     background-color: $bg-normal
 
     @if $kind == "boring"
-      border-color: $gray-light
+      border-color: $gray-light // Specificity bust the extend
       @extend %color-gray-dark
 
     &:hover

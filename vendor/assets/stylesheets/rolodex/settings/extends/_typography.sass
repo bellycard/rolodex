@@ -8,16 +8,16 @@
     +rem(font-size, $i)
 
 .s-alpha
-  @extend %line-height-tallest
+  @extend %line-height-xx-large
 
 .s-bravo,
 .s-charlie
-  @extend %line-height-taller
+  @extend %line-height-large
 
 .s-golf,
 .s-hotel
   @extend %font-family-helvetica
-  @extend %line-height-smaller
+  @extend %line-height-small
 
 // Headings
 
@@ -49,12 +49,6 @@
   %font-weight-#{$weight}
     font-weight: $i
 
-// Line height
-
-@each $line-height, $i in $baselines
-  %line-height-#{$line-height}
-    +rem(line-height, $i)
-
 // Colors
 
 @each $color, $i in $text-colors
@@ -63,8 +57,18 @@
 
 // Misc
 
-%text-center
-  text-align: center
+@each $alignment in $text-alignments
+  %text-#{$alignment}
+    text-align: #{$alignment}
 
-%text-decoration-none
-  text-decoration: none
+@each $decoration in $text-decorations
+  %text-decoration-#{$decoration}
+    text-decoration: #{$decoration}
+
+@each $transform in $text-transforms
+  %text-transform-#{$transform}
+    text-transform: #{$transform}
+
+@each $space in $white-spaces
+  %white-space-#{$space}
+    white-space: #{$space}

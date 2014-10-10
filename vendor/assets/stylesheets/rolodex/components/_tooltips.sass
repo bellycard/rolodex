@@ -15,10 +15,8 @@
     +background-svg("tooltips/tooltip-star", 10px)
     @extend %content-empty
     +rem(height, 10px)
-    left: 50%
     @extend .position-absolute
-    top: 50%
-    transform: translateX(-50%) translateY(-50%)
+    @extend %center-xy
     +rem(width, 10px)
   
   &:hover,
@@ -29,7 +27,7 @@
       +rem(background-position, 0 -10px)
 
   .form-group &
-    +rem(margin-left, $grid-gutter-half)
+    @extend .margin-left-half
 
 .tooltip-push-down
   +rem(margin-top, 1px)
@@ -52,20 +50,20 @@
   @extend .box-overlay
   border-color: $gray-light // Specificity bust the extend
   @extend %cursor-default
-  opacity: 0
-  pointer-events: none
+  @extend %opacity-0
+  @extend %pointer-events-none
   @extend .position-absolute
   @extend %transition-all
   +rem(width, 300px)
   z-index: 9
 
   .tooltip:hover &
-    opacity: 1
-    pointer-events: auto
+    @extend %opacity-1
+    @extend %pointer-events-auto
 
   &:before
     @extend %content-empty
-    +rem(height, $baseline-step * 2)
+    +rem(height, $baseline-x-small)
     @extend .position-absolute
     +rem(width, 40px)
 
@@ -77,12 +75,15 @@
 
 .tooltip-body
   @extend %color-gray-dark
-  +rem(padding, $baseline-smaller 20px)
+  @extend .padding-top-small
+  @extend .padding-bottom-small
+  +rem(padding-left, 20px)
+  +rem(padding-right, 20px)
   @extend .s-golf
 
   p:not(:last-child),
   .list-base li:not(:last-child)
-    +rem(margin-bottom, $baseline-step)
+    @extend .margin-bottom-step
 
 // Positioning
 
@@ -91,20 +92,20 @@
 .tooltip-top-left
   .tooltip-tip
     bottom: 100%
-    +rem(margin-bottom, $baseline-step * 2)
+    @extend .margin-bottom-x-small
 
     &:before
-      +rem(bottom, ($baseline-step * -2) - 1)
+      +rem(bottom, ($baseline-x-small * -1) - 1)
 
 .tooltip-bottom-right,
 .tooltip-bottom,
 .tooltip-bottom-left
   .tooltip-tip
     top: 100%
-    +rem(margin-top, $baseline-step * 2)
+    @extend .margin-top-x-small
     
     &:before
-      +rem(top, ($baseline-step * -2) - 1)
+      +rem(top, ($baseline-x-small * -1) - 1)
 
 .tooltip-top-right,
 .tooltip-bottom-right
@@ -115,8 +116,7 @@
 .tooltip-top .tooltip-tip:before,
 .tooltip-bottom .tooltip-tip,
 .tooltip-bottom .tooltip-tip:before
-  margin-left: 50%
-  transform: translateX(-50%)
+  @extend %center-x
 
 .tooltip-top-left,
 .tooltip-bottom-left
