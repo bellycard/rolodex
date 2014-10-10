@@ -59,8 +59,7 @@
     background-color: $bg-normal
 
     @if $kind == "boring"
-      // Cascade bust the extend
-      border-color: $gray-light
+      border-color: $gray-light // Specificity bust the extend
       @extend %color-gray-dark
 
     &:hover
