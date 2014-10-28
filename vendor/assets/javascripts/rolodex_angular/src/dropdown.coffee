@@ -91,6 +91,7 @@ angular.module('rolodex.dropdown', [])
           _.each anchors, (anchor) ->
             angular.element(anchor).on 'click', (evt) ->
               dropdownService.close(scope)
+              scope.$digest()
 
       else
         self.$element.removeAttr(dropDownOpen)
