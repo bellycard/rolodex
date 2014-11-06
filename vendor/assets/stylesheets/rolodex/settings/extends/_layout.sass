@@ -3,7 +3,8 @@
 
 // Image replacement
 
-.ir
+.ir,
+%ir
   color: transparent
   font: 0/0 a
   text-shadow: none
@@ -33,7 +34,8 @@
   
 // Box overlay
 
-.box-overlay
+.box-overlay,
+%box-overlay
   @extend %background-white
   border-color: $blue
   @extend %border-1
@@ -50,13 +52,15 @@
 // Displays
 
 @each $display in $displays
-  .display-#{$display}
+  .display-#{$display},
+  %display-#{$display}
     display: $display
 
 // Floats
 
 @each $float in $floats
-  .pull-#{$float}
+  .pull-#{$float},
+  %pull-#{$float}
     float: $float
 
 // Overflows
@@ -68,16 +72,18 @@
 // Positions
 
 @each $position in $positions
-  .position-#{$position}
+  .position-#{$position},
+  %position-#{$position}
     position: $position
 
 // Clearfix
 
-.group
+.group,
+%group
   &:before,
   &:after
     @extend %content-empty
-    @extend .display-table
+    @extend %display-table
   &:after
     clear: both
 
@@ -106,10 +112,12 @@
 // ========================================
 
 @each $zero in $zeros
-  .#{$zero}-0
+  .#{$zero}-0,
+  %#{$zero}-0
     #{$zero}: 0
 
-.margin-auto
+.margin-auto,
+%margin-auto
   margin: 0 auto
 
 // Baseline surgical classes
@@ -122,30 +130,38 @@
     
   @if $baseline == base
 
-    .margin-bottom
+    .margin-bottom,
+    %margin-bottom
       +rem(margin-bottom, $i)
 
-    .margin-top
+    .margin-top,
+    %margin-top
       +rem(margin-top, $i)
 
-    .padding-bottom
+    .padding-bottom,
+    %padding-bottom
       +rem(padding-bottom, $i)
 
-    .padding-top
+    .padding-top,
+    %padding-top
       +rem(padding-top, $i)
 
   @else
 
-    .margin-bottom-#{$baseline}
+    .margin-bottom-#{$baseline},
+    %margin-bottom-#{$baseline}
       +rem(margin-bottom, $i)
 
-    .margin-top-#{$baseline}
+    .margin-top-#{$baseline},
+    %margin-top-#{$baseline}
       +rem(margin-top, $i)
 
-    .padding-bottom-#{$baseline}
+    .padding-bottom-#{$baseline},
+    %padding-bottom-#{$baseline}
       +rem(padding-bottom, $i)
 
-    .padding-top-#{$baseline}
+    .padding-top-#{$baseline},
+    %padding-top-#{$baseline}
       +rem(padding-top, $i)
 
 // Gutter surgical classes
@@ -154,84 +170,102 @@
 @each $gutter, $i in $gutters
   @if $gutter == base
 
-    .margin-left
+    .margin-left,
+    %margin-left
       +rem(margin-left, $i)
 
-    .margin-right
+    .margin-right,
+    %margin-right
       +rem(margin-right, $i)
 
-    .padding-left
+    .padding-left,
+    %padding-left
       +rem(padding-left, $i)
 
-    .padding-right
+    .padding-right,
+    %padding-right
       +rem(padding-right, $i)
 
   @else
 
-    .margin-left-#{$gutter}
+    .margin-left-#{$gutter},
+    %margin-left-#{$gutter}
       +rem(margin-left, $i)
 
-    .margin-right-#{$gutter}
+    .margin-right-#{$gutter},
+    %margin-right-#{$gutter}
       +rem(margin-right, $i)
 
-    .padding-left-#{$gutter}
+    .padding-left-#{$gutter},
+    %padding-left-#{$gutter}
       +rem(padding-left, $i)
 
-    .padding-right-#{$gutter}
+    .padding-right-#{$gutter},
+    %padding-right-#{$gutter}
       +rem(padding-right, $i)
 
 // Full boxes
 // ========================================
 
-.padding-gutters
-  @extend .padding-left
-  @extend .padding-right
+.padding-gutters,
+%padding-gutters
+  @extend %padding-right
+  @extend %padding-left
 
-.padding-gutters-half
-  @extend .padding-left-half
-  @extend .padding-right-half
+.padding-gutters-half,
+%padding-gutters-half
+  @extend %padding-right-half
+  @extend %padding-left-half
   
-.padding-baselines
-  @extend .padding-bottom
-  @extend .padding-top
+.padding-baselines,
+%padding-baselines
+  @extend %padding-top
+  @extend %padding-bottom
 
-.padding-box
-  @extend .padding-gutters
-  @extend .padding-baselines
+.padding-box,
+%padding-box
+  @extend %padding-gutters
+  @extend %padding-baselines
 
-.margin-gutters
-  @extend .margin-left
-  @extend .margin-right
+.margin-gutters,
+%margin-gutters
+  @extend %margin-right
+  @extend %margin-left
 
-.margin-gutters-half
-  @extend .margin-left-half
-  @extend .margin-right-half
+.margin-gutters-half,
+%margin-gutters-half
+  @extend %margin-right-half
+  @extend %margin-left-half
   
-.margin-baselines
-  @extend .margin-bottom
-  @extend .margin-top
+.margin-baselines,
+%margin-baselines
+  @extend %margin-top
+  @extend %margin-bottom
 
-.margin-box
-  @extend .margin-gutters
-  @extend .margin-baselines
+.margin-box,
+%margin-box
+  @extend %margin-gutters
+  @extend %margin-baselines
 
 // Grid system
 // ========================================
 
-.grid
-  @extend .list-none
+.grid,
+%grid
+  @extend %list-none
   +rem(letter-spacing, -4px)
 
 .opera:-o-prefocus,
 .grid
   +rem(word-spacing, -5px)
 
-.grid-col
-  @extend .display-inline-block
-  vertical-align: top
-  letter-spacing: normal
-  word-spacing: normal
+.grid-col,
+%grid-col
+  @extend %display-inline-block
   *display: inline
+  letter-spacing: normal
+  @extend %vertical-align-top
+  @extend %white-space-normal
   zoom: 1
 
 // Grid widths
@@ -248,25 +282,30 @@ $columns: 12
     // Extend multiples of 2, 3, 5, or compile the class
     @if ($column % 2 == 0) and ($columns % 2 == 0)
     
-      .grid-#{$column}-#{$columns}
-        @extend .grid-#{$column/2}-#{$columns/2}
+      .grid-#{$column}-#{$columns},
+      %grid-#{$column}-#{$columns}
+        @extend %grid-#{$column/2}-#{$columns/2}
     
     @else if ($column % 3 == 0) and ($columns % 3 == 0)
     
-      .grid-#{$column}-#{$columns}
-        @extend .grid-#{$column/3}-#{$columns/3}
+      .grid-#{$column}-#{$columns},
+      %grid-#{$column}-#{$columns}
+        @extend %grid-#{$column/3}-#{$columns/3}
 
     @else if ($column % 5 == 0) and ($columns % 5 == 0)
     
-      .grid-#{$column}-#{$columns}
-        @extend .grid-#{$column/5}-#{$columns/5}
+      .grid-#{$column}-#{$columns},
+      %grid-#{$column}-#{$columns}
+        @extend %grid-#{$column/5}-#{$columns/5}
         
     @else
   
-      .grid-#{$column}-#{$columns}
+      .grid-#{$column}-#{$columns},
+      %grid-#{$column}-#{$columns}
         width: ($column/$columns) * 100%
     
   $columns: $columns - 1
 
-.grid-1-1
+.grid-1-1,
+%grid-1-1
   width: 100%

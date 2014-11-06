@@ -8,11 +8,11 @@
   @extend %border-radius-base
   @extend %color-white
   @extend %cursor-pointer
-  @extend .display-inline-block
+  @extend %display-inline-block
   @extend %font-family-open-sans
-  @extend .s-foxtrot
+  @extend %s-foxtrot
   @extend %line-height-base
-  @extend .margin-0
+  @extend %margin-0
   outline: 0
   +rem(padding, 8px 14px)
   @extend %text-center
@@ -35,14 +35,14 @@
     @extend %cursor-not-allowed
 
   &.btn-large
-    @extend .s-delta
-    @extend .padding-gutters
+    @extend %s-delta
+    @extend %padding-gutters
     +rem(padding-bottom, 18px)
     +rem(padding-top, 16px)
 
   &.btn-small
     @extend %border-radius-mini
-    @extend .s-golf
+    @extend %s-golf
     +rem(padding, ($baseline-step - 1) 10px)
 
 // Kinds

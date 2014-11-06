@@ -5,15 +5,15 @@
 // ========================================
 
 fieldset
-  @extend .border-0
-  @extend .margin-0
+  @extend %border-0
+  @extend %margin-0
   min-width: 0
-  @extend .padding-0
-  @extend .grid-1-1
+  @extend %padding-0
+  @extend %grid-1-1
 
 legend
-  @extend .border-0
-  @extend .padding-0
+  @extend %border-0
+  @extend %padding-0
 
 button::-moz-focus-inner,
 input::-moz-focus-inner
@@ -27,7 +27,7 @@ html input[disabled]
 input[type="checkbox"],
 input[type="radio"]
   box-sizing: border-box
-  @extend .padding-0
+  @extend %padding-0
 
 input[type="search"]
   -webkit-appearance: textfield
@@ -47,27 +47,27 @@ select,
 textarea
   color: inherit
   font: inherit
-  @extend .margin-0
+  @extend %margin-0
 
 .form-group
-  @extend .margin-bottom
-  @extend .position-relative
+  @extend %margin-bottom
+  @extend %position-relative
 
 .form-label
-  @extend .display-inline-block
+  @extend %display-inline-block
   @extend %font-weight-bold
-  @extend .margin-bottom-step
+  @extend %margin-bottom-step
 
 .form-subtle,
 .form-claim
-  @extend .s-golf
+  @extend %s-golf
 
 .form-subtle
   @extend %color-gray
   @extend %font-weight-normal
 
 .form-claim
-  @extend .pull-right
+  @extend %pull-right
   @extend %line-height-base
   @extend %transition-all
 
@@ -81,10 +81,10 @@ textarea
   @extend %border-base
   @extend %border-radius-base
   @extend %color-black
-  @extend .display-block
+  @extend %display-block
   +rem(padding, ($baseline-step + 2) ($gutter-half - 1))
-  @extend .position-relative
-  @extend .grid-1-1
+  @extend %position-relative
+  @extend %grid-1-1
   transition: border .15s ease, background-image .15s ease
 
   &:focus
@@ -126,9 +126,9 @@ textarea
   @extend %background-white-offset
 
 .form-placeholder-link
-  @extend .pull-right
+  @extend %pull-right
   @extend %line-height-base
-  @extend .s-golf
+  @extend %s-golf
 
 // Checkboxes and radio buttons
 
@@ -137,8 +137,8 @@ textarea
 
   input[type="radio"],
   input[type="checkbox"]
-    @extend .pull-left
-    @extend .margin-top-step
+    @extend %pull-left
+    @extend %margin-top-step
     +rem(margin-left, -20px)
 
   label[disabled]
@@ -154,15 +154,15 @@ textarea
   label
     @extend %cursor-pointer
     +rem(padding-left, 6px)
-    @extend .position-relative
+    @extend %position-relative
 
     &:before
       +background-svg("forms/radio-button", 20px 40px)
       @extend %content-empty
       +rem(height, 20px)
       +rem(left, -20px)
-      @extend .position-absolute
-      @extend .top-0
+      @extend %position-absolute
+      @extend %top-0
       +rem(width, 20px)
 
 .form-radio-active:before
@@ -172,9 +172,9 @@ textarea
 // ========================================
 
 .form-row
-  @extend .display-table
+  @extend %display-table
   border-collapse: separate
-  @extend .grid-1-1
+  @extend %grid-1-1
 
   .form-label,
   .form-btn
@@ -184,12 +184,12 @@ textarea
   .form-control,
   .form-area,
   .form-btn
-    @extend .display-table-cell
+    @extend %display-table-cell
     @extend %vertical-align-top
 
   .form-label,
   .form-btn
-    @extend .position-relative
+    @extend %position-relative
 
   .form-label
     @extend %background-white-offset
@@ -233,30 +233,32 @@ textarea
 // ========================================
 
 .form-help
-  @extend .form-subtle
-  @extend .margin-top-step
-  @extend .margin-gutters-half
+  @extend %color-gray
+  @extend %s-golf
+  @extend %font-weight-normal
+  @extend %margin-top-step
+  @extend %margin-gutters-half
 
   .form-choice &
     margin-left: 0
 
 .form-help-title
   @extend %color-gray-dark
-  @extend .display-inline-block
-  @extend .margin-top-step
-  @extend .margin-bottom-step
+  @extend %display-inline-block
+  @extend %margin-top-step
+  @extend %margin-bottom-step
 
 .form-help-suggestions
 
   li
     @extend %line-height-base
     +rem(padding-left, 18px)
-    @extend .position-relative
+    @extend %position-relative
 
   .i-suggest-tick,
   .form-help-bullet
-    @extend .position-absolute
-    @extend .left-0
+    @extend %position-absolute
+    @extend %left-0
     @extend %transition-all
 
   .i-suggest-tick
@@ -264,8 +266,8 @@ textarea
     +rem(top, 7px)
 
 .form-help-bullet
-  @extend .display-inline-block
-  @extend .s-delta
+  @extend %display-inline-block
+  @extend %s-delta
   @extend %text-center
   +rem(width, 12px)
 

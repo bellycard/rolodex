@@ -16,14 +16,14 @@ html
 
 @each $heading, $i in $headings
   #{$heading}
-    @extend .h-#{$i}
+    @extend %h-#{$i}
 
 // Margins
 
 #{headings()},
 p
-  @extend .margin-0
-  @extend .margin-bottom
+  @extend %margin-0
+  @extend %margin-bottom
 
 // Bolds
 
@@ -52,8 +52,8 @@ samp
   @extend %font-family-monospace
 
 pre
-  @extend .margin-0
-  @extend .margin-bottom
+  @extend %margin-0
+  @extend %margin-bottom
   white-space: pre-wrap
 
 // Address
@@ -64,7 +64,7 @@ address
 // Quotes
 
 blockquote
-  @extend .margin-0
+  @extend %margin-0
 
 q
   quotes: "\201C" "\201D" "\2018" "\2019"
@@ -72,7 +72,7 @@ q
 // Small
 
 small
-  @extend .s-golf
+  @extend %s-golf
 
 // Sub & sup
 
@@ -80,7 +80,7 @@ sub,
 sup
   font-size: 75%
   line-height: 0
-  @extend .position-relative
+  @extend %position-relative
   vertical-align: baseline
 
 sup

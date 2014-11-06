@@ -15,7 +15,7 @@ main,
 nav,
 section,
 summary
-  @extend .display-block
+  @extend %display-block
 
 // Defaults
 
@@ -29,10 +29,10 @@ html
 
 [hidden],
 template
-  @extend .display-none
+  @extend %display-none
 
 body
-  @extend .margin-0
+  @extend %margin-0
 
 // Media object
 
@@ -43,16 +43,16 @@ body
 // Flag
 
 .flag
-  @extend .display-table
-  @extend .grid-1-1
+  @extend %display-table
+  @extend %grid-1-1
 
 .flag-object,
 .flag-body
-  @extend .display-table-cell
+  @extend %display-table-cell
   @extend %vertical-align-middle
 
 .flag-object img
-  @extend .display-block
+  @extend %display-block
 
 .flag-body
-  @extend .grid-1-1
+  @extend %grid-1-1

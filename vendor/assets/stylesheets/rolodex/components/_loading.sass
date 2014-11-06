@@ -11,14 +11,14 @@
   +rem(background-position, 0 -34px)
   margin-left: auto
   margin-right: auto
-  @extend .position-relative
+  @extend %position-relative
 
   &:after
     animation: loading 1s linear infinite
     @extend %content-empty
-    @extend .position-absolute
-    @extend .right-0
-    @extend .top-0
+    @extend %position-absolute
+    @extend %right-0
+    @extend %top-0
 
   .modal-footer &
     +rem(margin-top, 4px)

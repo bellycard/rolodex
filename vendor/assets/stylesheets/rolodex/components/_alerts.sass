@@ -2,9 +2,9 @@
 // ========================================
 
 .alert-title
-  @extend .display-block
+  @extend %display-block
   @extend %font-weight-bold
-  @extend .margin-bottom-step
+  @extend %margin-bottom-step
 
 .alert-signal
   @extend %font-weight-bold
@@ -13,7 +13,7 @@
   @extend %text-transform-uppercase
 
 .alert-action
-  @extend .pull-right
+  @extend %pull-right
 
 // Kinds
 
@@ -43,7 +43,7 @@
       @extend %color-white
 
     .alert-signal
-      @extend .s-delta
+      @extend %s-delta
 
     .alert-action
       @extend %text-decoration-none
@@ -66,11 +66,11 @@
 
 .alert-banner
   @extend %color-white
-  @extend .padding-top-small
-  @extend .padding-bottom-small
-  @extend .padding-gutters-half
-  @extend .position-relative
-  @extend .s-echo
+  @extend %padding-top-small
+  @extend %padding-bottom-small
+  @extend %padding-gutters-half
+  @extend %position-relative
+  @extend %s-echo
 
   .i-close
     +rem(top, 23px)
@@ -100,7 +100,7 @@
   @extend %border-solid
   @extend %border-1
   @extend %color-black-offset
-  @extend .display-inline-block
+  @extend %display-inline-block
   +rem(padding, (($baseline-step * 1.5) - 1) ($gutter-half - 1))
 
 // Kinds
