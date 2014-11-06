@@ -5,12 +5,12 @@
 // ========================================
 
 [data-dropdown]
-  @extend .position-relative
+  @extend %position-relative
   
 [data-dropdown-content]
   @extend %opacity-0
   @extend %pointer-events-none
-  @extend .position-absolute
+  @extend %position-absolute
   @extend %transition-all
   z-index: 4
 
@@ -23,14 +23,14 @@
 
 .dropdown,
 .dropdown-alt
-  @extend .display-inline-block
+  @extend %display-inline-block
   @extend %vertical-align-middle
 
 .dropdown:after
-  @extend .i-caret
+  @extend %i-caret
   @extend %content-empty
   @extend %cursor-pointer
-  @extend .position-absolute
+  @extend %position-absolute
   +rem(right, $gutter-half)
   @extend %center-y
   z-index: 3
@@ -69,8 +69,8 @@
 // ========================================
 
 .dropdown-menu
-  @extend .box-overlay
-  @extend .margin-top-x-small
+  @extend %box-overlay
+  @extend %margin-top-x-small
   +rem(min-width, 140px)
   right: 0
   top: 100%
@@ -87,7 +87,7 @@
 
   a
     @extend %color-black-offset
-    @extend .display-block
+    @extend %display-block
     +rem(padding, 10px 22px)
 
     &:hover,
@@ -100,7 +100,7 @@
 .form-row
 
   [data-dropdown]
-    @extend .grid-1-1
+    @extend %grid-1-1
     
     .form-control:first-child,
     .form-area:first-child

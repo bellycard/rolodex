@@ -3,15 +3,15 @@
 
 .modal
   background-color: rgba($slate-dark, .8)
-  @extend .bottom-0
-  @extend .left-0
+  @extend %bottom-0
+  @extend %left-0
   @extend %opacity-0
   overflow-x: hidden
   overflow-y: auto
   +rem(padding, $baseline-step * 10)
-  @extend .position-fixed
-  @extend .right-0
-  @extend .top-0
+  @extend %position-fixed
+  @extend %right-0
+  @extend %top-0
   @extend %transition-all
   z-index: 99
 
@@ -22,24 +22,24 @@
   @extend %background-white
   @extend %border-radius-base
   box-shadow: 0 0 0 4px rgba($black, .15)
-  @extend .margin-auto
+  @extend %margin-auto
   +rem(max-width, 660px)
 
 .modal-header,
 .modal-footer
-  @extend .padding-box
+  @extend %padding-box
 
 .modal-header
-  @extend .position-relative
+  @extend %position-relative
   @extend %text-center
 
   p:last-child
-    @extend .margin-0
+    @extend %margin-0
 
 .modal-title
-  @extend .s-bravo
+  @extend %s-bravo
   @extend %font-weight-normal
-  @extend .margin-0
+  @extend %margin-0
 
 .modal-body,
 .modal-body-alt
@@ -53,20 +53,20 @@
 // Nav
 
 .modal-nav
-  @extend .padding-gutters
+  @extend %padding-gutters
 
   li
     +rem(margin-bottom, -1px)
-    @extend .padding-gutters
-    @extend .position-relative
+    @extend %padding-gutters
+    @extend %position-relative
     z-index: 1
 
   a
     +rem(border-bottom, 5px solid transparent)
     @extend %color-gray
-    @extend .display-block
-    @extend .padding-bottom-x-small
-    @extend .s-delta
+    @extend %display-block
+    @extend %padding-bottom-x-small
+    @extend %s-delta
     @extend %text-center
 
     &:hover,

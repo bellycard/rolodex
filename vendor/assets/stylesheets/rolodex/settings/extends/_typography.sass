@@ -4,37 +4,50 @@
 // Scale
 
 @each $size, $i in $font-sizes
-  .s-#{$size}
+  .s-#{$size},
+  %s-#{$size}
     +rem(font-size, $i)
 
-.s-alpha
+.s-alpha,
+%s-alpha
   @extend %line-height-xx-large
 
 .s-bravo,
-.s-charlie
+%s-bravo,
+.s-charlie,
+%s-charlie
   @extend %line-height-large
 
 .s-golf,
-.s-hotel
+%s-golf,
+.s-hotel,
+%s-hotel
   @extend %font-family-helvetica
   @extend %line-height-small
 
 // Headings
 
 @each $heading, $i in $headings
-  .h-#{$i}
-    @extend .s-#{$i}
+  .h-#{$i},
+  %h-#{$i}
+    @extend %s-#{$i}
 
 .h-alpha,
+%h-alpha,
 .h-bravo,
-.h-charlie
+%h-bravo,
+.h-charlie,
+%h-charlie
   @extend %font-weight-book
 
-.h-delta
+.h-delta,
+%h-delta
   @extend %font-weight-normal
 
 .h-echo,
-.h-foxtrot
+%h-echo,
+.h-foxtrot,
+%h-foxtrot
   @extend %font-weight-bold
 
 // Font families
@@ -52,7 +65,8 @@
 // Colors
 
 @each $color, $i in $text-colors
-  .text-#{$i}
+  .text-#{$i},
+  %text-#{$i}
     @extend %color-#{$color}
 
 // Misc
