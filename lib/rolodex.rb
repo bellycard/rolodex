@@ -7,9 +7,5 @@ module Rolodex
     config.module_name = 'templates'
     config.init_sprockets
   end
-  
-  if defined?(::Middleman)
-    require "middleman-autoprefixer"
-  end
 
 end
