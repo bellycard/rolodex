@@ -19,7 +19,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency 'angular-html2js'
-  spec.add_dependency 'middleman-autoprefixer'
   spec.add_dependency 'sass', '~> 3.4.3'
   spec.add_dependency 'sprockets', '~> 2.12.2'
 
