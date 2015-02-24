@@ -97,8 +97,8 @@
 
 .alert-inline
   @extend %border-radius-base
-  @extend %border-solid
-  @extend %border-1
+  border-style: solid
+  +rem(border-width, 1px)
   @extend %color-black-offset
   @extend %display-inline-block
   +rem(padding, (($baseline-step * 1.5) - 1) ($gutter-half - 1))

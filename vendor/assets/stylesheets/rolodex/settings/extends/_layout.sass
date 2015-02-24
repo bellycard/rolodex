@@ -14,23 +14,14 @@
 %border-gray-light
   border-color: $gray-light
 
-%border-1
-  +rem(border-width, 1px)
-
-%border-solid
-  border-style: solid
-
 %border-base
   @extend %border-gray-light
-  @extend %border-1
-  @extend %border-solid
+  +rem(border-width, 1px)
+  border-style: solid
 
 @each $radius, $i in $radii
   %border-radius-#{$radius}
     +rem(border-radius, $i)
-
-%border-radius-circle
-  border-radius: 50%
   
 // Box overlay
 
@@ -38,8 +29,8 @@
 %box-overlay
   @extend %background-white
   border-color: $blue
-  @extend %border-1
-  @extend %border-solid
+  +rem(border-width, 1px)
+  border-style: solid
   @extend %border-radius-base
   +rem(box-shadow, 0 0 0 4px rgba($black, .06))
 
