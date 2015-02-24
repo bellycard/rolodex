@@ -9,7 +9,7 @@
   overflow-x: hidden
   overflow-y: auto
   +rem(padding, $baseline-step * 10)
-  @extend %position-fixed
+  position: fixed
   @extend %right-0
   @extend %top-0
   @extend %transition-all
@@ -30,7 +30,7 @@
   @extend %padding-box
 
 .modal-header
-  @extend %position-relative
+  position: relative
   @extend %text-center
 
   p:last-child
@@ -58,7 +58,7 @@
   li
     +rem(margin-bottom, -1px)
     @extend %padding-gutters
-    @extend %position-relative
+    position: relative
     z-index: 1
 
   a

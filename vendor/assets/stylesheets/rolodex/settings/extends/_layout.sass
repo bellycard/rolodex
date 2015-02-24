@@ -36,23 +36,11 @@
 
 // Floats
 
-@each $float in $floats
-  .pull-#{$float},
-  %pull-#{$float}
-    float: $float
+.pull-left
+  float: left
 
-// Overflows
-
-@each $overflow in $overflows
-  %overflow-#{$overflow}
-    overflow: $overflow
-
-// Positions
-
-@each $position in $positions
-  .position-#{$position},
-  %position-#{$position}
-    position: $position
+.pull-right
+  float: right
 
 // Clearfix
 

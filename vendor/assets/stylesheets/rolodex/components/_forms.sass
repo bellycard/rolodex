@@ -51,7 +51,7 @@ textarea
 
 .form-group
   @extend %margin-bottom
-  @extend %position-relative
+  position: relative
 
 .form-label
   display: inline-block
@@ -67,7 +67,7 @@ textarea
   @extend %font-weight-normal
 
 .form-claim
-  @extend %pull-right
+  float: right
   @extend %line-height-base
   @extend %transition-all
 
@@ -83,7 +83,7 @@ textarea
   @extend %color-black
   display: block
   +rem(padding, ($baseline-step + 2) ($gutter-half - 1))
-  @extend %position-relative
+  position: relative
   @extend %grid-1-1
   transition: border .15s ease, background-image .15s ease
 
@@ -126,7 +126,7 @@ textarea
   @extend %background-white-offset
 
 .form-placeholder-link
-  @extend %pull-right
+  float: right
   @extend %line-height-base
   @extend %s-golf
 
@@ -137,7 +137,7 @@ textarea
 
   input[type="radio"],
   input[type="checkbox"]
-    @extend %pull-left
+    float: left
     @extend %margin-top-step
     +rem(margin-left, -20px)
 
@@ -154,14 +154,14 @@ textarea
   label
     @extend %cursor-pointer
     +rem(padding-left, 6px)
-    @extend %position-relative
+    position: relative
 
     &:before
       +background-svg("forms/radio-button", 20px 40px)
       @extend %content-empty
       +rem(height, 20px)
       +rem(left, -20px)
-      @extend %position-absolute
+      position: absolute
       @extend %top-0
       +rem(width, 20px)
 
@@ -189,7 +189,7 @@ textarea
 
   .form-label,
   .form-btn
-    @extend %position-relative
+    position: relative
 
   .form-label
     @extend %background-white-offset
@@ -253,11 +253,11 @@ textarea
   li
     @extend %line-height-base
     +rem(padding-left, 18px)
-    @extend %position-relative
+    position: relative
 
   .i-suggest-tick,
   .form-help-bullet
-    @extend %position-absolute
+    position: absolute
     @extend %left-0
     @extend %transition-all
 

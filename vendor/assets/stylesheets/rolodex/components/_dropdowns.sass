@@ -5,12 +5,12 @@
 // ========================================
 
 [data-dropdown]
-  @extend %position-relative
+  position: relative
   
 [data-dropdown-content]
   @extend %opacity-0
   @extend %pointer-events-none
-  @extend %position-absolute
+  position: absolute
   @extend %transition-all
   z-index: 4
 
@@ -30,7 +30,7 @@
   @extend %i-caret
   @extend %content-empty
   @extend %cursor-pointer
-  @extend %position-absolute
+  position: absolute
   +rem(right, $gutter-half)
   @extend %center-y
   z-index: 3

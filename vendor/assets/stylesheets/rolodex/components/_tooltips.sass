@@ -7,7 +7,7 @@
   @extend %cursor-pointer
   display: inline-block
   +rem(height, 22px)
-  @extend %position-relative
+  position: relative
   vertical-align: middle
   +rem(width, 22px)
 
@@ -15,7 +15,7 @@
     +background-svg("tooltips/tooltip-star", 10px)
     @extend %content-empty
     +rem(height, 10px)
-    @extend %position-absolute
+    position: absolute
     @extend %center-xy
     +rem(width, 10px)
   
@@ -52,7 +52,7 @@
   @extend %cursor-default
   @extend %opacity-0
   @extend %pointer-events-none
-  @extend %position-absolute
+  position: absolute
   @extend %transition-all
   +rem(width, 300px)
   z-index: 9
@@ -64,7 +64,7 @@
   &:before
     @extend %content-empty
     +rem(height, $baseline-x-small)
-    @extend %position-absolute
+    position: absolute
     +rem(width, 40px)
 
 .tooltip-header
