@@ -48,7 +48,7 @@
 %group
   &:before,
   &:after
-    @extend %content-empty
+    content: ""
     display: table
   &:after
     clear: both
@@ -201,7 +201,7 @@
 
 .grid,
 %grid
-  @extend %list-none
+  list-style: none
   +rem(letter-spacing, -4px)
 
 .opera:-o-prefocus,
