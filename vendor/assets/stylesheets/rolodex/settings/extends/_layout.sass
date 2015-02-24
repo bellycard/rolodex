@@ -34,19 +34,6 @@
   @extend %border-radius-base
   +rem(box-shadow, 0 0 0 4px rgba($black, .06))
 
-// Alignments
-
-@each $align in $alignments
-  %vertical-align-#{$align}
-    vertical-align: $align
-
-// Displays
-
-@each $display in $displays
-  .display-#{$display},
-  %display-#{$display}
-    display: $display
-
 // Floats
 
 @each $float in $floats
@@ -74,7 +61,7 @@
   &:before,
   &:after
     @extend %content-empty
-    @extend %display-table
+    display: table
   &:after
     clear: both
 
@@ -253,10 +240,10 @@
 
 .grid-col,
 %grid-col
-  @extend %display-inline-block
+  display: inline-block
   *display: inline
   letter-spacing: normal
-  @extend %vertical-align-top
+  vertical-align: top
   @extend %white-space-normal
   zoom: 1
 

@@ -2,7 +2,7 @@
 // ========================================
 
 .alert-title
-  @extend %display-block
+  display: block
   @extend %font-weight-bold
   @extend %margin-bottom-step
 
@@ -100,7 +100,7 @@
   border-style: solid
   +rem(border-width, 1px)
   @extend %color-black-offset
-  @extend %display-inline-block
+  display: inline-block
   +rem(padding, (($baseline-step * 1.5) - 1) ($gutter-half - 1))
 
 // Kinds

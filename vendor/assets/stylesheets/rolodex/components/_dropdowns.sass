@@ -23,8 +23,8 @@
 
 .dropdown,
 .dropdown-alt
-  @extend %display-inline-block
-  @extend %vertical-align-middle
+  display: inline-block
+  vertical-align: middle
 
 .dropdown:after
   @extend %i-caret
@@ -87,7 +87,7 @@
 
   a
     @extend %color-black-offset
-    @extend %display-block
+    display: block
     +rem(padding, 10px 22px)
 
     &:hover,

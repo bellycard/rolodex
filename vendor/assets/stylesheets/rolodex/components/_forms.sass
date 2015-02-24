@@ -54,7 +54,7 @@ textarea
   @extend %position-relative
 
 .form-label
-  @extend %display-inline-block
+  display: inline-block
   @extend %font-weight-bold
   @extend %margin-bottom-step
 
@@ -81,7 +81,7 @@ textarea
   @extend %border-base
   @extend %border-radius-base
   @extend %color-black
-  @extend %display-block
+  display: block
   +rem(padding, ($baseline-step + 2) ($gutter-half - 1))
   @extend %position-relative
   @extend %grid-1-1
@@ -172,7 +172,7 @@ textarea
 // ========================================
 
 .form-row
-  @extend %display-table
+  display: table
   border-collapse: separate
   @extend %grid-1-1
 
@@ -184,8 +184,8 @@ textarea
   .form-control,
   .form-area,
   .form-btn
-    @extend %display-table-cell
-    @extend %vertical-align-top
+    display: table-cell
+    vertical-align: top
 
   .form-label,
   .form-btn
@@ -244,7 +244,7 @@ textarea
 
 .form-help-title
   @extend %color-gray-dark
-  @extend %display-inline-block
+  display: inline-block
   @extend %margin-top-step
   @extend %margin-bottom-step
 
@@ -266,7 +266,7 @@ textarea
     +rem(top, 7px)
 
 .form-help-bullet
-  @extend %display-inline-block
+  display: inline-block
   @extend %s-delta
   @extend %text-center
   +rem(width, 12px)
