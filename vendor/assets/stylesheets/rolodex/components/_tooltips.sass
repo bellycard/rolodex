@@ -13,7 +13,7 @@
 
   &:after
     +background-svg("tooltips/tooltip-star", 10px)
-    @extend %content-empty
+    content: ""
     +rem(height, 10px)
     position: absolute
     @extend %center-xy
@@ -62,7 +62,7 @@
     @extend %pointer-events-auto
 
   &:before
-    @extend %content-empty
+    content: ""
     +rem(height, $baseline-x-small)
     position: absolute
     +rem(width, 40px)
