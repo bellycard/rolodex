@@ -220,6 +220,9 @@
 // Grid widths
 // ========================================
 
+.grid-1-1
+  width: 100%
+
 $columns: 12
 
 // Counting down from 12, for 12 columns
@@ -227,34 +230,7 @@ $columns: 12
   
   // Counting up to the given potential number of columns in a given row
   @for $column from 1 to $columns
-  
-    // Extend multiples of 2, 3, 5, or compile the class
-    @if ($column % 2 == 0) and ($columns % 2 == 0)
-    
-      .grid-#{$column}-#{$columns},
-      %grid-#{$column}-#{$columns}
-        @extend %grid-#{$column/2}-#{$columns/2}
-    
-    @else if ($column % 3 == 0) and ($columns % 3 == 0)
-    
-      .grid-#{$column}-#{$columns},
-      %grid-#{$column}-#{$columns}
-        @extend %grid-#{$column/3}-#{$columns/3}
-
-    @else if ($column % 5 == 0) and ($columns % 5 == 0)
-    
-      .grid-#{$column}-#{$columns},
-      %grid-#{$column}-#{$columns}
-        @extend %grid-#{$column/5}-#{$columns/5}
-        
-    @else
-  
-      .grid-#{$column}-#{$columns},
-      %grid-#{$column}-#{$columns}
-        width: ($column/$columns) * 100%
+    .grid-#{$column}-#{$columns}
+      width: ($column/$columns) * 100%
     
   $columns: $columns - 1
-
-.grid-1-1,
-%grid-1-1
-  width: 100%
