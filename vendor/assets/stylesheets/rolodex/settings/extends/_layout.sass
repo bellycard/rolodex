@@ -56,36 +56,18 @@
 // Centering
 // ========================================
 
-%left-50
-  left: 50%
-
-%top-50
-  top: 50%
-
 %center-x
-  @extend %left-50
+  left: 50%
   transform: translateX(-50%)
 
 %center-y
-  @extend %top-50
+  top: 50%
   transform: translateY(-50%)
 
 %center-xy
-  @extend %left-50
-  @extend %top-50
+  left: 50%
+  top: 50%
   transform: translateX(-50%) translateY(-50%)
-
-// Box models
-// ========================================
-
-@each $zero in $zeros
-  .#{$zero}-0,
-  %#{$zero}-0
-    #{$zero}: 0
-
-.margin-auto,
-%margin-auto
-  margin: 0 auto
 
 // Baseline surgical classes
 // ========================================

@@ -3,15 +3,15 @@
 
 .modal
   background-color: rgba($slate-dark, .8)
-  @extend %bottom-0
-  @extend %left-0
+  bottom: 0
+  left: 0
   @extend %opacity-0
   overflow-x: hidden
   overflow-y: auto
   +rem(padding, $baseline-step * 10)
   position: fixed
-  @extend %right-0
-  @extend %top-0
+  right: 0
+  top: 0
   @extend %transition-all
   z-index: 99
 
@@ -22,7 +22,7 @@
   @extend %background-white
   @extend %border-radius-base
   box-shadow: 0 0 0 4px rgba($black, .15)
-  @extend %margin-auto
+  margin: 0 auto
   +rem(max-width, 660px)
 
 .modal-header,
@@ -34,12 +34,12 @@
   @extend %text-center
 
   p:last-child
-    @extend %margin-0
+    margin: 0
 
 .modal-title
   @extend %s-bravo
   @extend %font-weight-normal
-  @extend %margin-0
+  margin: 0
 
 .modal-body,
 .modal-body-alt
