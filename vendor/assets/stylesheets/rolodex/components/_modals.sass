@@ -5,7 +5,7 @@
   background-color: rgba($slate-dark, .8)
   bottom: 0
   left: 0
-  @extend %opacity-0
+  opacity: 0
   overflow-x: hidden
   overflow-y: auto
   +rem(padding, $baseline-step * 10)
@@ -16,7 +16,7 @@
   z-index: 99
 
 .modal-fade
-  @extend %opacity-1
+  opacity: 1
 
 .modal-content
   @extend %background-white
@@ -77,4 +77,4 @@
     &.modal-nav-active
       border-color: $blue
       @extend %color-black
-      @extend %cursor-default
+      cursor: default

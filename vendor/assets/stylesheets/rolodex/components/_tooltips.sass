@@ -4,7 +4,7 @@
 .tooltip
   +rem(border, 2px solid $gray-light)
   border-radius: 50%
-  @extend %cursor-pointer
+  cursor: pointer
   display: inline-block
   +rem(height, 22px)
   position: relative
@@ -49,17 +49,17 @@
 .tooltip-tip
   @extend %box-overlay
   border-color: $gray-light // Specificity bust the extend
-  @extend %cursor-default
-  @extend %opacity-0
-  @extend %pointer-events-none
+  cursor: default
+  opacity: 0
+  pointer-events: none
   position: absolute
   @extend %transition-all
   +rem(width, 300px)
   z-index: 9
 
   .tooltip:hover &
-    @extend %opacity-1
-    @extend %pointer-events-auto
+    opacity: 1
+    pointer-events: auto
 
   &:before
     content: ""

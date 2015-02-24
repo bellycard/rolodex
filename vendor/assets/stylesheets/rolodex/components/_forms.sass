@@ -22,7 +22,7 @@ input::-moz-focus-inner
 
 button[disabled],
 html input[disabled]
-  @extend %cursor-not-allowed
+  cursor: not-allowed
 
 input[type="checkbox"],
 input[type="radio"]
@@ -97,7 +97,7 @@ textarea
   [disabled] &
     @extend %background-white-offset
     @extend %color-gray-light
-    @extend %cursor-not-allowed
+    cursor: not-allowed
 
   &:-ms-input-placeholder,
   &:-moz-placeholder,
@@ -142,7 +142,7 @@ textarea
     +rem(margin-left, -20px)
 
   label[disabled]
-    @extend %cursor-not-allowed
+    cursor: not-allowed
     @extend %color-gray
 
 // Custom radio buttons
@@ -152,7 +152,7 @@ textarea
     +rem(margin-bottom, $baseline-step / 2)
 
   label
-    @extend %cursor-pointer
+    cursor: pointer
     +rem(padding-left, 6px)
     position: relative
 
@@ -202,7 +202,7 @@ textarea
 
     &[disabled]
       @extend %color-gray
-      @extend %cursor-not-allowed
+      cursor: not-allowed
 
   > .form-control,
   > .form-area,
@@ -262,7 +262,7 @@ textarea
     @extend %transition-all
 
   .i-suggest-tick
-    @extend %opacity-0
+    opacity: 0
     +rem(top, 7px)
 
 .form-help-bullet
@@ -274,10 +274,10 @@ textarea
 .form-help-success
 
   .i-suggest-tick
-    @extend %opacity-1
+    opacity: 1
 
   .form-help-bullet
-    @extend %opacity-0
+    opacity: 0
 
 // Validation
 // ========================================
