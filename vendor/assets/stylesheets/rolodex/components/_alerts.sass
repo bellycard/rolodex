@@ -10,7 +10,7 @@
   @extend %font-weight-bold
   line-height: 1
   +rem(padding-right, 5px)
-  @extend %text-transform-uppercase
+  text-transform: uppercase
 
 .alert-action
   float: right
@@ -28,7 +28,7 @@
     background-repeat: no-repeat
 
     a
-      @extend %text-decoration-underline
+      text-decoration: underline
 
   .alert-banner.alert-#{$kind}
     @extend %background-#{$color}
@@ -46,7 +46,7 @@
       @extend %s-delta
 
     .alert-action
-      @extend %text-decoration-none
+      text-decoration: none
 
   .alert-inline.alert-#{$kind}
     @extend %background-#{$color}-light

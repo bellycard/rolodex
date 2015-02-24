@@ -198,7 +198,7 @@ textarea
     +rem(border-radius, $border-radius-base 0 0 $border-radius-base)
     @extend %color-gray-dark
     +rem(padding, ($baseline-step + 2) ($gutter-half - 1))
-    @extend %white-space-nowrap
+    white-space: nowrap
 
     &[disabled]
       @extend %color-gray
@@ -268,7 +268,7 @@ textarea
 .form-help-bullet
   display: inline-block
   @extend %s-delta
-  @extend %text-center
+  text-align: center
   +rem(width, 12px)
 
 .form-help-success

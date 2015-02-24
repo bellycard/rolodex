@@ -68,21 +68,3 @@
   .text-#{$i},
   %text-#{$i}
     @extend %color-#{$color}
-
-// Misc
-
-@each $alignment in $text-alignments
-  %text-#{$alignment}
-    text-align: #{$alignment}
-
-@each $decoration in $text-decorations
-  %text-decoration-#{$decoration}
-    text-decoration: #{$decoration}
-
-@each $transform in $text-transforms
-  %text-transform-#{$transform}
-    text-transform: #{$transform}
-
-@each $space in $white-spaces
-  %white-space-#{$space}
-    white-space: #{$space}
