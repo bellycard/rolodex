@@ -63,7 +63,7 @@ textarea
   @extend %s-golf
 
 .form-subtle
-  @extend %color-gray
+  color: $gray
   @extend %font-weight-normal
 
 .form-claim
@@ -76,11 +76,11 @@ textarea
 .form-control,
 .form-area,
 .form-placeholder
-  @extend %background-white
+  background-color: $white
   background-image: none
   @extend %border-base
   @extend %border-radius-base
-  @extend %color-black
+  color: $black
   display: block
   +rem(padding, ($baseline-step + 2) ($gutter-half - 1))
   position: relative
@@ -95,8 +95,8 @@ textarea
   &[disabled],
   &[readonly],
   [disabled] &
-    @extend %background-white-offset
-    @extend %color-gray-light
+    background-color: $white-offset
+    color: $gray-light
     cursor: not-allowed
 
   &:-ms-input-placeholder,
@@ -123,7 +123,7 @@ textarea
   +rem(padding-right, 48px)
 
 .form-placeholder
-  @extend %background-white-offset
+  background-color: $white-offset
 
 .form-placeholder-link
   float: right
@@ -143,7 +143,7 @@ textarea
 
   label[disabled]
     cursor: not-allowed
-    @extend %color-gray
+    color: $gray
 
 // Custom radio buttons
 
@@ -192,16 +192,16 @@ textarea
     position: relative
 
   .form-label
-    @extend %background-white-offset
+    background-color: $white-offset
     @extend %border-base
     border-right: 0
     +rem(border-radius, $border-radius-base 0 0 $border-radius-base)
-    @extend %color-gray-dark
+    color: $gray-dark
     +rem(padding, ($baseline-step + 2) ($gutter-half - 1))
     white-space: nowrap
 
     &[disabled]
-      @extend %color-gray
+      color: $gray
       cursor: not-allowed
 
   > .form-control,
@@ -233,7 +233,7 @@ textarea
 // ========================================
 
 .form-help
-  @extend %color-gray
+  color: $gray
   @extend %s-golf
   @extend %font-weight-normal
   @extend %margin-top-step
@@ -243,7 +243,7 @@ textarea
     margin-left: 0
 
 .form-help-title
-  @extend %color-gray-dark
+  color: $gray-dark
   display: inline-block
   @extend %margin-top-step
   @extend %margin-bottom-step
@@ -292,7 +292,7 @@ textarea
     z-index: 1
 
   &.form-choice
-    @extend %color-red
+    color: $red
 
 // Icons
 

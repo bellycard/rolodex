@@ -6,7 +6,7 @@
   +rem(border-width, 1px)
   border-color: transparent
   @extend %border-radius-base
-  @extend %color-white
+  color: $white
   cursor: pointer
   display: inline-block
   @extend %font-family-open-sans
@@ -23,13 +23,13 @@
 
   &:hover,
   &:active
-    @extend %color-white
+    color: $white
 
   &[disabled],
   &[disabled]:hover,
   &[disabled]:focus,
   &[disabled]:active
-    @extend %background-gray-light
+    background-color: $gray-light
     border-color: transparent
     color: #eee
     cursor: not-allowed
@@ -60,7 +60,7 @@
 
     @if $kind == "boring"
       border-color: $gray-light // Specificity bust the extend
-      @extend %color-gray-dark
+      color: $gray-dark
 
     &:hover
       background-color: $bg-hover
@@ -70,7 +70,7 @@
 
 .btn-boring:hover,
 .btn-boring:active
-  @extend %color-gray-dark
+  color: $gray-dark
 
 // Alternate & Overlay
 // ========================================
@@ -97,7 +97,7 @@
   background-color: rgba($black, .3)
   border-color: rgba($white, .5)
   +rem(border-width, 2px)
-  @extend %color-white
+  color: $white
 
   &:hover,
   &:focus

@@ -4,7 +4,7 @@
 // Base
 
 html
-  @extend %color-black-offset
+  color: $black-offset
   @extend %font-family-open-sans
   font-size: 87.5%
   -ms-text-size-adjust: 100%
@@ -48,7 +48,7 @@ code,
 kbd,
 pre,
 samp
-  @extend %color-gray
+  color: $gray
   @extend %font-family-monospace
 
 pre
@@ -93,7 +93,7 @@ sub
 
 a
   background: transparent
-  @extend %color-blue
+  color: $blue
   outline: 0
   text-decoration: none
   @extend %transition-all
@@ -104,4 +104,4 @@ a
   &:active,
   &:hover
     outline: 0
-    @extend %color-blue-dark
+    color: $blue-dark

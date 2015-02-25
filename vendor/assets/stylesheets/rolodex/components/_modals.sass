@@ -19,7 +19,7 @@
   opacity: 1
 
 .modal-content
-  @extend %background-white
+  background-color: $white
   @extend %border-radius-base
   box-shadow: 0 0 0 4px rgba($black, .15)
   margin: 0 auto
@@ -43,7 +43,7 @@
 
 .modal-body,
 .modal-body-alt
-  @extend %background-white-offset
+  background-color: $white-offset
   @extend %border-base
   +rem(border-width, 1px 0)
 
@@ -63,7 +63,7 @@
 
   a
     +rem(border-bottom, 5px solid transparent)
-    @extend %color-gray
+    color: $gray
     display: block
     @extend %padding-bottom-x-small
     @extend %s-delta
@@ -72,9 +72,9 @@
     &:hover,
     &:focus,
     &:active
-      @extend %color-blue
+      color: $blue
 
     &.modal-nav-active
       border-color: $blue
-      @extend %color-black
+      color: $black
       cursor: default

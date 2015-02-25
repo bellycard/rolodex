@@ -2,7 +2,7 @@
 // ========================================
 
 .label
-  @extend %background-white
+  background-color: $white
   @extend %border-radius-mini
   border-style: solid
   +rem(border-width, 1px)
@@ -22,9 +22,8 @@
 @each $label in $labels
   
   $kind:   nth($label, 1)
-  $border: nth($label, 2)
-  $color:  nth($label, 3)
+  $color:  nth($label, 2)
   
   .label-#{$kind}
-    border-color: $border
-    @extend %color-#{$color}
+    border-color: $color
+    color: $color

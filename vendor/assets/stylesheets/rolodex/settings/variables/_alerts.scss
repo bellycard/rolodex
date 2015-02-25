@@ -2,10 +2,10 @@
 // ========================================
 
 $alerts: (
-  (success, green, tick,   $green)
-  (warning, gold,  info,   $gold)
-  (danger,  red,   danger, $red)
-  (default, blue,  flop,   $blue)
+  (success, tick,   $green, $green-light, $green-dark)
+  (warning, info,   $gold,  $gold-light,  $gold-dark)
+  (danger,  danger, $red,   $red-light,   $red-dark)
+  (default, flop,   $blue,  $blue-light,  $blue-dark)
 );
 
 // Banner - Width, height, & top offset

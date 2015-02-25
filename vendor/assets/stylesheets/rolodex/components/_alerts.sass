@@ -19,10 +19,11 @@
 
 @each $alert in $alerts
 
-  $kind:   nth($alert, 1)
-  $color:  nth($alert, 2)
-  $icon:   nth($alert, 3)
-  $border: nth($alert, 4)
+  $kind:        nth($alert, 1)
+  $icon:        nth($alert, 2)
+  $color:       nth($alert, 3)
+  $color-light: nth($alert, 4)
+  $color-dark:  nth($alert, 5)
 
   .alert-#{$kind}
     background-repeat: no-repeat
@@ -31,16 +32,16 @@
       text-decoration: underline
 
   .alert-banner.alert-#{$kind}
-    @extend %background-#{$color}
+    background-color: $color
     +background-svg("alerts/icon-#{$icon}-light")
 
     a,
     .alert-signal
-      @extend %color-#{$color}-light
+      color: $color-light
 
     a:active,
     a:hover
-      @extend %color-white
+      color: $white
 
     .alert-signal
       @extend %s-delta
@@ -49,23 +50,23 @@
       text-decoration: none
 
   .alert-inline.alert-#{$kind}
-    @extend %background-#{$color}-light
+    background-color: $color-light
     +background-svg("alerts/icon-#{$icon}-dark")
-    border-color: $border
+    border-color: $color
 
     a,
     .alert-signal
-      @extend %color-#{$color}
+      color: $color
 
     a:active,
     a:hover
-      @extend %color-#{$color}-dark
+      color: $color-dark
 
 // Banner alerts
 // ========================================
 
 .alert-banner
-  @extend %color-white
+  color: $white
   @extend %padding-top-small
   @extend %padding-bottom-small
   @extend %padding-gutters-half
@@ -99,7 +100,7 @@
   @extend %border-radius-base
   border-style: solid
   +rem(border-width, 1px)
-  @extend %color-black-offset
+  color: $black-offset
   display: inline-block
   +rem(padding, (($baseline-step * 1.5) - 1) ($gutter-half - 1))
 

@@ -44,10 +44,10 @@
 // ========================================
 
 .dropdown-toggle
-  @extend %background-white
+  background-color: $white
   @extend %border-base
   @extend %border-radius-base
-  @extend %color-black-offset
+  color: $black-offset
   cursor: pointer
   +rem(padding, ($baseline-step + 2) 36px ($baseline-step + 2) ($gutter-half - 1))
   text-align: left
@@ -86,13 +86,13 @@
     border-bottom: 0
 
   a
-    @extend %color-black-offset
+    color: $black-offset
     display: block
     +rem(padding, 10px 22px)
 
     &:hover,
     &:focus
-      @extend %color-blue
+      color: $blue
 
 // Within a form row
 // ========================================
