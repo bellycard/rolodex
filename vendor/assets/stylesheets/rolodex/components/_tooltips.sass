@@ -27,7 +27,7 @@
       +rem(background-position, 0 -10px)
 
   .form-group &
-    @extend %margin-left-half
+    +rem(margin-left, $gutter-half)
 
 .tooltip-push-down
   +rem(margin-top, 1px)
@@ -75,15 +75,15 @@
 
 .tooltip-body
   color: $gray-dark
-  @extend %padding-top-small
-  @extend %padding-bottom-small
+  +rem(padding-top, $baseline-small)
+  +rem(padding-bottom, $baseline-small)
   +rem(padding-left, 20px)
   +rem(padding-right, 20px)
   @extend %s-golf
 
   p:not(:last-child),
   .list-base li:not(:last-child)
-    @extend %margin-bottom-step
+    +rem(margin-bottom, $baseline-step)
 
 // Positioning
 
@@ -92,7 +92,7 @@
 .tooltip-top-left
   .tooltip-tip
     bottom: 100%
-    @extend %margin-bottom-x-small
+    +rem(margin-bottom, $baseline-x-small)
 
     &:before
       +rem(bottom, ($baseline-x-small * -1) - 1)
@@ -102,7 +102,7 @@
 .tooltip-bottom-left
   .tooltip-tip
     top: 100%
-    @extend %margin-top-x-small
+    +rem(margin-top, $baseline-x-small)
     
     &:before
       +rem(top, ($baseline-x-small * -1) - 1)

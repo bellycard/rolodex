@@ -11,7 +11,7 @@
   display: inline-block
   @extend %font-family-open-sans
   @extend %s-foxtrot
-  @extend %line-height-base
+  +rem(line-height, $baseline-base)
   margin: 0
   outline: 0
   +rem(padding, 8px 14px)
@@ -36,9 +36,7 @@
 
   &.btn-large
     @extend %s-delta
-    @extend %padding-gutters
-    +rem(padding-bottom, 18px)
-    +rem(padding-top, 16px)
+    +cushion(padding, gutters, 16px, $baseline-small)
 
   &.btn-small
     @extend %border-radius-mini

@@ -27,7 +27,7 @@
 
 .modal-header,
 .modal-footer
-  @extend %padding-box
+  +cushion(padding, box)
 
 .modal-header
   position: relative
@@ -53,11 +53,11 @@
 // Nav
 
 .modal-nav
-  @extend %padding-gutters
+  +cushion(padding, gutters)
 
   li
     +rem(margin-bottom, -1px)
-    @extend %padding-gutters
+    +cushion(padding, gutters)
     position: relative
     z-index: 1
 
@@ -65,7 +65,7 @@
     +rem(border-bottom, 5px solid transparent)
     color: $gray
     display: block
-    @extend %padding-bottom-x-small
+    +rem(padding-bottom, $baseline-x-small)
     @extend %s-delta
     text-align: center
 

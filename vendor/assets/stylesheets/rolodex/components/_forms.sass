@@ -50,13 +50,13 @@ textarea
   margin: 0
 
 .form-group
-  @extend %margin-bottom
+  +rem(margin-bottom, $baseline-base)
   position: relative
 
 .form-label
   display: inline-block
   @extend %font-weight-bold
-  @extend %margin-bottom-step
+  +rem(margin-bottom, $baseline-step)
 
 .form-subtle,
 .form-claim
@@ -68,7 +68,7 @@ textarea
 
 .form-claim
   float: right
-  @extend %line-height-base
+  +rem(line-height, $baseline-base)
   @extend %transition-all
 
 // Text inputs and textareas
@@ -127,7 +127,7 @@ textarea
 
 .form-placeholder-link
   float: right
-  @extend %line-height-base
+  +rem(line-height, $baseline-base)
   @extend %s-golf
 
 // Checkboxes and radio buttons
@@ -138,7 +138,7 @@ textarea
   input[type="radio"],
   input[type="checkbox"]
     float: left
-    @extend %margin-top-step
+    +rem(margin-top, $baseline-step)
     +rem(margin-left, -20px)
 
   label[disabled]
@@ -236,8 +236,7 @@ textarea
   color: $gray
   @extend %s-golf
   @extend %font-weight-normal
-  @extend %margin-top-step
-  @extend %margin-gutters-half
+  +cushion(margin, gutters-half, $baseline-step, 0)
 
   .form-choice &
     margin-left: 0
@@ -245,13 +244,13 @@ textarea
 .form-help-title
   color: $gray-dark
   display: inline-block
-  @extend %margin-top-step
-  @extend %margin-bottom-step
+  +rem(margin-top, $baseline-step)
+  +rem(margin-bottom, $baseline-step)
 
 .form-help-suggestions
 
   li
-    @extend %line-height-base
+    +rem(line-height, $baseline-base)
     +rem(padding-left, 18px)
     position: relative
 

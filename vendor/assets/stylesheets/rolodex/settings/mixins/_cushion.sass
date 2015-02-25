@@ -1,0 +1,53 @@
+// Cushion
+// ========================================
+
+=cushion($property, $sides, $extras...)
+
+  $count: length($extras)
+  
+  // Gutters
+
+  @if $sides == "gutters" 
+
+    @if $count >= 2
+      +rem($property, nth($extras, 1) $gutter nth($extras, 2) $gutter)
+
+    @else if $count >= 1
+      +rem($property, $extras $gutter)
+  
+    @else
+      +rem(#{$property}-right, $gutter)
+      +rem(#{$property}-left,  $gutter)
+
+  // Gutters half
+  
+  @if $sides == "gutters-half"
+
+    @if $count >= 2
+      +rem($property, nth($extras, 1) $gutter-half nth($extras, 2) $gutter-half)
+
+    @else if $sides == "gutters-half" and $count >= 1
+      +rem($property, $extras $gutter-half)
+  
+    @else
+      +rem(#{$property}-right, $gutter-half)
+      +rem(#{$property}-left,  $gutter-half)
+
+  // Baselines
+  
+  @if $sides == "baselines"
+
+    @if $count >= 2
+      +rem($property, $baseline-base nth($extras, 1) $baseline-base nth($extras, 2))
+
+    @else if $count >= 1
+      +rem($property, $baseline-base $extras)
+  
+    @else
+      +rem(#{$property}-top,    $baseline-base)
+      +rem(#{$property}-bottom, $baseline-base)
+
+  // Box
+  
+  @if $sides == "box"
+    +rem($property, $baseline-base $gutter)

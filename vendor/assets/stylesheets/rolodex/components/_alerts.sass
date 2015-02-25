@@ -4,7 +4,7 @@
 .alert-title
   display: block
   @extend %font-weight-bold
-  @extend %margin-bottom-step
+  +rem(margin-bottom, $baseline-step)
 
 .alert-signal
   @extend %font-weight-bold
@@ -67,9 +67,7 @@
 
 .alert-banner
   color: $white
-  @extend %padding-top-small
-  @extend %padding-bottom-small
-  @extend %padding-gutters-half
+  +cushion(padding, gutters-half, $baseline-small)
   position: relative
   @extend %s-echo
 

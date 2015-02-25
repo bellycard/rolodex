@@ -22,8 +22,7 @@ html
 
 #{map-keys($headings)},
 p
-  margin: 0
-  @extend %margin-bottom
+  +rem(margin, 0 0 $baseline-base 0)
 
 // Bolds
 
@@ -52,8 +51,7 @@ samp
   @extend %font-family-monospace
 
 pre
-  margin: 0
-  @extend %margin-bottom
+  +rem(margin, 0 0 $baseline-base 0)
   white-space: pre-wrap
 
 // Address
