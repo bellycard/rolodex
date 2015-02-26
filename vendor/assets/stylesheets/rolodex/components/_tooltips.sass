@@ -16,7 +16,7 @@
     content: ""
     +rem(height, 10px)
     position: absolute
-    @extend %center-xy
+    +center(xy)
     +rem(width, 10px)
   
   &:hover,
@@ -116,7 +116,7 @@
 .tooltip-top .tooltip-tip:before,
 .tooltip-bottom .tooltip-tip,
 .tooltip-bottom .tooltip-tip:before
-  @extend %center-x
+  +center(x)
 
 .tooltip-top-left,
 .tooltip-bottom-left
