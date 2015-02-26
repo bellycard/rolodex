@@ -78,8 +78,8 @@ textarea
 .form-placeholder
   background-color: $white
   background-image: none
-  @extend %border-base
-  @extend %border-radius-base
+  +rem(border, 1px solid $gray-light)
+  +rem(border-radius, $border-radius-base)
   color: $black
   display: block
   +rem(padding, ($baseline-step + 2) ($gutter-half - 1))
@@ -193,7 +193,7 @@ textarea
 
   .form-label
     background-color: $white-offset
-    @extend %border-base
+    +rem(border, 1px solid $gray-light)
     border-right: 0
     +rem(border-radius, $border-radius-base 0 0 $border-radius-base)
     color: $gray-dark

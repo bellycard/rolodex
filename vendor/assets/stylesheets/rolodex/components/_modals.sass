@@ -20,7 +20,7 @@
 
 .modal-content
   background-color: $white
-  @extend %border-radius-base
+  +rem(border-radius, $border-radius-base)
   +rem(box-shadow, 0 0 0 4px rgba($black, .15))
   margin: 0 auto
   +rem(max-width, 660px)
@@ -44,7 +44,7 @@
 .modal-body,
 .modal-body-alt
   background-color: $white-offset
-  @extend %border-base
+  +rem(border, 1px solid $gray-light)
   +rem(border-width, 1px 0)
 
 .modal-body

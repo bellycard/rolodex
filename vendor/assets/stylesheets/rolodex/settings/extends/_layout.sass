@@ -8,28 +8,12 @@
   font: 0/0 a
   text-shadow: none
 
-// Borders
-
-%border-gray-light
-  border-color: $gray-light
-
-%border-base
-  @extend %border-gray-light
-  +rem(border-width, 1px)
-  border-style: solid
-
-@each $radius, $i in $radii
-  %border-radius-#{$radius}
-    +rem(border-radius, $i)
-  
 // Box overlay
 
 %box-overlay
   background-color: $white
-  border-color: $blue
-  +rem(border-width, 1px)
-  border-style: solid
-  @extend %border-radius-base
+  +rem(border, 1px solid $blue)
+  +rem(border-radius, $border-radius-base)
   +rem(box-shadow, 0 0 0 4px rgba($black, .06))
 
 // Floats

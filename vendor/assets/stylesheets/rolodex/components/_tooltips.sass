@@ -48,7 +48,7 @@
 
 .tooltip-tip
   @extend %box-overlay
-  border-color: $gray-light // Specificity bust the extend
+  border-color: $gray-light
   cursor: default
   opacity: 0
   pointer-events: none
@@ -75,10 +75,7 @@
 
 .tooltip-body
   color: $gray-dark
-  +rem(padding-top, $baseline-small)
-  +rem(padding-bottom, $baseline-small)
-  +rem(padding-left, 20px)
-  +rem(padding-right, 20px)
+  +rem(padding, $baseline-small 20px)
   @extend %s-golf
 
   p:not(:last-child),

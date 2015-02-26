@@ -2,10 +2,8 @@
 // ========================================
 
 .btn
-  border-style: solid
-  +rem(border-width, 1px)
-  border-color: transparent
-  @extend %border-radius-base
+  +rem(border, 1px solid transparent)
+  +rem(border-radius, $border-radius-base)
   color: $white
   cursor: pointer
   display: inline-block
@@ -39,7 +37,7 @@
     +cushion(padding, gutters, 16px, $baseline-small)
 
   &.btn-small
-    @extend %border-radius-mini
+    +rem(border-radius, $border-radius-mini)
     @extend %s-golf
     +rem(padding, ($baseline-step - 1) 10px)
 
