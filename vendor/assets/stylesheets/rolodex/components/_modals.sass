@@ -21,7 +21,7 @@
 .modal-content
   background-color: $white
   @extend %border-radius-base
-  box-shadow: 0 0 0 4px rgba($black, .15)
+  +rem(box-shadow, 0 0 0 4px rgba($black, .15))
   margin: 0 auto
   +rem(max-width, 660px)
 
@@ -49,6 +49,9 @@
 
 .modal-body
   +rem(padding, ($baseline-base - 1) $gutter)
+
+  p:last-child
+    margin-bottom: 0
 
 // Nav
 
