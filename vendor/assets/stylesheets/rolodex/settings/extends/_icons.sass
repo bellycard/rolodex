@@ -49,6 +49,8 @@
   display: inline-block
   vertical-align: middle
 
+$i-transparent: .65
+
 // Close
 // ========================================
 
@@ -65,12 +67,12 @@
   position: absolute
   +rem(right, 15px)
   +rem(top, 13px)
-  @extend %transition-all
+  transition: $transition-all
   +rem(width, 15px)
 
   &:hover,
   &:focus
-    @extend %opacity-65
+    opacity: $i-transparent
 
 // Caret
 // ========================================
