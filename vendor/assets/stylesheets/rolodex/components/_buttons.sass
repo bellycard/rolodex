@@ -7,8 +7,8 @@
   color: $white
   cursor: pointer
   display: inline-block
-  @extend %font-family-open-sans
-  @extend %s-foxtrot
+  font-family: $font-family-open-sans
+  +s-foxtrot
   +rem(line-height, $baseline-base)
   margin: 0
   outline: 0
@@ -33,12 +33,12 @@
     cursor: not-allowed
 
   &.btn-large
-    @extend %s-delta
+    +s-delta
     +cushion(padding, gutters, 16px, $baseline-small)
 
   &.btn-small
     +rem(border-radius, $border-radius-mini)
-    @extend %s-golf
+    +s-golf
     +rem(padding, ($baseline-step - 1) 10px)
 
 // Kinds

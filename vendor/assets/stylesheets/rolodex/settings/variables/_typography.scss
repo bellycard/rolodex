@@ -23,12 +23,6 @@ $font-family-open-sans: "Open Sans", Verdana, Helvetica, sans-serif;
 $font-family-helvetica: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $font-family-monospace: "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
 
-// Weights
-
-$font-weight-book:   300;
-$font-weight-normal: 400;
-$font-weight-bold:   600;
-
 // Maps
 // ========================================
 
@@ -62,14 +56,6 @@ $font-families: (
   open-sans: $font-family-open-sans,
   helvetica: $font-family-helvetica,
   monospace: $font-family-monospace
-);
-
-// Weights map
-
-$font-weights: (
-  book:   $font-weight-book,
-  normal: $font-weight-normal,
-  bold:   $font-weight-bold
 );
 
 // Colors map

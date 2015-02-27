@@ -3,11 +3,11 @@
 
 .alert-title
   display: block
-  @extend %font-weight-bold
+  font-weight: 600
   +rem(margin-bottom, $baseline-step)
 
 .alert-signal
-  @extend %font-weight-bold
+  font-weight: 600
   line-height: 1
   +rem(padding-right, 5px)
   text-transform: uppercase
@@ -44,7 +44,7 @@
       color: $white
 
     .alert-signal
-      @extend %s-delta
+      +s-delta
 
     .alert-action
       text-decoration: none
@@ -69,7 +69,7 @@
   color: $white
   +cushion(padding, gutters-half, $baseline-small)
   position: relative
-  @extend %s-echo
+  +s-echo
 
   .i-close
     +rem(top, 23px)

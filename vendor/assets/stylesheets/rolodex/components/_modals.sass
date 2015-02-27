@@ -37,8 +37,8 @@
     margin: 0
 
 .modal-title
-  @extend %s-bravo
-  @extend %font-weight-normal
+  +s-bravo
+  font-weight: 400
   margin: 0
 
 .modal-body,
@@ -69,7 +69,7 @@
     color: $gray
     display: block
     +rem(padding-bottom, $baseline-x-small)
-    @extend %s-delta
+    +s-delta
     text-align: center
 
     &:hover,
