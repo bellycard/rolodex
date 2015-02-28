@@ -236,7 +236,7 @@ textarea
   color: $gray
   +s-golf
   font-weight: 400
-  +cushion(margin, gutters-half, $baseline-step, 0)
+  +rem(margin, $baseline-step $gutter-half 0 $gutter-half)
 
   .form-choice &
     margin-left: 0
@@ -244,8 +244,7 @@ textarea
 .form-help-title
   color: $gray-dark
   display: inline-block
-  +rem(margin-top, $baseline-step)
-  +rem(margin-bottom, $baseline-step)
+  +bump(margin, baselines-step)
 
 .form-help-suggestions
 
