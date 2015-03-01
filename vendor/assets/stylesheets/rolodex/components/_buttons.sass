@@ -32,14 +32,14 @@
     color: #eee
     cursor: not-allowed
 
-  &.btn-large
-    +s-delta
-    +rem(padding, 16px $gutter $baseline-small $gutter)
+.btn-large
+  +s-delta
+  +rem(padding, 16px $gutter $baseline-small $gutter)
 
-  &.btn-small
-    +rem(border-radius, $border-radius-mini)
-    +s-golf
-    +rem(padding, ($baseline-step - 1) 10px)
+.btn-small
+  +rem(border-radius, $border-radius-mini)
+  +s-golf
+  +rem(padding, ($baseline-step - 1) 10px)
 
 // Kinds
 // ========================================
@@ -55,7 +55,7 @@
     background-color: $bg-normal
 
     @if $kind == "boring"
-      border-color: $gray-light // Specificity bust the extend
+      border-color: $gray-light
       color: $gray-dark
 
     &:hover

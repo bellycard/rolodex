@@ -18,6 +18,7 @@
 
   @if $border-color != ""
     +rem(border, 1px solid $border-color)
+
   @else
     +rem(border, 1px solid $blue)
 
@@ -28,6 +29,7 @@
   &:after
     content: ""
     display: table
+    
   &:after
     clear: both
 

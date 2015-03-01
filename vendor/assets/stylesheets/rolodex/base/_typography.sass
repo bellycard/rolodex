@@ -6,10 +6,10 @@
 html
   color: $black-offset
   font: 87.5% $font-family-open-sans
-  -ms-text-size-adjust: 100%
-  -webkit-text-size-adjust: 100%
   line-height: 24px
   line-height: 1.5rem
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
 
 // Heading sizes
 
@@ -33,7 +33,12 @@ h6
 
 // Margins
 
-#{map-keys($headings)},
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p
   +rem(margin, 0 0 $baseline-base 0)
 

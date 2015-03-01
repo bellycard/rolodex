@@ -11,14 +11,11 @@ fieldset
   padding: 0
   width: 100%
 
-legend
-  border: 0
-  padding: 0
-
+legend,
 button::-moz-focus-inner,
 input::-moz-focus-inner
-  border: 0   // Vendor prefixes bust the extend
-  padding: 0  // Vendor prefixes bust the extend
+  border: 0
+  padding: 0
 
 button[disabled],
 html input[disabled]
@@ -80,12 +77,12 @@ textarea
   background-image: none
   +rem(border, 1px solid $gray-light)
   +rem(border-radius, $border-radius-base)
-  color: $black
+  color: $black-offset
   display: block
   +rem(padding, ($baseline-step + 2) ($gutter-half - 1))
   position: relative
-  width: 100%
   transition: border .15s ease, background-image .15s ease
+  width: 100%
 
   &:focus
     border-color: $blue
@@ -102,10 +99,10 @@ textarea
   &:-ms-input-placeholder,
   &:-moz-placeholder,
   &::-webkit-input-placeholder
-    color: #999 // Vendor prefixes bust the extend
+    color: $gray
 
   &::-moz-placeholder
-    opacity: 1 // Vendor prefixes bust the extend
+    opacity: 1
 
   &[type='search']
     +background-svg("forms/icon-search", 15px)
@@ -118,7 +115,7 @@ textarea
 
 .form-date
   +background-svg("forms/icon-calendar", 20px 21px)
-  background-position: right 14px top 50%
+  background-position: right 14px top 50% // +rem doesn't work with 50%
   background-repeat: no-repeat
   +rem(padding-right, 48px)
 
@@ -127,8 +124,8 @@ textarea
 
 .form-placeholder-link
   float: right
-  +rem(line-height, $baseline-base)
   +s-golf
+  +rem(line-height, $baseline-base)
 
 // Checkboxes and radio buttons
 
@@ -142,8 +139,8 @@ textarea
     +rem(margin-left, -20px)
 
   label[disabled]
-    cursor: not-allowed
     color: $gray
+    cursor: not-allowed
 
 // Custom radio buttons
 
@@ -172,8 +169,8 @@ textarea
 // ========================================
 
 .form-row
-  display: table
   border-collapse: separate
+  display: table
   width: 100%
 
   .form-label,

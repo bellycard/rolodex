@@ -25,15 +25,25 @@
   $color-light: nth($alert, 4)
   $color-dark:  nth($alert, 5)
 
-  .alert-#{$kind}
+  .alert-banner-#{$kind},
+  .alert-inline-#{$kind}
     background-repeat: no-repeat
 
     a
       text-decoration: underline
 
-  .alert-banner.alert-#{$kind}
+  // Banner alerts
+
+  .alert-banner-#{$kind}
     background-color: $color
     +background-svg("alerts/icon-#{$icon}-light")
+    color: $white
+    +s-echo
+    +bump(padding, baselines-small gutters-half)
+    position: relative
+
+    .i-close
+      +rem(top, 23px)
 
     a,
     .alert-signal
@@ -49,10 +59,19 @@
     .alert-action
       text-decoration: none
 
-  .alert-inline.alert-#{$kind}
+    &.alert-dismissible
+      +rem(padding-right, $gutter-half * 3)
+
+  // Inline alerts
+
+  .alert-inline-#{$kind}
     background-color: $color-light
     +background-svg("alerts/icon-#{$icon}-dark")
-    border-color: $color
+    +rem(border, 1px solid $color)
+    +rem(border-radius, $border-radius-base)
+    color: $black-offset
+    display: inline-block
+    +rem(padding, (($baseline-step * 1.5) - 1) ($gutter-half - 1))
 
     a,
     .alert-signal
@@ -65,20 +84,6 @@
 // Banner alerts
 // ========================================
 
-.alert-banner
-  color: $white
-  +bump(padding, baselines-small gutters-half)
-  position: relative
-  +s-echo
-
-  .i-close
-    +rem(top, 23px)
-
-.alert-dismissible
-  +rem(padding-right, $gutter-half * 3)
-
-// Kinds
-
 @each $alert in $alerts-banner
 
   $kind:   nth($alert, 1)
@@ -86,23 +91,13 @@
   $height: nth($alert, 3)
   $offset: nth($alert, 4)
 
-  .alert-banner.alert-#{$kind}
+  .alert-banner-#{$kind}
     +rem(background-position, $gutter-half $offset)
     +rem(background-size, $width $height)
     +rem(padding-left, $gutter + $width)
 
 // Inline alerts
 // ========================================
-
-.alert-inline
-  +rem(border-radius, $border-radius-base)
-  border-style: solid
-  +rem(border-width, 1px)
-  color: $black-offset
-  display: inline-block
-  +rem(padding, (($baseline-step * 1.5) - 1) ($gutter-half - 1))
-
-// Kinds
 
 @each $alert in $alerts-inline
 
@@ -111,7 +106,7 @@
   $height: nth($alert, 3)
   $offset: nth($alert, 4)
 
-  .alert-inline.alert-#{$kind}
+  .alert-inline-#{$kind}
     +rem(background-position, 14px $offset)
     +rem(background-size, $width $height)
     +rem(padding-left, 24px + $width)

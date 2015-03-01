@@ -20,32 +20,3 @@ $baseline-xx-large: $baseline-step * 7; // 42px
 
 $border-radius-base: 6px;
 $border-radius-mini: 4px;
-
-// Maps
-// ========================================
-
-// Gutters map
-
-$gutters: (
-  base: $gutter,
-  half: $gutter-half
-);
-
-// Baselines map
-
-$baselines: (
-  step:     $baseline-step,
-  x-small:  $baseline-x-small,
-  small:    $baseline-small,
-  base:     $baseline-base,
-  large:    $baseline-large,
-  x-large:  $baseline-x-large,
-  xx-large: $baseline-xx-large
-);
-
-// Border radius map
-
-$radii: (
-  base: $border-radius-base,
-  mini: $border-radius-mini
-);

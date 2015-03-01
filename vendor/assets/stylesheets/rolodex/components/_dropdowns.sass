@@ -27,7 +27,7 @@
   vertical-align: middle
 
 .dropdown:after
-  @extend %i-caret
+  +i-caret
   content: ""
   cursor: pointer
   position: absolute
@@ -80,10 +80,9 @@
     right: auto
 
 .dropdown-menu-item
-  +rem(border-bottom, 1px solid $gray-light)
 
-  &:last-child
-    border-bottom: 0
+  &:not(:last-child)
+    +rem(border-bottom, 1px solid $gray-light)
 
   a
     color: $black-offset

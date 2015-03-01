@@ -26,40 +26,6 @@ $font-family-monospace: "Source Code Pro", Inconsolata, "Lucida Console", Termin
 // Maps
 // ========================================
 
-// Scale map
-
-$font-sizes: (
-  giga:    $s-giga,
-  mega:    $s-mega,
-  alpha:   $s-alpha,
-  bravo:   $s-bravo,
-  charlie: $s-charlie,
-  delta:   $s-delta,
-  echo:    $s-echo,
-  foxtrot: $s-foxtrot,
-  golf:    $s-golf,
-  hotel:   $s-hotel
-);
-
-$headings: (
-  h1: alpha,
-  h2: bravo,
-  h3: charlie,
-  h4: delta,
-  h5: echo,
-  h6: foxtrot
-);
-
-// Font families map
-
-$font-families: (
-  open-sans: $font-family-open-sans,
-  helvetica: $font-family-helvetica,
-  monospace: $font-family-monospace
-);
-
-// Colors map
-
 $text-colors: (
   $gray: subtle,
   $blue: success,
