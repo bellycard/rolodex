@@ -1,3 +1,3 @@
-.alert(ng-class="['alert-' + (type || 'warning'), closeable ? 'alert-dismissable' : null]" role="alert")
+%div(ng-class="['alert-banner-' + (type || 'warning'), closeable ? 'alert-dismissable' : null]" role="alert")
   %button.i-close(ng-click="close()" ng-show="closeable" type="button" aria-hidden="true") &times;
   %div(ng-transclude)

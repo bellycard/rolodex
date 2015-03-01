@@ -44,8 +44,8 @@
     +rem(#{$property}-top,    bumper($sides))
 
   @else if str-slice($sides, 1, 7) == "gutters"
-    +rem(#{$property}-right, bumper($sides))
     +rem(#{$property}-left,  bumper($sides))
+    +rem(#{$property}-right, bumper($sides))
 
   @else if $sides == "box"
     +rem(#{$property}, $baseline-base $gutter)
