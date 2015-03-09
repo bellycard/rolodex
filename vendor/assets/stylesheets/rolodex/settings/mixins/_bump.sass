@@ -1,0 +1,51 @@
+// Bump
+// ========================================
+
+// Bumper function
+
+@function bumper($value)
+
+  @if $value == "baselines-step"
+    @return $baseline-step
+
+  @if $value == "baselines-x-small"
+    @return $baseline-x-small
+
+  @if $value == "baselines-small"
+    @return $baseline-small
+
+  @if $value == "baselines"
+    @return $baseline-base
+
+  @if $value == "baselines-large"
+    @return $baseline-large
+
+  @if $value == "baselines-x-large"
+    @return $baseline-x-large
+  
+  @if $value == "baselines-xx-large"
+    @return $baseline-xx-large
+  
+  @if $value == "gutters"
+    @return $gutter
+  
+  @if $value == "gutters-half"
+    @return $gutter-half
+
+// Bump mixin
+
+=bump($property, $sides)
+  
+  @if length($sides) == 2
+    +rem(#{$property}, bumper(nth($sides, 1)) bumper(nth($sides, 2)))
+  
+  @else if str-slice($sides, 1, 9) == "baselines"
+    +rem(#{$property}-bottom, bumper($sides))
+    +rem(#{$property}-top,    bumper($sides))
+
+  @else if str-slice($sides, 1, 7) == "gutters"
+    +rem(#{$property}-left,  bumper($sides))
+    +rem(#{$property}-right, bumper($sides))
+
+  @else if $sides == "box"
+    +rem(#{$property}, $baseline-base $gutter)

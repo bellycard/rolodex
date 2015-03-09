@@ -5,34 +5,34 @@
 // ========================================
 
 [data-dropdown]
-  @extend %position-relative
+  position: relative
   
 [data-dropdown-content]
-  @extend %opacity-0
-  @extend %pointer-events-none
-  @extend %position-absolute
-  @extend %transition-all
+  opacity: 0
+  pointer-events: none
+  position: absolute
+  transition: $transition-all
   z-index: 4
 
   [data-dropdown-open] &
-    @extend %opacity-1
-    @extend %pointer-events-auto
+    opacity: 1
+    pointer-events: auto
 
 // Dropdown arrow
 // ========================================
 
 .dropdown,
 .dropdown-alt
-  @extend %display-inline-block
-  @extend %vertical-align-middle
+  display: inline-block
+  vertical-align: middle
 
 .dropdown:after
-  @extend %i-caret
-  @extend %content-empty
-  @extend %cursor-pointer
-  @extend %position-absolute
+  +i-caret
+  content: ""
+  cursor: pointer
+  position: absolute
   +rem(right, $gutter-half)
-  @extend %center-y
+  +center(y)
   z-index: 3
 
 .dropdown:hover:after,
@@ -44,13 +44,13 @@
 // ========================================
 
 .dropdown-toggle
-  @extend %background-white
-  @extend %border-base
-  @extend %border-radius-base
-  @extend %color-black-offset
-  @extend %cursor-pointer
+  background-color: $white
+  +rem(border, 1px solid $gray-light)
+  +rem(border-radius, $border-radius-base)
+  color: $black-offset
+  cursor: pointer
   +rem(padding, ($baseline-step + 2) 36px ($baseline-step + 2) ($gutter-half - 1))
-  @extend %text-left
+  text-align: left
 
   &:focus
     outline: 0
@@ -69,8 +69,8 @@
 // ========================================
 
 .dropdown-menu
-  @extend %box-overlay
-  @extend %margin-top-x-small
+  +box-overlay
+  +rem(margin-top, $baseline-x-small)
   +rem(min-width, 140px)
   right: 0
   top: 100%
@@ -80,19 +80,18 @@
     right: auto
 
 .dropdown-menu-item
-  +rem(border-bottom, 1px solid $gray-light)
 
-  &:last-child
-    border-bottom: 0
+  &:not(:last-child)
+    +rem(border-bottom, 1px solid $gray-light)
 
   a
-    @extend %color-black-offset
-    @extend %display-block
+    color: $black-offset
+    display: block
     +rem(padding, 10px 22px)
 
     &:hover,
     &:focus
-      @extend %color-blue
+      color: $blue
 
 // Within a form row
 // ========================================
@@ -100,7 +99,7 @@
 .form-row
 
   [data-dropdown]
-    @extend %grid-1-1
+    width: 100%
     
     .form-control:first-child,
     .form-area:first-child

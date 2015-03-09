@@ -2,83 +2,87 @@
 // ========================================
 
 .alert-title
-  @extend %display-block
-  @extend %font-weight-bold
-  @extend %margin-bottom-step
+  display: block
+  font-weight: 600
+  +rem(margin-bottom, $baseline-step)
 
 .alert-signal
-  @extend %font-weight-bold
+  font-weight: 600
   line-height: 1
   +rem(padding-right, 5px)
-  @extend %text-transform-uppercase
+  text-transform: uppercase
 
 .alert-action
-  @extend %pull-right
+  float: right
 
 // Kinds
 
 @each $alert in $alerts
 
-  $kind:   nth($alert, 1)
-  $color:  nth($alert, 2)
-  $icon:   nth($alert, 3)
-  $border: nth($alert, 4)
+  $kind:        nth($alert, 1)
+  $icon:        nth($alert, 2)
+  $color:       nth($alert, 3)
+  $color-light: nth($alert, 4)
+  $color-dark:  nth($alert, 5)
 
-  .alert-#{$kind}
+  .alert-banner-#{$kind},
+  .alert-inline-#{$kind}
     background-repeat: no-repeat
 
     a
-      @extend %text-decoration-underline
+      text-decoration: underline
 
-  .alert-banner.alert-#{$kind}
-    @extend %background-#{$color}
+  // Banner alerts
+
+  .alert-banner-#{$kind}
+    background-color: $color
     +background-svg("alerts/icon-#{$icon}-light")
+    color: $white
+    +s-echo
+    +bump(padding, baselines-small gutters-half)
+    position: relative
+
+    .i-close
+      +rem(top, 23px)
 
     a,
     .alert-signal
-      @extend %color-#{$color}-light
+      color: $color-light
 
     a:active,
     a:hover
-      @extend %color-white
+      color: $white
 
     .alert-signal
-      @extend %s-delta
+      +s-delta
 
     .alert-action
-      @extend %text-decoration-none
+      text-decoration: none
 
-  .alert-inline.alert-#{$kind}
-    @extend %background-#{$color}-light
+    &.alert-dismissible
+      +rem(padding-right, $gutter-half * 3)
+
+  // Inline alerts
+
+  .alert-inline-#{$kind}
+    background-color: $color-light
     +background-svg("alerts/icon-#{$icon}-dark")
-    border-color: $border
+    +rem(border, 1px solid $color)
+    +rem(border-radius, $border-radius-base)
+    color: $black-offset
+    display: inline-block
+    +rem(padding, (($baseline-step * 1.5) - 1) ($gutter-half - 1))
 
     a,
     .alert-signal
-      @extend %color-#{$color}
+      color: $color
 
     a:active,
     a:hover
-      @extend %color-#{$color}-dark
+      color: $color-dark
 
 // Banner alerts
 // ========================================
-
-.alert-banner
-  @extend %color-white
-  @extend %padding-top-small
-  @extend %padding-bottom-small
-  @extend %padding-gutters-half
-  @extend %position-relative
-  @extend %s-echo
-
-  .i-close
-    +rem(top, 23px)
-
-.alert-dismissible
-  +rem(padding-right, $gutter-half * 3)
-
-// Kinds
 
 @each $alert in $alerts-banner
 
@@ -87,23 +91,13 @@
   $height: nth($alert, 3)
   $offset: nth($alert, 4)
 
-  .alert-banner.alert-#{$kind}
+  .alert-banner-#{$kind}
     +rem(background-position, $gutter-half $offset)
     +rem(background-size, $width $height)
     +rem(padding-left, $gutter + $width)
 
 // Inline alerts
 // ========================================
-
-.alert-inline
-  @extend %border-radius-base
-  @extend %border-solid
-  @extend %border-1
-  @extend %color-black-offset
-  @extend %display-inline-block
-  +rem(padding, (($baseline-step * 1.5) - 1) ($gutter-half - 1))
-
-// Kinds
 
 @each $alert in $alerts-inline
 
@@ -112,7 +106,7 @@
   $height: nth($alert, 3)
   $offset: nth($alert, 4)
 
-  .alert-inline.alert-#{$kind}
+  .alert-inline-#{$kind}
     +rem(background-position, 14px $offset)
     +rem(background-size, $width $height)
     +rem(padding-left, 24px + $width)

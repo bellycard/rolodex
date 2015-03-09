@@ -15,7 +15,7 @@ main,
 nav,
 section,
 summary
-  @extend %display-block
+  display: block
 
 // Defaults
 
@@ -29,30 +29,30 @@ html
 
 [hidden],
 template
-  @extend %display-none
+  display: none
 
 body
-  @extend %margin-0
+  margin: 0
 
 // Media object
 
 .media,
 .media-body
-  @extend %overflow-hidden
+  overflow: hidden
 
 // Flag
 
 .flag
-  @extend %display-table
-  @extend %grid-1-1
+  display: table
+  width: 100%
 
 .flag-object,
 .flag-body
-  @extend %display-table-cell
-  @extend %vertical-align-middle
+  display: table-cell
+  vertical-align: middle
 
 .flag-object img
-  @extend %display-block
+  display: block
 
 .flag-body
-  @extend %grid-1-1
+  width: 100%

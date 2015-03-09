@@ -4,37 +4,54 @@
 // Base
 
 html
-  @extend %color-black-offset
-  @extend %font-family-open-sans
-  font-size: 87.5%
-  -ms-text-size-adjust: 100%
-  -webkit-text-size-adjust: 100%
+  color: $black-offset
+  font: 87.5% $font-family-open-sans
   line-height: 24px
   line-height: 1.5rem
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
 
 // Heading sizes
 
-@each $heading, $i in $headings
-  #{$heading}
-    @extend %h-#{$i}
+h1
+  +h-alpha
+
+h2
+  +h-bravo
+
+h3
+  +h-charlie
+
+h4
+  +h-delta
+
+h5
+  +h-echo
+
+h6
+  +h-foxtrot
 
 // Margins
 
-#{map-keys($headings)},
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p
-  @extend %margin-0
-  @extend %margin-bottom
+  +rem(margin, 0 0 $baseline-base 0)
 
 // Bolds
 
 b,
 strong
-  @extend %font-weight-bold
+  font-weight: 600
 
 // Abbreviations
 
 abbr[title]
-  border-bottom: 1px dotted
+  +rem(border-bottom, 1px dotted)
 
 // Horizontal rule
 
@@ -48,12 +65,11 @@ code,
 kbd,
 pre,
 samp
-  @extend %color-gray
-  @extend %font-family-monospace
+  color: $gray
+  font-family: $font-family-monospace
 
 pre
-  @extend %margin-0
-  @extend %margin-bottom
+  +rem(margin, 0 0 $baseline-base 0)
   white-space: pre-wrap
 
 // Address
@@ -64,7 +80,7 @@ address
 // Quotes
 
 blockquote
-  @extend %margin-0
+  margin: 0
 
 q
   quotes: "\201C" "\201D" "\2018" "\2019"
@@ -72,7 +88,7 @@ q
 // Small
 
 small
-  @extend %s-golf
+  +s-golf
 
 // Sub & sup
 
@@ -80,7 +96,7 @@ sub,
 sup
   font-size: 75%
   line-height: 0
-  @extend %position-relative
+  position: relative
   vertical-align: baseline
 
 sup
@@ -93,10 +109,10 @@ sub
 
 a
   background: transparent
-  @extend %color-blue
+  color: $blue
   outline: 0
-  @extend %text-decoration-none
-  @extend %transition-all
+  text-decoration: none
+  transition: $transition-all
 
   &:focus
     outline: thin dotted
@@ -104,4 +120,4 @@ a
   &:active,
   &:hover
     outline: 0
-    @extend %color-blue-dark
+    color: $blue-dark

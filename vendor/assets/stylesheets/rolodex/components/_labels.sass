@@ -2,17 +2,17 @@
 // ========================================
 
 .label
-  @extend %background-white
-  @extend %border-radius-mini
-  @extend %border-solid
-  @extend %border-1
+  background-color: $white
+  +rem(border-radius, $border-radius-mini)
+  border-style: solid
+  +rem(border-width, 1px)
+  +s-hotel
   font-weight: 500
   +rem(padding, 3px 7px 4px 7px)
-  @extend %position-relative
-  @extend %s-hotel
-  @extend %text-transform-uppercase
-  @extend %vertical-align-middle
-  @extend %white-space-nowrap
+  position: relative
+  text-transform: uppercase
+  vertical-align: middle
+  white-space: nowrap
 
 .label-push-left
   +rem(margin-left, 5px)
@@ -21,10 +21,9 @@
 
 @each $label in $labels
   
-  $kind:   nth($label, 1)
-  $border: nth($label, 2)
-  $color:  nth($label, 3)
+  $kind:  nth($label, 1)
+  $color: nth($label, 2)
   
   .label-#{$kind}
-    border-color: $border
-    @extend %color-#{$color}
+    border-color: $color
+    color: $color

@@ -5,29 +5,26 @@
 // ========================================
 
 fieldset
-  @extend %border-0
-  @extend %margin-0
+  border: 0
+  margin: 0
   min-width: 0
-  @extend %padding-0
-  @extend %grid-1-1
+  padding: 0
+  width: 100%
 
-legend
-  @extend %border-0
-  @extend %padding-0
-
+legend,
 button::-moz-focus-inner,
 input::-moz-focus-inner
-  border: 0   // Vendor prefixes bust the extend
-  padding: 0  // Vendor prefixes bust the extend
+  border: 0
+  padding: 0
 
 button[disabled],
 html input[disabled]
-  @extend %cursor-not-allowed
+  cursor: not-allowed
 
 input[type="checkbox"],
 input[type="radio"]
   box-sizing: border-box
-  @extend %padding-0
+  padding: 0
 
 input[type="search"]
   -webkit-appearance: textfield
@@ -47,45 +44,45 @@ select,
 textarea
   color: inherit
   font: inherit
-  @extend %margin-0
+  margin: 0
 
 .form-group
-  @extend %margin-bottom
-  @extend %position-relative
+  +rem(margin-bottom, $baseline-base)
+  position: relative
 
 .form-label
-  @extend %display-inline-block
-  @extend %font-weight-bold
-  @extend %margin-bottom-step
+  display: inline-block
+  font-weight: 600
+  +rem(margin-bottom, $baseline-step)
 
 .form-subtle,
 .form-claim
-  @extend %s-golf
+  +s-golf
 
 .form-subtle
-  @extend %color-gray
-  @extend %font-weight-normal
+  color: $gray
+  font-weight: 400
 
 .form-claim
-  @extend %pull-right
-  @extend %line-height-base
-  @extend %transition-all
+  float: right
+  +rem(line-height, $baseline-base)
+  transition: $transition-all
 
 // Text inputs and textareas
 
 .form-control,
 .form-area,
 .form-placeholder
-  @extend %background-white
+  background-color: $white
   background-image: none
-  @extend %border-base
-  @extend %border-radius-base
-  @extend %color-black
-  @extend %display-block
+  +rem(border, 1px solid $gray-light)
+  +rem(border-radius, $border-radius-base)
+  color: $black-offset
+  display: block
   +rem(padding, ($baseline-step + 2) ($gutter-half - 1))
-  @extend %position-relative
-  @extend %grid-1-1
+  position: relative
   transition: border .15s ease, background-image .15s ease
+  width: 100%
 
   &:focus
     border-color: $blue
@@ -95,17 +92,17 @@ textarea
   &[disabled],
   &[readonly],
   [disabled] &
-    @extend %background-white-offset
-    @extend %color-gray-light
-    @extend %cursor-not-allowed
+    background-color: $white-offset
+    color: $gray-light
+    cursor: not-allowed
 
   &:-ms-input-placeholder,
   &:-moz-placeholder,
   &::-webkit-input-placeholder
-    color: #999 // Vendor prefixes bust the extend
+    color: $gray
 
   &::-moz-placeholder
-    opacity: 1 // Vendor prefixes bust the extend
+    opacity: 1
 
   &[type='search']
     +background-svg("forms/icon-search", 15px)
@@ -118,17 +115,17 @@ textarea
 
 .form-date
   +background-svg("forms/icon-calendar", 20px 21px)
-  background-position: right 14px top 50%
+  background-position: right 14px top 50% // +rem doesn't work with 50%
   background-repeat: no-repeat
   +rem(padding-right, 48px)
 
 .form-placeholder
-  @extend %background-white-offset
+  background-color: $white-offset
 
 .form-placeholder-link
-  @extend %pull-right
-  @extend %line-height-base
-  @extend %s-golf
+  float: right
+  +s-golf
+  +rem(line-height, $baseline-base)
 
 // Checkboxes and radio buttons
 
@@ -137,13 +134,13 @@ textarea
 
   input[type="radio"],
   input[type="checkbox"]
-    @extend %pull-left
-    @extend %margin-top-step
+    float: left
+    +rem(margin-top, $baseline-step)
     +rem(margin-left, -20px)
 
   label[disabled]
-    @extend %cursor-not-allowed
-    @extend %color-gray
+    color: $gray
+    cursor: not-allowed
 
 // Custom radio buttons
 
@@ -152,17 +149,17 @@ textarea
     +rem(margin-bottom, $baseline-step / 2)
 
   label
-    @extend %cursor-pointer
+    cursor: pointer
     +rem(padding-left, 6px)
-    @extend %position-relative
+    position: relative
 
     &:before
       +background-svg("forms/radio-button", 20px 40px)
-      @extend %content-empty
+      content: ""
       +rem(height, 20px)
       +rem(left, -20px)
-      @extend %position-absolute
-      @extend %top-0
+      position: absolute
+      top: 0
       +rem(width, 20px)
 
 .form-radio-active:before
@@ -172,9 +169,9 @@ textarea
 // ========================================
 
 .form-row
-  @extend %display-table
   border-collapse: separate
-  @extend %grid-1-1
+  display: table
+  width: 100%
 
   .form-label,
   .form-btn
@@ -184,25 +181,25 @@ textarea
   .form-control,
   .form-area,
   .form-btn
-    @extend %display-table-cell
-    @extend %vertical-align-top
+    display: table-cell
+    vertical-align: top
 
   .form-label,
   .form-btn
-    @extend %position-relative
+    position: relative
 
   .form-label
-    @extend %background-white-offset
-    @extend %border-base
+    background-color: $white-offset
+    +rem(border, 1px solid $gray-light)
     border-right: 0
     +rem(border-radius, $border-radius-base 0 0 $border-radius-base)
-    @extend %color-gray-dark
+    color: $gray-dark
     +rem(padding, ($baseline-step + 2) ($gutter-half - 1))
-    @extend %white-space-nowrap
+    white-space: nowrap
 
     &[disabled]
-      @extend %color-gray
-      @extend %cursor-not-allowed
+      color: $gray
+      cursor: not-allowed
 
   > .form-control,
   > .form-area,
@@ -233,51 +230,49 @@ textarea
 // ========================================
 
 .form-help
-  @extend %color-gray
-  @extend %s-golf
-  @extend %font-weight-normal
-  @extend %margin-top-step
-  @extend %margin-gutters-half
+  color: $gray
+  +s-golf
+  font-weight: 400
+  +rem(margin, $baseline-step $gutter-half 0 $gutter-half)
 
   .form-choice &
     margin-left: 0
 
 .form-help-title
-  @extend %color-gray-dark
-  @extend %display-inline-block
-  @extend %margin-top-step
-  @extend %margin-bottom-step
+  color: $gray-dark
+  display: inline-block
+  +bump(margin, baselines-step)
 
 .form-help-suggestions
 
   li
-    @extend %line-height-base
+    +rem(line-height, $baseline-base)
     +rem(padding-left, 18px)
-    @extend %position-relative
+    position: relative
 
   .i-suggest-tick,
   .form-help-bullet
-    @extend %position-absolute
-    @extend %left-0
-    @extend %transition-all
+    position: absolute
+    left: 0
+    transition: $transition-all
 
   .i-suggest-tick
-    @extend %opacity-0
+    opacity: 0
     +rem(top, 7px)
 
 .form-help-bullet
-  @extend %display-inline-block
-  @extend %s-delta
-  @extend %text-center
+  display: inline-block
+  +s-delta
+  text-align: center
   +rem(width, 12px)
 
 .form-help-success
 
   .i-suggest-tick
-    @extend %opacity-1
+    opacity: 1
 
   .form-help-bullet
-    @extend %opacity-0
+    opacity: 0
 
 // Validation
 // ========================================
@@ -292,7 +287,7 @@ textarea
     z-index: 1
 
   &.form-choice
-    @extend %color-red
+    color: $red
 
 // Icons
 

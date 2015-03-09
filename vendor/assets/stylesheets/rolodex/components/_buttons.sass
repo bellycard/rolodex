@@ -2,48 +2,44 @@
 // ========================================
 
 .btn
-  @extend %border-solid
-  @extend %border-1
-  border-color: transparent
-  @extend %border-radius-base
-  @extend %color-white
-  @extend %cursor-pointer
-  @extend %display-inline-block
-  @extend %font-family-open-sans
-  @extend %s-foxtrot
-  @extend %line-height-base
-  @extend %margin-0
+  +rem(border, 1px solid transparent)
+  +rem(border-radius, $border-radius-base)
+  color: $white
+  cursor: pointer
+  display: inline-block
+  font-family: $font-family-open-sans
+  +s-foxtrot
+  +rem(line-height, $baseline-base)
+  margin: 0
   outline: 0
   +rem(padding, 8px 14px)
-  @extend %text-center
-  @extend %text-decoration-none
-  @extend %transition-all
-  @extend %vertical-align-middle
-  @extend %white-space-nowrap
+  text-align: center
+  text-decoration: none
+  transition: $transition-all
+  vertical-align: middle
+  white-space: nowrap
 
   &:hover,
   &:active
-    @extend %color-white
+    color: $white
 
   &[disabled],
   &[disabled]:hover,
   &[disabled]:focus,
   &[disabled]:active
-    @extend %background-gray-light
+    background-color: $gray-light
     border-color: transparent
     color: #eee
-    @extend %cursor-not-allowed
+    cursor: not-allowed
 
-  &.btn-large
-    @extend %s-delta
-    @extend %padding-gutters
-    +rem(padding-bottom, 18px)
-    +rem(padding-top, 16px)
+.btn-large
+  +s-delta
+  +rem(padding, 16px $gutter $baseline-small $gutter)
 
-  &.btn-small
-    @extend %border-radius-mini
-    @extend %s-golf
-    +rem(padding, ($baseline-step - 1) 10px)
+.btn-small
+  +rem(border-radius, $border-radius-mini)
+  +s-golf
+  +rem(padding, ($baseline-step - 1) 10px)
 
 // Kinds
 // ========================================
@@ -59,8 +55,8 @@
     background-color: $bg-normal
 
     @if $kind == "boring"
-      border-color: $gray-light // Specificity bust the extend
-      @extend %color-gray-dark
+      border-color: $gray-light
+      color: $gray-dark
 
     &:hover
       background-color: $bg-hover
@@ -70,7 +66,7 @@
 
 .btn-boring:hover,
 .btn-boring:active
-  @extend %color-gray-dark
+  color: $gray-dark
 
 // Alternate & Overlay
 // ========================================
@@ -97,7 +93,7 @@
   background-color: rgba($black, .3)
   border-color: rgba($white, .5)
   +rem(border-width, 2px)
-  @extend %color-white
+  color: $white
 
   &:hover,
   &:focus
