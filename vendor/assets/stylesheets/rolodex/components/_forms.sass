@@ -282,11 +282,18 @@ textarea
 .form-error
 
   &.form-control,
-  &.form-area
+  .form-control,
+  &.form-area,
+  .form-area
+    +background-svg("icons/icon-invalid", 16px)
+    +rem(background-position, right ($gutter-half - 1) top $baseline-x-small)
+    background-repeat: no-repeat
     border-color: $red
+    +rem(padding-right, 44px)
     z-index: 1
 
-  &.form-choice
+  &.form-choice,
+  .form-choice
     color: $red
 
 // Icons
