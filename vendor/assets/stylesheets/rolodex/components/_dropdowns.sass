@@ -52,10 +52,17 @@
   +rem(padding, ($baseline-step + 2) 36px ($baseline-step + 2) ($gutter-half - 1))
   text-align: left
 
+  &:hover
+    background-color: $white-offset
+
+  &:active
+    background-color: #eee
+
   &:focus
     outline: 0
 
   [data-dropdown-open] &
+    background-color: $white-offset
     border-color: $blue
 
   .form-row &
