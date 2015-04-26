@@ -16,6 +16,14 @@ Import modules to your Sass files:
 @import 'rolodex'
 ```
 
+## Use with Bower
+
+Import modules with this path in your Sass files:
+
+```
+@import 'bower_components/rolodex/vendor/assets/stylesheets/rolodex';
+```
+
 ## Contributing
 
 1. Fork it
@@ -23,3 +31,4 @@ Import modules to your Sass files:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
