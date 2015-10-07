@@ -15,6 +15,8 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+bower_components/
+node_modules/
 
 # Ignore .DS_store file
 .DS_Store

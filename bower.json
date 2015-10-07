@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/bellycard/rolodex"
   },
-  "main": "vendor/assets/stylesheets/rolodex.sass",
+  "main": "dist/rolodex.min.js",
   "ignore": [
     "**/.*",
     "node_modules",
