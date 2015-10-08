@@ -11,7 +11,7 @@ var tmpPath = '.tmp';
 
 // Compiles coffee to js, annotates Angular dependencies
 gulp.task('js', function() {
-  return gulp.src(path.join(assetPath, '/src/**/*.coffee'))
+  return gulp.src(path.join(assetPath, '/**/*.coffee'))
     .pipe($.coffee())
     .pipe($.ngAnnotate())
     .pipe(gulp.dest(tmpPath))
