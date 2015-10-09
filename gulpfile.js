@@ -27,9 +27,7 @@ gulp.task('js-hack', function() {
 
 // Compiles haml to js for Angular templateCache
 gulp.task('templates', function() {
-  return gulp.src(path.join(assetPath, '/template/**/*.haml'))
-    .pipe($.haml())
-    .pipe($.rename(function(path) { path.extname = '.html'; }))
+  return gulp.src(path.join(assetPath, '/template/**/*.html'))
     .pipe($.minifyHtml({ empty: true, spare: true, quotes: true }))
     .pipe($.angularTemplatecache('templateCacheHtml.js', {
       module: 'rolodex',
