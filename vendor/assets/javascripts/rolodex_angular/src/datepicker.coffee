@@ -177,7 +177,7 @@ angular.module('rolodex.datepicker', [
 .directive 'datepicker', ->
   restrict: 'EA'
   replace: true
-  templateUrl: 'rolodex_angular/template/datepicker/datepicker'
+  templateUrl: 'rolodex_angular/template/datepicker/datepicker.html'
   scope:
     datepickerMode: '=?'
     dateDisabled: '&'
@@ -198,7 +198,7 @@ angular.module('rolodex.datepicker', [
     return (
       restrict: 'EA'
       replace: true
-      templateUrl: 'rolodex_angular/template/datepicker/day'
+      templateUrl: 'rolodex_angular/template/datepicker/day.html'
       require: '^datepicker'
       link: (scope, element, attrs, ctrl) ->
         getDaysInMonth = (year, month) ->
@@ -301,7 +301,7 @@ angular.module('rolodex.datepicker', [
     return (
       restrict: 'EA'
       replace: true
-      templateUrl: 'rolodex_angular/template/datepicker/month'
+      templateUrl: 'rolodex_angular/template/datepicker/month.html'
       require: '^datepicker'
       link: (scope, element, attrs, ctrl) ->
         ctrl.step = years: 1
@@ -350,7 +350,7 @@ angular.module('rolodex.datepicker', [
     return (
       restrict: 'EA'
       replace: true
-      templateUrl: 'rolodex_angular/template/datepicker/year'
+      templateUrl: 'rolodex_angular/template/datepicker/year.html'
       require: '^datepicker'
       link: (scope, element, attrs, ctrl) ->
         getStartingYear = (year) ->
@@ -534,7 +534,7 @@ angular.module('rolodex.datepicker', [
   restrict: 'EA'
   replace: true
   transclude: true
-  templateUrl: 'rolodex_angular/template/datepicker/popup'
+  templateUrl: 'rolodex_angular/template/datepicker/popup.html'
   link: (scope, element, attrs) ->
     element.bind 'click', (event) ->
       event.preventDefault()

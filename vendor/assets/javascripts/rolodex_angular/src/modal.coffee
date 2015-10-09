@@ -64,7 +64,7 @@ angular.module("rolodex.modal", ["rolodex.transition", "templates"])
     replace: true
     transclude: true
     templateUrl: (tElement, tAttrs) ->
-      tAttrs.templateUrl or "rolodex_angular/template/modal/window"
+      tAttrs.templateUrl or "rolodex_angular/template/modal/window.html"
 
     link: (scope, element, attrs) ->
       element.addClass attrs.windowClass or ""

@@ -7,7 +7,7 @@ angular.module('rolodex.alert', [])
 .directive 'alert', ->
   restrict: 'EA'
   controller: 'AlertController'
-  templateUrl: 'rolodex_angular/template/alert/alert'
+  templateUrl: 'rolodex_angular/template/alert/alert.html'
   transclude: true
   replace: true
   scope:

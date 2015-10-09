@@ -39,7 +39,7 @@ angular.module("rolodex.accordion", ["rolodex.collapse"])
   controller: "AccordionController"
   transclude: true
   replace: false
-  templateUrl: 'rolodex_angular/template/accordion/accordion'
+  templateUrl: 'rolodex_angular/template/accordion/accordion.html'
 
 # The accordion-group directive indicates a block of html that will expand and collapse in an accordion
 .directive "accordionGroup", ->
@@ -47,7 +47,7 @@ angular.module("rolodex.accordion", ["rolodex.collapse"])
   restrict: "EA"
   transclude: true # It transcludes the contents of the directive into the template
   replace: true # The element containing the directive will be replaced with the template
-  templateUrl: 'rolodex_angular/template/accordion/accordion-group'
+  templateUrl: 'rolodex_angular/template/accordion/accordion-group.html'
   scope:
     heading: "@" # Interpolate the heading attribute onto this scope
     isOpen: "=?"
