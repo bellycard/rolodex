@@ -1,7 +1,9 @@
 {
   "name": "rolodex",
   "author": "Belly",
-  "keywords": [ "rolodex" ],
+  "keywords": [
+    "rolodex"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bellycard/rolodex/issues"
@@ -29,7 +31,8 @@
     "karma-firefox-launcher": "^0.1.3",
     "karma-jasmine": "^0.1.5",
     "karma-ng-html2js-preprocessor": "^0.1.0",
-    "karma-safari-launcher": "^0.1.1"
+    "karma-safari-launcher": "^0.1.1",
+    "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
     "test_angular": "./node_modules/karma/bin/karma start"
