@@ -5,7 +5,7 @@
 # work with the Rolodex styles. The rest remains true to the Bootstrap source including using their transition
 # animation library and not ngAnimate.
 
-angular.module("rolodex.modal", ["rolodex.transition"])
+angular.module("rolodex.modal", ["rolodex.transition", "templates"])
 
 # A helper, internal data structure that acts as a map but also allows getting / removing
 # elements in the LIFO order
