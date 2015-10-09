@@ -1,6 +1,3 @@
-#= require 'rolodex_angular/template/accordion/accordion'
-#= require 'rolodex_angular/template/accordion/accordion-group'
-
 angular.module("rolodex.accordion", ["rolodex.collapse"])
 
 .constant("accordionConfig", closeOthers: true)

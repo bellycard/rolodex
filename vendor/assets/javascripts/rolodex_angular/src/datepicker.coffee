@@ -1,9 +1,3 @@
-#= require 'rolodex_angular/template/datepicker/datepicker'
-#= require 'rolodex_angular/template/datepicker/day'
-#= require 'rolodex_angular/template/datepicker/month'
-#= require 'rolodex_angular/template/datepicker/popup'
-#= require 'rolodex_angular/template/datepicker/year'
-
 angular.module('rolodex.datepicker', [
   'rolodex.dateparser'
   'rolodex.dropdown'

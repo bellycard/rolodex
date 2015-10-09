@@ -1,5 +1,3 @@
-#= require 'rolodex_angular/template/alert/alert'
-
 angular.module('rolodex.alert', [])
 
 .controller('AlertController', ['$scope', '$attrs', ($scope, $attrs) ->

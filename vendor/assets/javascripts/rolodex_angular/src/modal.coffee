@@ -1,5 +1,3 @@
-#= require 'rolodex_angular/template/modal/window'
-
 # Because of the flexibility of UI-Bootstraps modal this is a copy of their source converted to CoffeeScript for
 # maintainability. The module namespace has been changed to suite Rolodex and the template has been adjusted to
 # work with the Rolodex styles. The rest remains true to the Bootstrap source including using their transition
