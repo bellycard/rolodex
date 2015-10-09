@@ -48,4 +48,4 @@ gulp.task('clean', function (done) {
   del([tmpPath, distPath], done);
 });
 
-gulp.task('default', ['js']);
+gulp.task('default', ['clean', 'build']);
