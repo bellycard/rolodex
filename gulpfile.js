@@ -27,13 +27,13 @@ gulp.task('js-hack', function() {
 
 // Compiles haml to js for Angular templateCache
 gulp.task('templates', function() {
-  return gulp.src(path.join(assetPath, '/template/**/*.html'))
+  return gulp.src(path.join(assetPath, '/template/**/*.ngt'))
     .pipe($.minifyHtml({ empty: true, spare: true, quotes: true }))
     .pipe($.angularTemplatecache('templateCacheHtml.js', {
       module: 'rolodex',
       root: 'rolodex_angular/template',
       transformUrl: function(url) {
-        return url.replace(/\.html$/, '')
+        return url.replace(/\.ngt$/, '')
       }
     }))
     .pipe(gulp.dest(tmpPath));
