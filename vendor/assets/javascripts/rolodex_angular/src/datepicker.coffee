@@ -1,3 +1,9 @@
+#= require 'rolodex_angular/template/datepicker/datepicker'
+#= require 'rolodex_angular/template/datepicker/day'
+#= require 'rolodex_angular/template/datepicker/month'
+#= require 'rolodex_angular/template/datepicker/popup'
+#= require 'rolodex_angular/template/datepicker/year'
+
 angular.module('rolodex.datepicker', [
   'rolodex.dateparser'
   'rolodex.dropdown'
@@ -177,7 +183,7 @@ angular.module('rolodex.datepicker', [
 .directive 'datepicker', ->
   restrict: 'EA'
   replace: true
-  templateUrl: 'rolodex_angular/template/datepicker/datepicker.html'
+  templateUrl: 'rolodex_angular/template/datepicker/datepicker'
   scope:
     datepickerMode: '=?'
     dateDisabled: '&'
@@ -198,7 +204,7 @@ angular.module('rolodex.datepicker', [
     return (
       restrict: 'EA'
       replace: true
-      templateUrl: 'rolodex_angular/template/datepicker/day.html'
+      templateUrl: 'rolodex_angular/template/datepicker/day'
       require: '^datepicker'
       link: (scope, element, attrs, ctrl) ->
         getDaysInMonth = (year, month) ->
@@ -301,7 +307,7 @@ angular.module('rolodex.datepicker', [
     return (
       restrict: 'EA'
       replace: true
-      templateUrl: 'rolodex_angular/template/datepicker/month.html'
+      templateUrl: 'rolodex_angular/template/datepicker/month'
       require: '^datepicker'
       link: (scope, element, attrs, ctrl) ->
         ctrl.step = years: 1
@@ -350,7 +356,7 @@ angular.module('rolodex.datepicker', [
     return (
       restrict: 'EA'
       replace: true
-      templateUrl: 'rolodex_angular/template/datepicker/year.html'
+      templateUrl: 'rolodex_angular/template/datepicker/year'
       require: '^datepicker'
       link: (scope, element, attrs, ctrl) ->
         getStartingYear = (year) ->
@@ -534,7 +540,7 @@ angular.module('rolodex.datepicker', [
   restrict: 'EA'
   replace: true
   transclude: true
-  templateUrl: 'rolodex_angular/template/datepicker/popup.html'
+  templateUrl: 'rolodex_angular/template/datepicker/popup'
   link: (scope, element, attrs) ->
     element.bind 'click', (event) ->
       event.preventDefault()

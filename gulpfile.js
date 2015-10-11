@@ -33,7 +33,7 @@ gulp.task('templates', function() {
       module: 'rolodex',
       root: 'rolodex_angular/template',
       transformUrl: function(url) {
-        return url.replace(/\.ngt\.html$/, '')
+        return url.replace(/\.html$/, '')
       }
     }))
     .pipe(gulp.dest(tmpPath));
