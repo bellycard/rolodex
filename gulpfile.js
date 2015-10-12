@@ -11,7 +11,7 @@ var distPath = 'dist';
 var tmpPath = '.tmp';
 
 // Compiles coffee to js, annotates Angular dependencies
-gulp.task('js', ['js-hack'], function() {
+gulp.task('js', ['js-template-cache'], function() {
   return gulp.src(path.join(assetPath, '/**/*.coffee'))
     .pipe($.coffee())
     .pipe($.ngAnnotate())
@@ -19,7 +19,7 @@ gulp.task('js', ['js-hack'], function() {
 });
 
 // A hack for non-Ruby projects to fake the templates namespace (which lives in a gem)
-gulp.task('js-hack', function() {
+gulp.task('js-template-cache', function() {
   var stream = source('templates.js');
   stream.end("(function() { angular.module('templates', []); }).call(this);");
   stream.pipe(gulp.dest(tmpPath));
@@ -45,7 +45,7 @@ gulp.task('build', ['js', 'templates'], function() {
     .pipe($.concat('rolodex.js'))
     .pipe(gulp.dest(distPath))
     .pipe($.uglify())
-    .pipe($.rename({extname: ".min.js"}))
+    .pipe($.rename({extname: '.min.js'}))
     .pipe(gulp.dest(distPath))
 });
 
