@@ -29,7 +29,7 @@ gulp.task('js-hack', function() {
 gulp.task('templates', function() {
   return gulp.src(path.join(assetPath, '/template/**/*.ngt'))
     .pipe($.minifyHtml({ empty: true, spare: true, quotes: true }))
-    .pipe($.angularTemplatecache('templateCacheHtml.js', {
+    .pipe($.angularTemplatecache('templates.js', {
       module: 'rolodex',
       root: 'rolodex_angular/template',
       transformUrl: function(url) {
