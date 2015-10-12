@@ -4,7 +4,8 @@ angular.module('rolodex.dropdown', [])
 
 .service('dropdownService', [
   '$document'
-  ($document) ->
+  '$timeout'
+  ($document, $timeout) ->
     openScope = null
 
     @open = (dropdownScope) ->
@@ -20,6 +21,9 @@ angular.module('rolodex.dropdown', [])
 
         if dropdownScope.forceClose
           openScope.isOpen = false if openScope
+
+          $timeout ->
+            dropdownScope.isOpen = false
 
         openScope = null
         $document.unbind 'click', closeDropdown

@@ -1,12 +1,11 @@
 {
   "name": "rolodex",
-  "version": "2.0.2",
   "homepage": "http://bellycard.com/",
   "repository": {
     "type": "git",
     "url": "https://github.com/bellycard/rolodex"
   },
-  "main": "vendor/assets/stylesheets/rolodex.sass",
+  "main": "dist/rolodex.min.js",
   "ignore": [
     "**/.*",
     "node_modules",

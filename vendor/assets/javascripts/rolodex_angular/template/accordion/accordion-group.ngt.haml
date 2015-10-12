@@ -1,7 +1,0 @@
-.panel.panel-default
-  .panel-heading
-    %h4.panel-title
-      %a.accordion-toggle{"accordion-transclude" => "heading", "ng-click" => "toggleOpen()"}
-        %span{"ng-class" => "{'text-muted': isDisabled}"} {{heading}}
-  .panel-collapse{:collapse => "!isOpen"}
-    .panel-body{"ng-transclude" => ""}
