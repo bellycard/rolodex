@@ -3,10 +3,10 @@
 
 =background-svg($file-name, $size...)
 
-  background-image: url("/images/#{$file-name}.png")
-  background-image: url("/images/#{$file-name}.svg")
+  background-image: url("#{$image-path}/#{$file-name}.png")
+  background-image: url("#{$image-path}/#{$file-name}.svg")
   background-image: image-url("#{$file-name}.png")
   background-image: image-url("#{$file-name}.svg")
 
   @if length($size) > 0
-    +rem(background-size, $size)
+    +rem(background-size, $size...)
