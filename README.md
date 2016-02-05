@@ -32,3 +32,8 @@ Import modules with this path in your Sass files:
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+## Publishing/Deploying
+
+1. Bump the [version number](http://semver.org/) `rolodex/lib/rolodex/version.rb`
+2. Build the new gemspec `$ gem build rolodex.gemspec`
+3. Push to rubygems.org `$ gem push rolodex-[new-version-number].gem`
