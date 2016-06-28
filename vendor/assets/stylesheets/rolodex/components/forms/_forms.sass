@@ -1,0 +1,101 @@
+// Default styles
+// ========================================
+
+.form-group
+  +rem(margin-bottom, $baseline-base)
+  position: relative
+
+.form-label
+  display: inline-block
+  font-weight: 600
+  +rem(margin-bottom, $baseline-step)
+
+.form-subtle,
+.form-claim
+  +s-golf
+
+.form-subtle
+  color: $gray
+  font-weight: 400
+
+.form-claim
+  float: right
+  +rem(line-height, $baseline-base)
+  transition: $transition-all
+
+// Horizontal styles
+// ========================================
+
+.form-row
+  border-collapse: separate
+  display: table
+  width: 100%
+
+  .form-label,
+  .form-btn
+    width: 1%
+
+  .form-label,
+  .form-control,
+  .form-area,
+  .form-btn
+    display: table-cell
+    vertical-align: top
+
+  .form-label,
+  .form-btn
+    position: relative
+
+  .form-label
+    background-color: $white-offset
+    +rem(border, 1px solid $gray-light)
+    border-right: 0
+    +rem(border-radius, $border-radius-base 0 0 $border-radius-base)
+    color: $gray-dark
+    +rem(padding, ($baseline-step + 2) ($gutter-half - 1))
+    white-space: nowrap
+
+    &[disabled]
+      color: $gray
+      cursor: not-allowed
+
+  > .form-control,
+  > .form-area,
+
+    &:first-child
+      border-bottom-right-radius: 0
+      border-top-right-radius: 0
+
+    &:last-child
+      border-bottom-left-radius: 0
+      border-top-left-radius: 0
+
+    &:not(:first-child):not(:last-child)
+      border-radius: 0
+
+  .form-btn:last-child
+    &:hover,
+    &:focus,
+    &:active
+      z-index: 2
+
+    .btn
+      border-bottom-left-radius: 0
+      border-top-left-radius: 0
+      +rem(margin-left, -1px)
+
+
+// Shake
+
+.form-submit-invalid
+  animation: shake 1s ease both
+
+@keyframes shake
+  0%, 100%
+    transform: translateX(0)
+
+  10%, 30%, 50%, 70%, 90%
+    +rem(transform, translateX(-5px))
+
+  20%, 40%, 60%, 80%
+    +rem(transform, translateX(5px))
