@@ -1,0 +1,30 @@
+.font-light   { font-weight: 300 }
+.font-bold    { font-weight: 600 }
+.font-regular { font-weight: normal }
+.font-italic  { font-style: italic }
+
+.text-left    { text-align: left }
+.text-center  { text-align: center }
+.text-right   { text-align: right }
+.text-justify { text-align: justify }
+
+.text-uppercase       { text-transform: uppercase }
+.text-underline       { text-decoration: underline }
+.text-strike          { text-decoration: line-through }
+.text-decoration-none { text-decoration: none }
+
+.nowrap     { white-space: nowrap }
+.break-word { word-wrap: break-word }
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-style-none { list-style: none; padding-left: 0; }
+
+.tracked       { letter-spacing:  2px; }
+.tracked-tight { letter-spacing: -1px; }
+.tracked-mega  { letter-spacing:  5px; }

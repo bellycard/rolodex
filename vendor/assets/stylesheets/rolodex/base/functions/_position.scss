@@ -1,0 +1,35 @@
+.position-relative { position: relative }
+.position-absolute { position: absolute }
+.position-fixed    { position: fixed }
+
+.z100  { z-index: 100 }
+.z500  { z-index: 500 }
+.z1000 { z-index: 1000 }
+
+@each $baseline in $baselines {
+  $name: nth($baseline, 1);
+  $value: nth($baseline, 2);
+
+  .top-#{$name}    { top: $value }
+  .right-#{$name}  { right: $value }
+  .bottom-#{$name} { bottom: $value }
+  .left-#{$name}   { left: $value }
+}
+
+.top-0    { top: 0 }
+.right-0  { right: 0 }
+.bottom-0 { bottom: 0 }
+.left-0   { left: 0 }
+
+.fill {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.fit { max-width: 100% }
+
+.center-x  { left: 50%; transform: translateX(-50%) }
+.center-y  { top: 50%; transform: translateY(-50%) }
+.center-xy { left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%) }
