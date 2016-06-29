@@ -8,4 +8,5 @@ angular.module('rolodex', [
   'rolodex.dropdown'
   'rolodex.modal'
   'rolodex.transition'
+  'rolodex.stepper'
 ])

@@ -1,6 +1,6 @@
 #= require 'rolodex_angular/template/stepper/stepper'
 
-angular.module 'bly.components.stepper', []
+angular.module 'rolodex.stepper', []
 
 .directive 'blyStepper', ->
   restrict: 'AE'
