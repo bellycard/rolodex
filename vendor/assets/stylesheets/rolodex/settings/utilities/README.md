@@ -1,5 +1,5 @@
 ### Utilties
-#### Low level CSS classes
+#### Low-level CSS classes
 
 This concept is based on the work by @jxnblk and @mrmrs on [basscss](http://github.com/basscss) and [tachyons](http://github.com/tachyons-css/).
 
@@ -16,13 +16,13 @@ By default, we include:
 @import lib/typography
 ```
 
-You can include a more robust low level css library by adding:
+The new classes can be added by importing:
 
 ```sass
 @import rolodex/settings/utilities/addons
 ``  `
 
-or if you're using bower:
+or if you're using Bower:
 
 ```sass
 @import bower_components/vendor/assets/stylesheets/rolodex/settings/utilities/addons
@@ -30,7 +30,7 @@ or if you're using bower:
 
 ### Utilities
 
-* [Align ](#align)
+* [Align](#align)
 * [Border](#border)
 * [Clearfix](#clearfix)
 * [Color](#color)
@@ -60,18 +60,18 @@ Vertical alignment for table layouts
 
 ```html
 <div class="overflow-auto">
-  <div class="table">
-    <div class="table-cell align-baseline">.align-baseline</div>
-    <div class="table-cell align-top">.align-top</div>
-    <div class="table-cell align-middle">.align-middle</div>
-    <div class="table-cell align-bottom">.align-bottom</div>
+  <div class="display-table">
+    <div class="display-table-cell align-baseline">.align-baseline</div>
+    <div class="display-table-cell align-top">.align-top</div>
+    <div class="display-table-cell align-middle">.align-middle</div>
+    <div class="display-table-cell align-bottom">.align-bottom</div>
   </div>
 </div>
 ```
 
 # Border
 
-Default border styling, `1px solid $gray-light`:
+Default border styling, `1px solid $gray-light`
 
 ```sass
 .border
@@ -98,7 +98,7 @@ No border:
 .bl-0   // border-left: 0
 ```
 
-Border radius, default `$border-radius-base` (6px) and `$border-radius-mini` (4px):
+Border radius, default `$border-radius-base` (6px) and mini `$border-radius-mini` (4px)
 
 ```sass
 .circle
@@ -117,20 +117,19 @@ Border radius, default `$border-radius-base` (6px) and `$border-radius-mini` (4p
 .rounded-left-mini
 ```
 
-
 ```html
 <div class="bg-gray-light rounded">
-  <h1 class="px text-center border-bottom">Heading</h1>
+  <h1 class="text-center border-bottom">Heading</h1>
 </div>
 ```
 
 # Clearfix
 
-Clearfix classes `.clearfix`, `.group`:
+Clearfix classes `.group`, `.clearfix`
 
 ```sass
-.clearfix
 .group
+.clearfix
 .clear-left
 .clear-right
 .clear-both
@@ -146,9 +145,14 @@ Clearfix classes `.clearfix`, `.group`:
 
 # Color
 
-Text and background color classes
+Text color and background color
 
-Text color is `.color-[name]`, and background color is `.bg-[name]`, where `[name]` is from: [settings/variables/colors]().
+```.sass
+.color-$color
+-.bg-$color
+```
+
+Where `$color` is from [rolodex/settings/variables/colors]()
 
 ```html
 <div class="bg-slate">
@@ -159,7 +163,7 @@ Text color is `.color-[name]`, and background color is `.bg-[name]`, where `[nam
 
 # Display
 
-Display utility classes:
+Display utility classes
 
 ```sass
 .display-none
@@ -182,7 +186,7 @@ Display utility classes:
 
 # Hide
 
-Responsive hide classes. Breakpoint for `display: none` based on `@media (min-width: $breakpoint)`.
+Responsive visibility classes
 
 ```sass
 .hide
@@ -201,10 +205,8 @@ Responsive hide classes. Breakpoint for `display: none` based on `@media (min-wi
 
 # Icons
 
-Helpers for commonly used icons:
-
 ```sass
-.i-icon
+.i-ico
 .i-caret
 .i-caret-white
 ```
@@ -216,8 +218,6 @@ Helpers for commonly used icons:
 ```
 
 # Layout
-
-Helpers for layout:
 
 ```sass
 .ir   // Image Replacement
@@ -252,43 +252,47 @@ Misc:
 
 # Margin
 
-To keep things short, margin classes use a shorthand:
+To keep things short, margin classes use a shorthand
 
-```
-  prefixes:
-    m   - margin
-    mt  - margin top
-    mr  - margin right
-    mb  - margin bottom
-    ml  - margin left
-    mx  - x-axis (left and right)
-    my  - y-axis (top and bottom)
-    mn  - negative
-    m0  - zero reset
-
-  modifiers
-    -baseline   (ex: mt-large)
-    -h          ($gutter-half value, available on left/right/x)
-
-  examples
-    mt-base
-    mb-x-large
-    mr
-    mx-small
-    ml-h
+Prefixes:
+```sass
+.m   // margin
+.mt  // margin top
+.mr  // margin right
+.mb  // margin bottom
+.ml  // margin left
+.mx  // x-axis (left and right)
+.my  // y-axis (top and bottom)
+.mn  // negative
+.m0  // zero reset
 ```
 
-The right side values for this shorthand (mt-`value`), are specified by the [`$baselines`]() variables:
+Modifiers
+````sass
+-baseline   // $baseline variable
+-h          // $gutter-half, available on left/right/x
+```
+
+Examples
+```sass
+.mt-base     // margin-top: $baseline-base
+.mb-x-large  // margin-bottom: $baseline-x-large
+.mr          // margin-right: $gutter
+.mx-small    // margin-left: $baseline-small; margin-right: $baseline-small
+.ml-h        // margin-left: $gutter-half
+```
+
+The right side values are [`$baseline`]() variables
 
 | name | variable | value |
 | ---- | -------- | ----- |
-| step | $baseline-step | 6px |
-| x-small | $baseline-x-small | 12px |
-| small | $baseline-small | 18px |
-| base | $baseline-base | 24px |
-| large | $baseline-large | 30px |
-| x-large | $baseline-x-large | 36px |
-| xx-large | $baseline-xx-large | 42px |
+| step | `$baseline-step` | 6px |
+| x-small | `$baseline-x-small` | 12px |
+| small | `$baseline-small` | 18px |
+| base | `$baseline-base` | 24px |
+| large | `$baseline-large` | 30px |
+| x-large | `$baseline-x-large` | 36px |
+| xx-large | `$baseline-xx-large` | 42px |
 
 (so `mt-small` is `margin-top: $baseline-small`)
 
@@ -301,7 +305,7 @@ The right side values for this shorthand (mt-`value`), are specified by the [`$b
 
 # Opacity
 
-Values for opacity:
+Values for opacity
 
 ```sass
 .o-100
@@ -321,43 +325,47 @@ Values for opacity:
 
 # Padding
 
-To keep things short, padding classes use a shorthand (identical to margin):
+To keep things short, padding classes use a shorthand (identical to margin)
 
-```
-  prefixes:
-    p   - padding
-    pt  - padding top
-    pr  - padding right
-    pb  - padding bottom
-    pl  - padding left
-    px  - x-axis (left and right)
-    py  - y-axis (top and bottom)
-    pn  - negative
-    p0  - zero reset
-
-  modifiers
-    -baseline   (ex: mt-large)
-    -h          ($gutter-half value, available on left/right/x)
-
-  examples
-    pt-base
-    pb-x-large
-    pr
-    px-small
-    pl-h
+Prefixes:
+```sass
+.p   // padding
+.pt  // padding top
+.pr  // padding right
+.pb  // padding bottom
+.pl  // padding left
+.px  // x-axis (left and right)
+.py  // y-axis (top and bottom)
+.pn  // negative
+.p0  // zero reset
 ```
 
-The right side values for this shorthand (pt-`value`), are specified by the [`$baselines`]() variables:
+Modifiers
+````sass
+-baseline   // $baseline variable
+-h          // $gutter-half, available on left/right/x
+```
+
+Examples
+```sass
+.pt-base     // padding-top: $baseline-base
+.pb-x-large  // padding-bottom: $baseline-x-large
+.pr          // padding-right: $gutter
+.px-small    // padding-left: $baseline-small; padding-right: $baseline-small
+.pl-h        // padding-left: $gutter-half
+```
+
+The right side values are [`$baseline`]() variables
 
 | name | variable | value |
 | ---- | -------- | ----- |
-| step | $baseline-step | 6px |
-| x-small | $baseline-x-small | 12px |
-| small | $baseline-small | 18px |
-| base | $baseline-base | 24px |
-| large | $baseline-large | 30px |
-| x-large | $baseline-x-large | 36px |
-| xx-large | $baseline-xx-large | 42px |
+| step | `$baseline-step` | 6px |
+| x-small | `$baseline-x-small` | 12px |
+| small | `$baseline-small` | 18px |
+| base | `$baseline-base` | 24px |
+| large | `$baseline-large` | 30px |
+| x-large | `$baseline-x-large` | 36px |
+| xx-large | `$baseline-xx-large` | 42px |
 
 (so `pt-small` is `padding-top: $baseline-small`)
 
@@ -370,7 +378,7 @@ The right side values for this shorthand (pt-`value`), are specified by the [`$b
 
 # Position
 
-Utilities for position:
+Utilities for position
 
 ```sass
 .position-relative
@@ -378,7 +386,7 @@ Utilities for position:
 .position-fixed
 ```
 
-Z-indexes:
+Z index
 
 ```sass
 .z-100
@@ -386,12 +394,105 @@ Z-indexes:
 .z-1000
 ```
 
-Position from [`$baselines`]() variables:
+Position from [`$baseline`]() variables
 
-`.top-`
+```sass
+.top-$baseline
+.right-$baseline
+.bottom-$baseline
+.left-$baseline
+```
 
-# Responsive Margin
-# Responsive Padding
+```sass
+.fill     // top, right, bottom, left: 0
+.fit      // max-width: 100%
+```
+
+Vertical/horizontal center
+
+```sass
+.center-x
+.center-y
+.center-xy
+```
+
 # Typography
+
+Weights
+
+```sass
+.font-light
+.font-bold
+.font-regular
+.font-italic
+```
+
+Families
+
+```sass
+.font-family-open-sans
+.font-family-helvetica
+.font-family-monospace
+```
+
+Alignment
+
+```sass
+.text-left
+.text-center
+.text-right
+.text-justify
+```
+
+Words
+
+```sass
+.nowrap
+.break-word
+.truncate
+```
+
+Spacing
+
+```sass
+.tracked
+.tracked-tight
+.tracked-mega
+```
+
+Scale
+
+```sass
+.s-giga
+.s-mega
+.s-alpha
+.s-bravo
+.s-charlie
+.s-delta
+.s-echo
+.s-foxtrot
+.s-golf
+.s-hotel
+```
+
+Headings
+
+```sass
+.h-alpha
+.h-bravo
+.h-charlie
+.h-delta
+.h-echo
+.h-foxtrot
+```
+
 # Width
 
+Max widths based on breakpoints:
+
+```sass
+.max-width-xs
+.max-width-sm
+.max-width-md
+.max-width-lg
+```
