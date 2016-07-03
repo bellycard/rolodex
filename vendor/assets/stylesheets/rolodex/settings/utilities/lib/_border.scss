@@ -1,3 +1,6 @@
+// Border
+// ========================================
+
 $border-width: 1px;
 $border-style: solid;
 $border-color: $gray-light;
@@ -17,6 +20,8 @@ $border-color: $gray-light;
 .br-0 { border-right: 0 }
 .bb-0 { border-bottom: 0 }
 .bl-0 { border-left: 0 }
+
+// Rounded borders
 
 .circle      { border-radius: 50% }
 .not-rounded { border-radius: 0 }

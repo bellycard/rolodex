@@ -1,14 +1,17 @@
+// Layout
+// ========================================
+
 .ir {
   color: transparent;
   font: 0/0 a;
   text-shadow: none;
 }
 
-.overflow-hidden  { overflow: hidden }
-.overflow-scroll  { overflow: scroll }
-.overflow-auto    { overflow: auto }
+.overflow-hidden { overflow: hidden }
+.overflow-scroll { overflow: scroll }
+.overflow-auto   { overflow: auto }
 
-.float-left, .pull-left   { float: left }
+.float-left,  .pull-left  { float: left }
 .float-right, .pull-right { float: right }
 .float-none               { float: none }
 

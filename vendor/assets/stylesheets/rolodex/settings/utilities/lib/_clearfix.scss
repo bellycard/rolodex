@@ -1,3 +1,6 @@
+// Clearfix
+// ========================================
+
 .clearfix:before, .group:before
 .clearfix:after,  .group:after { content: " "; display: table; }
 .clearfix:after,  .group:after { clear: both; }

@@ -1,3 +1,6 @@
+// Hide
+// ========================================
+
 .hide {
   position: absolute !important;
   height: 1px;
@@ -5,6 +8,8 @@
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
+
+// Responsive hide
 
 @each $breakpoint in $breakpoints {
   $name:  nth($breakpoint, 1);
