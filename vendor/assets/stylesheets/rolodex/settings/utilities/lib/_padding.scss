@@ -20,7 +20,8 @@
   left/right uses $gutter/$gutter-half
 */
 
-// Vertical padding based on $baseline-variables
+// Vertical padding based on $baseline variables
+
 @each $baseline in $baselines {
   $name:  nth($baseline, 1);
   $value: nth($baseline, 2);
@@ -35,7 +36,8 @@
   .pn-#{$name} { padding-left: -$value; padding-right: -$value }
 }
 
-// Default left and right padding, uses $gutter
+// Defaults ($baseline-base, $gutters)
+
 .p    { padding: $baseline-base $gutter }
 .p-h  { padding: $baseline-base $gutter-half }
 .pn   { margin-left: -$gutter; margin-right: -$gutter }
@@ -51,6 +53,7 @@
 .py   { padding-top: $baseline-base; padding-bottom: $baseline-base }
 
 // Zero padding
+
 .p0   { padding: 0 }
 .pt-0 { padding-top: 0 }
 .pr-0 { padding-right: 0 }

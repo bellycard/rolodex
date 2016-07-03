@@ -20,7 +20,8 @@
   left/right uses $gutter/$gutter-half
 */
 
-// margin based on $baseline-variables
+// Margins based on $baseline variables
+
 @each $baseline in $baselines {
   $name:  nth($baseline, 1);
   $value: nth($baseline, 2);
@@ -35,7 +36,8 @@
   .mn-#{$name} { margin-left: -$value; margin-right: -$value }
 }
 
-// Defaults
+// Defaults ($baseline-base, $gutters)
+
 .m    { margin: $baseline-base $gutter }
 .m-h  { margin: $baseline-base $gutter-half }
 .mn   { margin-left: -$gutter; margin-right: -$gutter }
@@ -51,6 +53,7 @@
 .my   { margin-top: $baseline-base; margin-bottom: $baseline-base }
 
 // Zero margin
+
 .m0   { margin: 0 }
 .mt-0 { margin-top: 0 }
 .mr-0 { margin-right: 0 }
@@ -60,6 +63,7 @@
 .my-0 { margin-top: 0; margin-bottom: 0 }
 
 // Auto margin
+
 .m-auto   { margin: auto }
 .ml-auto  { margin-left: auto }
 .mr-auto  { margin-right: auto }
