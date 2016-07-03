@@ -21,6 +21,13 @@
   .left-#{$name}   { left: $value }
 }
 
+.top      { top: $baseline-base }
+.bottom   { bottom: $baseline-base }
+.left     { left: $gutter }
+.left-h   { left: $gutter-half }
+.right    { right: $gutter }
+.right-h  { right: $gutter-half }
+
 .top-0    { top: 0 }
 .right-0  { right: 0 }
 .bottom-0 { bottom: 0 }

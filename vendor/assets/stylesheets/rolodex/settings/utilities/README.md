@@ -20,7 +20,7 @@ The new classes can be added by importing:
 
 ```sass
 @import rolodex/settings/utilities/addons
-``  `
+```
 
 or if you're using Bower:
 
@@ -42,8 +42,6 @@ or if you're using Bower:
 * [Opacity](#opacity)
 * [Padding](#padding)
 * [Position](#position)
-* [Responsive Margin](#responsive-margin)
-* [Responsive Padding](#responsive-padding)
 * [Typography](#typography)
 * [Width](#width)
 
@@ -58,17 +56,6 @@ Vertical alignment for table layouts
 .align-bottom
 ```
 
-```html
-<div class="overflow-auto">
-  <div class="display-table">
-    <div class="display-table-cell align-baseline">.align-baseline</div>
-    <div class="display-table-cell align-top">.align-top</div>
-    <div class="display-table-cell align-middle">.align-middle</div>
-    <div class="display-table-cell align-bottom">.align-bottom</div>
-  </div>
-</div>
-```
-
 # Border
 
 Default border styling, `1px solid $gray-light`
@@ -81,14 +68,14 @@ Default border styling, `1px solid $gray-light`
 .border-left
 ```
 
-Border states:
+Border states
 
 ```sass
 .border--transparent  // border-color: transparent
 .border--active       // border-color: $blue
 ```
 
-No border:
+No border
 
 ```sass
 .b0     // border: 0
@@ -117,12 +104,6 @@ Border radius, default `$border-radius-base` (6px) and mini `$border-radius-mini
 .rounded-left-mini
 ```
 
-```html
-<div class="bg-gray-light rounded">
-  <h1 class="text-center border-bottom">Heading</h1>
-</div>
-```
-
 # Clearfix
 
 Clearfix classes `.group`, `.clearfix`
@@ -136,30 +117,16 @@ Clearfix classes `.group`, `.clearfix`
 .clear-none
 ```
 
-```html
-<div class="clearfix">
-  <div class="pull-left">left</div>
-  <div class="pull-right">right</div>
-</div>
-```
-
 # Color
 
 Text color and background color
 
 ```.sass
 .color-$color
--.bg-$color
+.bg-$color
 ```
 
-Where `$color` is from [rolodex/settings/variables/colors]()
-
-```html
-<div class="bg-slate">
-  <h1 class="color-white">White Color</h1>
-  <h2 class="bg-purple color-gold">Gold Color</h2>
-</div>
-```
+Where `$color` is from [rolodex/settings/variables/colors](https://github.com/bellycard/rolodex/blob/master/vendor/assets/stylesheets/rolodex/settings/variables/_colors.scss)
 
 # Display
 
@@ -174,19 +141,9 @@ Display utility classes
 .display-table-cell
 ```
 
-```html
-<div class="overflow-auto">
-  <span class="display-block">Full width</span>
-  <div class="display-table">
-    <div class="display-table-cell">its a table</div>
-    <div class="display-table-cell">a fake table</div>
-  </div>
-</div>
-```
-
 # Hide
 
-Responsive visibility classes
+Responsive visibility classes from [$breakpoints](https://github.com/bellycard/rolodex/blob/master/vendor/assets/stylesheets/rolodex/settings/variables/_layout.scss)
 
 ```sass
 .hide
@@ -196,34 +153,17 @@ Responsive visibility classes
 .lg-hide
 ```
 
-```html
-<div class="overflow-auto">
-  <span class="md-hide">Hidden when bigger than tablet</span>
-  <span class="hide">Aggressive hide</span>
-</div>
-```
-
 # Icons
 
 ```sass
-.i-ico
+.i-icon
 .i-caret
 .i-caret-white
 ```
 
-```html
-<i class="i-icon i-custom-icon"></i>
-<i class="i-caret"></i>
-<i class="i-caret-white"></i>
-```
-
 # Layout
 
-```sass
-.ir   // Image Replacement
-```
-
-Overflow:
+Overflow
 
 ```sass
 .overflow-hidden
@@ -231,7 +171,7 @@ Overflow:
 .overflow-auto
 ```
 
-Floats:
+Floats
 
 ```sass
 .float-left
@@ -242,7 +182,13 @@ Floats:
 .pull-right
 ```
 
-Misc:
+Image replacement
+
+```sass
+.ir
+```
+
+Cursor
 
 ```sass
 .cursor-pointer
@@ -254,35 +200,30 @@ Misc:
 
 To keep things short, margin classes use a shorthand
 
-Prefixes:
+Default top/bottom values are `$baseline-base` (24px)
+
+Default left/right values are `$gutter` (30px)
+
+Prefixes
 ```sass
-.m   // margin
-.mt  // margin top
-.mr  // margin right
-.mb  // margin bottom
-.ml  // margin left
-.mx  // x-axis (left and right)
-.my  // y-axis (top and bottom)
-.mn  // negative
-.m0  // zero reset
+ .m-  // margin
+.mt-  // margin top
+.mr-  // margin right
+.mb-  // margin bottom
+.ml-  // margin left
+.mx-  // x-axis (left and right)
+.my-  // y-axis (top and bottom)
+.mn-  // negative
+.m0-  // zero reset
 ```
 
 Modifiers
 ````sass
--baseline   // $baseline variable
+-$baseline  // $baseline variable
 -h          // $gutter-half, available on left/right/x
 ```
 
-Examples
-```sass
-.mt-base     // margin-top: $baseline-base
-.mb-x-large  // margin-bottom: $baseline-x-large
-.mr          // margin-right: $gutter
-.mx-small    // margin-left: $baseline-small; margin-right: $baseline-small
-.ml-h        // margin-left: $gutter-half
-```
-
-The right side values are [`$baseline`]() variables
+The [`$baseline`](https://github.com/bellycard/rolodex/blob/master/vendor/assets/stylesheets/rolodex/settings/variables/_layout.scss) variables are:
 
 | name | variable | value |
 | ---- | -------- | ----- |
@@ -294,13 +235,13 @@ The right side values are [`$baseline`]() variables
 | x-large | `$baseline-x-large` | 36px |
 | xx-large | `$baseline-xx-large` | 42px |
 
-(so `mt-small` is `margin-top: $baseline-small`)
-
-```html
-<div class="mt ml bg-slate">
-  <h1 class="color-white text-center my-x-large">Big header</h1>
-  <h2 class="mt-base">Sub header</h2>
-</div>
+Examples
+```sass
+.mt-base     // margin-top: $baseline-base
+.mb-x-large  // margin-bottom: $baseline-x-large
+.mr          // margin-right: $gutter
+.mx-small    // margin-left: $baseline-small; margin-right: $baseline-small
+.ml-h        // margin-left: $gutter-half
 ```
 
 # Opacity
@@ -327,35 +268,30 @@ Values for opacity
 
 To keep things short, padding classes use a shorthand (identical to margin)
 
-Prefixes:
+Default top/bottom values are `$baseline-base` (24px)
+
+Default left/right values are `$gutter` (30px)
+
+Prefixes
 ```sass
-.p   // padding
-.pt  // padding top
-.pr  // padding right
-.pb  // padding bottom
-.pl  // padding left
-.px  // x-axis (left and right)
-.py  // y-axis (top and bottom)
-.pn  // negative
-.p0  // zero reset
+ .p-  // padding
+.pt-  // padding top
+.pr-  // padding right
+.pb-  // padding bottom
+.pl-  // padding left
+.px-  // x-axis (left and right)
+.py-  // y-axis (top and bottom)
+.pn-  // negative
+.p0-  // zero reset
 ```
 
 Modifiers
 ````sass
--baseline   // $baseline variable
+-$baseline  // $baseline variable
 -h          // $gutter-half, available on left/right/x
 ```
 
-Examples
-```sass
-.pt-base     // padding-top: $baseline-base
-.pb-x-large  // padding-bottom: $baseline-x-large
-.pr          // padding-right: $gutter
-.px-small    // padding-left: $baseline-small; padding-right: $baseline-small
-.pl-h        // padding-left: $gutter-half
-```
-
-The right side values are [`$baseline`]() variables
+The [`$baseline`](https://github.com/bellycard/rolodex/blob/master/vendor/assets/stylesheets/rolodex/settings/variables/_layout.scss) variables are:
 
 | name | variable | value |
 | ---- | -------- | ----- |
@@ -367,16 +303,56 @@ The right side values are [`$baseline`]() variables
 | x-large | `$baseline-x-large` | 36px |
 | xx-large | `$baseline-xx-large` | 42px |
 
-(so `pt-small` is `padding-top: $baseline-small`)
-
-```html
-<div class="pt pl bg-slate">
-  <h1 class="color-white text-center py-x-large">Big header</h1>
-  <h2 class="pt-base">Sub header</h2>
-</div>
+Examples
+```sass
+.pt-base     // padding-top: $baseline-base
+.pb-x-large  // padding-bottom: $baseline-x-large
+.pr          // padding-right: $gutter
+.px-small    // padding-left: $baseline-small; padding-right: $baseline-small
+.pl-h        // padding-left: $gutter-half
 ```
 
 # Position
+
+Default top/bottom values are `$baseline-base` (24px)
+
+Default left/right values are `$gutter` (30px)
+
+Prefixes
+
+```sass
+.top-
+.right-
+.bottom-
+.left-
+```
+
+Modifiers
+````sass
+-$baseline  // $baseline variable
+-h          // $gutter-half, available on left/right/x
+```
+
+The [`$baseline`](https://github.com/bellycard/rolodex/blob/master/vendor/assets/stylesheets/rolodex/settings/variables/_layout.scss) variables are:
+
+| name | variable | value |
+| ---- | -------- | ----- |
+| step | `$baseline-step` | 6px |
+| x-small | `$baseline-x-small` | 12px |
+| small | `$baseline-small` | 18px |
+| base | `$baseline-base` | 24px |
+| large | `$baseline-large` | 30px |
+| x-large | `$baseline-x-large` | 36px |
+| xx-large | `$baseline-xx-large` | 42px |
+
+Examples
+
+```sass
+.top-small    // top: $baseline-small
+.right-step   // right: $baseline-step
+.bottom-base  // bottom: $baseline-base
+.left         // left: $gutter
+```
 
 Utilities for position
 
@@ -386,7 +362,7 @@ Utilities for position
 .position-fixed
 ```
 
-Z index
+z index
 
 ```sass
 .z-100
@@ -394,18 +370,9 @@ Z index
 .z-1000
 ```
 
-Position from [`$baseline`]() variables
-
 ```sass
-.top-$baseline
-.right-$baseline
-.bottom-$baseline
-.left-$baseline
-```
-
-```sass
-.fill     // top, right, bottom, left: 0
-.fit      // max-width: 100%
+.fill // top, right, bottom, left: 0
+.fit  // max-width: 100%
 ```
 
 Vertical/horizontal center
@@ -418,7 +385,7 @@ Vertical/horizontal center
 
 # Typography
 
-Weights
+Weight
 
 ```sass
 .font-light
@@ -427,7 +394,7 @@ Weights
 .font-italic
 ```
 
-Families
+Family
 
 ```sass
 .font-family-open-sans
@@ -488,7 +455,7 @@ Headings
 
 # Width
 
-Max widths based on breakpoints:
+Max widths from [$breakpoints](https://github.com/bellycard/rolodex/blob/master/vendor/assets/stylesheets/rolodex/settings/variables/_layout.scss)
 
 ```sass
 .max-width-xs
