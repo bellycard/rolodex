@@ -14,13 +14,13 @@
 
   modifiers
     -baseline   (ex: pt-large)
-    -h          (gutter-half value, available on left/right/x)
+    -h          ($gutter-half value, available on left/right/x)
 
   top/bottom uses $baseline variables
   left/right uses $gutter/$gutter-half
 */
 
-// Vertical padding based on $baseline variables
+// Padding based on $baseline variables
 
 @each $baseline in $baselines {
   $name:  nth($baseline, 1);

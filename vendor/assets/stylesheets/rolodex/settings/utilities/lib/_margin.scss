@@ -14,7 +14,7 @@
 
   modifiers
     -baseline   (ex: mt-large)
-    -h          (gutter-half value, available on left/right/x)
+    -h          ($gutter-half value, available on left/right/x)
 
   top/bottom uses $baseline variables
   left/right uses $gutter/$gutter-half
