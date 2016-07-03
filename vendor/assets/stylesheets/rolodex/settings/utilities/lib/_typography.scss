@@ -6,6 +6,10 @@
 .font-regular { font-weight: normal }
 .font-italic  { font-style: italic }
 
+.font-family-open-sans { font-family: $font-family-open-sans }
+.font-family-helvetica { font-family: $font-family-helvetica }
+.font-family-monospace { font-family: $font-family-monospace }
+
 .text-left    { text-align: left }
 .text-center  { text-align: center }
 .text-right   { text-align: right }
@@ -34,58 +38,22 @@
 
 // Scale
 
-.s-giga
-  +s-giga
-
-.s-mega
-  +s-mega
-
-.s-alpha
-  +s-alpha
-
-.s-bravo
-  +s-bravo
-
-.s-charlie
-  +s-charlie
-
-.s-delta
-  +s-delta
-
-.s-echo
-  +s-echo
-
-.s-foxtrot
-  +s-foxtrot
-
-.s-golf
-  +s-golf
-
-.s-hotel
-  +s-hotel
+.s-giga { @include s-giga }
+.s-mega { @include s-mega }
+.s-alpha { @include s-alpha }
+.s-bravo { @include s-bravo }
+.s-charlie { @include s-charlie }
+.s-delta { @include s-delta }
+.s-echo { @include s-echo }
+.s-foxtrot { @include s-foxtrot }
+.s-golf { @include s-golf }
+.s-hotel { @include s-hotel }
 
 // Headings
 
-.h-alpha
-  +h-alpha
-
-.h-bravo
-  +h-bravo
-
-.h-charlie
-  +h-charlie
-
-.h-delta
-  +h-delta
-
-.h-echo
-  +h-echo
-
-.h-foxtrot
-  +h-foxtrot
-
-// Colors
-
-@each $color, $i in $text-colors
-  .text-#{$i},
-    color: $color
+.h-alpha { @include h-alpha }
+.h-bravo { @include h-bravo }
+.h-charlie { @include h-charlie }
+.h-delta { @include h-delta }
+.h-echo { @include h-echo }
+.h-foxtrot { @include h-foxtrot }

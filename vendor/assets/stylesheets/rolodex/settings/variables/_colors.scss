@@ -45,9 +45,14 @@ $gray-dark:    #666;
 $black-offset: #333;
 $black:        #000;
 
-// Class name map
+// Color class name map
 
 $colors: (
+  (subtle,       $gray)
+  (success,      $green)
+  (warning,      $gold)
+  (danger,       $red)
+
   (blue,         $blue)
   (blue-light,   $blue-light)
   (blue-dark,    $blue-dark)
