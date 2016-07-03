@@ -20,8 +20,6 @@
   $value: nth($breakpoint, 2):
 
   @media (min-width: $value) {
-    .#{name}-hide {
-      display: none !important;
-    }
+    .#{name}-hide { display: none !important }
   }
 }

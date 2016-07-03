@@ -5,11 +5,11 @@ $border-width: 1px;
 $border-style: solid;
 $border-color: $gray-light;
 
-.border        { border-style: $border-style; border-width: $border-width; border-color: $border-color; }
-.border-top    { border-top-style: $border-style; border-top-width: $border-width; border-color: $border-color; }
-.border-right  { border-right-style: $border-style; border-right-width: $border-width; border-color: $border-color; }
-.border-bottom { border-bottom-style: $border-style; border-bottom-width: $border-width; border-color: $border-color; }
-.border-left   { border-left-style: $border-style; border-left-width: $border-width; border-color: $border-color; }
+.border        { border-style: $border-style; border-width: $border-width; border-color: $border-color }
+.border-top    { border-top-style: $border-style; border-top-width: $border-width; border-color: $border-color }
+.border-right  { border-right-style: $border-style; border-right-width: $border-width; border-color: $border-color }
+.border-bottom { border-bottom-style: $border-style; border-bottom-width: $border-width; border-color: $border-color }
+.border-left   { border-left-style: $border-style; border-left-width: $border-width; border-color: $border-color }
 
 .border--transparent { border-color: transparent }
 .border--active      { border-color: $blue }
