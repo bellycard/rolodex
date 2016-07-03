@@ -30,3 +30,12 @@ $baselines: (
 
 $border-radius-base: 6px;
 $border-radius-mini: 4px;
+
+// Breakpoints
+
+$breakpoints: (
+  (xs, 480px), // 30em
+  (sm, 640px), // 40em
+  (md, 768px), // 48em
+  (lg, 1024px) // 64em
+);

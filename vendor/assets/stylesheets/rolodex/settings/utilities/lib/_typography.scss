@@ -1,3 +1,6 @@
+// Typography
+// ========================================
+
 .font-light   { font-weight: 300 }
 .font-bold    { font-weight: 600 }
 .font-regular { font-weight: normal }
@@ -28,3 +31,61 @@
 .tracked       { letter-spacing:  2px; }
 .tracked-tight { letter-spacing: -1px; }
 .tracked-mega  { letter-spacing:  5px; }
+
+// Scale
+
+.s-giga
+  +s-giga
+
+.s-mega
+  +s-mega
+
+.s-alpha
+  +s-alpha
+
+.s-bravo
+  +s-bravo
+
+.s-charlie
+  +s-charlie
+
+.s-delta
+  +s-delta
+
+.s-echo
+  +s-echo
+
+.s-foxtrot
+  +s-foxtrot
+
+.s-golf
+  +s-golf
+
+.s-hotel
+  +s-hotel
+
+// Headings
+
+.h-alpha
+  +h-alpha
+
+.h-bravo
+  +h-bravo
+
+.h-charlie
+  +h-charlie
+
+.h-delta
+  +h-delta
+
+.h-echo
+  +h-echo
+
+.h-foxtrot
+  +h-foxtrot
+
+// Colors
+
+@each $color, $i in $text-colors
+  .text-#{$i},
+    color: $color
