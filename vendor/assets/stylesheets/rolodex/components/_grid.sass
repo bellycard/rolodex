@@ -25,9 +25,11 @@
 $columns: 12
 
 // Counting down from 12, for 12 columns
+
 @while 1 <= $columns
 
   // Counting up to the given potential number of columns in a given row
+
   @for $column from 1 to $columns
 
     .grid-#{$column}-#{$columns}
