@@ -3,7 +3,7 @@
 
 This concept is based on the work by @jxnblk and @mrmrs on [basscss](http://github.com/basscss) and [tachyons](http://github.com/tachyons-css/).
 
-By default, we include:
+By default, Rolodex includes:
 
 ```sass
 // Utilities
@@ -16,7 +16,7 @@ By default, we include:
 @import lib/typography
 ```
 
-The new classes can be added by importing:
+Additional low-level classes can be added by importing:
 
 ```sass
 @import rolodex/settings/utilities/addons
@@ -26,6 +26,20 @@ or if you're using Bower:
 
 ```sass
 @import bower_components/vendor/assets/stylesheets/rolodex/settings/utilities/addons
+```
+
+These classes include:
+
+```sass
+@import lib/align
+@import lib/border
+@import lib/display
+@import lib/hide
+@import lib/margin
+@import lib/opacity
+@import lib/padding
+@import lib/position
+@import lib/width
 ```
 
 ### Utilities
