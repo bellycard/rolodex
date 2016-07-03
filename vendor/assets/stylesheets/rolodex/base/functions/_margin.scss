@@ -43,11 +43,11 @@
 .mr-h { margin-right: $gutter-half }
 .mt   { margin-top: $baseline-base }
 .mb   { margin-bottom: $baseline-base }
-
 .mx   { margin-left: $gutter; margin-right: $gutter }
 .mx-h { margin-left: $gutter-half; margin-right: $gutter-half }
 .my   { margin-top: $baseline-base; margin-bottom: $baseline-base }
 
+// Zero margin
 .m0   { margin: 0 }
 .mt-0 { margin-top: 0 }
 .mr-0 { margin-right: 0 }
@@ -56,6 +56,7 @@
 .mx-0 { margin-left: 0; margin-right: 0 }
 .my-0 { margin-top: 0; margin-bottom: 0 }
 
+// Auto margin
 .m-auto   { margin: auto }
 .ml-auto  { margin-left: auto }
 .mr-auto  { margin-right: auto }

@@ -10,11 +10,8 @@
 
 .float-left, .pull-left   { float: left }
 .float-right, .pull-right { float: right }
-.float-none { float: none }
+.float-none               { float: none }
 
-.cursor-pointer { cursor: pointer }
-
-.pointer-none { pointer-events: none }
+.cursor-pointer   { cursor: pointer }
+.pointer-none     { pointer-events: none }
 .user-select-none { -webkit-touch-callout: none; user-select: none }
-
-img { max-width: 100%; }
