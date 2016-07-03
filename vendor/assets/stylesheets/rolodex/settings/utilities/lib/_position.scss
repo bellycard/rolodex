@@ -5,9 +5,11 @@
 .position-absolute { position: absolute }
 .position-fixed    { position: fixed }
 
-.z100  { z-index: 100 }
-.z500  { z-index: 500 }
-.z1000 { z-index: 1000 }
+.z-100  { z-index: 100 }
+.z-500  { z-index: 500 }
+.z-1000 { z-index: 1000 }
+
+// Position from $baseline variables
 
 @each $baseline in $baselines {
   $name: nth($baseline, 1);

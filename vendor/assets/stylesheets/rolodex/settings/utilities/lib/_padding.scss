@@ -20,7 +20,7 @@
   left/right uses $gutter/$gutter-half
 */
 
-// Padding based on $baseline variables
+// Padding from $baseline variables
 
 @each $baseline in $baselines {
   $name:  nth($baseline, 1);
