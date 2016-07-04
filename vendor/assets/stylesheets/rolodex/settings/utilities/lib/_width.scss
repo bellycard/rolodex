@@ -11,5 +11,5 @@
   $name:  nth($breakpoint, 1);
   $value: nth($breakpoint, 2);
 
-  .max-width-#{name} { max-width: $value }
+  .max-width-#{$name} { max-width: $value }
 }
