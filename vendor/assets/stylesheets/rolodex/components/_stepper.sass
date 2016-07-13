@@ -4,20 +4,20 @@ $stepper-padding: $baseline-step ($stepper-button-width + 10) $baseline-step 10p
 
 [bly-stepper]
   +rem(border, 1px solid $gray-light)
-  border-radius: $border-radius-base
+  +rem(border-radius, $border-radius-base)
   box-sizing: border-box
   display: inline-block
   +group
   position: relative
   +rem(width, 94px)
 
-  .btn-increment,
   .btn-decrement
+  .btn-increment,
     background: $white-offset
     +rem(border-bottom, 1px solid $gray-light)
     +rem(border-left, 1px solid $gray-light)
     +rem(border-top-right-radius, $border-radius-base)
-    color: #000
+    color: $black
     cursor: pointer
     +s-foxtrot
     +rem(height, $stepper-button-height)
@@ -37,11 +37,11 @@ $stepper-padding: $baseline-step ($stepper-button-width + 10) $baseline-step 10p
       color: $gray
 
   .btn-decrement
-    top: auto
     bottom: 0
     border-bottom: none
-    +rem(border-top-right-radius, 0)
     +rem(border-bottom-right-radius, $border-radius-base)
+    +rem(border-top-right-radius, 0)
+    top: auto
 
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button
