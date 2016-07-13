@@ -1,0 +1,5 @@
+<input name="{{name}}" type="number" ng-model="ngModel" min="{{min}}" placeholder="{{min}}" >
+<div class="stepper">
+  <div class="btn-decrement" ng-disabled="!canDecrement()" ng-click="canDecrement() && decrement()">&ndash;</div>
+  <div class="btn-increment" ng-disabled="!canIncrement()" ng-click="canIncrement() && increment()">+</div>
+</div>
