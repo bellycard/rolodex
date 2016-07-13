@@ -22,7 +22,6 @@
   z-index: 1000
 
 // Position from $baseline variables
-// ex: .top-x-large
 
 @each $position in $positions
 
@@ -36,13 +35,7 @@
     .#{$direction}-#{$name}
       +rem(#{$direction}, $value)
 
-// Default positions
-
-.top
-  +rem(top, $baseline-base)
-
-.bottom
-  +rem(bottom, $baseline-base)
+// Horizontal positions
 
 .left
   +rem(left, $gutter)
@@ -57,7 +50,6 @@
   +rem(right, $gutter-half)
 
 // Position resets
-// ex: .top-0
 
 @each $position in $positions
   $direction: nth($baseline, 1)
