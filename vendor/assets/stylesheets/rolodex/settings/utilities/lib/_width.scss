@@ -1,0 +1,15 @@
+// Width
+// ========================================
+
+// Max-width from $breakpoints
+//   .max-width-xs
+//   .max-width-sm
+//   .max-width-md
+//   .max-width-lg
+
+@each $breakpoint in $breakpoints {
+  $name:  nth($breakpoint, 1);
+  $value: nth($breakpoint, 2);
+
+  .max-width-#{$name} { max-width: $value }
+}

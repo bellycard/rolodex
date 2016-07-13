@@ -1,0 +1,59 @@
+// Typography
+// ========================================
+
+.font-light   { font-weight: 300 }
+.font-bold    { font-weight: 600 }
+.font-regular { font-weight: normal }
+.font-italic  { font-style: italic }
+
+.font-family-open-sans { font-family: $font-family-open-sans }
+.font-family-helvetica { font-family: $font-family-helvetica }
+.font-family-monospace { font-family: $font-family-monospace }
+
+.text-left    { text-align: left }
+.text-center  { text-align: center }
+.text-right   { text-align: right }
+.text-justify { text-align: justify }
+
+.text-uppercase       { text-transform: uppercase }
+.text-underline       { text-decoration: underline }
+.text-strike          { text-decoration: line-through }
+.text-decoration-none { text-decoration: none }
+
+.nowrap     { white-space: nowrap }
+.break-word { word-wrap: break-word }
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-style-none { list-style: none; padding-left: 0 }
+
+.tracked       { letter-spacing:  2px; }
+.tracked-tight { letter-spacing: -1px; }
+.tracked-mega  { letter-spacing:  5px; }
+
+// Scale
+
+.s-giga { @include s-giga }
+.s-mega { @include s-mega }
+.s-alpha { @include s-alpha }
+.s-bravo { @include s-bravo }
+.s-charlie { @include s-charlie }
+.s-delta { @include s-delta }
+.s-echo { @include s-echo }
+.s-foxtrot { @include s-foxtrot }
+.s-golf { @include s-golf }
+.s-hotel { @include s-hotel }
+
+// Headings
+
+.h-alpha { @include h-alpha }
+.h-bravo { @include h-bravo }
+.h-charlie { @include h-charlie }
+.h-delta { @include h-delta }
+.h-echo { @include h-echo }
+.h-foxtrot { @include h-foxtrot }

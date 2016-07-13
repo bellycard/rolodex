@@ -1,0 +1,47 @@
+// Position
+// ========================================
+
+.position-relative { position: relative }
+.position-absolute { position: absolute }
+.position-fixed    { position: fixed }
+
+.z-100  { z-index: 100 }
+.z-500  { z-index: 500 }
+.z-1000 { z-index: 1000 }
+
+// Position from $baseline variables
+
+@each $baseline in $baselines {
+  $name: nth($baseline, 1);
+  $value: nth($baseline, 2);
+
+  .top-#{$name}    { top: $value }
+  .right-#{$name}  { right: $value }
+  .bottom-#{$name} { bottom: $value }
+  .left-#{$name}   { left: $value }
+}
+
+.top      { top: $baseline-base }
+.bottom   { bottom: $baseline-base }
+.left     { left: $gutter }
+.left-h   { left: $gutter-half }
+.right    { right: $gutter }
+.right-h  { right: $gutter-half }
+
+.top-0    { top: 0 }
+.right-0  { right: 0 }
+.bottom-0 { bottom: 0 }
+.left-0   { left: 0 }
+
+.fill {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.fit { max-width: 100% }
+
+.center-x  { left: 50%; transform: translateX(-50%) }
+.center-y  { top: 50%; transform: translateY(-50%) }
+.center-xy { left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%) }

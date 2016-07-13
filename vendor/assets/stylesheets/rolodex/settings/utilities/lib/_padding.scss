@@ -1,0 +1,63 @@
+/*
+  Padding
+  ========================================
+
+  p   padding
+  pt  padding top
+  pr  padding right
+  pb  padding bottom
+  pl  padding left
+  px  x-axis (left and right)
+  py  y-axis (top and bottom)
+  pn  negative
+  p0  0 reset
+
+  modifiers
+    -baseline   (ex: pt-large)
+    -h          ($gutter-half value, available on left/right/x)
+
+  top/bottom uses $baseline variables
+  left/right uses $gutter/$gutter-half
+*/
+
+// Padding from $baseline variables
+
+@each $baseline in $baselines {
+  $name:  nth($baseline, 1);
+  $value: nth($baseline, 2);
+
+  .p-#{$name}  { padding-top: $value; padding-bottom: $value }
+  .pt-#{$name} { padding-top: $value }
+  .pr-#{$name} { padding-right: $value }
+  .pb-#{$name} { padding-bottom: $value }
+  .pl-#{$name} { padding-left: $value }
+  .px-#{$name} { padding-left: $value; padding-right: $value }
+  .py-#{$name} { padding-top: $value; padding-bottom: $value }
+  .pn-#{$name} { padding-left: -$value; padding-right: -$value }
+}
+
+// Defaults ($baseline-base, $gutters)
+
+.p    { padding: $baseline-base $gutter }
+.p-h  { padding: $baseline-base $gutter-half }
+.pn   { margin-left: -$gutter; margin-right: -$gutter }
+.pn-h { margin-left: -$gutter-half; margin-right: -$gutter-half }
+.pl   { padding-left: $gutter }
+.pl-h { padding-left: $gutter-half }
+.pr   { padding-right: $gutter }
+.pr-h { padding-right: $gutter-half }
+.pt   { padding-top: $baseline-base }
+.pb   { padding-bottom: $baseline-base }
+.px   { padding-left: $gutter; padding-right: $gutter }
+.px-h { padding-left: $gutter-half; padding-right: $gutter-half }
+.py   { padding-top: $baseline-base; padding-bottom: $baseline-base }
+
+// Zero padding
+
+.p0   { padding: 0 }
+.pt-0 { padding-top: 0 }
+.pr-0 { padding-right: 0 }
+.pb-0 { padding-bottom: 0 }
+.pl-0 { padding-left: 0 }
+.px-0 { padding-left: 0; padding-right: 0 }
+.py-0 { padding-top: 0; padding-bottom: 0 }

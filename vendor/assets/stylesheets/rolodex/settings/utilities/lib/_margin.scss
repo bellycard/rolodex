@@ -1,0 +1,71 @@
+/*
+  Margin
+  ========================================
+
+  m   margin
+  mt  margin top
+  mr  margin right
+  mb  margin bottom
+  ml  margin left
+  mx  x-axis (left and right)
+  my  y-axis (top and bottom)
+  mn  negative
+  m0  0 reset
+
+  modifiers
+    -baseline   (ex: mt-large)
+    -h          ($gutter-half value, available on left/right/x)
+
+  top/bottom uses $baseline variables
+  left/right uses $gutter/$gutter-half
+*/
+
+// Margins from $baseline variables
+
+@each $baseline in $baselines {
+  $name:  nth($baseline, 1);
+  $value: nth($baseline, 2);
+
+  .m-#{$name}  { margin-top: $value; margin-bottom: $value }
+  .mt-#{$name} { margin-top: $value }
+  .mr-#{$name} { margin-right: $value }
+  .mb-#{$name} { margin-bottom: $value }
+  .ml-#{$name} { margin-left: $value }
+  .mx-#{$name} { margin-left: $value; margin-right: $value }
+  .my-#{$name} { margin-top: $value; margin-bottom: $value }
+  .mn-#{$name} { margin-left: -$value; margin-right: -$value }
+}
+
+// Defaults ($baseline-base, $gutters)
+
+.m    { margin: $baseline-base $gutter }
+.m-h  { margin: $baseline-base $gutter-half }
+.mn   { margin-left: -$gutter; margin-right: -$gutter }
+.mn-h { margin-left: -$gutter-half; margin-right: -$gutter-half }
+.ml   { margin-left: $gutter }
+.ml-h { margin-left: $gutter-half }
+.mr   { margin-right: $gutter }
+.mr-h { margin-right: $gutter-half }
+.mt   { margin-top: $baseline-base }
+.mb   { margin-bottom: $baseline-base }
+.mx   { margin-left: $gutter; margin-right: $gutter }
+.mx-h { margin-left: $gutter-half; margin-right: $gutter-half }
+.my   { margin-top: $baseline-base; margin-bottom: $baseline-base }
+
+// Zero margin
+
+.m0   { margin: 0 }
+.mt-0 { margin-top: 0 }
+.mr-0 { margin-right: 0 }
+.mb-0 { margin-bottom: 0 }
+.ml-0 { margin-left: 0 }
+.mx-0 { margin-left: 0; margin-right: 0 }
+.my-0 { margin-top: 0; margin-bottom: 0 }
+
+// Auto margin
+
+.m-auto   { margin: auto }
+.ml-auto  { margin-left: auto }
+.mr-auto  { margin-right: auto }
+.mx-auto  { margin-left: auto; margin-right: auto }
+

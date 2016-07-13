@@ -1,0 +1,38 @@
+// Border
+// ========================================
+
+$border-width: 1px;
+$border-style: solid;
+$border-color: $gray-light;
+
+.border        { border-style: $border-style; border-width: $border-width; border-color: $border-color }
+.border-top    { border-top-style: $border-style; border-top-width: $border-width; border-color: $border-color }
+.border-right  { border-right-style: $border-style; border-right-width: $border-width; border-color: $border-color }
+.border-bottom { border-bottom-style: $border-style; border-bottom-width: $border-width; border-color: $border-color }
+.border-left   { border-left-style: $border-style; border-left-width: $border-width; border-color: $border-color }
+
+.border--transparent { border-color: transparent }
+.border--active      { border-color: $blue }
+
+.b0   { border: 0}
+.bt-0 { border-top: 0 }
+.br-0 { border-right: 0 }
+.bb-0 { border-bottom: 0 }
+.bl-0 { border-left: 0 }
+
+// Rounded borders
+
+.circle      { border-radius: 50% }
+.not-rounded { border-radius: 0 }
+
+.rounded        { border-radius: $border-radius-base }
+.rounded-top    { border-radius: $border-radius-base $border-radius-base 0 0 }
+.rounded-right  { border-radius: 0 $border-radius-base $border-radius-base 0 }
+.rounded-bottom { border-radius: 0 0 $border-radius-base $border-radius-base }
+.rounded-left   { border-radius: $border-radius-base 0 0 $border-radius-base }
+
+.rounded-mini        { border-radius: $border-radius-mini }
+.rounded-top-mini    { border-radius: $border-radius-mini $border-radius-mini 0 0 }
+.rounded-right-mini  { border-radius: 0 $border-radius-mini $border-radius-mini 0 }
+.rounded-bottom-mini { border-radius: 0 0 $border-radius-mini $border-radius-mini }
+.rounded-left-mini   { border-radius: $border-radius-mini 0 0 $border-radius-mini }
