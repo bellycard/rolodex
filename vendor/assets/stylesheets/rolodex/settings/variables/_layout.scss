@@ -34,8 +34,17 @@ $border-radius-mini: 4px;
 // Breakpoints
 
 $breakpoints: (
-  (xs, 480px), // 30em
-  (sm, 640px), // 40em
-  (md, 768px), // 48em
-  (lg, 1024px) // 64em
+  (xs, 480px)
+  (sm, 640px)
+  (md, 768px)
+  (lg, 1024px)
+);
+
+// Shorthands
+
+$positions: (
+  (top,    t)
+  (right,  r)
+  (bottom, b)
+  (left,   l)
 );

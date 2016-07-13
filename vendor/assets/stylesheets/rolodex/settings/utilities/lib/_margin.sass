@@ -1,0 +1,115 @@
+/*
+  Margin
+  ========================================
+
+  m   margin
+  mt  margin top
+  mr  margin right
+  mb  margin bottom
+  ml  margin left
+  mx  x-axis (left and right)
+  my  y-axis (top and bottom)
+  mn  negative
+
+  resets
+    m-0
+    mt-0
+    mr-0
+    mb-0
+    ml-0
+
+  modifiers
+    -baseline   (ex: mt-large)
+    -h          ($gutter-half value, available on left/right/x)
+    -0          (reset)
+
+  top/bottom uses $baseline variables
+  left/right uses $gutter/$gutter-half
+*/
+
+// Margin from $baseline variables
+
+@each $baseline in $baselines
+  $name:  nth($baseline, 1)
+  $value: nth($baseline, 2)
+
+  .m-#{$name}
+    +rem(margin-top, $value)
+    +rem(margin-bottom, $value)
+
+  .my-#{$name}
+    +rem(margin-top, $value)
+    +rem(margin-bottom, $value)
+
+  // .mt-, .mr-, .mb-, .ml-
+  @each $position in $positions
+    $direction: nth($position, 1)
+    $shorthand: nth($position, 2)
+
+    .m#{$shorthand}-#{$name}
+      +rem(margin-#{$direction}, $value)
+
+// Horizontal alignment ($gutter/$gutter-half)
+
+.ml
+  +rem(margin-left, $gutter)
+
+.ml-h
+  +rem(margin-left, $gutter-half)
+
+.mr
+  +rem(margin-right, $gutter)
+
+.mr-h
+  +rem(margin-right, $gutter-half)
+
+.mx
+  +rem(margin-left, $gutter)
+  +rem(margin-right, $gutter)
+
+.mx-h
+  +rem(margin-left, $gutter-half)
+  +rem(margin-right, $gutter-half)
+
+.mn
+  +rem(margin-left, -$gutter)
+  +rem(margin-right, -$gutter)
+
+.mn-h
+  +rem(margin-left, -$gutter-half)
+  +rem(margin-right, -$gutter-half)
+
+// Resets
+
+.m-0
+  margin: 0
+
+.mx-0
+  margin-left: 0
+  margin-right: 0
+
+.my-0
+  margin-top: 0
+  margin-bottom: 0
+
+@each $position in $positions
+  $direction: nth($position, 1)
+  $shorthand: nth($position, 2)
+
+  .m#{$shorthand}-0
+    margin-#{$direction}: 0
+
+// Auto margin
+
+.m-auto
+  margin: auto
+
+.ml-auto
+  margin-left: auto
+
+.mr-auto
+  margin-right: auto
+
+.mx-auto
+  margin-left: auto
+  margin-right: auto

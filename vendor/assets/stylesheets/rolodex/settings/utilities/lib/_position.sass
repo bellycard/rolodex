@@ -1,0 +1,90 @@
+// Position
+// ========================================
+
+.position-relative
+  position: relative
+
+.position-absolute
+  position: absolute
+
+.position-fixed
+  position: fixed
+
+// Z-indexes
+
+.z-100
+  z-index: 100
+
+.z-500
+  z-index: 500
+
+.z-1000
+  z-index: 1000
+
+// Position from $baseline variables
+// ex: .top-x-large
+
+@each $position in $positions
+
+  $direction: nth($baseline, 1)
+
+  @each $baseline in $baselines
+
+    $name:  nth($baseline, 1)
+    $value: nth($baseline, 2)
+
+    .#{$direction}-#{$name}
+      +rem(#{$direction}, $value)
+
+// Default positions
+
+.top
+  +rem(top, $baseline-base)
+
+.bottom
+  +rem(bottom, $baseline-base)
+
+.left
+  +rem(left, $gutter)
+
+.left-h
+  +rem(left, $gutter-half)
+
+.right
+  +rem(right, $gutter)
+
+.right-h
+  +rem(right, $gutter-half)
+
+// Position resets
+// ex: .top-0
+
+@each $position in $positions
+  $direction: nth($baseline, 1)
+
+  .#{$direction}-0
+    #{$direction}: 0
+
+.fill
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.fit
+  max-width: 100%
+
+// Absolute centering
+
+.center-x
+  left: 50%
+  transform: translateX(-50%)
+
+.center-y
+  top: 50%
+  transform: translateY(-50%)
+
+.center-xy
+  left: 50%
+  top: 50%
+  transform: translateX(-50%) translateY(-50%)

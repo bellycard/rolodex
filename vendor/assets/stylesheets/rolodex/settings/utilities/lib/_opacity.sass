@@ -1,0 +1,19 @@
+// Opacity
+// ========================================
+
+$i: 1
+
+// Opacity in steps of 10
+
+@while $i < 100
+
+  .o-#{$i}
+    opacity: #{i * .01}
+
+  $i: $i + 10
+
+.o-05
+  opacity: .05
+
+.o-0
+  opacity: 0

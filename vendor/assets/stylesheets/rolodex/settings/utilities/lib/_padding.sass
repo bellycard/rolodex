@@ -1,0 +1,105 @@
+/*
+  Padding
+  ========================================
+
+  shorthand:
+    p   padding
+    pt  padding top
+    pr  padding right
+    pb  padding bottom
+    pl  padding left
+    px  x-axis (left and right)
+    py  y-axis (top and bottom)
+    pn  negative
+
+  modifiers:
+    -baseline   (ex: pt-large)
+    -h          ($gutter-half value, available on left/right/x)
+    -0          (reset)
+
+  resets:
+    p-0
+    pt-0
+    pr-0
+    pb-0
+    pl-0
+
+  top/bottom uses $baseline variables
+  left/right uses $gutter/$gutter-half
+*/
+
+// Padding from $baseline variables
+
+@each $baseline in $baselines
+  $name:  nth($baseline, 1)
+  $value: nth($baseline, 2)
+
+  .p-#{$name}
+    +rem(padding-bottom, $value)
+    +rem(padding-top, $value)
+
+  .px-#{$name}
+    +rem(padding-top, $value)
+    +rem(padding-bottom, $value)
+
+  .py-#{$name}
+    +rem(padding-top, $value)
+    +rem(padding-bottom, $value)
+
+  // .mt-, .mr-, .mb-, .ml-
+  @each $position in $positions
+    $direction: nth($position, 1)
+    $shorthand: nth($position, 2)
+
+    .m#{$shorthand}-#{$name}
+      +rem(padding-#{$direction}, $value)
+
+// Horizontal alignment ($gutter/$gutter-half)
+
+.pl
+  +rem(padding-left, $gutter)
+
+.pl-h
+  +rem(padding-left, $gutter-half)
+
+.pr
+  +rem(padding-right, $gutter)
+
+.pr-h
+  +rem(padding-right, $gutter-half)
+
+.px
+  +rem(padding-left, $gutter)
+  +rem(padding-right, $gutter)
+
+.px-h
+  +rem(padding-left, $gutter-half)
+  +rem(padding-right, $gutter-half)
+
+.pn
+  +rem(padding-left, -$gutter)
+  +rem(padding-right, -$gutter)
+
+.pn-h
+  +rem(padding-left, -$gutter-half)
+  +rem(padding-right, -$gutter-half)
+
+// Resets
+
+.m-0
+  padding: 0
+
+.mx-0
+  padding-left: 0
+  padding-right: 0
+
+.my-0
+  padding-top: 0
+  padding-bottom: 0
+
+@each $position in $positions
+  $direction: nth($position, 1)
+  $shorthand: nth($position, 2)
+
+  .m#{$shorthand}-0
+    padding-#{$direction}: 0

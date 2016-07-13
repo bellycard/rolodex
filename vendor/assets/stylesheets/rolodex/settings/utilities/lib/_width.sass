@@ -1,0 +1,12 @@
+// Width
+// ========================================
+
+// Max-width from $breakpoints
+
+@each $breakpoint in $breakpoints
+
+  $name:  nth($breakpoint, 1)
+  $value: nth($breakpoint, 2)
+
+  .max-width-#{$name}
+    +rem(max-width, $value)

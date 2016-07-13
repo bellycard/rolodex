@@ -1,0 +1,84 @@
+// Border
+// ========================================
+
+$border-color: $gray-light
+$border-style: solid
+$border-width: 1px
+
+.border
+  border-color: $border-color
+  border-style: $border-style
+  +rem(border-width, $border-width)
+
+.b-0,
+.border-none,
+  border: 0
+
+// Default border styling
+
+@each $position in $positions
+
+  $direction: nth($position, 1)
+  $shorthand: nth($position, 2)
+
+  // Default styling
+
+  .border-#{$direction}
+    border-#{$direction}-style: $border-style
+    +rem(border-#{$direction}-width, $border-width)
+    border-color: $border-color
+
+  // Border resets
+
+  .b#{$shorthand}-0
+    border-#{$direction}: 0
+
+// State
+
+.border-transparent
+  border-color: transparent
+
+.border-active
+  border-color: $blue
+
+// Rounded borders
+
+.circle
+  border-radius: 50%
+
+.rounded
+  +rem(border-radius, $border-radius-base)
+
+.rounded-mini
+  +rem(border-radius, $border-radius-mini)
+
+.not-rounded
+  border-radius: 0
+
+ // $border-radius-base 6px
+
+.rounded-top
+  +rem(border-radius, $border-radius-base $border-radius-base 0 0)
+
+.rounded-right
+  +rem(border-radius, 0 $border-radius-base $border-radius-base 0)
+
+.rounded-bottom
+  +rem(border-radius, 0 0 $border-radius-base $border-radius-base)
+
+.rounded-left
+  +rem(border-radius, $border-radius-base 0 0 $border-radius-base)
+
+// $border-radius-mini 4px
+
+.rounded-top-mini
+  +rem(border-radius, $border-radius-mini $border-radius-mini 0 0)
+
+.rounded-right-mini
+  +rem(border-radius, 0 $border-radius-mini $border-radius-mini 0)
+
+.rounded-bottom-mini
+  +rem(border-radius, 0 0 $border-radius-mini $border-radius-mini)
+
+.rounded-left-mini
+  +rem(border-radius, $border-radius-mini 0 0 $border-radius-mini)
