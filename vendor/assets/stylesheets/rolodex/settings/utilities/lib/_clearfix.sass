@@ -1,20 +1,9 @@
 // Clearfix
 // ========================================
 
-.clearfix:before,
-.clearfix:after,
-.group:before,
-.group:after
-  content: " "
-  display: table
-
-.clearfix:after,
-.group:after
-  clear: both
-
-.clearfix,
-.group
-  *zoom: 1
+.group,
+.clearfix
+  +group
 
 .clear-left
   clear: left
