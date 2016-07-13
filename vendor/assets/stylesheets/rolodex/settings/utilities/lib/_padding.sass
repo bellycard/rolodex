@@ -42,7 +42,6 @@
     +rem(padding-bottom, $value)
     +rem(padding-top, $value)
 
-  // .pt, .pr, .pb, .pl
   @each $position in $positions
 
     $direction: nth($position, 1)
@@ -91,6 +90,5 @@
   $direction: nth($position, 1)
   $shorthand: nth($position, 2)
 
-  // .pt-, .pr-, .pb-, .pl-
   .p#{$shorthand}-0
     padding-#{$direction}: 0

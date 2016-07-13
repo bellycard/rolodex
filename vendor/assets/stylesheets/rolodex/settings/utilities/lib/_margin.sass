@@ -42,7 +42,6 @@
     +rem(margin-bottom, $value)
     +rem(margin-top, $value)
 
-  // .mt, .mr, .mb, .ml
   @each $position in $positions
 
     $direction: nth($position, 1)
@@ -91,7 +90,6 @@
   $direction: nth($position, 1)
   $shorthand: nth($position, 2)
 
-  // .mt-, .mr-, .mb-, .ml-
   .m#{$shorthand}-0
     margin-#{$direction}: 0
 
