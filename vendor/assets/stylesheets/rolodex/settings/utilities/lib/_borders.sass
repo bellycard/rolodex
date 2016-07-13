@@ -5,16 +5,12 @@ $border-color: $gray-light
 $border-style: solid
 $border-width: 1px
 
+// Default border styling
+
 .border
   border-color: $border-color
   border-style: $border-style
   +rem(border-width, $border-width)
-
-.b-0,
-.border-none,
-  border: 0
-
-// Default border styling
 
 @each $position in $positions
 
@@ -32,6 +28,10 @@ $border-width: 1px
 
   .b#{$shorthand}-0
     border-#{$direction}: 0
+
+.b-0,
+.border-none,
+  border: 0
 
 // State
 
