@@ -2,11 +2,11 @@ require 'rolodex/sass'
 
 module Rolodex
   class << self
-    # Inspired by bootstrap-sass
     def load!
       if defined?(::Rails)
         require 'rolodex/engine'
-      elsif defined?(:Sprockets)
+      elsif defined?(::Sprockets)
+        Sprockets.append_path(File.join(asset_path, 'images'))
         Sprockets.append_path(File.join(asset_path, 'stylesheets'))
         Sprockets.append_path(File.join(asset_path, 'javascripts'))
       end

@@ -6,13 +6,13 @@ var del = require('del');
 var source = require('vinyl-source-stream');
 var $ = require('gulp-load-plugins')();
 
-var assetPath = 'vendor/assets/javascripts/rolodex_angular';
+var assetPath = 'src/javascripts';
 var distPath = 'dist';
 var tmpPath = '.tmp';
 
 // Compiles coffee to js, annotates Angular dependencies
 gulp.task('js', ['js-template-cache'], function() {
-  return gulp.src(path.join(assetPath, '/**/*.coffee'))
+  return gulp.src(path.join(assetPath, '**/*.coffee'))
     .pipe($.coffee())
     .pipe($.ngAnnotate())
     .pipe(gulp.dest(tmpPath))
@@ -27,14 +27,10 @@ gulp.task('js-template-cache', function() {
 
 // Compiles haml to js for Angular templateCache
 gulp.task('templates', function() {
-  return gulp.src(path.join(assetPath, '/template/**/*.ngt'))
+  return gulp.src(path.join(assetPath, '**/*.html'))
     .pipe($.minifyHtml({ empty: true, spare: true, quotes: true }))
     .pipe($.angularTemplatecache('templates.js', {
-      module: 'rolodex',
-      root: 'rolodex_angular/template',
-      transformUrl: function(url) {
-        return url.replace(/\.ngt$/, '')
-      }
+      module: 'rolodex'
     }))
     .pipe(gulp.dest(tmpPath));
 });

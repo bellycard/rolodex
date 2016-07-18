@@ -1,18 +1,14 @@
 {
   "name": "rolodex",
-  "author": "Belly",
-  "keywords": [
-    "rolodex"
-  ],
-  "license": "MIT",
+  "homepage": "https://github.com/bellycard/rolodex",
   "repository": {
     "type": "git",
     "url": "https://github.com/bellycard/rolodex.git"
   },
-  "homepage": "https://github.com/bellycard/rolodex",
   "bugs": {
     "url": "https://github.com/bellycard/rolodex/issues"
   },
+  "license": "MIT",
   "devDependencies": {
     "del": "^2.0.2",
     "gulp": "^3.9.0",

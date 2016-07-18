@@ -12,7 +12,7 @@ angular.module 'rolodex.stepper', []
     name: '@'
     ngModel: '='
     ngDisabled: '='
-  templateUrl: 'rolodex_angular/template/stepper/stepper'
+  templateUrl: 'components/stepper/stepper.html'
 
   link: (scope, elem, attrs, ngModelCtrl) ->
     scope.step = 1 unless scope.step

@@ -1,5 +1,3 @@
-#= require 'rolodex_angular/template/alert/alert'
-
 angular.module('rolodex.alert', [])
 
 .controller('AlertController', ['$scope', '$attrs', ($scope, $attrs) ->
@@ -9,7 +7,7 @@ angular.module('rolodex.alert', [])
 .directive 'alert', ->
   restrict: 'EA'
   controller: 'AlertController'
-  templateUrl: 'rolodex_angular/template/alert/alert'
+  templateUrl: 'components/alert.html'
   transclude: true
   replace: true
   scope:

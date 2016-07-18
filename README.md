@@ -1,27 +1,31 @@
 # Rolodex
 
-Styleguide gem for Belly
+Style for [Belly](http://bellycard.com)
 
-## Use with Middleman
+## Installation
+
+It is recommended to only include parts of rolodex as you need them. Read the entry files for javascript and stylesheets.
+
+### Use with Bower
+
+Import modules with this path in your Sass files:
+
+```
+@import 'bower_components/rolodex/src/stylesheets/rolodex';
+```
+
+### Use with Rails/Middleman
 
 Add to your `Gemfile`:
 
 ```
-gem 'rolodex', :git => 'https://github.com/bellycard/rolodex.git'
+gem 'rolodex'
 ```
 
 Import modules to your Sass files:
 
 ```
 @import 'rolodex'
-```
-
-## Use with Bower
-
-Import modules with this path in your Sass files:
-
-```
-@import 'bower_components/rolodex/vendor/assets/stylesheets/rolodex';
 ```
 
 ## Contributing

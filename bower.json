@@ -1,23 +1,20 @@
 {
   "name": "rolodex",
-  "homepage": "http://bellycard.com/",
+  "homepage": "https://github.com/bellycard/rolodex",
   "repository": {
     "type": "git",
     "url": "https://github.com/bellycard/rolodex"
   },
-  "license": "MIT",
-  "main": "dist/rolodex.min.js",
+  "main": "dist/rolodex.js",
   "ignore": [
     "**/.*",
     "node_modules",
-    "spec",
     "lib"
   ],
+  "license": "MIT",
   "keywords": [
-    "css",
+    "sass",
     "belly",
-    "rolodex",
-    "front-end",
-    "framework"
+    "rolodex"
   ]
 }
