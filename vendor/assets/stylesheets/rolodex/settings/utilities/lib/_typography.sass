@@ -1,0 +1,77 @@
+// Typography
+// ========================================
+
+.font-family-open-sans
+  font-family: $font-family-open-sans
+
+.font-family-helvetica
+  font-family: $font-family-helvetica
+
+.font-family-monospace
+  font-family: $font-family-monospace
+
+// Font weights
+
+$each $weight in $font-weights
+  $name:  $nth-value($weight, 1)
+  $value: $nth-value($weight, 1)
+
+  .font-#{$name}
+    font-weight: #{$value}
+
+// Text alignment
+
+.text-left
+  text-align: left
+
+.text-center
+  text-align: center
+
+.text-right
+  text-align: right
+
+.text-justify
+  text-align: justify
+
+// Text modifiers
+
+.text-uppercase
+  text-transform: uppercase
+
+.text-underline
+  text-decoration: underline
+
+.text-strike
+  text-decoration: line-through
+
+.text-decoration-none
+  text-decoration: none
+
+// Helpers
+
+.nowrap
+  white-space: nowrap
+
+.break-word
+  word-wrap: break-word
+
+.truncate
+  max-width: 100%
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.list-style-none
+  list-style: none
+  padding-left: 0
+
+// Letter spacing
+
+.tracked
+  +rem(letter-spacing, 2px)
+
+.tracked-tight
+  +rem(letter-spacing, -1px)
+
+.tracked-mega
+  +rem(letter-spacing, 5px)

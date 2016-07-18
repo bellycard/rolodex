@@ -16,7 +16,35 @@ $baseline-large:    $baseline-step * 5; // 30px
 $baseline-x-large:  $baseline-step * 6; // 36px
 $baseline-xx-large: $baseline-step * 7; // 42px
 
+$baselines: (
+  (step,     $baseline-step)
+  (x-small,  $baseline-x-small)
+  (small,    $baseline-small)
+  (base,     $baseline-base)
+  (large,    $baseline-large)
+  (x-large,  $baseline-x-large)
+  (xx-large, $baseline-xx-large)
+);
+
 // Border radius
 
 $border-radius-base: 6px;
 $border-radius-mini: 4px;
+
+// Breakpoints
+
+$breakpoints: (
+  (xs, 480px)
+  (sm, 640px)
+  (md, 768px)
+  (lg, 1024px)
+);
+
+// Shorthands
+
+$positions: (
+  (top,    t)
+  (right,  r)
+  (bottom, b)
+  (left,   l)
+);

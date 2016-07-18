@@ -1,0 +1,20 @@
+// Hide
+// ========================================
+
+.hide
+  clip: rect(1px, 1px, 1px, 1px)
+  +rem(height, 1px)
+  overflow: hidden
+  position: absolute !important
+  +rem(width, 1px)
+
+// Responsive hide from $breakpoints
+
+@each $breakpoint in $breakpoints
+
+  $name:  nth($breakpoint, 1)
+  $value: nth($breakpoint, 2)
+
+  @media (min-width: $value)
+    .#{$name}-hide
+      display: none !important
