@@ -6,8 +6,8 @@ var del = require('del');
 var source = require('vinyl-source-stream');
 var $ = require('gulp-load-plugins')();
 
-var assetPath = 'src/javascripts';
-var distPath = 'dist';
+var assetPath = 'assets/javascripts';
+var distPath = 'assets/dist';
 var tmpPath = '.tmp';
 
 // Compiles coffee to js, annotates Angular dependencies

@@ -9,6 +9,7 @@ module Rolodex
         Sprockets.append_path(File.join(asset_path, 'images'))
         Sprockets.append_path(File.join(asset_path, 'stylesheets'))
         Sprockets.append_path(File.join(asset_path, 'javascripts'))
+        Sprockets.append_path(File.join(asset_path, 'dist'))
       end
     end
 
@@ -17,7 +18,7 @@ module Rolodex
     end
 
     def asset_path
-      @asset_path ||= File.join gem_path, 'src'
+      @asset_path ||= File.join gem_path, 'assets'
     end
   end
 end

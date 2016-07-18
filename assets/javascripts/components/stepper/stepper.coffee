@@ -1,5 +1,3 @@
-#= require 'rolodex_angular/template/stepper/stepper'
-
 angular.module 'rolodex.stepper', []
 
 .directive 'blyStepper', ->

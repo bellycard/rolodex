@@ -1,9 +1,12 @@
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "rolodex/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "rolodex"
   spec.version       = Rolodex::VERSION
   spec.homepage      = "http://github.com/bellycard/rolodex"
+  spec.authors       = ["AJ Self, Darby Frey, Shay Howe"]
   spec.email         = ["tech@bellycard.com"]
   spec.description   = %q{Rolodex}
   spec.summary       = %q{Rolodex}
