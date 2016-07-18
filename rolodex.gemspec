@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["tech@bellycard.com"]
   spec.description   = %q{Rolodex}
   spec.summary       = %q{Rolodex}
-  spec.homepage      = ""
+  spec.homepage      = "http://github.com/bellycard/rolodex"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -18,12 +18,10 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'angular-html2js'
-  spec.add_dependency 'sass', '~> 3.4.3'
+  spec.add_dependency 'sass', '~> 3.4.22'
   spec.add_dependency 'sprockets'
 
   spec.add_development_dependency 'bundler', '~> 1.3'
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'pry'
-
 end
