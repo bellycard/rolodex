@@ -13,8 +13,8 @@
 // Font weights
 
 @each $weight in $font-weights
-  $name:  $nth-value($weight, 1)
-  $value: $nth-value($weight, 1)
+  $name:  nth($weight, 1)
+  $value: nth($weight, 1)
 
   .fw-#{$name}
     font-weight: #{$value}
