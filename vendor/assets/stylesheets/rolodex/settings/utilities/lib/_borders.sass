@@ -7,7 +7,7 @@ $border-width: 1px
 
 // Default border styling
 
-.border
+.ba
   border-color: $border-color
   border-style: $border-style
   +rem(border-width, $border-width)
@@ -19,7 +19,7 @@ $border-width: 1px
 
   // Default styling
 
-  .border-#{$direction}
+  .b#{$shorthand}
     border-#{$direction}-style: $border-style
     +rem(border-#{$direction}-width, $border-width)
     border-color: $border-color
@@ -29,56 +29,48 @@ $border-width: 1px
   .b#{$shorthand}-0
     border-#{$direction}: 0
 
-.b-0,
-.border-none,
+.b-0
   border: 0
 
 // State
 
-.border-transparent
-  border-color: transparent
-
-.border-active
+.b-active
   border-color: $blue
 
-// Rounded borders
+// Border radius
 
-.circle
-  border-radius: 50%
-
-.rounded
+.br-base
   +rem(border-radius, $border-radius-base)
 
-.rounded-mini
+.br-mini
   +rem(border-radius, $border-radius-mini)
 
-.not-rounded
+.br-50
+  border-radius: 50%
+
+.br-0
   border-radius: 0
 
- // $border-radius-base 6px
-
-.rounded-top
+.br-top
   +rem(border-radius, $border-radius-base $border-radius-base 0 0)
 
-.rounded-right
+.br-right
   +rem(border-radius, 0 $border-radius-base $border-radius-base 0)
 
-.rounded-bottom
+.br-bottom
   +rem(border-radius, 0 0 $border-radius-base $border-radius-base)
 
-.rounded-left
+.br-left
   +rem(border-radius, $border-radius-base 0 0 $border-radius-base)
 
-// $border-radius-mini 4px
-
-.rounded-top-mini
+.br-top-mini
   +rem(border-radius, $border-radius-mini $border-radius-mini 0 0)
 
-.rounded-right-mini
+.br-right-mini
   +rem(border-radius, 0 $border-radius-mini $border-radius-mini 0)
 
-.rounded-bottom-mini
+.br-bottom-mini
   +rem(border-radius, 0 0 $border-radius-mini $border-radius-mini)
 
-.rounded-left-mini
+.br-left-mini
   +rem(border-radius, $border-radius-mini 0 0 $border-radius-mini)

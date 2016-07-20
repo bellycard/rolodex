@@ -1,13 +1,13 @@
 // Typography
 // ========================================
 
-.font-family-open-sans
+.ff-open-sans
   font-family: $font-family-open-sans
 
-.font-family-helvetica
+.ff-helvetica
   font-family: $font-family-helvetica
 
-.font-family-monospace
+.ff-monospace
   font-family: $font-family-monospace
 
 // Font weights
@@ -16,36 +16,30 @@ $each $weight in $font-weights
   $name:  $nth-value($weight, 1)
   $value: $nth-value($weight, 1)
 
-  .font-#{$name}
+  .fw-#{$name}
     font-weight: #{$value}
 
 // Text alignment
 
-.text-left
-  text-align: left
-
-.text-center
+.tc
   text-align: center
 
-.text-right
-  text-align: right
+.tl
+  text-align: left
 
-.text-justify
-  text-align: justify
+.tr
+  text-align: right
 
 // Text modifiers
 
-.text-uppercase
+.uppercase
   text-transform: uppercase
 
-.text-underline
+.underline
   text-decoration: underline
 
-.text-strike
+.strike
   text-decoration: line-through
-
-.text-decoration-none
-  text-decoration: none
 
 // Helpers
 
@@ -61,7 +55,7 @@ $each $weight in $font-weights
   text-overflow: ellipsis
   white-space: nowrap
 
-.list-style-none
+.list-reset
   list-style: none
   padding-left: 0
 

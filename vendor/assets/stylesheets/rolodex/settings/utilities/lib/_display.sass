@@ -1,9 +1,20 @@
 // Display
 // ========================================
 
-$display: "block", "inline", "inline-block", "none", "table", "table-cell"
+.db
+  display: block
 
-@each $value in $display
+.di
+  display: inline
 
-  .display-#{$value}
-    display: #{$value}
+.dib
+  display: inline-block
+
+.dn
+  display: none
+
+.dt
+  display: table
+
+.dtc
+  display: table-cell
