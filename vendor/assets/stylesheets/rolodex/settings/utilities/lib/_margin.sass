@@ -9,23 +9,14 @@
   $value: nth($baseline, 2)
 
   .m-#{$name}
-    +rem(margin, $value)
-
-  .mx-#{$name}
-    +rem(margin-left, $value)
-    +rem(margin-right, $value)
-
-  .my-#{$name}
     +rem(margin-bottom, $value)
     +rem(margin-top, $value)
 
-  @each $position in $positions
+  .mt-#{$name}
+    +rem(margin-top, $value)
 
-    $direction: nth($position, 1)
-    $shorthand: nth($position, 2)
-
-    .m#{$shorthand}-#{$name}
-      +rem(margin-#{$direction}, $value)
+  .mb-#{$name}
+    +rem(margin-bottom, $value)
 
 // Horizontal alignment ($gutter/$gutter-half)
 
@@ -62,13 +53,17 @@
   margin-bottom: 0
   margin-top: 0
 
-@each $position in $positions
+.mt-0
+  margin-top: 0
 
-  $direction: nth($position, 1)
-  $shorthand: nth($position, 2)
+.mr-0
+  margin-right: 0
 
-  .m#{$shorthand}-0
-    margin-#{$direction}: 0
+.mb-0
+  margin-bottom: 0
+
+.ml-0
+  margin-left: 0
 
 // Auto margin
 

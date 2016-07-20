@@ -7,29 +7,32 @@ $border-width: 1px
 
 // Default border styling
 
-.ba
+.b-all
   border-color: $border-color
   border-style: $border-style
   +rem(border-width, $border-width)
 
-@each $position in $positions
+.b-top
+  border-top-style: $border-style
+  +rem(border-top-width, $border-width)
+  border-color: $border-color
 
-  $direction: nth($position, 1)
-  $shorthand: nth($position, 2)
+.b-right
+  border-right-style: $border-style
+  +rem(border-right-width, $border-width)
+  border-color: $border-color
 
-  // Default styling
+.b-bottom
+  border-bottom-style: $border-style
+  +rem(border-bottom-width, $border-width)
+  border-color: $border-color
 
-  .b#{$shorthand}
-    border-#{$direction}-style: $border-style
-    +rem(border-#{$direction}-width, $border-width)
-    border-color: $border-color
+.b-left
+  border-left-style: $border-style
+  +rem(border-left-width, $border-width)
+  border-color: $border-color
 
-  // Border resets
-
-  .b#{$shorthand}-0
-    border-#{$direction}: 0
-
-.b-0
+.b-none
   border: 0
 
 // State

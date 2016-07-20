@@ -1,4 +1,4 @@
-// Color
+// Text Color
 // ========================================
 
 @each $color in $colors
@@ -8,6 +8,13 @@
 
   .color-#{$name}
     color: $value
+
+// Background color
+
+@each $color in $colors
+
+  $name:  nth($color, 1)
+  $value: nth($color, 2)
 
   .bg-#{$name}
     background-color: $value

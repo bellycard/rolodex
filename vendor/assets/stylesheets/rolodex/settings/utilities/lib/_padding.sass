@@ -9,23 +9,16 @@
   $value: nth($baseline, 2)
 
   .p-#{$name}
-    +rem(padding, $value)
-
-  .px-#{$name}
-    +rem(padding-left, $value)
-    +rem(padding-right, $value)
-
-  .py-#{$name}
     +rem(padding-bottom, $value)
     +rem(padding-top, $value)
 
-  @each $position in $positions
+  .pt-#{$name}
+    +rem(padding-top, $value)
 
-    $direction: nth($position, 1)
-    $shorthand: nth($position, 2)
+  .pb-#{$name}
+    +rem(padding-bottom, $value)
 
-    .p#{$shorthand}-#{$name}
-      +rem(padding-#{$direction}, $value)
+
 
 // Horizontal alignment ($gutter/$gutter-half)
 
@@ -62,10 +55,14 @@
   padding-bottom: 0
   padding-top: 0
 
-@each $position in $positions
+.pt-0
+  padding-top: 0
 
-  $direction: nth($position, 1)
-  $shorthand: nth($position, 2)
+.pr-0
+  padding-right: 0
 
-  .p#{$shorthand}-0
-    padding-#{$direction}: 0
+.pb-0
+  padding-bottom: 0
+
+.pl-0
+  padding-left: 0
