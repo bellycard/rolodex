@@ -12,13 +12,14 @@
 
 // Font weights
 
-@each $weight in $font-weights
-  $name:  nth($weight, 1)
-  $value: nth($weight, 1)
+.fw-300
+  font-weight: 300
 
-  .fw-#{$name}
-    font-weight: #{$value}
+.fw-400
+  font-weight: 400
 
+.fw-600
+  font-weight: 600
 
 // Text alignment
 
@@ -73,11 +74,8 @@
 
 // Letter spacing
 
-.tracked
+.ls-loose
   +rem(letter-spacing, 2px)
 
-.tracked-tight
+.ls-tight
   +rem(letter-spacing, -1px)
-
-.tracked-mega
-  +rem(letter-spacing, 5px)

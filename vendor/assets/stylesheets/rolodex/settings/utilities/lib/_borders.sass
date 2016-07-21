@@ -32,6 +32,7 @@ $border-width: 1px
   +rem(border-left-width, $border-width)
   border-color: $border-color
 
+.b-0,
 .b-none
   border: 0
 
@@ -40,24 +41,25 @@ $border-width: 1px
 .b-active
   border-color: $blue
 
-.b-light
+.b-offset
   border-color: $white-offset
 
-.b-dark
+.b-gray
   border-color: $gray
 
 // Border radius
 
-.br-base
+.br-circle
+  border-radius: 50%
+
+.br-all
   +rem(border-radius, $border-radius-base)
 
 .br-mini
   +rem(border-radius, $border-radius-mini)
 
-.br-50
-  border-radius: 50%
-
-.br-0
+.br-0,
+.br-none
   border-radius: 0
 
 .br-top

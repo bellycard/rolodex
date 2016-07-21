@@ -33,9 +33,14 @@ $border-radius-mini: 4px;
 
 // Breakpoints
 
+$breakpoint-xs: 480px;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
 $breakpoints: (
-  (xs, 480px)
-  (sm, 640px)
-  (md, 768px)
-  (lg, 1024px)
+  (xs, $breakpoint-xs)
+  (sm, $breakpoint-sm)
+  (md, $breakpoint-md)
+  (lg, $breakpoint-lg)
 );

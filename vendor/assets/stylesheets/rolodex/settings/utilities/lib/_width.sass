@@ -8,5 +8,11 @@
   $name:  nth($breakpoint, 1)
   $value: nth($breakpoint, 2)
 
-  .max-width-#{$name}
+  .mw-#{$name}
     +rem(max-width, $value)
+
+.mw-none
+  max-width: none
+
+.w-auto
+  width: auto
