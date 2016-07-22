@@ -35,14 +35,10 @@
 // Absolute centering
 
 .center-x
-  left: 50%
-  transform: translateX(-50%)
+  +center(x)
 
 .center-y
-  top: 50%
-  transform: translateY(-50%)
+  +center(y)
 
 .center-xy
-  left: 50%
-  top: 50%
-  transform: translateX(-50%) translateY(-50%)
+  +center(xy)
