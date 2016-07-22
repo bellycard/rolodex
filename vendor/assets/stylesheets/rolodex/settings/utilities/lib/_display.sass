@@ -1,0 +1,9 @@
+// Display
+// ========================================
+
+$display: "block", "inline", "inline-block", "none", "table", "table-cell"
+
+@each $value in $display
+
+  .d-#{$value}
+    display: #{$value}

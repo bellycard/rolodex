@@ -24,27 +24,29 @@
 // Clearfix
 
 =group
+  *zoom: 1
+
   &:before,
   &:after
     content: ""
     display: table
-    
+
   &:after
     clear: both
 
 // Center
 
 =center($alignment)
-  
+
   @if $alignment == "x" or $alignment == "xy"
     left: 50%
-  
+
   @if $alignment == "y" or $alignment == "xy"
     top: 50%
- 
+
   @if $alignment == "x"
     transform: translateX(-50%)
- 
+
   @if $alignment == "y"
     transform: translateY(-50%)
 

@@ -9,7 +9,7 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "lib"
+    "spec"
   ],
   "license": "MIT",
   "keywords": [
