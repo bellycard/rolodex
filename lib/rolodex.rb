@@ -1,20 +1,15 @@
-require 'angular/html2js'
 require 'rolodex/sass'
 
 module Rolodex
   class << self
-    # Inspired by bootstrap-sass
     def load!
-      Angular::Html2js.configure do |config|
-        config.module_name = 'templates'
-        config.init_sprockets
-      end
-
       if defined?(::Rails)
         require 'rolodex/engine'
-      elsif defined?(:Sprockets)
+      elsif defined?(::Sprockets)
+        Sprockets.append_path(File.join(asset_path, 'images'))
         Sprockets.append_path(File.join(asset_path, 'stylesheets'))
         Sprockets.append_path(File.join(asset_path, 'javascripts'))
+        Sprockets.append_path(File.join(asset_path, 'dist'))
       end
     end
 
@@ -23,7 +18,7 @@ module Rolodex
     end
 
     def asset_path
-      @asset_path ||= File.join gem_path, 'vendor', 'assets'
+      @asset_path ||= File.join gem_path, 'assets'
     end
   end
 end
