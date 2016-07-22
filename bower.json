@@ -9,8 +9,7 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "spec",
-    "lib"
+    "spec"
   ],
   "keywords": [
     "css",
