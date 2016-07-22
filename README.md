@@ -4,14 +4,12 @@ Style for [Belly](http://bellycard.com)
 
 ## Installation
 
-It is recommended to only include parts of rolodex as you need them. Read the entry files for javascript and stylesheets.
-
 ### Use with Bower
 
 Import modules with this path in your Sass files:
 
 ```
-@import 'bower_components/rolodex/src/stylesheets/rolodex';
+@import 'bower_components/rolodex/assets/stylesheets/rolodex';
 ```
 
 ### Use with Rails/Middleman

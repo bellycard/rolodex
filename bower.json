@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/bellycard/rolodex"
   },
-  "main": "dist/rolodex.js",
+  "main": "assets/dist/rolodex.js",
   "ignore": [
     "**/.*",
     "node_modules",
