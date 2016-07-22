@@ -41,7 +41,7 @@ Rolodex uses [semver](http://semver.org/) for versioning. Bower will pick up new
 1. Run `$ gulp build` to create the minified files
 2. Bump `VERSION` in [rolodex/lib/rolodex/version.rb](https://github.com/bellycard/rolodex/blob/master/lib/rolodex/version.rb)
 3. Commit the minified files and version bump (`$ git commit -am 'Release v4.2.0'`)
-2. Create a new git tag with the (`$ git tag v4.2.0`)
-3. Push the git tag (`$ git push --tags`)
-2. Build the new gemspec `gem build rolodex.gemspec`
-3. Push to rubygems.org `gem push rolodex-[new-version-number].gem`
+4. Create a new git tag with the (`$ git tag v4.2.0`)
+5. Push the git tag (`$ git push --tags`)
+6. Build the new gemspec `gem build rolodex.gemspec`
+7. Push to rubygems.org `gem push rolodex-[new-version-number].gem`
