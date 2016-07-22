@@ -1,0 +1,83 @@
+// Modals
+// ========================================
+
+.modal
+  background-color: rgba($slate-dark, .8)
+  bottom: 0
+  left: 0
+  opacity: 0
+  overflow-x: hidden
+  overflow-y: auto
+  +rem(padding, $baseline-step * 10)
+  position: fixed
+  right: 0
+  top: 0
+  transition: $transition-all
+  z-index: 99
+
+.modal-fade
+  opacity: 1
+
+.modal-content
+  background-color: $white
+  +rem(border-radius, $border-radius-base)
+  +rem(box-shadow, 0 0 0 4px rgba($black, .15))
+  margin: 0 auto
+  +rem(max-width, 660px)
+
+.modal-header,
+.modal-footer
+  +bump(padding, box)
+
+.modal-header
+  position: relative
+  text-align: center
+
+  p:last-child
+    margin: 0
+
+.modal-title
+  +s-bravo
+  font-weight: 400
+  margin: 0
+
+.modal-body,
+.modal-body-alt
+  background-color: $white-offset
+  +rem(border, 1px solid $gray-light)
+  +rem(border-width, 1px 0)
+
+.modal-body
+  +rem(padding, ($baseline-base - 1) $gutter)
+
+  p:last-child
+    margin-bottom: 0
+
+// Nav
+
+.modal-nav
+  +bump(padding, gutters)
+
+  li
+    +rem(margin-bottom, -1px)
+    +bump(padding, gutters)
+    position: relative
+    z-index: 1
+
+  a
+    +rem(border-bottom, 5px solid transparent)
+    color: $gray
+    display: block
+    +s-delta
+    +rem(padding-bottom, $baseline-x-small)
+    text-align: center
+
+    &:hover,
+    &:focus,
+    &:active
+      color: $blue
+
+    &.modal-nav-active
+      border-color: $blue
+      color: $black
+      cursor: default

@@ -1,0 +1,16 @@
+// Misc
+// ========================================
+
+// Transition
+
+$transition-duration: .15s;
+$transition-function: ease;
+$transition-all:      all $transition-duration $transition-function;
+
+// Icons
+
+$i-transparent: .65;
+
+// Image Path
+
+$image-path: "/images" !default;

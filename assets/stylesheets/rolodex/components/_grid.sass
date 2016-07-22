@@ -1,0 +1,38 @@
+// Grid
+// ========================================
+
+.grid
+  list-style: none
+  +rem(letter-spacing, -4px)
+
+.opera:-o-prefocus,
+.grid
+  +rem(word-spacing, -5px)
+
+.grid-col
+  display: inline-block
+  *display: inline
+  letter-spacing: normal
+  vertical-align: top
+  white-space: normal
+  zoom: 1
+
+// Grid
+
+.grid-1-1
+  width: 100%
+
+$columns: 12
+
+// Counting down from 12, for 12 columns
+
+@while 1 <= $columns
+
+  // Counting up to the given potential number of columns in a given row
+
+  @for $column from 1 to $columns
+
+    .grid-#{$column}-#{$columns}
+      width: ($column/$columns) * 100%
+
+  $columns: $columns - 1

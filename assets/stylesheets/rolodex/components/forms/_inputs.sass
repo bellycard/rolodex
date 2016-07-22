@@ -1,0 +1,97 @@
+// Inputs
+// ========================================
+
+.form-control,
+.form-area,
+.form-placeholder
+  background-color: $white
+  background-image: none
+  +rem(border, 1px solid $gray-light)
+  +rem(border-radius, $border-radius-base)
+  color: $black-offset
+  display: block
+  +rem(padding, ($baseline-step + 2) ($gutter-half - 1))
+  position: relative
+  transition: border .15s ease, background-image .15s ease
+  width: 100%
+
+  &:focus
+    border-color: $blue
+    outline: 0
+    z-index: 2
+
+  &[disabled],
+  &[readonly],
+  [disabled] &
+    background-color: $white-offset
+    color: $gray-light
+    cursor: not-allowed
+
+  &:-ms-input-placeholder,
+  &:-moz-placeholder,
+  &::-webkit-input-placeholder
+    color: $gray
+
+  &::-moz-placeholder
+    opacity: 1
+
+  &[type='search']
+    +background-svg("forms/icon-search", 15px)
+    background-position: 14px 50%
+    background-repeat: no-repeat
+    +rem(padding-left, 38px)
+
+.form-area
+  +rem(min-height, $baseline-large)
+
+.form-date
+  +background-svg("forms/icon-calendar", 20px 21px)
+  background-position: right 14px top 50% // +rem doesn't work with 50%
+  background-repeat: no-repeat
+  +rem(padding-right, 48px)
+
+.form-placeholder
+  background-color: $white-offset
+
+.form-placeholder-link
+  float: right
+  +s-golf
+  +rem(line-height, $baseline-base)
+
+// Checkboxes and radio buttons
+
+.form-choice
+  +rem(padding-left, 20px)
+
+  input[type="radio"],
+  input[type="checkbox"]
+    float: left
+    +rem(margin-top, $baseline-step)
+    +rem(margin-left, -20px)
+
+  label[disabled]
+    color: $gray
+    cursor: not-allowed
+
+// Custom radio buttons
+
+.form-radio
+  &:not(:last-of-type)
+    +rem(margin-bottom, $baseline-step / 2)
+
+  label
+    cursor: pointer
+    +rem(padding-left, 6px)
+    position: relative
+
+    &:before
+      +background-svg("forms/radio-button", 20px 40px)
+      content: ""
+      +rem(height, 20px)
+      +rem(left, -20px)
+      position: absolute
+      top: 0
+      +rem(width, 20px)
+
+.form-radio-active:before
+  +rem(background-position, 0 -20px)

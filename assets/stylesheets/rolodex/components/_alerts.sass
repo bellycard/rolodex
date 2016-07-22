@@ -1,0 +1,112 @@
+// Alerts
+// ========================================
+
+.alert-title
+  display: block
+  font-weight: 600
+  +rem(margin-bottom, $baseline-step)
+
+.alert-signal
+  font-weight: 600
+  line-height: 1
+  +rem(padding-right, 5px)
+  text-transform: uppercase
+
+.alert-action
+  float: right
+
+// Kinds
+
+@each $alert in $alerts
+
+  $kind:        nth($alert, 1)
+  $icon:        nth($alert, 2)
+  $color:       nth($alert, 3)
+  $color-light: nth($alert, 4)
+  $color-dark:  nth($alert, 5)
+
+  .alert-banner-#{$kind},
+  .alert-inline-#{$kind}
+    background-repeat: no-repeat
+
+    a
+      text-decoration: underline
+
+  // Banner alerts
+
+  .alert-banner-#{$kind}
+    background-color: $color
+    +background-svg("alerts/icon-#{$icon}-light")
+    color: $white
+    +s-echo
+    +bump(padding, baselines-small gutters-half)
+    position: relative
+
+    .i-close
+      +rem(top, 23px)
+
+    a,
+    .alert-signal
+      color: $color-light
+
+    a:active,
+    a:hover
+      color: $white
+
+    .alert-signal
+      +s-delta
+
+    .alert-action
+      text-decoration: none
+
+    &.alert-dismissible
+      +rem(padding-right, $gutter-half * 3)
+
+  // Inline alerts
+
+  .alert-inline-#{$kind}
+    background-color: $color-light
+    +background-svg("alerts/icon-#{$icon}-dark")
+    +rem(border, 1px solid $color)
+    +rem(border-radius, $border-radius-base)
+    color: $black-offset
+    display: inline-block
+    +rem(padding, (($baseline-step * 1.5) - 1) ($gutter-half - 1))
+
+    a,
+    .alert-signal
+      color: $color
+
+    a:active,
+    a:hover
+      color: $color-dark
+
+// Banner alerts
+// ========================================
+
+@each $alert in $alerts-banner
+
+  $kind:   nth($alert, 1)
+  $width:  nth($alert, 2)
+  $height: nth($alert, 3)
+  $offset: nth($alert, 4)
+
+  .alert-banner-#{$kind}
+    +rem(background-position, $gutter-half $offset)
+    +rem(background-size, $width $height)
+    +rem(padding-left, $gutter + $width)
+
+// Inline alerts
+// ========================================
+
+@each $alert in $alerts-inline
+
+  $kind:   nth($alert, 1)
+  $width:  nth($alert, 2)
+  $height: nth($alert, 3)
+  $offset: nth($alert, 4)
+
+  .alert-inline-#{$kind}
+    +rem(background-position, 14px $offset)
+    +rem(background-size, $width $height)
+    +rem(padding-left, 24px + $width)

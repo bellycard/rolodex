@@ -1,0 +1,123 @@
+// Typography
+// ========================================
+
+// Base
+
+html
+  color: $black-offset
+  font: 87.5% $font-family-open-sans
+  line-height: 24px
+  line-height: 1.5rem
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+
+// Heading sizes
+
+h1
+  +h-alpha
+
+h2
+  +h-bravo
+
+h3
+  +h-charlie
+
+h4
+  +h-delta
+
+h5
+  +h-echo
+
+h6
+  +h-foxtrot
+
+// Margins
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+  +rem(margin, 0 0 $baseline-base 0)
+
+// Bolds
+
+b,
+strong
+  font-weight: 600
+
+// Abbreviations
+
+abbr[title]
+  +rem(border-bottom, 1px dotted)
+
+// Horizontal rule
+
+hr
+  box-sizing: border-box
+  height: 0
+
+// Code
+
+code,
+kbd,
+pre,
+samp
+  color: $gray
+  font-family: $font-family-monospace
+
+pre
+  +rem(margin, 0 0 $baseline-base 0)
+  white-space: pre-wrap
+
+// Address
+
+address
+  font-style: normal
+
+// Quotes
+
+blockquote
+  margin: 0
+
+q
+  quotes: "\201C" "\201D" "\2018" "\2019"
+
+// Small
+
+small
+  +s-golf
+
+// Sub & sup
+
+sub,
+sup
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+
+sup
+  top: -0.5em
+
+sub
+  bottom: -0.25em
+
+// Links
+
+a
+  background: transparent
+  color: $blue
+  outline: 0
+  text-decoration: none
+  transition: $transition-all
+
+  &:focus
+    outline: thin dotted
+
+  &:active,
+  &:hover
+    outline: 0
+    color: $blue-dark
