@@ -1,0 +1,27 @@
+<table aria-activedescendant="{{ activeDateId }}" aria-labelledby="{{uniqueId }}-title" role="grid">
+  <thead>
+    <tr>
+      <th class="prev available" ng-click="move(-1)" tabindex="-1">
+        <div class="i-caret"></div>
+      </th>
+      <th class="month" colspan="{{ 5 + showWeeks }}">
+        {{ title }}
+      </th>
+      <th class="next available" ng-click="move(1)" tabindex="-1">
+        <div class="i-caret"></div>
+      </th>
+    </tr>
+    <tr>
+      <th class="text-center" ng-repeat="label in labels track by $index">
+        <small aria-label="{{ label.full}}">{{ label.abbr }}</small>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="row in rows track by $index">
+      <td aria-disabled="{{ !!dt.disabled }}" id="{{ dt.uid }}" ng-class="{active: dt.selected, available: !dt.disabled, off: dt.disabled}" ng-click="select(dt.date, dt.disabled)" ng-disabled="dt.disabled" ng-repeat="dt in row track by dt.date" role="gridcell" tabindex="-1">
+        <span ng-class="{'text-muted': dt.secondary}">{{ dt.label }}</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
