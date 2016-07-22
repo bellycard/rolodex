@@ -3,7 +3,6 @@
 var gulp = require('gulp');
 var path = require('path');
 var del = require('del');
-var fs = require('fs');
 var $ = require('gulp-load-plugins')();
 
 var paths = {
