@@ -2,26 +2,26 @@
 // ========================================
 
 $alerts: (
-  (success, tick,   $green, $green-light, $green-dark)
-  (warning, info,   $gold,  $gold-light,  $gold-dark)
-  (danger,  danger, $red,   $red-light,   $red-dark)
-  (default, flop,   $blue,  $blue-light,  $blue-dark)
+  ("success", "tick",   $green, $green-light, $green-dark)
+  ("warning", "info",   $gold,  $gold-light,  $gold-dark)
+  ("danger",  "danger", $red,   $red-light,   $red-dark)
+  ("default", "flop",   $blue,  $blue-light,  $blue-dark)
 );
 
 // Banner - Width, height, & top offset
 
 $alerts-banner: (
-  (success, 22px, 22px, 19px)
-  (warning, 22px, 22px, 19px)
-  (danger,  22px, 20px, 21px)
-  (default, 24px, 21px, 20px)
+  ("success", 22px, 22px, 19px)
+  ("warning", 22px, 22px, 19px)
+  ("danger",  22px, 20px, 21px)
+  ("default", 24px, 21px, 20px)
 );
 
 // Inline - Width, height, & top offset
 
 $alerts-inline: (
-  (success, 16px, 16px, 12px)
-  (warning, 16px, 16px, 12px)
-  (danger,  16px, 15px, 13px)
-  (default, 20px, 18px, 11px)
+  ("success", 16px, 16px, 12px)
+  ("warning", 16px, 16px, 12px)
+  ("danger",  16px, 15px, 13px)
+  ("default", 20px, 18px, 11px)
 );

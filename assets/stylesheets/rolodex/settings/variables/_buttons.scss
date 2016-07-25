@@ -2,9 +2,9 @@
 // ========================================
 
 $btns: (
-  (default, $blue,  #3599c7,       $blue-dark)
-  (success, $green, #3e9b56,       $green-dark)
-  (warning, $gold,  #d89b45,       $gold-dark)
-  (danger,  $red,   #b6464a,       $red-dark)
-  (boring,  $white, $white-offset, #eee)
+  ("default", $blue,  #3599c7,       $blue-dark)
+  ("success", $green, #3e9b56,       $green-dark)
+  ("warning", $gold,  #d89b45,       $gold-dark)
+  ("danger",  $red,   #b6464a,       $red-dark)
+  ("boring",  $white, $white-offset, #eee)
 );
