@@ -19,5 +19,5 @@ $displays: "block", "inline", "inline-block", "none", "table", "table-cell"
 
     @each $display in $displays
 
-      .d-#{$name}-#{$display}
+      .d-#{$display}-#{$name}
         display: #{$display}
