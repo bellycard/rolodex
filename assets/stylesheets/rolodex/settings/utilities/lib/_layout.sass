@@ -31,6 +31,24 @@
 .f-none
   float: none
 
+// Responsive floats
+
+@each $breakpoint in $breakpoints
+
+  $name:  nth($breakpoint, 1)
+  $value: nth($breakpoint, 2)
+
+  @media (min-width: $value)
+
+    .f-left-#{$name}
+      display: left
+
+    .f-right-#{$name}
+      display: right
+
+    .f-none-#{$name}
+      display: none
+
 // Cursor
 
 .c-default

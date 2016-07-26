@@ -22,7 +22,7 @@ $columns: 12
 
       @for $column from 1 to $columns
 
-        .grid-#{$name}-#{$column}-#{$columns}
+        .grid-#{$column}-#{$columns}-#{$name}
           width: ($column/$columns) * 100%
 
   $columns: $columns - 1
