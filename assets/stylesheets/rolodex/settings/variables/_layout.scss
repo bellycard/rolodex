@@ -17,13 +17,13 @@ $baseline-x-large:  $baseline-step * 6; // 36px
 $baseline-xx-large: $baseline-step * 7; // 42px
 
 $baselines: (
-  ("step",     $baseline-step)
-  ("x-small",  $baseline-x-small)
-  ("small",    $baseline-small)
-  ("base",     $baseline-base)
-  ("large",    $baseline-large)
-  ("x-large",  $baseline-x-large)
-  ("xx-large", $baseline-xx-large)
+  "step",     $baseline-step
+  "x-small",  $baseline-x-small
+  "small",    $baseline-small
+  "base",     $baseline-base
+  "large",    $baseline-large
+  "x-large",  $baseline-x-large
+  "xx-large", $baseline-xx-large
 );
 
 // Border radius
@@ -39,8 +39,8 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 
 $breakpoints: (
-  ("xs", $breakpoint-xs)
-  ("sm", $breakpoint-sm)
-  ("md", $breakpoint-md)
-  ("lg", $breakpoint-lg)
+  "xs", $breakpoint-xs
+  "sm", $breakpoint-sm
+  "md", $breakpoint-md
+  "lg", $breakpoint-lg
 );

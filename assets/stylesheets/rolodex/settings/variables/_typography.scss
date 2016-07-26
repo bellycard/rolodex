@@ -24,7 +24,7 @@ $font-family-helvetica: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", san
 $font-family-monospace: "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
 
 $font-families: (
-  ("open-sans", $font-family-open-sans)
-  ("helvetica", $font-family-helvetica)
-  ("monospace", $font-family-monospace)
+  "open-sans", $font-family-open-sans
+  "helvetica", $font-family-helvetica
+  "monospace", $font-family-monospace
 );
