@@ -17,13 +17,7 @@
 
 // Kinds
 
-@each $alert in $alerts
-
-  $kind:        nth($alert, 1)
-  $icon:        nth($alert, 2)
-  $color:       nth($alert, 3)
-  $color-light: nth($alert, 4)
-  $color-dark:  nth($alert, 5)
+@each $kind, $icon, $color, $color-light, $color-dark in $alerts
 
   .alert-banner-#{$kind},
   .alert-inline-#{$kind}
@@ -84,12 +78,7 @@
 // Banner alerts
 // ========================================
 
-@each $alert in $alerts-banner
-
-  $kind:   nth($alert, 1)
-  $width:  nth($alert, 2)
-  $height: nth($alert, 3)
-  $offset: nth($alert, 4)
+@each $kind, $width, $height, $offset in $alerts-banner
 
   .alert-banner-#{$kind}
     +rem(background-position, $gutter-half $offset)
@@ -99,12 +88,7 @@
 // Inline alerts
 // ========================================
 
-@each $alert in $alerts-inline
-
-  $kind:   nth($alert, 1)
-  $width:  nth($alert, 2)
-  $height: nth($alert, 3)
-  $offset: nth($alert, 4)
+@each $kind, $width, $height, $offset in $alerts-banner
 
   .alert-inline-#{$kind}
     +rem(background-position, 14px $offset)

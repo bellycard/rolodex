@@ -3,10 +3,7 @@
 
 // Margin from $baseline variables
 
-@each $baseline in $baselines
-
-  $name:  nth($baseline, 1)
-  $value: nth($baseline, 2)
+@each $name, $value in $breakpoints
 
   .m-#{$name}
     +rem(margin-bottom, $value)

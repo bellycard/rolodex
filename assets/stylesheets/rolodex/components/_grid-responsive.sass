@@ -13,10 +13,7 @@ $columns: 12
 
 @while 1 <= $columns
 
-  @each $breakpoint in $breakpoints
-
-    $name:  nth($breakpoint, 1)
-    $value: nth($breakpoint, 2)
+  @each $name, $value in $breakpoints
 
     @media (min-width: $value)
 

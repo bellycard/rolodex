@@ -3,10 +3,7 @@
 
 // Padding from $baseline variables
 
-@each $baseline in $baselines
-
-  $name:  nth($baseline, 1)
-  $value: nth($baseline, 2)
+@each $name, $vaue in $baselines
 
   .p-#{$name}
     +rem(padding-bottom, $value)

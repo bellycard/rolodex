@@ -3,10 +3,7 @@
 
 // Max-width from $breakpoints
 
-@each $breakpoint in $breakpoints
-
-  $name:  nth($breakpoint, 1)
-  $value: nth($breakpoint, 2)
+@each $name, $value in $breakpoints
 
   .mw-#{$name}
     +rem(max-width, $value)

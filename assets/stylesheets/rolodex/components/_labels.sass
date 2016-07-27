@@ -19,11 +19,8 @@
 
 // Backgrounds
 
-@each $label in $labels
-  
-  $kind:  nth($label, 1)
-  $color: nth($label, 2)
-  
+@each $kind, $color in $labels
+
   .label-#{$kind}
     border-color: $color
     color: $color

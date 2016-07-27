@@ -1,6 +1,8 @@
 // Alerts
 // ========================================
 
+// Alerts - type, icon, color, color light, color dark
+
 $alerts: (
   ("success", "tick",   $green, $green-light, $green-dark)
   ("warning", "info",   $gold,  $gold-light,  $gold-dark)
@@ -8,7 +10,7 @@ $alerts: (
   ("default", "flop",   $blue,  $blue-light,  $blue-dark)
 );
 
-// Banner - Width, height, & top offset
+// Banner - width, height, & top offset
 
 $alerts-banner: (
   ("success", 22px, 22px, 19px)
@@ -17,7 +19,7 @@ $alerts-banner: (
   ("default", 24px, 21px, 20px)
 );
 
-// Inline - Width, height, & top offset
+// Inline - width, height, & top offset
 
 $alerts-inline: (
   ("success", 16px, 16px, 12px)

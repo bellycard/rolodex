@@ -10,10 +10,7 @@ $displays: "block", "inline", "inline-block", "none", "table", "table-cell"
 
 // Responsive display
 
-@each $breakpoint in $breakpoints
-
-  $name:  nth($breakpoint, 1)
-  $value: nth($breakpoint, 2)
+@each $name, $value in $breakpoints
 
   @media (min-width: $value)
 
