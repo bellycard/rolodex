@@ -7,11 +7,5 @@
   display: inline-block
   vertical-align: middle
 
-=i-caret($color: "")
-  +i-icon
-  +background-svg("icons/icon-caret", 12px 23px)
-  +rem(height, 7px)
-  +rem(width, 12px)
-
-  @if $color == white
-    +rem(background-position, 0 -16px)
+=icon($name)
+  @extend .i-#{$name}
