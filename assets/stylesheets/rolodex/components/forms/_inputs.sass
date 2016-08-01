@@ -59,6 +59,7 @@
   +rem(line-height, $baseline-base)
 
 // Checkboxes and radio buttons
+// ========================================
 
 .form-choice
   +rem(padding-left, 20px)
@@ -95,3 +96,38 @@
 
 .form-radio-active:before
   +rem(background-position, 0 -20px)
+
+// Select
+// ========================================
+
+.form-select
+  background: $white
+  border-radius: $border-radius-base
+  display: inline-block
+  +rem(min-width, 75px)
+  position: relative
+
+  &::after
+    +i-caret
+    bottom: 0
+    content: ""
+    pointer-events: none
+    position: absolute
+    +rem(right, $gutter-half)
+    +center(y)
+    z-index: 100
+
+  input[type="select"]
+    -moz-appearance: none
+    -webkit-appearance: none
+    background: transparent
+    cursor: pointer
+    display: inline-block
+    outline: none
+    +rem(padding, $baseline-x-small $gutter $baseline-x-small $gutter-half)
+    width: 100%
+    z-index: 2
+
+  &:active,
+  &:focus
+    border-color: $blue
