@@ -96,3 +96,59 @@
 
   &:active
     background-color: rgba($black, .7)
+
+// Dropdown buttons
+// ========================================
+
+.btn-dropdown
+  border-bottom-right-radius: 0
+  border-top-right-radius: 0
+  float: left
+
+  &.btn
+    +rem(margin-right, -2px)
+
+.btn-dropdown-menu
+  border-bottom-left-radius: 0
+  border-top-left-radius: 0
+  +rem(margin-left, 1px)
+
+// Button groups
+// ========================================
+
+.btn-group
+  display: inline-block
+  position: relative
+  vertical-align: middle
+
+  > .btn
+    position: relative
+    float: left
+
+    &.active,
+    &:active,
+    &:focus
+      z-index: 2
+
+  // Middle buttons
+
+  .btn + .btn
+    +rem(margin-left, -1px)
+
+  & > .btn:not(:first-child):not(:last-child)
+    border-radius: 0
+
+  // First button
+
+  & > .btn:first-child
+    margin-left: 0
+
+    &:not(:last-child)
+      border-bottom-right-radius: 0
+      border-top-right-radius: 0
+
+  // Last button
+
+  & > .btn:last-child:not(:first-child)
+    border-bottom-left-radius: 0
+    border-top-left-radius: 0
