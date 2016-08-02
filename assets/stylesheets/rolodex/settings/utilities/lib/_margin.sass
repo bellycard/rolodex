@@ -5,7 +5,8 @@
 
 @each $name, $value in $baselines
 
-  .m-#{$name}
+  .m-#{$name},
+  .my-#{$name}
     +rem(margin-bottom, $value)
     +rem(margin-top, $value)
 
@@ -56,14 +57,6 @@
 .mx-quarter
   +rem(margin-left, $gutter-quarter)
   +rem(margin-right, $gutter-quarter)
-
-// Bump
-
-.m-bump
-  +bump(margin, box)
-
-.m-bump-half
-  +bump(margin, baselines gutters-half)
 
 // Resets
 

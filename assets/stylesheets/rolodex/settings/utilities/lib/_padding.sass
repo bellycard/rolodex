@@ -5,7 +5,8 @@
 
 @each $name, $value in $baselines
 
-  .p-#{$name}
+  .p-#{$name},
+  .py-#{$name}
     +rem(padding-bottom, $value)
     +rem(padding-top, $value)
 
@@ -56,14 +57,6 @@
 .px-quarter
   +rem(padding-left, $gutter-quarter)
   +rem(padding-right, $gutter-quarter)
-
-// Bump
-
-.p-bump
-  +bump(padding, box)
-
-.p-bump-half
-  +bump(padding, baselines gutters-half)
 
 // Resets
 
