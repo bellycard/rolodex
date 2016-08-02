@@ -15,34 +15,54 @@
   .pb-#{$name}
     +rem(padding-bottom, $value)
 
-// Horizontal alignment ($gutter/$gutter-half)
+// Horizontal alignment ($gutters)
 
 .pl
   +rem(padding-left, $gutter)
 
-.pl-h
+.pl-half
   +rem(padding-left, $gutter-half)
+
+.pl-third
+  +rem(padding-left, $gutter-third)
+
+.pl-fourth
+  +rem(padding-left, $gutter-fourth)
 
 .pr
   +rem(padding-right, $gutter)
 
-.pr-h
+.pr-half
   +rem(padding-right, $gutter-half)
+
+.pr-third
+  +rem(padding-right, $gutter-third)
+
+.pr-fourth
+  +rem(padding-right, $gutter-fourth)
 
 .px
   +rem(padding-left, $gutter)
   +rem(padding-right, $gutter)
 
-.px-h
+.px-half
   +rem(padding-left, $gutter-half)
   +rem(padding-right, $gutter-half)
+
+.px-third
+  +rem(padding-left, $gutter-third)
+  +rem(padding-right, $gutter-third)
+
+.px-fourth
+  +rem(padding-left, $gutter-fourth)
+  +rem(padding-right, $gutter-fourth)
 
 // Bump
 
 .p-bump
   +bump(padding, box)
 
-.p-bump-h
+.p-bump-half
   +bump(padding, baselines gutters-half)
 
 // Resets

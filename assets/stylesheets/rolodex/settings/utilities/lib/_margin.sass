@@ -15,34 +15,54 @@
   .mb-#{$name}
     +rem(margin-bottom, $value)
 
-// Horizontal alignment ($gutter/$gutter-half)
+// Horizontal alignment ($gutters)
 
 .ml
   +rem(margin-left, $gutter)
 
-.ml-h
+.ml-half
   +rem(margin-left, $gutter-half)
+
+.ml-third
+  +rem(margin-left, $gutter-third)
+
+.ml-fourth
+  +rem(margin-left, $gutter-fourth)
 
 .mr
   +rem(margin-right, $gutter)
 
-.mr-h
+.mr-half
   +rem(margin-right, $gutter-half)
+
+.mr-third
+  +rem(margin-right, $gutter-third)
+
+.mr-fourth
+  +rem(margin-right, $gutter-fourth)
 
 .mx
   +rem(margin-left, $gutter)
   +rem(margin-right, $gutter)
 
-.mx-h
+.mx-half
   +rem(margin-left, $gutter-half)
   +rem(margin-right, $gutter-half)
+
+.mx-third
+  +rem(margin-left, $gutter-third)
+  +rem(margin-right, $gutter-third)
+
+.mx-fourth
+  +rem(margin-left, $gutter-fourth)
+  +rem(margin-right, $gutter-fourth)
 
 // Bump
 
 .m-bump
   +bump(margin, box)
 
-.m-bump-h
+.m-bump-half
   +bump(margin, baselines gutters-half)
 
 // Resets
