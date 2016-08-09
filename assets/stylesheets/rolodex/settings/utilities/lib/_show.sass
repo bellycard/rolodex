@@ -1,19 +1,20 @@
 // Show
 // ========================================
 
-[class*=show-]
-  display: none
+$displays: "block", "inline", "inline-block"
 
 // Responsive show from $breakpoints
 
 @each $name, $value in $breakpoints
 
+  @each $display in $displays
+
+    .show-#{$display}-#{$name}
+      display: none
+
   @media (min-width: $value)
-    .show-block-#{$name}
-      display: block
 
-    .show-inline-#{$name}
-      display: inline
+    @each $display in $displays
 
-    .show-inline-block-#{$name}
-      display: inline-block
+      .show-#{$display}-#{$name}
+        display: #{$display}
