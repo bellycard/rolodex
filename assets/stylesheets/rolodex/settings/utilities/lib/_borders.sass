@@ -2,35 +2,50 @@
 // ========================================
 
 $border-color: $gray-light
+$border-color-alt: $gray-light-alt
 $border-style: solid
 $border-width: 1px
 
 // Default border styling
 
-.b-all
-  border-color: $border-color
+.b-all,
+.b-all-alt
   border-style: $border-style
   +rem(border-width, $border-width)
 
-.b-top
+.b-top,
+.b-top-alt
   border-top-style: $border-style
   +rem(border-top-width, $border-width)
-  border-color: $border-color
 
 .b-right
+.b-right-alt
   border-right-style: $border-style
   +rem(border-right-width, $border-width)
-  border-color: $border-color
 
 .b-bottom
+.b-bottom-alt
   border-bottom-style: $border-style
   +rem(border-bottom-width, $border-width)
-  border-color: $border-color
 
-.b-left
+.b-left,
+.b-left-alt
   border-left-style: $border-style
   +rem(border-left-width, $border-width)
-  border-color: $border-color
+
+.b-all,
+.b-top,
+.b-right,
+.b-bottom,
+.b-left
+  border-color: $gray-light
+
+.b-all-alt,
+.b-top-alt,
+.b-right-alt,
+.b-bottom-alt,
+.b-left-alt,
+  border-color: $gray-light-alt
 
 .b-0,
 .b-none
