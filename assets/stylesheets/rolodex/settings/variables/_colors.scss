@@ -37,52 +37,67 @@ $pink-dark:    #a03f62;
 
 // Monochromatic palette
 
-$white:        #fff;
-$white-offset: #f7f7f7;
-$gray-light:   #ccc;
-$gray:         #999;
-$gray-dark:    #666;
-$black-offset: #333;
-$black:        #000;
+$white:             #fff;
+$white-offset:      #f7f7f7;
+$white-offset-alt:  #fafafa;
+$gray-light:        #ccc;
+$gray-light-alt:    #e6e6e6;
+$gray:              #999;
+$gray-dark:         #666;
+$black-offset:      #333;
+$black:             #000;
+
+// Alt brand palettes
+$blue-light-alt:    #eea8e0;
+
+$blue-slate:        #364a60;
+$blue-slate-light:  #9ea5ad;
+$blue-slate-dark:   #213141;
 
 // Color class name map
 
 $colors: (
-  "subtle":       $gray,
-  "success":      $green,
-  "warning":      $gold,
-  "danger":       $red,
+  "subtle":           $gray,
+  "success":          $green,
+  "warning":          $gold,
+  "danger":           $red,
 
-  "blue":         $blue,
-  "blue-light":   $blue-light,
-  "blue-dark":    $blue-dark,
-  "slate":        $slate,
-  "slate-light":  $slate-light,
-  "slate-dark":   $slate-dark,
-  "red":          $red,
-  "red-light":    $red-light,
-  "red-dark":     $red-dark,
-  "gold":         $gold,
-  "gold-light":   $gold-light,
-  "gold-dark":    $gold-dark,
-  "purple":       $purple,
-  "purple-light": $purple-light,
-  "purple-dark":  $purple-dark,
-  "orange":       $orange,
-  "orange-light": $orange-light,
-  "orange-dark":  $orange-dark,
-  "green":        $green,
-  "green-light":  $green-light,
-  "green-dark":   $green-dark,
-  "pink":         $pink,
-  "pink-light":   $pink-light,
-  "pink-dark":    $pink-dark,
+  "blue":             $blue,
+  "blue-light":       $blue-light,
+  "blue-dark":        $blue-dark,
+  "blue-light-alt":   $blue-light-alt,
+  "blue-slate":       $blue-slate,
+  "blue-slate-light": $blue-slate-light,
+  "blue-slate-dark":  $blue-slate-dark,
+  "slate":            $slate,
+  "slate-light":      $slate-light,
+  "slate-dark":       $slate-dark,
+  "red":              $red,
+  "red-light":        $red-light,
+  "red-dark":         $red-dark,
+  "gold":             $gold,
+  "gold-light":       $gold-light,
+  "gold-dark":        $gold-dark,
+  "purple":           $purple,
+  "purple-light":     $purple-light,
+  "purple-dark":      $purple-dark,
+  "orange":           $orange,
+  "orange-light":     $orange-light,
+  "orange-dark":      $orange-dark,
+  "green":            $green,
+  "green-light":      $green-light,
+  "green-dark":       $green-dark,
+  "pink":             $pink,
+  "pink-light":       $pink-light,
+  "pink-dark":        $pink-dark,
 
-  "white":        $white,
-  "white-offset": $white-offset,
-  "gray-light":   $gray-light,
-  "gray":         $gray,
-  "gray-dark":    $gray-dark,
-  "black-offset": $black-offset,
-  "black":        $black
+  "white":            $white,
+  "white-offset":     $white-offset,
+  "white-offset-alt": $white-offset-alt,
+  "gray-light":       $gray-light,
+  "gray-light-alt":   $gray-light-alt,
+  "gray":             $gray,
+  "gray-dark":        $gray-dark,
+  "black-offset":     $black-offset,
+  "black":            $black
 );

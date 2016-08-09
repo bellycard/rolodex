@@ -59,6 +59,12 @@
     &:active
       background-color: $bg-active
 
+  .btn-#{$kind}-raised
+    box-shadow: inset 0 -1px rgba(0,0,0,0.20)
+
+    &:active
+      box-shadow: inset 0 0 rgba(0,0,0,0.20)
+
 .btn-boring:hover,
 .btn-boring:active
   color: $blue
@@ -96,6 +102,16 @@
 
   &:active
     background-color: rgba($black, .7)
+
+// Raised Button
+
+@each $kind, $bg-normal, $bg-hover, $bg-active in $btns
+
+  .btn-#{$kind}-raised
+    box-shadow: inset 0 -1px rgba(0,0,0,0.20);
+
+    &:active
+      box-shadow: inset 0 0 rgba(0,0,0,0.20);
 
 // Dropdown buttons
 // ========================================
