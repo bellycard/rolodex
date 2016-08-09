@@ -8,6 +8,6 @@
 
 @each $name, $value in $breakpoints
 
-  @media (max-width: $value)
+  @media (min-width: $value)
     .hide-#{$name}
       display: none !important
