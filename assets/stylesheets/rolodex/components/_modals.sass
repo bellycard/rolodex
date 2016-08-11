@@ -18,14 +18,11 @@ $modal-breakpoint: $breakpoint-md + 1 !default
   transition: $transition-all
   z-index: 99
 
-  &:target
-    opacity: 1
-    pointer-events: all
-
   @media (min-width: $modal-breakpoint)
     +rem(padding, $baseline-step * 10 $gutter)
 
 .modal-fade
+.modal:target
   opacity: 1
   pointer-events: all
 
