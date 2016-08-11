@@ -60,7 +60,12 @@
       background-color: $bg-active
 
   .btn-#{$kind}-raised
-    box-shadow: inset 0 -2px rgba(0,0,0,0.20)
+
+    @if $kind == "boring"
+      box-shadow: inset 0 -1px rgba(0,0,0,0.20)
+    @else
+      box-shadow: inset 0 -2px rgba(0,0,0,0.20)
+
     border: 0
 
     &:active

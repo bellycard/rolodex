@@ -1,6 +1,9 @@
 // Modals
 // ========================================
 
+$modal-width: 660px !default
+$modal-breakpoint: $breakpoint-md + 1 !default
+
 .modal
   background-color: rgba($slate-dark, .8)
   bottom: 0
@@ -8,26 +11,37 @@
   opacity: 0
   overflow-x: hidden
   overflow-y: auto
-  +rem(padding, $baseline-step * 10)
+  pointer-events: none
   position: fixed
   right: 0
   top: 0
   transition: $transition-all
   z-index: 99
 
+  @media (min-width: $modal-breakpoint)
+    +rem(padding, $baseline-step * 10 $gutter)
+
 .modal-fade
+.modal:target
   opacity: 1
+  pointer-events: all
 
 .modal-content
   background-color: $white
-  +rem(border-radius, $border-radius-base)
-  +rem(box-shadow, 0 0 0 4px rgba($black, .15))
   margin: 0 auto
-  +rem(max-width, 660px)
+
+  @media (min-width: $modal-breakpoint)
+    +rem(border-radius, $border-radius-base)
+    +rem(box-shadow, 0 0 0 4px rgba($black, .15))
+    +rem(max-width, $modal-width)
+    transform: translate(0,0)
 
 .modal-header,
 .modal-footer
-  +bump(padding, box)
+  +bump(padding, baselines-x-small gutters-half)
+  
+  @media (min-width: $modal-breakpoint)
+    +bump(padding, box)
 
 .modal-header
   position: relative
@@ -48,7 +62,10 @@
   +rem(border-width, 1px 0)
 
 .modal-body
-  +rem(padding, ($baseline-base - 1) $gutter)
+  +bump(padding, baselines gutters-half)
+
+  @media (min-width: $modal-breakpoint)
+    +rem(padding, ($baseline-base - 1) $gutter)
 
   p:last-child
     margin-bottom: 0
@@ -81,3 +98,12 @@
       border-color: $blue
       color: $black
       cursor: default
+
+.modal-close
+  content: ''
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 0
