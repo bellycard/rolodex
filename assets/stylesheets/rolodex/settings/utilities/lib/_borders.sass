@@ -1,35 +1,29 @@
 // Border
 // ========================================
 
-$border-color: $gray-light
-$border-color-alt: $gray-light-alt
+$border-color: $gray-light !default
 $border-style: solid
 $border-width: 1px
 
 // Default border styling
 
-.b-all,
-.b-all-alt
+.b-all
   border-style: $border-style
   +rem(border-width, $border-width)
 
-.b-top,
-.b-top-alt
+.b-top
   border-top-style: $border-style
   +rem(border-top-width, $border-width)
 
 .b-right
-.b-right-alt
   border-right-style: $border-style
   +rem(border-right-width, $border-width)
 
 .b-bottom
-.b-bottom-alt
   border-bottom-style: $border-style
   +rem(border-bottom-width, $border-width)
 
-.b-left,
-.b-left-alt
+.b-left
   border-left-style: $border-style
   +rem(border-left-width, $border-width)
 
@@ -39,13 +33,6 @@ $border-width: 1px
 .b-bottom,
 .b-left
   border-color: $gray-light
-
-.b-all-alt,
-.b-top-alt,
-.b-right-alt,
-.b-bottom-alt,
-.b-left-alt,
-  border-color: $gray-light-alt
 
 .b-0,
 .b-none
