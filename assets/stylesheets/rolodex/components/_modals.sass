@@ -21,7 +21,7 @@ $modal-breakpoint: $breakpoint-md + 1 !default
   @media (min-width: $modal-breakpoint)
     +rem(padding, $baseline-step * 10 $gutter)
 
-.modal-fade
+.modal-fade,
 .modal:target
   opacity: 1
   pointer-events: all
@@ -39,7 +39,7 @@ $modal-breakpoint: $breakpoint-md + 1 !default
 .modal-header,
 .modal-footer
   +bump(padding, baselines-x-small gutters-half)
-  
+
   @media (min-width: $modal-breakpoint)
     +bump(padding, box)
 
