@@ -10,6 +10,7 @@
   +rem(border-radius, $border-radius-base)
   color: $black-offset
   display: block
+  +rem(line-height, $baseline-base)
   +rem(padding, ($baseline-step + 2) ($gutter-half - 1))
   position: relative
   transition: border .15s ease, background-image .15s ease
@@ -29,6 +30,7 @@
 
   &:-ms-input-placeholder,
   &:-moz-placeholder,
+  &::-moz-placeholder,
   &::-webkit-input-placeholder
     color: $gray
 
