@@ -14,7 +14,7 @@ var paths = {
   dist: 'assets/dist', // where compiled files will go
 }
 
-// Compiles coffee to js, annotates Angular dependencies
+// Compiles sass to css
 gulp.task('sass', function(callback) {
   return gulp.src(path.join(paths.assets, paths.stylesheets, '**/*.{sass,scss}'))
     .pipe($.sass())
@@ -59,5 +59,25 @@ gulp.task('js', ['coffee', 'templates'], function(callback) {
     })
 });
 
-gulp.task('build', ['sass', 'js']);
+gulp.task('assetSize', function(callback) {
+  return gulp.src(paths.dist + '**/*.{css,js}')
+    .pipe($.size({
+      title: 'Output...',
+      showFiles: true,
+    }));
+});
+
+gulp.task('assetSizeGzip', function(callback) {
+  return gulp.src(paths.dist + '**/*.{css,js}')
+    .pipe($.size({
+      title: 'Gzipped Output...',
+      gzip: true,
+      showFiles: true,
+    }));
+});
+
+gulp.task('build', function(callback) {
+  $.runSequence(['sass', 'js'], 'assetSize', 'assetSizeGzip', callback);
+});
+
 gulp.task('default', ['build']);
