@@ -63,6 +63,9 @@
 .btn-boring:active
   color: $blue
 
+.btn-boring.btn-gradient
+  background-image: linear-gradient(-180deg, #FFFFFF 0%, #F3F5F7 100%)
+
 // Alternate, Overlay, & Gradient
 // ========================================
 
@@ -122,6 +125,15 @@
 
 // Button groups
 // ========================================
+$btn-group-bg: $white !default
+$btn-group-color: $blue-slate-medium !default
+$btn-group-border-color: $gray-alt !default
+$btn-group-border-style: solid
+$btn-group-border-width: 1px
+$btn-group-hover-bg: $gray-light-alt !default
+$btn-group-hover-color: $blue-dark !default
+$btn-group-active-bg: $blue-dark !default
+$btn-group-active-color: $white !default
 
 .btn-group
   display: inline-block
@@ -131,6 +143,22 @@
   > .btn
     position: relative
     float: left
+
+    &.btn-style
+      background-color: $btn-group-bg
+      border-color: $btn-group-border-color
+      border-style: $btn-group-border-style
+      +rem(border-width, $btn-group-border-width)
+      color: $btn-group-color
+
+      &:hover
+        background-color: $btn-group-hover-bg
+        color: $btn-group-hover-color
+
+      &.active
+        background-color: $btn-group-active-bg
+        background-image: linear-gradient(-180deg, rgba(255,255,255,0.00) 0%, rgba(0,0,0,0.20) 100%)
+        color: $btn-group-active-color
 
     &.active,
     &:active,
