@@ -125,18 +125,23 @@
 
 // Button groups
 // ========================================
-$btn-group-bg: $white !default
-$btn-group-color: $blue-slate-medium !default
 
-$btn-group-border-color: $gray-alt !default
+// Button group settings
+
+$btn-group-bg: $white !default
+$btn-group-color: $gray !default
+
+$btn-group-border-color: $gray-light !default
 $btn-group-border-style: solid
 $btn-group-border-width: 1px
 
-$btn-group-hover-bg: $gray-light-alt !default
-$btn-group-hover-color: $blue-dark !default
+$btn-group-hover-bg: $white-offset !default
+$btn-group-hover-color: $black-offset !default
 
-$btn-group-active-bg: $blue-dark !default
-$btn-group-active-color: $white !default
+$btn-group-active-bg: $white-offset !default
+$btn-group-active-color: $black-offset !default
+
+// Button group
 
 .btn-group
   display: inline-block
@@ -156,7 +161,6 @@ $btn-group-active-color: $white !default
 
       &.active
         background-color: $btn-group-active-bg
-        background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, .2) 100%)
         border-color: $btn-group-active-bg
         color: $btn-group-active-color
 
