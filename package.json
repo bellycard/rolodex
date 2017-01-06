@@ -1,5 +1,6 @@
 {
   "name": "rolodex",
+  "version": "2.0.7",
   "homepage": "https://github.com/bellycard/rolodex",
   "repository": {
     "type": "git",
