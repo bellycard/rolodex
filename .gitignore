@@ -25,3 +25,4 @@ node_modules/
 # Ignore Ruby version manager schtuff
 .ruby-version
 .ruby-gemset
+.npm-debug.log
