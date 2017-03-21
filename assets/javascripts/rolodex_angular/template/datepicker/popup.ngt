@@ -1,3 +1,0 @@
-<div class="date-picker-solo daterangepicker dropdown-menu group" data-dropdown-content ng-keydown="keydown($event)">
-  <div ng-transclude></div>
-</div>

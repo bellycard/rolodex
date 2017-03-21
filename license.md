@@ -1,4 +1,4 @@
-Copyright (c) 2013 Belly
+Copyright (c) 2017 Belly Inc.
 
 MIT License
 
