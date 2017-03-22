@@ -21,8 +21,8 @@ module.exports = {
               options: {
                 plugins: function() {
                   return [
-                    require('postcss-smart-import')(),
-                    require('postcss-css-variables')(),
+                    require('postcss-import')(),
+                    require('postcss-cssnext')(),
                   ];
                 }
               }
