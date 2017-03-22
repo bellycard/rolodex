@@ -4,9 +4,9 @@
 }
 
 .stripe-light:nth-child(odd) {
-  background-color: var(--gray-lightest);
+  background-color: var(--gray-light);
 }
 
 .stripe-dark:nth-child(odd) {
-  background-color: var(--gray-light);
+  background-color: var(--gray);
 }
