@@ -2,7 +2,9 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './src/rolodex.css',
+  entry: {
+    rolodex: './src/rolodex.css'
+  },
 
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -14,11 +16,19 @@ module.exports = {
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
           use: [
-            'css-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 1,
+                sourceMap: true,
+              }
+            },
             {
               loader: 'postcss-loader',
               options: {
+                sourceMap: true,
                 plugins: function() {
                   return [
                     require('postcss-import')(),
@@ -29,11 +39,11 @@ module.exports = {
             }
           ]
         })
-      }
+      },
     ]
   },
 
   plugins: [
-    new ExtractTextPlugin('rolodex.css')
+    new ExtractTextPlugin('[name].css'),
   ]
 };
