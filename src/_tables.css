@@ -1,0 +1,12 @@
+.collapse {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.stripe-light:nth-child(odd) {
+  background-color: var(--gray-lightest);
+}
+
+.stripe-dark:nth-child(odd) {
+  background-color: var(--gray-light);
+}

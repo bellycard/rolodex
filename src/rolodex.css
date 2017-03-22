@@ -1,4 +1,4 @@
-/*@import './_media-queries';*/
+/*! rolodex v3.0.0 | https://github.com/bellycard/rolodex */
 
 @import 'tachyons/src/_normalize';
 @import 'tachyons/src/_box-sizing';
@@ -8,7 +8,6 @@
 @import 'tachyons/src/_background-position';
 @import 'tachyons/src/_outlines';
 @import 'tachyons/src/_borders';
-/*@import 'tachyons/src/_border-colors';*/
 @import 'tachyons/src/_border-radius';
 @import 'tachyons/src/_border-style';
 @import 'tachyons/src/_border-widths';
@@ -34,11 +33,8 @@
 @import 'tachyons/src/_position';
 @import 'tachyons/src/_opacity';
 @import 'tachyons/src/_rotations';
-/*@import 'tachyons/src/_skins';*/
-/*@import 'tachyons/src/_skins-pseudo';*/
 @import 'tachyons/src/_spacing';
 @import 'tachyons/src/_negative-margins';
-@import 'tachyons/src/_tables';
 @import 'tachyons/src/_text-decoration';
 @import 'tachyons/src/_text-align';
 @import 'tachyons/src/_text-transform';
@@ -50,8 +46,12 @@
 @import 'tachyons/src/_vertical-align';
 @import 'tachyons/src/_hovers';
 @import 'tachyons/src/_z-index';
-@import 'tachyons/src/_nested';
-@import 'tachyons/src/_styles';
+
+@import './_border-colors';
+@import './_nested';
+@import './_skins';
+@import './_skins-pseudo';
+@import './_tables';
 
 @import './_colors';
-@import 'tachyons/src/_media-queries';
+@import './_media-queries';

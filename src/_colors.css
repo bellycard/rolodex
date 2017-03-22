@@ -1,70 +1,39 @@
-/*! Rolodex Colors */
-
 :root {
-  --black: #000;
-  --near-black: #111;
-  --dark-gray:#333;
-  --mid-gray:#555;
-  --gray: #777;
-  --silver: #999;
-  --light-silver: #aaa;
-  --moon-gray: #ccc;
-  --light-gray: #eee;
-  --near-white: #f4f4f4;
-  --white: #fff;
+  --black:             #000000;
+  --black-offset:      #1e1e21;
+  --gray-darkest:      #333333;
+  --gray-dark:         #45454c;
+  --gray:              #999999;
+  --gray-light:        #cccccc;
+  --gray-lightest:     #e7ebef;
+  --white-offset:      #fafafa;
+  --white:             #ffffff;
 
-  --transparent:transparent;
+  --transparent:       rgba(255, 255, 255, 0);
 
- --black-90: rgba(0,0,0,.9);
- --black-80: rgba(0,0,0,.8);
- --black-70: rgba(0,0,0,.7);
- --black-60: rgba(0,0,0,.6);
- --black-50: rgba(0,0,0,.5);
- --black-40: rgba(0,0,0,.4);
- --black-30: rgba(0,0,0,.3);
- --black-20: rgba(0,0,0,.2);
- --black-10: rgba(0,0,0,.1);
- --black-05: rgba(0,0,0,.05);
- --black-025: rgba(0,0,0,.025);
- --black-0125: rgba(0,0,0,.0125);
-
- --white-90: rgba(255,255,255,.9);
- --white-80: rgba(255,255,255,.8);
- --white-70: rgba(255,255,255,.7);
- --white-60: rgba(255,255,255,.6);
- --white-50: rgba(255,255,255,.5);
- --white-40: rgba(255,255,255,.4);
- --white-30: rgba(255,255,255,.3);
- --white-20: rgba(255,255,255,.2);
- --white-10: rgba(255,255,255,.1);
- --white-05: rgba(255,255,255,.05);
- --white-025: rgba(255,255,255,.025);
- --white-0125: rgba(255,255,255,.0125);
-
-  --dark-red:  #e7040f;
-  --red:  #ff4136;
-  --light-red:  #ff725c;
-  --orange:  #ff6300;
-  --gold:  #ffb700;
-  --yellow:  #ffd700;
-  --light-yellow:  #fbf1a9;
-  --purple:  #5e2ca5;
-  --light-purple:  #a463f2;
-  --dark-pink:  #d5008f;
-  --hot-pink: #ff41b4;
-  --pink:  #ff80cc;
-  --light-pink:  #ffa3d7;
-  --dark-green:  #137752;
-  --green:  #19a974;
-  --light-green:  #9eebcf;
-  --navy:  #001b44;
-  --dark-blue:  #00449e;
-  --blue:  #357edd;
-  --light-blue:  #96ccff;
-  --lightest-blue:  #cdecff;
-  --washed-blue:  #f6fffe;
-  --washed-green:  #e8fdf5;
-  --washed-yellow:  #fffceb;
-  --washed-red:  #ffdfdf;
-
+  --pink:              #d37295;
+  --pink-dark:         #a03f62;
+  --pink-light:        #f2d1e3;
+  --red:               #cb4e52;
+  --red-dark:          #9c292d;
+  --red-light:         #f7e2e2;
+  --orange:            #ed844a;
+  --orange-dark:       #ba5117;
+  --orange-light:      #f4d4c6;
+  --yellow:            #f3ae4e;
+  --yellow-dark:       #c07b1b;
+  --yellow-light:      #fceddf;
+  --green:             #45ad60;
+  --green-dark:        #127a2d;
+  --green-light:       #c8edcd;
+  --blue:              #33a9e0;
+  --blue-dark:         #0076ad;
+  --blue-light:        #e1f2fa;
+  --blue-ocean:        #364a60;
+  --blue-ocean-dark:   #213141;
+  --blue-ocean-medium: #8593a3;
+  --blue-ocean-light:  #bcc3cb;
+  --purple:            #6479bf;
+  --purple-dark:       #31468c;
+  --purple-light:      #cbd6f4;
 }
