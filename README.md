@@ -44,4 +44,4 @@ Import modules to your Sass files:
 
 ## License
 
-[MIT](/license) &copy; Belly, Inc.
+[MIT](/LICENSE) &copy; Belly
