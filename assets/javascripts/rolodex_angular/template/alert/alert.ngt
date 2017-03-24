@@ -1,4 +1,0 @@
-<div ng-class="['alert-banner-' + (type || 'warning'), closeable ? 'alert-dismissable' : null]" role="alert">
-  <button aria-hidden="true" class="i-close" ng-click="close()" ng-show="closeable" type="button">&times;</button>
-  <div ng-transclude></div>
-</div>
