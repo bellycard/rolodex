@@ -1,4 +1,4 @@
-/*! rolodex v3.0.0 | https://github.com/bellycard/rolodex */
+/*! rolodex v3.0.3 | https://github.com/bellycard/rolodex */
 
 @import 'tachyons/src/_normalize';
 @import 'tachyons/src/_box-sizing';
@@ -18,7 +18,6 @@
 @import 'tachyons/src/_display';
 @import 'tachyons/src/_flexbox';
 @import 'tachyons/src/_floats';
-@import 'tachyons/src/_font-family';
 @import 'tachyons/src/_font-style';
 @import 'tachyons/src/_font-weight';
 @import 'tachyons/src/_forms';
@@ -48,6 +47,7 @@
 @import 'tachyons/src/_z-index';
 
 @import './_border-colors';
+@import './_font-family';
 @import './_nested';
 @import './_skins';
 @import './_skins-pseudo';
