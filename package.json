@@ -2,6 +2,7 @@
   "name": "rolodex-css",
   "description": "Functional CSS for Belly",
   "version": "3.0.3",
+  "main": "dist/rolodex.min.css",
   "repository": {
     "type": "git",
     "url": "bellycard/rolodex"

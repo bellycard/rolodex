@@ -4,7 +4,19 @@
 
 > Functional CSS for Belly
 
-## Installation
+## Getting Started
+
+### Using the CDN
+
+The simplest way to start using rolodex is to include a reference to the file in the head of your HTML.
+
+```html
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/rolodex-css/dist/rolodex.min.css">
+</head>
+```
+
+### Installation
 
 ```bash
 yarn add -D rolodex-css
@@ -41,6 +53,7 @@ Import modules to your Sass files:
 ```sass
 @import 'rolodex'
 ```
+
 
 ## License
 
