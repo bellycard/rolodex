@@ -5395,22 +5395,22 @@ code, .code {
 .hover-bg-slate-light:focus { background-color: #efeff4; }
 
 .hover-bg-blue-slate:hover,
-.hover-bg-blue-slate:focus { color: #364a60; }
+.hover-bg-blue-slate:focus { background-color: #364a60; }
 
 .hover-bg-blue-slate-dark:hover,
-.hover-bg-blue-slate-dark:focus { color: #213141; }
+.hover-bg-blue-slate-dark:focus { background-color: #213141; }
 
 .hover-bg-blue-slate-medium:hover,
-.hover-bg-blue-slate-medium:focus { color: #8593a3; }
+.hover-bg-blue-slate-medium:focus { background-color: #8593a3; }
 
 .hover-bg-blue-slate-light:hover,
-.hover-bg-blue-slate-light:focus { color: #bcc3cb; }
+.hover-bg-blue-slate-light:focus { background-color: #bcc3cb; }
 
 .hover-bg-gray-alt:hover,
-.hover-bg-gray-alt:focus { color: #e7ebef; }
+.hover-bg-gray-alt:focus { background-color: #e7ebef; }
 
 .hover-bg-gray-light-alt:hover,
-.hover-bg-gray-light-alt:focus { color: #f3f5f7; }
+.hover-bg-gray-light-alt:focus { background-color: #f3f5f7; }
 
 .collapse {
     border-collapse: collapse;

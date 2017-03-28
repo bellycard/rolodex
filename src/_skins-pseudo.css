@@ -153,14 +153,14 @@
 .hover-bg-slate-light:focus { background-color: var(--slate-light); }
 
 .hover-bg-blue-slate:hover,
-.hover-bg-blue-slate:focus { color: var(--blue-slate); }
+.hover-bg-blue-slate:focus { background-color: var(--blue-slate); }
 .hover-bg-blue-slate-dark:hover,
-.hover-bg-blue-slate-dark:focus { color: var(--blue-slate-dark); }
+.hover-bg-blue-slate-dark:focus { background-color: var(--blue-slate-dark); }
 .hover-bg-blue-slate-medium:hover,
-.hover-bg-blue-slate-medium:focus { color: var(--blue-slate-medium); }
+.hover-bg-blue-slate-medium:focus { background-color: var(--blue-slate-medium); }
 .hover-bg-blue-slate-light:hover,
-.hover-bg-blue-slate-light:focus { color: var(--blue-slate-light); }
+.hover-bg-blue-slate-light:focus { background-color: var(--blue-slate-light); }
 .hover-bg-gray-alt:hover,
-.hover-bg-gray-alt:focus { color: var(--gray-alt); }
+.hover-bg-gray-alt:focus { background-color: var(--gray-alt); }
 .hover-bg-gray-light-alt:hover,
-.hover-bg-gray-light-alt:focus { color: var(--gray-light-alt); }
+.hover-bg-gray-light-alt:focus { background-color: var(--gray-light-alt); }
