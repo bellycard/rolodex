@@ -1,4 +1,4 @@
-/*! rolodex v3.0.0 | https://github.com/bellycard/rolodex */
+/*! rolodex v3.0.3 | https://github.com/bellycard/rolodex */
 
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
@@ -1868,103 +1868,6 @@ img { max-width: 100%; }
   .fl-l { float: left; _display: inline; }
   .fr-l { float: right; _display: inline; }
   .fn-l { float: none; }
-}
-
-/*
-
-   FONT FAMILY GROUPS
-   Docs: http://tachyons.io/docs/typography/font-family/
-
-*/
-
-.sans-serif {
-  font-family: -apple-system, BlinkMacSystemFont,
-               'avenir next', avenir,
-               'helvetica neue', helvetica,
-               ubuntu,
-               roboto, noto,
-               'segoe ui', arial,
-               sans-serif;
-}
-
-.serif {
-  font-family: georgia,
-               times,
-               serif;
-}
-
-.system-sans-serif {
-  font-family: sans-serif;
-}
-
-.system-serif {
-  font-family: serif;
-}
-
-/* Monospaced Typefaces (for code) */
-
-/* From http://cssfontstack.com */
-
-code, .code {
-  font-family: Consolas,
-               monaco,
-               monospace;
-}
-
-.courier {
-  font-family: 'Courier Next',
-               courier,
-               monospace;
-}
-
-/* Sans-Serif Typefaces */
-
-.helvetica {
-  font-family: 'helvetica neue', helvetica,
-               sans-serif;
-}
-
-.avenir {
-  font-family: 'avenir next', avenir,
-               sans-serif;
-}
-
-/* Serif Typefaces */
-
-.athelas {
-  font-family: athelas,
-               georgia,
-               serif;
-}
-
-.georgia {
-  font-family: georgia,
-               serif;
-}
-
-.times {
-  font-family: times,
-               serif;
-}
-
-.bodoni {
-  font-family: "Bodoni MT",
-                serif;
-}
-
-.calisto {
-  font-family: "Calisto MT",
-                serif;
-}
-
-.garamond {
-  font-family: garamond,
-               serif;
-}
-
-.baskerville {
-  font-family: baskerville,
-               serif;
 }
 
 /*
@@ -4975,6 +4878,101 @@ code, .code {
 
 .b--gray-light-alt { border-color: #f3f5f7; }
 
+.sans-serif {
+  font-family: -apple-system, BlinkMacSystemFont,
+               'avenir next', avenir,
+               'helvetica neue', helvetica,
+               ubuntu,
+               roboto, noto,
+               'segoe ui', arial,
+               sans-serif;
+}
+
+.serif {
+  font-family: georgia,
+               times,
+               serif;
+}
+
+.system-sans-serif {
+  font-family: sans-serif;
+}
+
+.system-serif {
+  font-family: serif;
+}
+
+/* Monospaced Typefaces (for code) */
+
+/* From http://cssfontstack.com */
+
+code, .code {
+  font-family: Consolas,
+               monaco,
+               monospace;
+}
+
+.courier {
+  font-family: 'Courier Next',
+               courier,
+               monospace;
+}
+
+/* Sans-Serif Typefaces */
+
+.helvetica {
+  font-family: 'helvetica neue', helvetica,
+               sans-serif;
+}
+
+.avenir {
+  font-family: 'avenir next', avenir,
+               sans-serif;
+}
+
+.open-sans {
+  font-family: 'open sans',
+               sans-serif;
+}
+
+/* Serif Typefaces */
+
+.athelas {
+  font-family: athelas,
+               georgia,
+               serif;
+}
+
+.georgia {
+  font-family: georgia,
+               serif;
+}
+
+.times {
+  font-family: times,
+               serif;
+}
+
+.bodoni {
+  font-family: "Bodoni MT",
+                serif;
+}
+
+.calisto {
+  font-family: "Calisto MT",
+                serif;
+}
+
+.garamond {
+  font-family: garamond,
+               serif;
+}
+
+.baskerville {
+  font-family: baskerville,
+               serif;
+}
+
 .nested-copy-line-height p,
 .nested-copy-line-height ul,
 .nested-copy-line-height ol {
@@ -5300,119 +5298,119 @@ code, .code {
 
 /* Background Colors */
 
-.bg-hover-black:hover,
-.bg-hover-black:focus { background-color: #000000; }
+.hover-bg-black:hover,
+.hover-bg-black:focus { background-color: #000000; }
 
-.bg-hover-black-offset:hover,
-.bg-hover-black-offset:focus { background-color: #333333; }
+.hover-bg-black-offset:hover,
+.hover-bg-black-offset:focus { background-color: #333333; }
 
-.bg-hover-gray-dark:hover,
-.bg-hover-gray-dark:focus { background-color: #666666; }
+.hover-bg-gray-dark:hover,
+.hover-bg-gray-dark:focus { background-color: #666666; }
 
-.bg-hover-gray:hover,
-.bg-hover-gray:focus { background-color: #999999; }
+.hover-bg-gray:hover,
+.hover-bg-gray:focus { background-color: #999999; }
 
-.bg-hover-gray-light:hover,
-.bg-hover-gray-light:focus { background-color: #cccccc; }
+.hover-bg-gray-light:hover,
+.hover-bg-gray-light:focus { background-color: #cccccc; }
 
-.bg-hover-white-offset:hover,
-.bg-hover-white-offset:focus { background-color: #f7f7f7; }
+.hover-bg-white-offset:hover,
+.hover-bg-white-offset:focus { background-color: #f7f7f7; }
 
-.bg-hover-white:hover,
-.bg-hover-white:focus { background-color: #ffffff; }
+.hover-bg-white:hover,
+.hover-bg-white:focus { background-color: #ffffff; }
 
-.bg-hover-transparent:hover,
-.bg-hover-transparent:focus { background-color: rgba(255, 255, 255, 0); }
+.hover-bg-transparent:hover,
+.hover-bg-transparent:focus { background-color: rgba(255, 255, 255, 0); }
 
-.bg-hover-pink:hover,
-.bg-hover-pink:focus { background-color: #d37295; }
+.hover-bg-pink:hover,
+.hover-bg-pink:focus { background-color: #d37295; }
 
-.bg-hover-pink-dark:hover,
-.bg-hover-pink-dark:focus { background-color: #a03f62; }
+.hover-bg-pink-dark:hover,
+.hover-bg-pink-dark:focus { background-color: #a03f62; }
 
-.bg-hover-pink-light:hover,
-.bg-hover-pink-light:focus { background-color: #f2d1e3; }
+.hover-bg-pink-light:hover,
+.hover-bg-pink-light:focus { background-color: #f2d1e3; }
 
-.bg-hover-red:hover,
-.bg-hover-red:focus { background-color: #cb4e52; }
+.hover-bg-red:hover,
+.hover-bg-red:focus { background-color: #cb4e52; }
 
-.bg-hover-red-dark:hover,
-.bg-hover-red-dark:focus { background-color: #9c292d; }
+.hover-bg-red-dark:hover,
+.hover-bg-red-dark:focus { background-color: #9c292d; }
 
-.bg-hover-red-light:hover,
-.bg-hover-red-light:focus { background-color: #f7e2e2; }
+.hover-bg-red-light:hover,
+.hover-bg-red-light:focus { background-color: #f7e2e2; }
 
-.bg-hover-orange:hover,
-.bg-hover-orange:focus { background-color: #ed844a; }
+.hover-bg-orange:hover,
+.hover-bg-orange:focus { background-color: #ed844a; }
 
-.bg-hover-orange-dark:hover,
-.bg-hover-orange-dark:focus { background-color: #ba5117; }
+.hover-bg-orange-dark:hover,
+.hover-bg-orange-dark:focus { background-color: #ba5117; }
 
-.bg-hover-orange-light:hover,
-.bg-hover-orange-light:focus { background-color: #f4d4c6; }
+.hover-bg-orange-light:hover,
+.hover-bg-orange-light:focus { background-color: #f4d4c6; }
 
-.bg-hover-yellow:hover,
-.bg-hover-yellow:focus { background-color: #f3ae4e; }
+.hover-bg-yellow:hover,
+.hover-bg-yellow:focus { background-color: #f3ae4e; }
 
-.bg-hover-yellow-dark:hover,
-.bg-hover-yellow-dark:focus { background-color: #c07b1b; }
+.hover-bg-yellow-dark:hover,
+.hover-bg-yellow-dark:focus { background-color: #c07b1b; }
 
-.bg-hover-yellow-light:hover,
-.bg-hover-yellow-light:focus { background-color: #fceddf; }
+.hover-bg-yellow-light:hover,
+.hover-bg-yellow-light:focus { background-color: #fceddf; }
 
-.bg-hover-green:hover,
-.bg-hover-green:focus { background-color: #45ad60; }
+.hover-bg-green:hover,
+.hover-bg-green:focus { background-color: #45ad60; }
 
-.bg-hover-green-dark:hover,
-.bg-hover-green-dark:focus { background-color: #127a2d; }
+.hover-bg-green-dark:hover,
+.hover-bg-green-dark:focus { background-color: #127a2d; }
 
-.bg-hover-green-light:hover,
-.bg-hover-green-light:focus { background-color: #c8edcd; }
+.hover-bg-green-light:hover,
+.hover-bg-green-light:focus { background-color: #c8edcd; }
 
-.bg-hover-purple:hover,
-.bg-hover-purple:focus { background-color: #6479bf; }
+.hover-bg-purple:hover,
+.hover-bg-purple:focus { background-color: #6479bf; }
 
-.bg-hover-purple-dark:hover,
-.bg-hover-purple-dark:focus { background-color: #31468c; }
+.hover-bg-purple-dark:hover,
+.hover-bg-purple-dark:focus { background-color: #31468c; }
 
-.bg-hover-purple-light:hover,
-.bg-hover-purple-light:focus { background-color: #cbd6f4; }
+.hover-bg-purple-light:hover,
+.hover-bg-purple-light:focus { background-color: #cbd6f4; }
 
-.bg-hover-blue:hover,
-.bg-hover-blue:focus { background-color: #33a9e0; }
+.hover-bg-blue:hover,
+.hover-bg-blue:focus { background-color: #33a9e0; }
 
-.bg-hover-blue-dark:hover,
-.bg-hover-blue-dark:focus { background-color: #0076ad; }
+.hover-bg-blue-dark:hover,
+.hover-bg-blue-dark:focus { background-color: #0076ad; }
 
-.bg-hover-blue-light:hover,
-.bg-hover-blue-light:focus { background-color: #e1f2fa; }
+.hover-bg-blue-light:hover,
+.hover-bg-blue-light:focus { background-color: #e1f2fa; }
 
-.bg-hover-slate:hover,
-.bg-hover-slate:focus { background-color: #45454c; }
+.hover-bg-slate:hover,
+.hover-bg-slate:focus { background-color: #45454c; }
 
-.bg-hover-slate-dark:hover,
-.bg-hover-slate-dark:focus { background-color: #1e1e21; }
+.hover-bg-slate-dark:hover,
+.hover-bg-slate-dark:focus { background-color: #1e1e21; }
 
-.bg-hover-slate-light:hover,
-.bg-hover-slate-light:focus { background-color: #efeff4; }
+.hover-bg-slate-light:hover,
+.hover-bg-slate-light:focus { background-color: #efeff4; }
 
-.bg-hover-blue-slate:hover,
-.bg-hover-blue-slate:focus { color: #364a60; }
+.hover-bg-blue-slate:hover,
+.hover-bg-blue-slate:focus { color: #364a60; }
 
-.bg-hover-blue-slate-dark:hover,
-.bg-hover-blue-slate-dark:focus { color: #213141; }
+.hover-bg-blue-slate-dark:hover,
+.hover-bg-blue-slate-dark:focus { color: #213141; }
 
-.bg-hover-blue-slate-medium:hover,
-.bg-hover-blue-slate-medium:focus { color: #8593a3; }
+.hover-bg-blue-slate-medium:hover,
+.hover-bg-blue-slate-medium:focus { color: #8593a3; }
 
-.bg-hover-blue-slate-light:hover,
-.bg-hover-blue-slate-light:focus { color: #bcc3cb; }
+.hover-bg-blue-slate-light:hover,
+.hover-bg-blue-slate-light:focus { color: #bcc3cb; }
 
-.bg-hover-gray-alt:hover,
-.bg-hover-gray-alt:focus { color: #e7ebef; }
+.hover-bg-gray-alt:hover,
+.hover-bg-gray-alt:focus { color: #e7ebef; }
 
-.bg-hover-gray-light-alt:hover,
-.bg-hover-gray-light-alt:focus { color: #f3f5f7; }
+.hover-bg-gray-light-alt:hover,
+.hover-bg-gray-light-alt:focus { color: #f3f5f7; }
 
 .collapse {
     border-collapse: collapse;
