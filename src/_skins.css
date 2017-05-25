@@ -8,7 +8,26 @@
 .white-offset { color: var(--white-offset); }
 .white { color: var(--white); }
 
-.transparent { color: var(--transparent); }
+.black-90 { color: var(--black-90); }
+.black-80 { color: var(--black-80); }
+.black-70 { color: var(--black-70); }
+.black-60 { color: var(--black-60); }
+.black-50 { color: var(--black-50); }
+.black-40 { color: var(--black-40); }
+.black-30 { color: var(--black-30); }
+.black-20 { color: var(--black-20); }
+.black-10 { color: var(--black-10); }
+.black-05 { color: var(--black-05); }
+
+.white-90 { color: var(--white-90); }
+.white-80 { color: var(--white-80); }
+.white-70 { color: var(--white-70); }
+.white-60 { color: var(--white-60); }
+.white-50 { color: var(--white-50); }
+.white-40 { color: var(--white-40); }
+.white-30 { color: var(--white-30); }
+.white-20 { color: var(--white-20); }
+.white-10 { color: var(--white-10); }
 
 .pink { color: var(--pink); }
 .pink-dark { color: var(--pink-dark); }
@@ -53,8 +72,27 @@
 .bg-gray-light { background-color: var(--gray-light); }
 .bg-white-offset { background-color: var(--white-offset); }
 .bg-white { background-color: var(--white); }
-
 .bg-transparent { background-color: var(--transparent); }
+
+.bg-black-90 { background-color: var(--black-90); }
+.bg-black-80 { background-color: var(--black-80); }
+.bg-black-70 { background-color: var(--black-70); }
+.bg-black-60 { background-color: var(--black-60); }
+.bg-black-50 { background-color: var(--black-50); }
+.bg-black-40 { background-color: var(--black-40); }
+.bg-black-30 { background-color: var(--black-30); }
+.bg-black-20 { background-color: var(--black-20); }
+.bg-black-10 { background-color: var(--black-10); }
+.bg-black-05 { background-color: var(--black-05); }
+.bg-white-90 { background-color: var(--white-90); }
+.bg-white-80 { background-color: var(--white-80); }
+.bg-white-70 { background-color: var(--white-70); }
+.bg-white-60 { background-color: var(--white-60); }
+.bg-white-50 { background-color: var(--white-50); }
+.bg-white-40 { background-color: var(--white-40); }
+.bg-white-30 { background-color: var(--white-30); }
+.bg-white-20 { background-color: var(--white-20); }
+.bg-white-10 { background-color: var(--white-10); }
 
 .bg-pink { background-color: var(--pink); }
 .bg-pink-dark { background-color: var(--pink-dark); }

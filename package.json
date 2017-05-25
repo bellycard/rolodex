@@ -8,7 +8,7 @@
     "url": "bellycard/rolodex"
   },
   "scripts": {
-    "build": "webpack && cssnano dist/rolodex.css dist/rolodex.min.css",
+    "build": "webpack",
     "watch": "webpack -w",
     "prepublish": "npm run build",
     "postpublish": "git push --tags"
