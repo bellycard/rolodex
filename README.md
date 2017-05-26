@@ -1,6 +1,6 @@
 # Rolodex
 
-[![David](https://img.shields.io/david/dev/bellycard/rolodex.svg)]()
+[![David](https://david-dm.org/bellycard/rolodex.svg)]()
 
 > Functional CSS for Belly
 
