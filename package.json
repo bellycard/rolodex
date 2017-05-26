@@ -8,8 +8,8 @@
     "url": "https://github.com/bellycard/rolodex"
   },
   "scripts": {
-    "prepublish": "gulp",
-    "postpublish": "git push --tags"
+    "postversion": "gulp",
+    "prepublish": "gulp"
   },
   "license": "MIT",
   "devDependencies": {

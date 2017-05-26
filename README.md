@@ -1,6 +1,6 @@
 # Rolodex
 
-[![David](https://david-dm.org/bellycard/rolodex.svg)]()
+[![David](https://img.shields.io/david/dev/bellycard/rolodex.svg)]()
 
 > Functional CSS for Belly
 
@@ -12,15 +12,13 @@ The simplest way to start using rolodex is to include a reference to the file in
 
 ```html
 <head>
-  <link rel="stylesheet" href="https://unpkg.com/rolodex-css/dist/rolodex.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/rolodex-css">
 </head>
 ```
 
 ### Installation
 
 ```bash
-yarn add -D rolodex-css
-# or
 npm install --save-dev rolodex-css
 ```
 
