@@ -1,7 +1,7 @@
 {
   "name": "rolodex-css",
   "description": "Functional CSS for Belly",
-  "version": "3.1.2",
+  "version": "3.1.3",
   "main": "dist/rolodex.min.css",
   "repository": {
     "type": "git",
