@@ -22,6 +22,6 @@
     "gulp-rename": "^1.2.2",
     "postcss-cssnext": "^2.11.0",
     "postcss-import": "^10.0.0",
-    "tachyons": "^4.6.2"
+    "tachyons": "^4.7.4"
   }
 }
