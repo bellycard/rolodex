@@ -2400,9 +2400,9 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
-tachyons@^4.6.2:
-  version "4.7.4"
-  resolved "https://registry.yarnpkg.com/tachyons/-/tachyons-4.7.4.tgz#eca4ffa15c1f06a357f088c6d0e687fc5f0408cc"
+tachyons@^4.8.1:
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/tachyons/-/tachyons-4.8.1.tgz#9a3183feecb3240c4dcefee7feecc8259acd7381"
 
 through2@^0.6.1:
   version "0.6.5"
