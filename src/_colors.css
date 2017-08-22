@@ -71,9 +71,9 @@
   --gray-light-alt: #f3f5f7;
 
   /* Hatch Colors */
-  --hatch-green: #65b5a2;
-  --hatch-green-dark: #03575b;
-  --hatch-green-light: #79eadd;
-  --hatch-gray: #b3b2b3;
-  --hatch-gray-light: #eff2f3;
+  --hatch-green: #7fbcaa;
+  --hatch-green-dark: #006663;
+  --hatch-green-light: #7ae9dd;
+  --hatch-gray: #a0a1a2;
+  --hatch-gray-light: #dadfe1;
 }
