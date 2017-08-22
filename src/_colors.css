@@ -50,25 +50,20 @@
   --green: #45ad60;
   --green-dark: #127a2d;
   --green-light: #c8edcd;
+  --blue: #357edd;
+  --blue-dark: #00449e;
+  --blue-light: #96ccff;
   --purple: #6479bf;
   --purple-dark: #31468c;
   --purple-light: #cbd6f4;
 
   /* Belly Colors */
-  --blue: #33a9e0;
-  --blue-dark: #0076ad;
-  --blue-light: #e1f2fa;
-  --slate: #45454c;
-  --slate-dark: #1e1e21;
-  --slate-light: #efeff4;
-
-  /* BLUE Colors */
-  --blue-slate: #364a60;
-  --blue-slate-dark: #213141;
-  --blue-slate-medium: #8593a3;
-  --blue-slate-light: #bcc3cb;
-  --gray-alt: #e7ebef;
-  --gray-light-alt: #f3f5f7;
+  --belly-blue: #33a9e0;
+  --belly-blue-dark: #0076ad;
+  --belly-blue-light: #e1f2fa;
+  --belly-slate: #45454c;
+  --belly-slate-dark: #1e1e21;
+  --belly-slate-light: #efeff4;
 
   /* Hatch Colors */
   --hatch-green: #7fbcaa;

@@ -126,6 +126,15 @@
 .green-light {
   color: var(--green-light);
 }
+.blue {
+  color: var(--blue);
+}
+.blue-dark {
+  color: var(--blue-dark);
+}
+.blue-light {
+  color: var(--blue-light);
+}
 .purple {
   color: var(--purple);
 }
@@ -136,60 +145,41 @@
   color: var(--purple-light);
 }
 
-.blue {
-  color: var(--blue);
+/* Belly Brand Text Color Skins */
+
+.belly-blue {
+  color: var(--belly-blue);
 }
-.blue-dark {
-  color: var(--blue-dark);
+.belly-blue-dark {
+  color: var(--belly-blue-dark);
 }
-.blue-light {
-  color: var(--blue-light);
+.belly-blue-light {
+  color: var(--belly-blue-light);
 }
-.slate {
-  color: var(--slate);
+.belly-slate {
+  color: var(--belly-slate);
 }
-.slate-dark {
-  color: var(--slate-dark);
+.belly-slate-dark {
+  color: var(--belly-slate-dark);
 }
-.slate-light {
-  color: var(--slate-light);
+.belly-slate-light {
+  color: var(--belly-slate-light);
 }
 
-.blue-slate {
-  color: var(--blue-slate);
-}
-.blue-slate-dark {
-  color: var(--blue-slate-dark);
-}
-.blue-slate-medium {
-  color: var(--blue-slate-medium);
-}
-.blue-slate-light {
-  color: var(--blue-slate-light);
-}
-.gray-alt {
-  color: var(--gray-alt);
-}
-.gray-light-alt {
-  color: var(--gray-light-alt);
-}
+/* Hatch Brand Text Color Skins */
 
 .hatch-green {
   color: var(--hatch-green);
 }
-
 .hatch-green-dark {
   color: var(--hatch-green-dark);
 }
-
 .hatch-green-light {
   color: var(--hatch-green-light);
 }
-
 .hatch-gray {
   color: var(--hatch-gray);
 }
-
 .hatch-gray-light {
   color: var(--hatch-gray-light);
 }
@@ -324,6 +314,15 @@
 .bg-green-light {
   background-color: var(--green-light);
 }
+.bg-blue {
+  background-color: var(--blue);
+}
+.bg-blue-dark {
+  background-color: var(--blue-dark);
+}
+.bg-blue-light {
+  background-color: var(--blue-light);
+}
 .bg-purple {
   background-color: var(--purple);
 }
@@ -334,60 +333,41 @@
   background-color: var(--purple-light);
 }
 
-.bg-blue {
-  background-color: var(--blue);
+/* Belly Brand Background Skins */
+
+.bg-belly-blue {
+  background-color: var(--belly-blue);
 }
-.bg-blue-dark {
-  background-color: var(--blue-dark);
+.bg-belly-blue-dark {
+  background-color: var(--belly-blue-dark);
 }
-.bg-blue-light {
-  background-color: var(--blue-light);
+.bg-belly-blue-light {
+  background-color: var(--belly-blue-light);
 }
-.bg-slate {
-  background-color: var(--slate);
+.bg-belly-slate {
+  background-color: var(--belly-slate);
 }
-.bg-slate-dark {
-  background-color: var(--slate-dark);
+.bg-belly-slate-dark {
+  background-color: var(--belly-slate-dark);
 }
-.bg-slate-light {
-  background-color: var(--slate-light);
+.bg-belly-slate-light {
+  background-color: var(--belly-slate-light);
 }
 
-.bg-blue-slate {
-  background-color: var(--blue-slate);
-}
-.bg-blue-slate-dark {
-  background-color: var(--blue-slate-dark);
-}
-.bg-blue-slate-medium {
-  background-color: var(--blue-slate-medium);
-}
-.bg-blue-slate-light {
-  background-color: var(--blue-slate-light);
-}
-.bg-gray-alt {
-  background-color: var(--gray-alt);
-}
-.bg-gray-light-alt {
-  background-color: var(--gray-light-alt);
-}
+/* Hatch Brand Background Skins */
 
 .bg-hatch-green {
   background-color: var(--hatch-green);
 }
-
 .bg-hatch-green-dark {
   background-color: var(--hatch-green-dark);
 }
-
 .bg-hatch-green-light {
   background-color: var(--hatch-green-light);
 }
-
 .bg-hatch-gray {
   background-color: var(--hatch-gray);
 }
-
 .bg-hatch-gray-light {
   background-color: var(--hatch-gray-light);
 }

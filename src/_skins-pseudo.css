@@ -166,6 +166,18 @@
 .hover-green-light:focus {
   color: var(--green-light);
 }
+.hover-blue:hover,
+.hover-blue:focus {
+  color: var(--blue);
+}
+.hover-blue-dark:hover,
+.hover-blue-dark:focus {
+  color: var(--blue-dark);
+}
+.hover-blue-light:hover,
+.hover-blue-light:focus {
+  color: var(--blue-light);
+}
 .hover-purple:hover,
 .hover-purple:focus {
   color: var(--purple);
@@ -179,57 +191,57 @@
   color: var(--purple-light);
 }
 
-.hover-blue:hover,
-.hover-blue:focus {
-  color: var(--blue);
+/* Hatch Text Colors */
+
+.hover-belly-blue:hover,
+.hover-belly-blue:focus {
+  color: var(--belly-blue);
 }
-.hover-blue-dark:hover,
-.hover-blue-dark:focus {
-  color: var(--blue-dark);
+.hover-belly-blue-dark:hover,
+.hover-belly-blue-dark:focus {
+  color: var(--belly-blue-dark);
 }
-.hover-blue-light:hover,
-.hover-blue-light:focus {
-  color: var(--blue-light);
+.hover-belly-blue-light:hover,
+.hover-belly-blue-light:focus {
+  color: var(--belly-blue-light);
 }
-.hover-slate:hover,
-.hover-slate:focus {
-  color: var(--slate);
+.hover-belly-slate:hover,
+.hover-belly-slate:focus {
+  color: var(--belly-slate);
 }
-.hover-slate-dark:hover,
-.hover-slate-dark:focus {
-  color: var(--slate-dark);
+.hover-belly-slate-dark:hover,
+.hover-belly-slate-dark:focus {
+  color: var(--belly-slate-dark);
 }
-.hover-slate-light:hover,
-.hover-slate-light:focus {
-  color: var(--slate-light);
+.hover-belly-slate-light:hover,
+.hover-belly-slate-light:focus {
+  color: var(--belly-slate-light);
 }
 
-.hover-blue-slate:hover,
-.hover-blue-slate:focus {
-  color: var(--blue-slate);
+/* Hatch Text Colors Pseudo Skins */
+
+.hover-hatch-green:hover.
+.hover-hatch-green:focus {
+  color: var(--hatch-green);
 }
-.hover-blue-slate-dark:hover,
-.hover-blue-slate-dark:focus {
-  color: var(--blue-slate-dark);
+.hover-hatch-green-dark:hover.
+.hover-hatch-green-dark:focus {
+  color: var(--hatch-green-dark);
 }
-.hover-blue-slate-medium:hover,
-.hover-blue-slate-medium:focus {
-  color: var(--blue-slate-medium);
+.hover-hatch-green-light:hover.
+.hover-hatch-green-light:focus {
+  color: var(--hatch-green-light);
 }
-.hover-blue-slate-light:hover,
-.hover-blue-slate-light:focus {
-  color: var(--blue-slate-light);
+.hover-hatch-gray:hover.
+.hover-hatch-gray:focus {
+  color: var(--hatch-gray);
 }
-.hover-gray-alt:hover,
-.hover-gray-alt:focus {
-  color: var(--gray-alt);
-}
-.hover-gray-light-alt:hover,
-.hover-gray-light-alt:focus {
-  color: var(--gray-light-alt);
+.hover-hatch-gray-light:hover.
+.hover-hatch-gray-light:focus {
+  color: var(--hatch-gray-light);
 }
 
-/* Background Colors */
+/* Background Color Pseudo Skins */
 
 .hover-bg-black:hover,
 .hover-bg-black:focus {
@@ -337,6 +349,8 @@
   background-color: var(--white-10);
 }
 
+/* General Background Color Pseudo Skins */
+
 .hover-bg-pink:hover,
 .hover-bg-pink:focus {
   background-color: var(--pink);
@@ -397,6 +411,18 @@
 .hover-bg-green-light:focus {
   background-color: var(--green-light);
 }
+.hover-bg-blue:hover,
+.hover-bg-blue:focus {
+  background-color: var(--blue);
+}
+.hover-bg-blue-dark:hover,
+.hover-bg-blue-dark:focus {
+  background-color: var(--blue-dark);
+}
+.hover-bg-blue-light:hover,
+.hover-bg-blue-light:focus {
+  background-color: var(--blue-light);
+}
 .hover-bg-purple:hover,
 .hover-bg-purple:focus {
   background-color: var(--purple);
@@ -410,76 +436,51 @@
   background-color: var(--purple-light);
 }
 
-.hover-bg-blue:hover,
-.hover-bg-blue:focus {
-  background-color: var(--blue);
+/* Belly Brand Background Color Pseudo Skins */
+
+.hover-bg-belly-blue:hover,
+.hover-bg-belly-blue:focus {
+  background-color: var(--belly-blue);
 }
-.hover-bg-blue-dark:hover,
-.hover-bg-blue-dark:focus {
-  background-color: var(--blue-dark);
+.hover-bg-belly-blue-dark:hover,
+.hover-bg-belly-blue-dark:focus {
+  background-color: var(--belly-blue-dark);
 }
-.hover-bg-blue-light:hover,
-.hover-bg-blue-light:focus {
-  background-color: var(--blue-light);
+.hover-bg-belly-blue-light:hover,
+.hover-bg-belly-blue-light:focus {
+  background-color: var(--belly-blue-light);
 }
-.hover-bg-slate:hover,
-.hover-bg-slate:focus {
-  background-color: var(--slate);
+.hover-bg-belly-slate:hover,
+.hover-bg-belly-slate:focus {
+  background-color: var(--belly-slate);
 }
-.hover-bg-slate-dark:hover,
-.hover-bg-slate-dark:focus {
-  background-color: var(--slate-dark);
+.hover-bg-belly-slate-dark:hover,
+.hover-bg-belly-slate-dark:focus {
+  background-color: var(--belly-slate-dark);
 }
-.hover-bg-slate-light:hover,
-.hover-bg-slate-light:focus {
-  background-color: var(--slate-light);
+.hover-bg-belly-slate-light:hover,
+.hover-bg-belly-slate-light:focus {
+  background-color: var(--belly-slate-light);
 }
 
-.hover-bg-blue-slate:hover,
-.hover-bg-blue-slate:focus {
-  background-color: var(--blue-slate);
-}
-.hover-bg-blue-slate-dark:hover,
-.hover-bg-blue-slate-dark:focus {
-  background-color: var(--blue-slate-dark);
-}
-.hover-bg-blue-slate-medium:hover,
-.hover-bg-blue-slate-medium:focus {
-  background-color: var(--blue-slate-medium);
-}
-.hover-bg-blue-slate-light:hover,
-.hover-bg-blue-slate-light:focus {
-  background-color: var(--blue-slate-light);
-}
-.hover-bg-gray-alt:hover,
-.hover-bg-gray-alt:focus {
-  background-color: var(--gray-alt);
-}
-.hover-bg-gray-light-alt:hover,
-.hover-bg-gray-light-alt:focus {
-  background-color: var(--gray-light-alt);
-}
+/* Hatch Brand Background Color Pseudo Skins */
 
 .hover-bg-hatch-green:hover.
 .hover-bg-hatch-green:focus {
   background-color: var(--hatch-green);
 }
-
 .hover-bg-hatch-green-dark:hover.
 .hover-bg-hatch-green-dark:focus {
   background-color: var(--hatch-green-dark);
 }
-
 .hover-bg-hatch-green-light:hover.
 .hover-bg-hatch-green-light:focus {
   background-color: var(--hatch-green-light);
 }
-
 .hover-bg-hatch-gray:hover.
 .hover-bg-hatch-gray:focus {
   background-color: var(--hatch-gray);
 }
-
 .hover-bg-hatch-gray-light:hover.
 .hover-bg-hatch-gray-light:focus {
   background-color: var(--hatch-gray-light);

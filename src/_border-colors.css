@@ -143,6 +143,15 @@
 .b--green-light {
   border-color: var(--green-light);
 }
+.b--blue {
+  border-color: var(--blue);
+}
+.b--blue-dark {
+  border-color: var(--blue-dark);
+}
+.b--blue-light {
+  border-color: var(--blue-light);
+}
 .b--purple {
   border-color: var(--purple);
 }
@@ -153,43 +162,28 @@
   border-color: var(--purple-light);
 }
 
-.b--blue {
-  border-color: var(--blue);
+/* Belly Brand Border Colors */
+
+.b--belly-blue {
+  border-color: var(--belly-blue);
 }
-.b--blue-dark {
-  border-color: var(--blue-dark);
+.b--belly-blue-dark {
+  border-color: var(--belly-blue-dark);
 }
-.b--blue-light {
-  border-color: var(--blue-light);
+.b--belly-blue-light {
+  border-color: var(--belly-blue-light);
 }
-.b--slate {
-  border-color: var(--slate);
+.b--belly-slate {
+  border-color: var(--belly-slate);
 }
-.b--slate-dark {
-  border-color: var(--slate-dark);
+.b--belly-slate-dark {
+  border-color: var(--belly-slate-dark);
 }
-.b--slate-light {
-  border-color: var(--slate-light);
+.b--belly-slate-light {
+  border-color: var(--belly-slate-light);
 }
 
-.b--blue-slate {
-  border-color: var(--blue-slate);
-}
-.b--blue-slate-dark {
-  border-color: var(--blue-slate-dark);
-}
-.b--blue-slate-medium {
-  border-color: var(--blue-slate-medium);
-}
-.b--blue-slate-light {
-  border-color: var(--blue-slate-light);
-}
-.b--gray-alt {
-  border-color: var(--gray-alt);
-}
-.b--gray-light-alt {
-  border-color: var(--gray-light-alt);
-}
+/* Hatch Brand Border Colors */
 
 .b--hatch-green {
   border-color: var(--hatch-green);
