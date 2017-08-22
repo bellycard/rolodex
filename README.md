@@ -22,6 +22,16 @@ The simplest way to start using rolodex is to include a reference to the file in
 npm install --save-dev rolodex-css
 ```
 
+## Deployment
+
+```
+# bump version and build
+npm version [<new version> | major | minor | patch]
+
+# publish to npmjs.com
+npm publish
+```
+
 ### Older Versions
 
 The following instructions are for using rolodex v2.x and earlier.
