@@ -5916,27 +5916,27 @@ code,
 
 /* Hatch Text Colors Pseudo Skins */
 
-.hover-hatch-green:hover.
+.hover-hatch-green:hover,
 .hover-hatch-green:focus {
   color: #7fbcaa;
 }
 
-.hover-hatch-green-dark:hover.
+.hover-hatch-green-dark:hover,
 .hover-hatch-green-dark:focus {
   color: #006663;
 }
 
-.hover-hatch-green-light:hover.
+.hover-hatch-green-light:hover,
 .hover-hatch-green-light:focus {
   color: #7ae9dd;
 }
 
-.hover-hatch-gray:hover.
+.hover-hatch-gray:hover,
 .hover-hatch-gray:focus {
   color: #a0a1a2;
 }
 
-.hover-hatch-gray-light:hover.
+.hover-hatch-gray-light:hover,
 .hover-hatch-gray-light:focus {
   color: #dadfe1;
 }
@@ -6214,27 +6214,27 @@ code,
 
 /* Hatch Brand Background Color Pseudo Skins */
 
-.hover-bg-hatch-green:hover.
+.hover-bg-hatch-green:hover,
 .hover-bg-hatch-green:focus {
   background-color: #7fbcaa;
 }
 
-.hover-bg-hatch-green-dark:hover.
+.hover-bg-hatch-green-dark:hover,
 .hover-bg-hatch-green-dark:focus {
   background-color: #006663;
 }
 
-.hover-bg-hatch-green-light:hover.
+.hover-bg-hatch-green-light:hover,
 .hover-bg-hatch-green-light:focus {
   background-color: #7ae9dd;
 }
 
-.hover-bg-hatch-gray:hover.
+.hover-bg-hatch-gray:hover,
 .hover-bg-hatch-gray:focus {
   background-color: #a0a1a2;
 }
 
-.hover-bg-hatch-gray-light:hover.
+.hover-bg-hatch-gray-light:hover,
 .hover-bg-hatch-gray-light:focus {
   background-color: #dadfe1;
 }
