@@ -5033,6 +5033,18 @@ img { max-width: 100%; }
   border-color: #c8edcd;
 }
 
+.b--blue {
+  border-color: #357edd;
+}
+
+.b--blue-dark {
+  border-color: #00449e;
+}
+
+.b--blue-light {
+  border-color: #96ccff;
+}
+
 .b--purple {
   border-color: #6479bf;
 }
@@ -5045,72 +5057,52 @@ img { max-width: 100%; }
   border-color: #cbd6f4;
 }
 
-.b--blue {
+/* Belly Brand Border Colors */
+
+.b--belly-blue {
   border-color: #33a9e0;
 }
 
-.b--blue-dark {
+.b--belly-blue-dark {
   border-color: #0076ad;
 }
 
-.b--blue-light {
+.b--belly-blue-light {
   border-color: #e1f2fa;
 }
 
-.b--slate {
+.b--belly-slate {
   border-color: #45454c;
 }
 
-.b--slate-dark {
+.b--belly-slate-dark {
   border-color: #1e1e21;
 }
 
-.b--slate-light {
+.b--belly-slate-light {
   border-color: #efeff4;
 }
 
-.b--blue-slate {
-  border-color: #364a60;
-}
-
-.b--blue-slate-dark {
-  border-color: #213141;
-}
-
-.b--blue-slate-medium {
-  border-color: #8593a3;
-}
-
-.b--blue-slate-light {
-  border-color: #bcc3cb;
-}
-
-.b--gray-alt {
-  border-color: #e7ebef;
-}
-
-.b--gray-light-alt {
-  border-color: #f3f5f7;
-}
+/* Hatch Brand Border Colors */
 
 .b--hatch-green {
-  border-color: #65b5a2;
+  border-color: #7fbcaa;
 }
 
 .b--hatch-green-dark {
-  border-color: #03575b;
+  border-color: #006663;
 }
 
 .b--hatch-green-light {
-  border-color: #79eadd;
+  border-color: #7ae9dd;
 }
 
 .b--hatch-gray {
-  border-color: #b3b2b3;
+  border-color: #a0a1a2;
 }
 
 .b--hatch-gray-light {
-  border-color: #f3f5f7;
+  border-color: var(--gray-light-alt);
 }
 
 body,
@@ -5163,13 +5155,13 @@ code,
 }
 
 .nested-links a {
-  color: #33a9e0;
+  color: #357edd;
   transition: color .15s ease-in;
 }
 
 .nested-links a:hover,
 .nested-links a:focus {
-  color: #e1f2fa;
+  color: #96ccff;
   transition: color .15s ease-in;
 }
 
@@ -5339,6 +5331,18 @@ code,
   color: #c8edcd;
 }
 
+.blue {
+  color: #357edd;
+}
+
+.blue-dark {
+  color: #00449e;
+}
+
+.blue-light {
+  color: #96ccff;
+}
+
 .purple {
   color: #6479bf;
 }
@@ -5351,72 +5355,52 @@ code,
   color: #cbd6f4;
 }
 
-.blue {
+/* Belly Brand Text Color Skins */
+
+.belly-blue {
   color: #33a9e0;
 }
 
-.blue-dark {
+.belly-blue-dark {
   color: #0076ad;
 }
 
-.blue-light {
+.belly-blue-light {
   color: #e1f2fa;
 }
 
-.slate {
+.belly-slate {
   color: #45454c;
 }
 
-.slate-dark {
+.belly-slate-dark {
   color: #1e1e21;
 }
 
-.slate-light {
+.belly-slate-light {
   color: #efeff4;
 }
 
-.blue-slate {
-  color: #364a60;
-}
-
-.blue-slate-dark {
-  color: #213141;
-}
-
-.blue-slate-medium {
-  color: #8593a3;
-}
-
-.blue-slate-light {
-  color: #bcc3cb;
-}
-
-.gray-alt {
-  color: #e7ebef;
-}
-
-.gray-light-alt {
-  color: #f3f5f7;
-}
+/* Hatch Brand Text Color Skins */
 
 .hatch-green {
-  color: #65b5a2;
+  color: #7fbcaa;
 }
 
 .hatch-green-dark {
-  color: #03575b;
+  color: #006663;
 }
 
 .hatch-green-light {
-  color: #79eadd;
+  color: #7ae9dd;
 }
 
 .hatch-gray {
-  color: #b3b2b3;
+  color: #a0a1a2;
 }
 
 .hatch-gray-light {
-  color: #eff2f3;
+  color: #dadfe1;
 }
 
 /* Background Colors */
@@ -5589,6 +5573,18 @@ code,
   background-color: #c8edcd;
 }
 
+.bg-blue {
+  background-color: #357edd;
+}
+
+.bg-blue-dark {
+  background-color: #00449e;
+}
+
+.bg-blue-light {
+  background-color: #96ccff;
+}
+
 .bg-purple {
   background-color: #6479bf;
 }
@@ -5601,72 +5597,52 @@ code,
   background-color: #cbd6f4;
 }
 
-.bg-blue {
+/* Belly Brand Background Skins */
+
+.bg-belly-blue {
   background-color: #33a9e0;
 }
 
-.bg-blue-dark {
+.bg-belly-blue-dark {
   background-color: #0076ad;
 }
 
-.bg-blue-light {
+.bg-belly-blue-light {
   background-color: #e1f2fa;
 }
 
-.bg-slate {
+.bg-belly-slate {
   background-color: #45454c;
 }
 
-.bg-slate-dark {
+.bg-belly-slate-dark {
   background-color: #1e1e21;
 }
 
-.bg-slate-light {
+.bg-belly-slate-light {
   background-color: #efeff4;
 }
 
-.bg-blue-slate {
-  background-color: #364a60;
-}
-
-.bg-blue-slate-dark {
-  background-color: #213141;
-}
-
-.bg-blue-slate-medium {
-  background-color: #8593a3;
-}
-
-.bg-blue-slate-light {
-  background-color: #bcc3cb;
-}
-
-.bg-gray-alt {
-  background-color: #e7ebef;
-}
-
-.bg-gray-light-alt {
-  background-color: #f3f5f7;
-}
+/* Hatch Brand Background Skins */
 
 .bg-hatch-green {
-  background-color: #65b5a2;
+  background-color: #7fbcaa;
 }
 
 .bg-hatch-green-dark {
-  background-color: #03575b;
+  background-color: #006663;
 }
 
 .bg-hatch-green-light {
-  background-color: #79eadd;
+  background-color: #7ae9dd;
 }
 
 .bg-hatch-gray {
-  background-color: #b3b2b3;
+  background-color: #a0a1a2;
 }
 
 .bg-hatch-gray-light {
-  background-color: #eff2f3;
+  background-color: #dadfe1;
 }
 
 /* Text Colors */
@@ -5876,6 +5852,21 @@ code,
   color: #c8edcd;
 }
 
+.hover-blue:hover,
+.hover-blue:focus {
+  color: #357edd;
+}
+
+.hover-blue-dark:hover,
+.hover-blue-dark:focus {
+  color: #00449e;
+}
+
+.hover-blue-light:hover,
+.hover-blue-light:focus {
+  color: #96ccff;
+}
+
 .hover-purple:hover,
 .hover-purple:focus {
   color: #6479bf;
@@ -5891,67 +5882,66 @@ code,
   color: #cbd6f4;
 }
 
-.hover-blue:hover,
-.hover-blue:focus {
+/* Hatch Text Colors */
+
+.hover-belly-blue:hover,
+.hover-belly-blue:focus {
   color: #33a9e0;
 }
 
-.hover-blue-dark:hover,
-.hover-blue-dark:focus {
+.hover-belly-blue-dark:hover,
+.hover-belly-blue-dark:focus {
   color: #0076ad;
 }
 
-.hover-blue-light:hover,
-.hover-blue-light:focus {
+.hover-belly-blue-light:hover,
+.hover-belly-blue-light:focus {
   color: #e1f2fa;
 }
 
-.hover-slate:hover,
-.hover-slate:focus {
+.hover-belly-slate:hover,
+.hover-belly-slate:focus {
   color: #45454c;
 }
 
-.hover-slate-dark:hover,
-.hover-slate-dark:focus {
+.hover-belly-slate-dark:hover,
+.hover-belly-slate-dark:focus {
   color: #1e1e21;
 }
 
-.hover-slate-light:hover,
-.hover-slate-light:focus {
+.hover-belly-slate-light:hover,
+.hover-belly-slate-light:focus {
   color: #efeff4;
 }
 
-.hover-blue-slate:hover,
-.hover-blue-slate:focus {
-  color: #364a60;
+/* Hatch Text Colors Pseudo Skins */
+
+.hover-hatch-green:hover.
+.hover-hatch-green:focus {
+  color: #7fbcaa;
 }
 
-.hover-blue-slate-dark:hover,
-.hover-blue-slate-dark:focus {
-  color: #213141;
+.hover-hatch-green-dark:hover.
+.hover-hatch-green-dark:focus {
+  color: #006663;
 }
 
-.hover-blue-slate-medium:hover,
-.hover-blue-slate-medium:focus {
-  color: #8593a3;
+.hover-hatch-green-light:hover.
+.hover-hatch-green-light:focus {
+  color: #7ae9dd;
 }
 
-.hover-blue-slate-light:hover,
-.hover-blue-slate-light:focus {
-  color: #bcc3cb;
+.hover-hatch-gray:hover.
+.hover-hatch-gray:focus {
+  color: #a0a1a2;
 }
 
-.hover-gray-alt:hover,
-.hover-gray-alt:focus {
-  color: #e7ebef;
+.hover-hatch-gray-light:hover.
+.hover-hatch-gray-light:focus {
+  color: #dadfe1;
 }
 
-.hover-gray-light-alt:hover,
-.hover-gray-light-alt:focus {
-  color: #f3f5f7;
-}
-
-/* Background Colors */
+/* Background Color Pseudo Skins */
 
 .hover-bg-black:hover,
 .hover-bg-black:focus {
@@ -6083,6 +6073,8 @@ code,
   background-color: rgba(255, 255, 255, .1);
 }
 
+/* General Background Color Pseudo Skins */
+
 .hover-bg-pink:hover,
 .hover-bg-pink:focus {
   background-color: #d37295;
@@ -6158,6 +6150,21 @@ code,
   background-color: #c8edcd;
 }
 
+.hover-bg-blue:hover,
+.hover-bg-blue:focus {
+  background-color: #357edd;
+}
+
+.hover-bg-blue-dark:hover,
+.hover-bg-blue-dark:focus {
+  background-color: #00449e;
+}
+
+.hover-bg-blue-light:hover,
+.hover-bg-blue-light:focus {
+  background-color: #96ccff;
+}
+
 .hover-bg-purple:hover,
 .hover-bg-purple:focus {
   background-color: #6479bf;
@@ -6173,89 +6180,63 @@ code,
   background-color: #cbd6f4;
 }
 
-.hover-bg-blue:hover,
-.hover-bg-blue:focus {
+/* Belly Brand Background Color Pseudo Skins */
+
+.hover-bg-belly-blue:hover,
+.hover-bg-belly-blue:focus {
   background-color: #33a9e0;
 }
 
-.hover-bg-blue-dark:hover,
-.hover-bg-blue-dark:focus {
+.hover-bg-belly-blue-dark:hover,
+.hover-bg-belly-blue-dark:focus {
   background-color: #0076ad;
 }
 
-.hover-bg-blue-light:hover,
-.hover-bg-blue-light:focus {
+.hover-bg-belly-blue-light:hover,
+.hover-bg-belly-blue-light:focus {
   background-color: #e1f2fa;
 }
 
-.hover-bg-slate:hover,
-.hover-bg-slate:focus {
+.hover-bg-belly-slate:hover,
+.hover-bg-belly-slate:focus {
   background-color: #45454c;
 }
 
-.hover-bg-slate-dark:hover,
-.hover-bg-slate-dark:focus {
+.hover-bg-belly-slate-dark:hover,
+.hover-bg-belly-slate-dark:focus {
   background-color: #1e1e21;
 }
 
-.hover-bg-slate-light:hover,
-.hover-bg-slate-light:focus {
+.hover-bg-belly-slate-light:hover,
+.hover-bg-belly-slate-light:focus {
   background-color: #efeff4;
 }
 
-.hover-bg-blue-slate:hover,
-.hover-bg-blue-slate:focus {
-  background-color: #364a60;
-}
-
-.hover-bg-blue-slate-dark:hover,
-.hover-bg-blue-slate-dark:focus {
-  background-color: #213141;
-}
-
-.hover-bg-blue-slate-medium:hover,
-.hover-bg-blue-slate-medium:focus {
-  background-color: #8593a3;
-}
-
-.hover-bg-blue-slate-light:hover,
-.hover-bg-blue-slate-light:focus {
-  background-color: #bcc3cb;
-}
-
-.hover-bg-gray-alt:hover,
-.hover-bg-gray-alt:focus {
-  background-color: #e7ebef;
-}
-
-.hover-bg-gray-light-alt:hover,
-.hover-bg-gray-light-alt:focus {
-  background-color: #f3f5f7;
-}
+/* Hatch Brand Background Color Pseudo Skins */
 
 .hover-bg-hatch-green:hover.
 .hover-bg-hatch-green:focus {
-  background-color: #65b5a2;
+  background-color: #7fbcaa;
 }
 
 .hover-bg-hatch-green-dark:hover.
 .hover-bg-hatch-green-dark:focus {
-  background-color: #03575b;
+  background-color: #006663;
 }
 
 .hover-bg-hatch-green-light:hover.
 .hover-bg-hatch-green-light:focus {
-  background-color: #79eadd;
+  background-color: #7ae9dd;
 }
 
 .hover-bg-hatch-gray:hover.
 .hover-bg-hatch-gray:focus {
-  background-color: #b3b2b3;
+  background-color: #a0a1a2;
 }
 
 .hover-bg-hatch-gray-light:hover.
 .hover-bg-hatch-gray-light:focus {
-  background-color: #eff2f3;
+  background-color: #dadfe1;
 }
 
 .collapse {
@@ -6274,8 +6255,6 @@ code,
 :root {
 
   /* Belly Colors */
-
-  /* BLUE Colors */
 
   /* Hatch Colors */
 }
