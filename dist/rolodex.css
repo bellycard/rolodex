@@ -5109,12 +5109,6 @@ img { max-width: 100%; }
   border-color: #f6f6f6;
 }
 
-body,
-.sans-serif
-.open-sans {
-  font-family: 'Open Sans', sans-serif;
-}
-
 code,
 .code {
   font-family: 'Source Code Pro', monospace;
