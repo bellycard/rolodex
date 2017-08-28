@@ -1,4 +1,4 @@
-/*! rolodex-css v4.0.1 | MIT License | https://github.com/bellycard/rolodex */
+/*! rolodex-css v5.0.0 | MIT License | https://github.com/bellycard/rolodex */
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -5086,29 +5086,27 @@ img { max-width: 100%; }
 /* Hatch Brand Border Colors */
 
 .b--hatch-green {
-  border-color: #7fbcaa;
+  border-color: #63bab0;
 }
 
 .b--hatch-green-dark {
-  border-color: #006663;
+  border-color: #04575b;
 }
 
 .b--hatch-green-light {
-  border-color: #7ae9dd;
+  border-color: #79e9dd;
 }
 
-.b--hatch-gray {
-  border-color: #a0a1a2;
+.b--hatch-black {
+  border-color: #232323;
+}
+
+.b--hatch-slate {
+  border-color: #484848;
 }
 
 .b--hatch-gray-light {
-  border-color: var(--gray-light-alt);
-}
-
-body,
-.sans-serif
-.open-sans {
-  font-family: 'Open Sans', sans-serif;
+  border-color: #f6f6f6;
 }
 
 code,
@@ -5384,23 +5382,27 @@ code,
 /* Hatch Brand Text Color Skins */
 
 .hatch-green {
-  color: #7fbcaa;
+  color: #63bab0;
 }
 
 .hatch-green-dark {
-  color: #006663;
+  color: #04575b;
 }
 
 .hatch-green-light {
-  color: #7ae9dd;
+  color: #79e9dd;
 }
 
-.hatch-gray {
-  color: #a0a1a2;
+.hatch-black {
+  color: #232323;
+}
+
+.hatch-slate {
+  color: #484848;
 }
 
 .hatch-gray-light {
-  color: #dadfe1;
+  color: #f6f6f6;
 }
 
 /* Background Colors */
@@ -5626,23 +5628,27 @@ code,
 /* Hatch Brand Background Skins */
 
 .bg-hatch-green {
-  background-color: #7fbcaa;
+  background-color: #63bab0;
 }
 
 .bg-hatch-green-dark {
-  background-color: #006663;
+  background-color: #04575b;
 }
 
 .bg-hatch-green-light {
-  background-color: #7ae9dd;
+  background-color: #79e9dd;
 }
 
-.bg-hatch-gray {
-  background-color: #a0a1a2;
+.bg-hatch-black {
+  background-color: #232323;
+}
+
+.bg-hatch-slate {
+  background-color: #484848;
 }
 
 .bg-hatch-gray-light {
-  background-color: #dadfe1;
+  background-color: #f6f6f6;
 }
 
 /* Text Colors */
@@ -5918,27 +5924,32 @@ code,
 
 .hover-hatch-green:hover,
 .hover-hatch-green:focus {
-  color: #7fbcaa;
+  color: #63bab0;
 }
 
 .hover-hatch-green-dark:hover,
 .hover-hatch-green-dark:focus {
-  color: #006663;
+  color: #04575b;
 }
 
 .hover-hatch-green-light:hover,
 .hover-hatch-green-light:focus {
-  color: #7ae9dd;
-}
-
-.hover-hatch-gray:hover,
-.hover-hatch-gray:focus {
-  color: #a0a1a2;
+  color: #79e9dd;
 }
 
 .hover-hatch-gray-light:hover,
 .hover-hatch-gray-light:focus {
-  color: #dadfe1;
+  color: #f6f6f6;
+}
+
+.hover-hatch-slate:hover,
+.hover-hatch-slate:focus {
+  color: #484848;
+}
+
+.hover-hatch-black:hover,
+.hover-hatch-black:focus {
+  color: #232323;
 }
 
 /* Background Color Pseudo Skins */
@@ -6216,27 +6227,32 @@ code,
 
 .hover-bg-hatch-green:hover,
 .hover-bg-hatch-green:focus {
-  background-color: #7fbcaa;
+  background-color: #63bab0;
 }
 
 .hover-bg-hatch-green-dark:hover,
 .hover-bg-hatch-green-dark:focus {
-  background-color: #006663;
+  background-color: #04575b;
 }
 
 .hover-bg-hatch-green-light:hover,
 .hover-bg-hatch-green-light:focus {
-  background-color: #7ae9dd;
+  background-color: #79e9dd;
 }
 
-.hover-bg-hatch-gray:hover,
-.hover-bg-hatch-gray:focus {
-  background-color: #a0a1a2;
+.hover-bg-hatch-black:hover,
+.hover-bg-hatch-black:focus {
+  background-color: #232323;
+}
+
+.hover-bg-hatch-slate:hover,
+.hover-bg-hatch-slate:focus {
+  background-color: #484848;
 }
 
 .hover-bg-hatch-gray-light:hover,
 .hover-bg-hatch-gray-light:focus {
-  background-color: #dadfe1;
+  background-color: #f6f6f6;
 }
 
 .collapse {

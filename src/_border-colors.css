@@ -194,9 +194,12 @@
 .b--hatch-green-light {
   border-color: var(--hatch-green-light);
 }
-.b--hatch-gray {
-  border-color: var(--hatch-gray);
+.b--hatch-black {
+  border-color: var(--hatch-black);
+}
+.b--hatch-slate {
+  border-color: var(--hatch-slate);
 }
 .b--hatch-gray-light {
-  border-color: var(--gray-light-alt);
+  border-color: var(--hatch-gray-light);
 }
