@@ -66,9 +66,10 @@
   --belly-slate-light: #efeff4;
 
   /* Hatch Colors */
-  --hatch-green: #7fbcaa;
-  --hatch-green-dark: #006663;
-  --hatch-green-light: #7ae9dd;
-  --hatch-gray: #a0a1a2;
-  --hatch-gray-light: #dadfe1;
+  --hatch-green: #63bab0;
+  --hatch-green-dark: #04575b;
+  --hatch-green-light: #79e9dd;
+  --hatch-black: #232323;
+  --hatch-slate: #484848;
+  --hatch-gray-light: #f6f6f6;
 }

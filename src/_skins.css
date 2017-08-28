@@ -177,8 +177,11 @@
 .hatch-green-light {
   color: var(--hatch-green-light);
 }
-.hatch-gray {
-  color: var(--hatch-gray);
+.hatch-black {
+  color: var(--hatch-black);
+}
+.hatch-slate {
+  color: var(--hatch-slate);
 }
 .hatch-gray-light {
   color: var(--hatch-gray-light);
@@ -365,8 +368,11 @@
 .bg-hatch-green-light {
   background-color: var(--hatch-green-light);
 }
-.bg-hatch-gray {
-  background-color: var(--hatch-gray);
+.bg-hatch-black {
+  background-color: var(--hatch-black);
+}
+.bg-hatch-slate {
+  background-color: var(--hatch-slate);
 }
 .bg-hatch-gray-light {
   background-color: var(--hatch-gray-light);
