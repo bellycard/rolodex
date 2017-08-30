@@ -17,6 +17,7 @@
 @import 'tachyons/src/_flexbox';
 @import 'tachyons/src/_floats';
 @import 'tachyons/src/_font-style';
+@import 'tachyons/src/_font-family';
 @import 'tachyons/src/_font-weight';
 @import 'tachyons/src/_forms';
 @import 'tachyons/src/_heights';
@@ -45,7 +46,6 @@
 @import 'tachyons/src/_z-index';
 
 @import './_border-colors';
-@import './_font-family';
 @import './_nested';
 @import './_skins';
 @import './_skins-pseudo';

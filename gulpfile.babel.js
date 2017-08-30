@@ -9,7 +9,7 @@ import pkg from './package.json';
 
 const banner = `/*! ${pkg.name} v${pkg.version} | ${pkg.license} License | ${pkg.repository.url} */\n`;
 
-gulp.task('default', () => {
+gulp.task('build', () => {
   return gulp.src('./src/rolodex.css')
     .pipe(postcss([
       postcssImport(),
@@ -25,6 +25,8 @@ gulp.task('default', () => {
     ]))
     .pipe(gulp.dest('./dist'))
 });
+
+gulp.task('default', ['build']);
 
 gulp.task('watch', ['default'], () => {
   gulp.watch('src/**/*.css', ['default'])

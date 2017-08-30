@@ -1590,13 +1590,11 @@ img { max-width: 100%; }
 
 .flex-wrap    { -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-.flex-nowrap    { -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
-
-.flex-wrap-reverse    { -ms-flex-wrap: wrap-reverse; flex-wrap: wrap-reverse; }
-
 .flex-column-reverse  { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
 
 .flex-row-reverse     { -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; }
+
+.flex-wrap-reverse    { -ms-flex-wrap: wrap-reverse; flex-wrap: wrap-reverse; }
 
 .items-start    { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
 
@@ -1674,10 +1672,9 @@ img { max-width: 100%; }
   .flex-column-ns { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
   .flex-row-ns { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
   .flex-wrap-ns { -ms-flex-wrap: wrap; flex-wrap: wrap; }
-  .flex-nowrap-ns { -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
-  .flex-wrap-reverse-ns { -ms-flex-wrap: wrap-reverse; flex-wrap: wrap-reverse; }
   .flex-column-reverse-ns { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
   .flex-row-reverse-ns { -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; }
+  .flex-wrap-reverse-ns { -ms-flex-wrap: wrap-reverse; flex-wrap: wrap-reverse; }
   .items-start-ns { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
   .items-end-ns { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
   .items-center-ns { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
@@ -1729,10 +1726,9 @@ img { max-width: 100%; }
   .flex-column-m { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
   .flex-row-m     { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
   .flex-wrap-m { -ms-flex-wrap: wrap; flex-wrap: wrap; }
-  .flex-nowrap-m { -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
-  .flex-wrap-reverse-m { -ms-flex-wrap: wrap-reverse; flex-wrap: wrap-reverse; }
   .flex-column-reverse-m { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
   .flex-row-reverse-m { -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; }
+  .flex-wrap-reverse-m { -ms-flex-wrap: wrap-reverse; flex-wrap: wrap-reverse; }
   .items-start-m { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
   .items-end-m { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
   .items-center-m { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
@@ -1784,10 +1780,9 @@ img { max-width: 100%; }
   .flex-column-l { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
   .flex-row-l { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
   .flex-wrap-l { -ms-flex-wrap: wrap; flex-wrap: wrap; }
-  .flex-nowrap-l { -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
-  .flex-wrap-reverse-l { -ms-flex-wrap: wrap-reverse; flex-wrap: wrap-reverse; }
   .flex-column-reverse-l { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
   .flex-row-reverse-l { -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; }
+  .flex-wrap-reverse-l { -ms-flex-wrap: wrap-reverse; flex-wrap: wrap-reverse; }
 
   .items-start-l { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
   .items-end-l { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
@@ -1905,6 +1900,103 @@ img { max-width: 100%; }
 @media screen and (min-width: 60em) {
   .i-l       { font-style: italic; }
   .fs-normal-l     { font-style: normal; }
+}
+
+/*
+
+   FONT FAMILY GROUPS
+   Docs: http://tachyons.io/docs/typography/font-family/
+
+*/
+
+.sans-serif {
+  font-family: -apple-system, BlinkMacSystemFont,
+               'avenir next', avenir,
+               'helvetica neue', helvetica,
+               ubuntu,
+               roboto, noto,
+               'segoe ui', arial,
+               sans-serif;
+}
+
+.serif {
+  font-family: georgia,
+               times,
+               serif;
+}
+
+.system-sans-serif {
+  font-family: sans-serif;
+}
+
+.system-serif {
+  font-family: serif;
+}
+
+/* Monospaced Typefaces (for code) */
+
+/* From http://cssfontstack.com */
+
+code, .code {
+  font-family: Consolas,
+               monaco,
+               monospace;
+}
+
+.courier {
+  font-family: 'Courier Next',
+               courier,
+               monospace;
+}
+
+/* Sans-Serif Typefaces */
+
+.helvetica {
+  font-family: 'helvetica neue', helvetica,
+               sans-serif;
+}
+
+.avenir {
+  font-family: 'avenir next', avenir,
+               sans-serif;
+}
+
+/* Serif Typefaces */
+
+.athelas {
+  font-family: athelas,
+               georgia,
+               serif;
+}
+
+.georgia {
+  font-family: georgia,
+               serif;
+}
+
+.times {
+  font-family: times,
+               serif;
+}
+
+.bodoni {
+  font-family: "Bodoni MT",
+                serif;
+}
+
+.calisto {
+  font-family: "Calisto MT",
+                serif;
+}
+
+.garamond {
+  font-family: garamond,
+               serif;
+}
+
+.baskerville {
+  font-family: baskerville,
+               serif;
 }
 
 /*
@@ -4101,7 +4193,6 @@ img { max-width: 100%; }
     l = left
     r = right
     c = center
-    j = justify
 
   Media Query Extensions:
     -ns = not-small
@@ -4116,27 +4207,22 @@ img { max-width: 100%; }
 
 .tc  { text-align: center; }
 
-.tj  { text-align: justify; }
-
 @media screen and (min-width: 30em) {
   .tl-ns  { text-align: left; }
   .tr-ns  { text-align: right; }
   .tc-ns  { text-align: center; }
-  .tj-ns  { text-align: justify; }
 }
 
 @media screen and (min-width: 45em) {
   .tl-m  { text-align: left; }
   .tr-m  { text-align: right; }
   .tc-m  { text-align: center; }
-  .tj-m  { text-align: justify; }
 }
 
 @media screen and (min-width: 60em) {
   .tl-l  { text-align: left; }
   .tr-l  { text-align: right; }
   .tc-l  { text-align: center; }
-  .tj-l  { text-align: justify; }
 }
 
 /*
@@ -4450,17 +4536,11 @@ img { max-width: 100%; }
   margin-left: auto;
 }
 
-.mr-auto { margin-right: auto; }
-
-.ml-auto { margin-left:  auto; }
-
 @media screen and (min-width: 30em){
   .center-ns {
     margin-right: auto;
     margin-left: auto;
   }
-  .mr-auto-ns { margin-right: auto; }
-  .ml-auto-ns { margin-left:  auto; }
 }
 
 @media screen and (min-width: 45em){
@@ -4468,8 +4548,6 @@ img { max-width: 100%; }
     margin-right: auto;
     margin-left: auto;
   }
-  .mr-auto-m { margin-right: auto; }
-  .ml-auto-m { margin-left:  auto; }
 }
 
 @media screen and (min-width: 60em){
@@ -4477,8 +4555,6 @@ img { max-width: 100%; }
     margin-right: auto;
     margin-left: auto;
   }
-  .mr-auto-l { margin-right: auto; }
-  .ml-auto-l { margin-left:  auto; }
 }
 
 /*
@@ -4759,7 +4835,6 @@ img { max-width: 100%; }
 .shadow-hover::after {
   content: '';
   box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, .2);
-  border-radius: inherit;
   opacity: 0;
   position: absolute;
   top: 0;
@@ -5097,6 +5172,10 @@ img { max-width: 100%; }
   border-color: #79e9dd;
 }
 
+.b--hatch-green-x-light {
+  border-color: #ebfcfa;
+}
+
 .b--hatch-black {
   border-color: #232323;
 }
@@ -5107,11 +5186,6 @@ img { max-width: 100%; }
 
 .b--hatch-gray-light {
   border-color: #f6f6f6;
-}
-
-code,
-.code {
-  font-family: 'Source Code Pro', monospace;
 }
 
 .nested-copy-line-height p,
@@ -5393,6 +5467,10 @@ code,
   color: #79e9dd;
 }
 
+.hatch-green-x-light {
+  color: #ebfcfa;
+}
+
 .hatch-black {
   color: #232323;
 }
@@ -5637,6 +5715,10 @@ code,
 
 .bg-hatch-green-light {
   background-color: #79e9dd;
+}
+
+.bg-hatch-green-x-light {
+  background-color: #ebfcfa;
 }
 
 .bg-hatch-black {
@@ -5935,6 +6017,11 @@ code,
 .hover-hatch-green-light:hover,
 .hover-hatch-green-light:focus {
   color: #79e9dd;
+}
+
+.hover-hatch-green-x-light:hover,
+.hover-hatch-green-x-light:focus {
+  color: #ebfcfa;
 }
 
 .hover-hatch-gray-light:hover,
@@ -6238,6 +6325,11 @@ code,
 .hover-bg-hatch-green-light:hover,
 .hover-bg-hatch-green-light:focus {
   background-color: #79e9dd;
+}
+
+.hover-bg-hatch-green-x-light:hover,
+.hover-bg-hatch-green-x-light:focus {
+  background-color: #ebfcfa;
 }
 
 .hover-bg-hatch-black:hover,

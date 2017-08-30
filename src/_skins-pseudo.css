@@ -232,6 +232,10 @@
 .hover-hatch-green-light:focus {
   color: var(--hatch-green-light);
 }
+.hover-hatch-green-x-light:hover,
+.hover-hatch-green-x-light:focus {
+  color: var(--hatch-green-x-light);
+}
 .hover-hatch-gray-light:hover,
 .hover-hatch-gray-light:focus {
   color: var(--hatch-gray-light);
@@ -480,6 +484,10 @@
 .hover-bg-hatch-green-light:hover,
 .hover-bg-hatch-green-light:focus {
   background-color: var(--hatch-green-light);
+}
+.hover-bg-hatch-green-x-light:hover,
+.hover-bg-hatch-green-x-light:focus {
+  background-color: var(--hatch-green-x-light);
 }
 .hover-bg-hatch-black:hover,
 .hover-bg-hatch-black:focus {

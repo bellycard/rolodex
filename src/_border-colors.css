@@ -194,6 +194,9 @@
 .b--hatch-green-light {
   border-color: var(--hatch-green-light);
 }
+.b--hatch-green-x-light {
+  border-color: var(--hatch-green-x-light);
+}
 .b--hatch-black {
   border-color: var(--hatch-black);
 }

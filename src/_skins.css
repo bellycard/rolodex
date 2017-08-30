@@ -177,6 +177,9 @@
 .hatch-green-light {
   color: var(--hatch-green-light);
 }
+.hatch-green-x-light {
+  color: var(--hatch-green-x-light);
+}
 .hatch-black {
   color: var(--hatch-black);
 }
@@ -367,6 +370,9 @@
 }
 .bg-hatch-green-light {
   background-color: var(--hatch-green-light);
+}
+.bg-hatch-green-x-light {
+  background-color: var(--hatch-green-x-light);
 }
 .bg-hatch-black {
   background-color: var(--hatch-black);
