@@ -4937,7 +4937,7 @@ code, .code {
 }
 
 .b--gray-light {
-  border-color: #cccccc;
+  border-color: #dfdfdf;
 }
 
 .b--white-offset {
@@ -5256,7 +5256,7 @@ code, .code {
 }
 
 .gray-light {
-  color: #cccccc;
+  color: #dfdfdf;
 }
 
 .white-offset {
@@ -5502,7 +5502,7 @@ code, .code {
 }
 
 .bg-gray-light {
-  background-color: #cccccc;
+  background-color: #dfdfdf;
 }
 
 .bg-white-offset {
@@ -5757,7 +5757,7 @@ code, .code {
 
 .hover-gray-light:hover,
 .hover-gray-light:focus {
-  color: #cccccc;
+  color: #dfdfdf;
 }
 
 .hover-white-offset:hover,
@@ -6063,7 +6063,7 @@ code, .code {
 
 .hover-bg-gray-light:hover,
 .hover-bg-gray-light:focus {
-  background-color: #cccccc;
+  background-color: #dfdfdf;
 }
 
 .hover-bg-white-offset:hover,
@@ -6357,7 +6357,7 @@ code, .code {
 }
 
 .stripe-dark:nth-child(odd) {
-  background-color: #cccccc;
+  background-color: #dfdfdf;
 }
 
 :root {
